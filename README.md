@@ -1,2 +1,2 @@
 # wp-plugins
-Compassion Switzerland wordpress plugins
+Wordpress plugins for Compassion Switzerland
