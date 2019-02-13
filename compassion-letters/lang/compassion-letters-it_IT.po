@@ -1,0 +1,320 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Compassion Letters\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-19 09:04+0000\n"
+"PO-Revision-Date: 2018-09-19 09:07+0000\n"
+"Last-Translator: olivier <sept@numero7.ch>\n"
+"Language-Team: Italian\n"
+"Language: it_IT\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: compassion-letters.php:234
+msgid "Compassion Schweiz"
+msgstr "Compassion Svizzera"
+
+#: compassion-letters.php:235
+msgid "Der Brief an Ihr Patenkind"
+msgstr "La lettera per il vostro bambino"
+
+#: templates/email/user-email.php:156 templates/email/user-email.php:176
+#: templates/email_de/user-email.php:155 templates/email_de/user-email.php:176
+#: templates/email_it/user-email.php:155 templates/email_it/user-email.php:177
+msgid "Lieber"
+msgstr " Caro"
+
+#: templates/email/user-email.php:156 templates/email/user-email.php:176
+#: templates/email_de/user-email.php:155 templates/email_de/user-email.php:176
+#: templates/email_it/user-email.php:155 templates/email_it/user-email.php:177
+msgid "Liebe"
+msgstr " Cara"
+
+#: templates/frontend/1form_christmas.php:32
+#: templates/frontend/form_christmas.php:32 templates/frontend/form.php:32
+msgid "Anrede"
+msgstr "Appellativo"
+
+#: templates/frontend/1form_christmas.php:35
+#: templates/frontend/form_christmas.php:35
+#: templates/frontend/form_christmas.php:35 templates/frontend/form.php:35
+#: templates/frontend/form.php:35
+msgid "Anrede erforderlich"
+msgstr "Appellativo richiesto"
+
+#: templates/frontend/1form_christmas.php:35
+#: templates/frontend/form_christmas.php:35 templates/frontend/form.php:35
+msgid "Frau"
+msgstr "Signora"
+
+#: templates/frontend/1form_christmas.php:35
+#: templates/frontend/form_christmas.php:35 templates/frontend/form.php:35
+msgid "Herr"
+msgstr "Signor"
+
+#: templates/frontend/1form_christmas.php:41
+#: templates/frontend/form_christmas.php:41 templates/frontend/form.php:41
+msgid "E-Mail"
+msgstr "E-Mail"
+
+#: templates/frontend/1form_christmas.php:44
+#: templates/frontend/form_christmas.php:44 templates/frontend/form.php:44
+msgid "E-Mailadresse erforderlich"
+msgstr "E-mail richiesta"
+
+#: templates/frontend/1form_christmas.php:50
+#: templates/frontend/form_christmas.php:50
+#: templates/frontend/form_christmas.php:88 templates/frontend/form.php:50
+#: templates/frontend/form.php:88
+msgid "Vorname, Nachname"
+msgstr "Cognome, nome"
+
+#: templates/frontend/1form_christmas.php:53
+#: templates/frontend/form_christmas.php:53 templates/frontend/form.php:53
+msgid "Name erforderlich"
+msgstr "Nome richiesto"
+
+#: templates/frontend/1form_christmas.php:60
+#: templates/frontend/form_christmas.php:60 templates/frontend/form.php:60
+msgid "Patennummer (ohne CH)"
+msgstr "Numero referenza sostenitore (senza CH)"
+
+#: templates/frontend/1form_christmas.php:63
+#: templates/frontend/form_christmas.php:63 templates/frontend/form.php:63
+msgid "Bitte gültige Nummer eingeben (ohne CH)"
+msgstr "Inserire il numero valido (senza CH)"
+
+#: templates/frontend/1form_christmas.php:63
+#: templates/frontend/form_christmas.php:63 templates/frontend/form.php:63
+msgid "Patennummer erforderlich"
+msgstr "Numero referenza sostenitore richiesto"
+
+#: templates/frontend/1form_christmas.php:69
+#: templates/frontend/form_christmas.php:69 templates/frontend/form.php:69
+msgid "Patenkindnummer"
+msgstr "Numero referenza bambino"
+
+#: templates/frontend/1form_christmas.php:72
+#: templates/frontend/form_christmas.php:72 templates/frontend/form.php:72
+msgid "Patenkindnummer erforderlich"
+msgstr "Numero del bambino richiesto"
+
+#: templates/frontend/1form_christmas.php:72
+#: templates/frontend/form_christmas.php:72 templates/frontend/form.php:72
+msgid "Bitte gültige Patenkindnummer eingeben"
+msgstr "Inserire il numero del bambino valido"
+
+#: templates/frontend/1form_christmas.php:78
+#: templates/frontend/form_christmas.php:78 templates/frontend/form.php:78
+msgid "Nachricht"
+msgstr "Vostro messaggio"
+
+#: templates/frontend/1form_christmas.php:81
+#: templates/frontend/form_christmas.php:81 templates/frontend/form.php:81
+msgid "Nachricht erforderlich"
+msgstr "Messaggio richiesto"
+
+#: templates/frontend/1form_christmas.php:82
+#: templates/frontend/form_christmas.php:82 templates/frontend/form.php:82
+msgid "von 1300 Zeichen"
+msgstr "a 1300 caratteri"
+
+#: templates/frontend/1form_christmas.php:98
+#: templates/frontend/form_christmas.php:102 templates/frontend/form.php:101
+msgid "Bild"
+msgstr "Foto"
+
+#: templates/frontend/1form_christmas.php:102
+#: templates/frontend/form_christmas.php:106 templates/frontend/form.php:105
+msgid "Feld leeren"
+msgstr " Campo vuoto"
+
+#: templates/frontend/1form_christmas.php:102
+#: templates/frontend/form_christmas.php:106 templates/frontend/form.php:105
+msgid "Bild hochladen"
+msgstr "Caricare foto"
+
+#: templates/frontend/1form_christmas.php:103
+#: templates/frontend/form_christmas.php:107 templates/frontend/form.php:106
+msgid "Format: JPG/PNG, max. Grösse: 2MB"
+msgstr "Formato: JPG/PNG, max.: 2MB"
+
+#: templates/frontend/1form_christmas.php:112 templates/frontend/form.php:115
+msgid "Bitte wählen Sie eine Vorlage: "
+msgstr "Scegliete un modello, grazie:"
+
+#: templates/frontend/1form_christmas.php:115
+#: templates/frontend/1form_christmas.php:123
+#: templates/frontend/1form_christmas.php:131
+#: templates/frontend/1form_christmas.php:140
+#: templates/frontend/1form_christmas.php:149
+#: templates/frontend/1form_christmas.php:158
+#: templates/frontend/1form_christmas.php:167
+#: templates/frontend/1form_christmas.php:176
+#: templates/frontend/form_christmas.php:119 templates/frontend/form.php:118
+#: templates/frontend/form.php:128 templates/frontend/form.php:137
+#: templates/frontend/form.php:148 templates/frontend/form.php:159
+#: templates/frontend/form.php:170 templates/frontend/form.php:181
+#: templates/frontend/form.php:193
+msgid "Vorlage erforderlich"
+msgstr "Modello richiesto"
+
+#: templates/frontend/1form_christmas.php:115
+#: templates/frontend/form_christmas.php:120 templates/frontend/form.php:118
+msgid "Vorlage 1"
+msgstr "Modello 1"
+
+#: templates/frontend/1form_christmas.php:118 templates/frontend/form.php:121
+msgid "Vorlage 1 auswählen"
+msgstr "Scegliere il modello 1"
+
+#: templates/frontend/1form_christmas.php:123 templates/frontend/form.php:128
+msgid "Vorlage 2"
+msgstr "Modello 2"
+
+#: templates/frontend/1form_christmas.php:126 templates/frontend/form.php:131
+msgid "Vorlage 2 auswählen"
+msgstr "Scegliere il modello 2"
+
+#: templates/frontend/1form_christmas.php:131 templates/frontend/form.php:137
+msgid "Vorlage 3"
+msgstr "Modello 3"
+
+#: templates/frontend/1form_christmas.php:134 templates/frontend/form.php:140
+msgid "Vorlage 3 auswählen"
+msgstr "Scegliere il modello 3"
+
+#: templates/frontend/1form_christmas.php:140 templates/frontend/form.php:148
+msgid "Vorlage 4"
+msgstr "Modello 4"
+
+#: templates/frontend/1form_christmas.php:143 templates/frontend/form.php:151
+msgid "Vorlage 4 auswählen"
+msgstr "Scegliere il modello 4"
+
+#: templates/frontend/1form_christmas.php:149 templates/frontend/form.php:159
+msgid "Vorlage 5"
+msgstr "Modello 5"
+
+#: templates/frontend/1form_christmas.php:152 templates/frontend/form.php:162
+msgid "Vorlage 5 auswählen"
+msgstr "Scegliere il modello 5"
+
+#: templates/frontend/1form_christmas.php:158 templates/frontend/form.php:170
+msgid "Vorlage 6"
+msgstr "Modello 6"
+
+#: templates/frontend/1form_christmas.php:161 templates/frontend/form.php:173
+msgid "Vorlage 6 auswählen"
+msgstr "Scegliere il modello 6"
+
+#: templates/frontend/1form_christmas.php:167 templates/frontend/form.php:181
+msgid "Vorlage 7"
+msgstr "Modello 7"
+
+#: templates/frontend/1form_christmas.php:170 templates/frontend/form.php:184
+msgid "Vorlage 7 auswählen"
+msgstr "Scegliere il modello 7"
+
+#: templates/frontend/1form_christmas.php:176 templates/frontend/form.php:193
+msgid "Vorlage 8"
+msgstr "Modello 8"
+
+#: templates/frontend/1form_christmas.php:179 templates/frontend/form.php:196
+msgid "Vorlage 8 auswählen"
+msgstr "Scegliere il modello 8"
+
+#: templates/frontend/1form_christmas.php:195
+#: templates/frontend/form_christmas.php:150 templates/frontend/form.php:124
+#: templates/frontend/form.php:134 templates/frontend/form.php:143
+#: templates/frontend/form.php:154 templates/frontend/form.php:165
+#: templates/frontend/form.php:176 templates/frontend/form.php:188
+#: templates/frontend/form.php:200 templates/frontend/form.php:229
+msgid "Vorschau"
+msgstr "Anteprima"
+
+#: templates/frontend/1form_christmas.php:195
+#: templates/frontend/1form_christmas.php:202
+#: templates/frontend/form_christmas.php:150
+#: templates/frontend/form_christmas.php:159 templates/frontend/form.php:229
+#: templates/frontend/form.php:237
+msgid "Absenden"
+msgstr "Inviare"
+
+#: templates/frontend/1form_christmas.php:211
+#: templates/frontend/form_christmas.php:168 templates/frontend/form.php:246
+msgid "Ihre Vorschau wird generiert..."
+msgstr "La vostra anteprima è in preparazione   "
+
+#: templates/frontend/1form_christmas.php:212
+#: templates/frontend/form_christmas.php:169 templates/frontend/form.php:247
+msgid "Ihr Brief wird generiert..."
+msgstr "La vostra lettera è in preparazione"
+
+#: templates/frontend/1form_christmas.php:213
+msgid "Ihr Brief wurde verschickt."
+msgstr "La vostra lettera è stata inviata."
+
+#: templates/frontend/1form_christmas.php:214
+#: templates/frontend/form_christmas.php:172 templates/frontend/form.php:249
+msgid "Es ist ein Fehler!"
+msgstr "C’è un errore!"
+
+#: templates/frontend/1form_christmas.php:215
+msgid "Bitte überprüfen Sie Ihre Referenznummer und die Nummer Ihres Kindes."
+msgstr ""
+
+#: templates/frontend/form_christmas.php:81 templates/frontend/form.php:81
+msgid ""
+"Um den Verlust Ihres Briefes zu vermeiden, empfehlen wir Ihnen, diesen "
+"zuerst auf einem Word-Dokument zu schreiben und ihn danach hier einzufügen."
+msgstr ""
+"Per evitare di perdere il tuo testo ti consigliamo vivamente di scriverlo in "
+"un file word e incollarlo qui."
+
+#: templates/frontend/form_christmas.php:88 templates/frontend/form.php:88
+msgid ""
+"Ich finde meine Nummer gerade nicht! Bitte senden Sie mir die Informationen "
+"per E-Mail"
+msgstr "Rinviatemi le informazioni del mio sostegno per email "
+
+#: templates/frontend/form_christmas.php:88 templates/frontend/form.php:88
+msgid ""
+"Ich finde meine Nummer gerade nicht! Bitte senden Sie mir die Informationen "
+"per E-Mail. (Das kann einen Arbeitstag dauern)"
+msgstr ""
+"Rinviatemi le informazioni del mio sostegno per email (può richiedere un "
+"giorno lavorativo)"
+
+#: templates/frontend/form_christmas.php:152 templates/frontend/form.php:230
+msgid "Tipps fürs Briefeschreiben"
+msgstr "Consigli per scrivere una lettera"
+
+#: templates/frontend/form_christmas.php:170 templates/frontend/form.php:248
+msgid "Ihr Brief wurde verschickt. Sie erhalten eine Kopie per E-Mail."
+msgstr "La vostra lettera è stata inviata. Riceverai una copia via e-mail."
+
+#: templates/frontend/form_christmas.php:170
+msgid "Schliessen"
+msgstr "Chiudere"
+
+#: templates/frontend/form_christmas.php:173 templates/frontend/form.php:250
+msgid ""
+"Wir haben derzeit ein Problem mit dem Online Senden von Briefen. Unsere "
+"Informatiker arbeiten an dem Fehler. Vielen Dank für Ihr Verständnis. In der "
+"Zwischenzeit, senden Sie bitte Ihren Brief an info@compassion.ch."
+msgstr ""
+"Al momento abbiamo dei problemi tecnici con l'invio delle lettere, stiamo "
+"cercando di risolverli. Grazie per la vostra comprensione. Potete inviare le "
+"vostre lettere a questo indirizzo: info@compassion.ch"
+
+#. Name of the plugin
+msgid "Compassion Letters"
+msgstr ""
+
+#. Author of the plugin
+msgid "giftGRUEN GmbH"
+msgstr ""

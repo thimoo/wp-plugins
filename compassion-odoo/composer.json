@@ -1,0 +1,14 @@
+{
+    "name": "jklay/compassion-odoo",
+    "description": "Odoo Connector",
+    "type": "library",
+    "require": {
+        "darkaonline/ripcord": "^0.1.4"
+    },
+    "authors": [
+        {
+            "name": "Jonathan Klay",
+            "email": "jklay@gmail.com"
+        }
+    ]
+}

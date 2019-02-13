@@ -1,0 +1,402 @@
+.child-sponsor {
+	
+	 li{list-style: none;}
+  .progress-steps {
+    margin-top: 30px;
+
+    p {
+      text-align: center;
+      font-size: 20px;
+      line-height: 26px;
+      font-family: "Georgia";
+      color: $color_text;
+    }
+
+    ul {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    li {
+      display: inline-block;
+      width: 76px;
+      height: 76px;
+      text-align: center;
+      border-radius: 50%;
+      background: $color_light_blue;
+      color: $color_light_grey;
+      font-size: 26px;
+      font-family: "Tetria Black";
+      padding-top: 17px;
+      margin-right: 70px;
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 50px;
+        height: 6px;
+        margin: 0 10px;
+        background: url(../images/progress-bar.svg) center center no-repeat;
+        background-size: cover;
+        display: inline-block;
+        float: left;
+        position: absolute;
+        right: -70px;
+        top: 50%;
+        margin-top: -3px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+    
+    li.active {
+      background: $color_blue;
+      color: $color_white;
+    }
+  }
+  .reco-checkbox{
+	 margin-bottom: 0.5em;
+  	 ul{margin-bottom: 0;}
+  	.hidden-form {
+      margin-top: 10px;
+//       padding-bottom: 10px;
+
+      &.hidden {
+        display: none;
+      }
+   
+   
+      
+    }
+   }
+
+.language{
+ul{
+	li{margin:0 0 .5em 0}
+	margin:.5em 0 0 0;}
+label{	
+display: inline-block;
+line-height:1;
+margin-left: 1em;
+vertical-align: top
+}
+
+label.error {
+      position: absolute;
+      bottom: -95px;
+      left: 0;
+      margin:0;
+      border-radius: 4px;
+      width: 150px;
+    padding: 4px;
+    }
+
+}
+	#consumer_select-error{margin:0;}
+  .checkbox-wrapper {
+    float: left;
+    width: 100%;
+
+    .right {
+      color: #0a0a0a;
+
+      h4 {
+        font-family: "Tetria Regular";
+        margin-top: 15px;
+      }
+
+      .select-wrapper {
+        width: 100%;
+      }
+    }
+
+    label {
+      clear: both;
+      float: left;
+      width: 100%;
+
+      h4,
+      input {
+        float: left;
+      }
+    }
+
+    .icheckbox_flat-aero {
+      float: left;
+      margin: 6px 10px 0 0;
+    }
+  }
+
+  .select-wrapper {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  input.error {
+    border: 1px solid $color_red;
+  }
+
+  label.error {
+    background: $color_red;
+    color: $color_white;
+    margin: -22px 0 1em;
+    padding: 0 5px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  
+  
+ .condgenerale label.error {
+    background: $color_red;
+    color: $color_white;
+    margin: 1.5em 0 1em;
+    padding: 0 5px;
+    border-radius: 4px;
+    width: 250px;
+  }
+
+
+
+  .recaptcha-wrapper {
+    position: relative;
+    margin-bottom: 25px;
+
+    .error {
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-radius: 4px;
+      margin-top: 0;
+      margin-right: 15px;
+    }
+  }
+  
+  .radio-wrapper {
+    position: relative;
+
+    input[type=radio] {
+      float: left;
+    }
+
+    label:not(.error) {
+      float: left;
+      margin: 8px 20px 0 10px;
+    }
+
+    label.error {
+      position: absolute;
+      bottom: -15px;
+      right: 15px;
+      border-radius: 4px;
+    }
+
+    .iradio_flat-aero {
+      float: left;
+      margin-top: 5px;
+      margin-right: 10px;
+    }
+  }
+  
+  .radio-wrapper1 {
+    position: relative;
+
+    input[type=radio] {
+      float: left;
+    }
+
+    label:not(.error) {
+      float: left;
+      margin: 8px 20px 0 10px;
+    }
+
+    label.error {
+      position: absolute;
+      bottom: -15px;
+      right: 15px;
+      border-radius: 4px;
+    }
+  	.iradio_flat-aero {
+      float: left;
+      margin-top: 11px;
+    }
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  .strong-statment{
+	 font-weight: $global-weight-bold;
+	 font-size:20px;
+  }
+  input[type=radio] {
+    margin-top: 15px;
+  }
+
+  h6, h4 {
+    color: $color_dark_text;
+    margin: 50px 0 80px;
+  }
+
+  h4 {
+    margin: 0 0 30px;
+  }
+
+  hr {
+    margin: 30px 0;
+    float: left;
+    width: 100%;
+    border-color: #deded8;
+  }
+
+  .form-action {
+    text-align: center;
+    padding-top: 15px;
+    float: left;
+    width: 100%;
+
+    a {
+      margin: 0 15px;
+      display: inline-block;
+    }
+  }
+
+  .no-padding-left {
+    padding-left: 0 !important;
+  }
+
+  .campaign {
+    background: $color_brown;
+    padding: 20px;
+    border-radius: 5px;
+    color: $color_white;
+    margin-top: 20px;
+    position: relative;
+
+    .checkbox-label {
+      position: relative;
+      padding-left: 30px;
+      width: 60%;
+      width: calc(100% - 251px);
+      margin-top: 5px;
+
+      .icheckbox_flat-aero {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    .text-bold {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .checkbox-content,
+    h5,
+    label {
+      color: $color_white;
+    }
+
+    .logo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-top-right-radius: 5px;
+      overflow: hidden;
+    }
+
+    .hidden-form {
+      margin-top: 50px;
+      padding-bottom: 10px;
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    .iradio_flat-aero {
+      margin-right: 5px;
+    }
+  }
+
+  &.step-2 {
+    label.middle,
+    .small-8 {
+      padding: 4px 0;
+      margin-bottom: 5px;
+    }
+    
+    ul{margin-left:0;}
+
+    .edit {
+      float: right;
+      color: $color_blue;
+      margin-top: 15px;
+    }
+
+    h3 {
+      float: left;
+      width: 100%;
+      clear: both;
+      color: $color_dark_text;
+    }
+
+    h4 {
+      float: left;
+      width: 100%;
+      clear: both;
+      color: $color_dark_text;
+      margin-bottom: 20px;
+      color: $color_dark_text;
+    }
+
+    .checkbox-wrapper {
+      margin-top: 15px;
+
+      .right {
+        padding-top: 15px;
+        margin-right: -30px;
+      }
+    }
+
+    h6 {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+//zahlung 
+
+.zahlung label{display:inline-block; margin-right: 1em}
+
+@media screen and (max-width: 1080px) {
+  .child-sponsor {
+
+    .campaign {
+      .logo {
+        position: static;
+        margin: 0 auto 20px;
+      }
+
+      .checkbox-label {
+        width: 100%;
+
+        .icheckbox_flat-aero {
+          top: 2px;
+        }
+      }
+    }
+
+  }
+}
+

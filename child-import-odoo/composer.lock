@@ -1,0 +1,99 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "9622ae6f68cbd40ab2c308c74202a88e",
+    "content-hash": "0831029fc62b2a27a946da5c012f3db2",
+    "packages": [
+        {
+            "name": "giftgruen/wp-helper",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "git@git.giftgruen.com:giftgruen/wp-helper.git",
+                "reference": "a5708f29a583141711ef92f0e40da032ce283081"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.giftgruen.com/dist/giftgruen-wp-helper-a5708f29a583141711ef92f0e40da032ce283081-zip-7fe87b.zip",
+                "reference": "a5708f29a583141711ef92f0e40da032ce283081",
+                "shasum": "f64ce918f809abbfe039c74a44cd46eccbe51a1e"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WPHelper\\": "src/"
+                }
+            },
+            "license": [
+                "Copyright"
+            ],
+            "authors": [
+                {
+                    "name": "Lukas Breuer",
+                    "email": "lukas.breuer@outlook.com"
+                }
+            ],
+            "time": "2016-07-13 14:29:32"
+        },
+        {
+            "name": "rmccue/requests",
+            "version": "v1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmccue/Requests.git",
+                "reference": "6aac485666c2955077d77b796bbdd25f0013a4ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmccue/Requests/zipball/6aac485666c2955077d77b796bbdd25f0013a4ea",
+                "reference": "6aac485666c2955077d77b796bbdd25f0013a4ea",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Requests": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "ISC"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan McCue",
+                    "homepage": "http://ryanmccue.info"
+                }
+            ],
+            "description": "A HTTP library written in PHP, for human beings.",
+            "homepage": "http://github.com/rmccue/Requests",
+            "keywords": [
+                "curl",
+                "fsockopen",
+                "http",
+                "idna",
+                "ipv6",
+                "iri",
+                "sockets"
+            ],
+            "time": "2014-05-18 04:59:02"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

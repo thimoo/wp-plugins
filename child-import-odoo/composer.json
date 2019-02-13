@@ -1,0 +1,17 @@
+{
+  "name": "luettgens/cowis-import",
+  "type": "Plugin",
+  "license": "Copyright",
+  "authors": [
+    {
+      "name": "Lukas Breuer",
+      "email": "lukas.breuer@outlook.com"
+    }
+  ],
+  "repositories": [
+    {"type":"composer","url":"https://composer.giftgruen.com"}
+  ],
+  "require": [
+    {"giftgruen/wp-helper": "^1.0.2"}
+  ]
+}
