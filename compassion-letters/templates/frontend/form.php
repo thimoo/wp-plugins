@@ -50,7 +50,7 @@
                     <label class="text-left middle"><?php _e('Vorname, Nachname', 'compassion-letters'); ?>*</label>
                 </div>
                 <div class="small-8 columns">
-                    <input type="text" required data-msg="<?php _e('Name erforderlich', 'compassion-letters'); ?>" class="input-field clear-pdf-on-change" name="name" id="name">
+                    <input type="text" required data-msg="<?php _e('Name erforderlich', 'compassion-letters'); ?>" class="input-field clear-pdf-on-change" name="name" id="pname">
                 </div>
             </div>
 
