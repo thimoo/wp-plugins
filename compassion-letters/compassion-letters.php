@@ -10,6 +10,12 @@ defined('ABSPATH') || die();
 define('COMPASSION_LETTERS_PLUGIN_DIR_PATH', plugin_dir_path(__FILE__));
 define('COMPASSION_LETTERS_PLUGIN_DIR_URL', plugin_dir_url(__FILE__));
 
+// Constant used to store files processed from information sent by the user.
+$plugin_name = dirname(plugin_basename(__FILE__));
+$uploads_dir = wp_upload_dir();
+define('COMPASSION_LETTERS_FILES_DIR_PATH', trailingslashit($uploads_dir['basedir']) . $plugin_name);
+define('COMPASSION_LETTERS_FILES_DIR_URL',  trailingslashit($uploads_dir['baseurl']) . $plugin_name);
+
 add_action('plugins_loaded', 'wan_load_textdomain');
 function wan_load_textdomain() {
     load_plugin_textdomain( 'compassion-letters', false, dirname( plugin_basename(__FILE__) ) . '/lang/' );
@@ -23,6 +29,8 @@ use \WPHelper as WP;
 
 class CompassionLetters
 {
+    const THUMB_FOLDER_NAME = 'thumb';
+
     private $pdf_folder;
     private $thumb_folder;
     private $template_folder;
@@ -31,10 +39,12 @@ class CompassionLetters
     {
         add_action('init', [$this, '__init']);
 
-        $this->pdf_folder = COMPASSION_LETTERS_PLUGIN_DIR_PATH . 'files/pdf/';
-        $this->thumb_folder = COMPASSION_LETTERS_PLUGIN_DIR_PATH . 'files/thumb/';
-        $this->template_folder = COMPASSION_LETTERS_PLUGIN_DIR_PATH . 'templates/';
+        $this->pdf_folder = trailingslashit(COMPASSION_LETTERS_FILES_DIR_PATH) . 'pdf/';
+        $this->thumb_folder = trailingslashit(COMPASSION_LETTERS_FILES_DIR_PATH) . self::THUMB_FOLDER_NAME . '/';
+        $this->uploads_folder = trailingslashit(COMPASSION_LETTERS_FILES_DIR_PATH) . 'uploads';
+        $this->template_folder = trailingslashit(COMPASSION_LETTERS_PLUGIN_DIR_PATH) . 'templates/';
 
+        register_activation_hook(__FILE__, array($this, 'create_folder_structure'));
         // register cronjob
         register_activation_hook(__FILE__, array($this, 'register_cleanup_cronjob'));
         add_action('compassion-letters-cleanup-event', array($this, 'cleanup_action'));
@@ -43,7 +53,7 @@ class CompassionLetters
     public function __init()
     {
         add_shortcode('compassion-letters', array($this, 'shortcode'));
-       add_shortcode('compassion-christmas', array($this, 'shortcodech'));
+        add_shortcode('compassion-christmas', array($this, 'shortcodech'));
 
 
         // register ajax actions
@@ -69,6 +79,13 @@ class CompassionLetters
 
     }
 
+    public function create_folder_structure() {
+        $targets = array($this->pdf_folder, $this->thumb_folder, $this->uploads_folder);
+        foreach($targets as $target) {
+            wp_mkdir_p($target);
+        }
+    }
+
     public function register_cleanup_cronjob() {
         if (! wp_next_scheduled ( 'compassion-letters-cleanup-event' )) {
             wp_schedule_event(time(), 'hourly', 'compassion-letters-cleanup-event');
@@ -86,13 +103,13 @@ class CompassionLetters
         $this->remove_old_files($this->thumb_folder, $timestamp);
 
         // uploads
-        if ($handle = opendir(COMPASSION_LETTERS_PLUGIN_DIR_PATH . 'files/uploads')) {
+        if ($handle = opendir($this->uploads_folder)) {
             while (false !== ($file = readdir($handle))) {
                 if ('.' === $file) continue;
                 if ('..' === $file) continue;
 
 
-                unlink(COMPASSION_LETTERS_PLUGIN_DIR_PATH . 'files/uploads/' . $file);
+                unlink(trailingslashit($this->uploads_folder) . $file);
             }
             closedir($handle);
         }
@@ -132,7 +149,7 @@ class CompassionLetters
     private function handle_image_upload() {
         if(empty($_FILES)) return null;
 
-        $file = WP\Common::getFile('image', COMPASSION_LETTERS_PLUGIN_DIR_PATH . '/files/uploads');
+        $file = WP\Common::getFile('image', $this->uploads_folder);
 
         return $file;
     }
@@ -166,7 +183,7 @@ class CompassionLetters
 
         echo json_encode([
             'thumbnails' => $thumbnails,
-            'thumbnailURL' => COMPASSION_LETTERS_PLUGIN_DIR_URL . 'files/thumb/',
+            'thumbnailURL' => trailingslashit(COMPASSION_LETTERS_FILES_DIR_URL) . self::THUMB_FOLDER_NAME . '/',
             'pdf' => $pdf_path
         ]);
 
@@ -180,7 +197,7 @@ class CompassionLetters
      * @param $data
      * @return string
      */
-   public function get_email_template1($template, $data) {
+    public function get_email_template1($template, $data) {
 
         $my_current_lang = apply_filters( 'wpml_current_language', NULL );
         ob_start();
