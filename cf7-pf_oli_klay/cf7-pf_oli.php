@@ -308,7 +308,7 @@ class donationForm {
         $arrayToHash = array();
         foreach ($form as $key => $value) {
             if ($value != '') {
-                $arrayToHash[] = strtoupper($key) . '=' . $value . 'stc0mp45510nypg3in2';
+                $arrayToHash[] = strtoupper($key) . '=' . $value . POSTFINANCE_SHA_IN;
             }
         }
         asort($arrayToHash);
