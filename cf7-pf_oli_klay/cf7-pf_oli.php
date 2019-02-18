@@ -363,16 +363,8 @@ class Compassion_Donation_Form {
 
         ob_start();
 
-        if ($_SERVER['HTTP_HOST'] == TEST_SERVER) {
-
-//        $debug = false;
-            $debug = true;
-            if ($debug) {
-                print_r($_GET);
-            }
-        } else {
-
-            $debug = false;
+        if (WP_DEBUG) {
+            print_r($_GET);
         }
 
         global $wpdb;
@@ -410,14 +402,14 @@ class Compassion_Donation_Form {
 
             $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE odoo_status = '" . self::RECEIVED_FROM_PF . "'");
 
-            if ($debug) {
+            if (WP_DEBUG) {
                 print_r($results);
             }
 
             try {
                 if (sizeof($results) >= 1) {
 
-                    $odoo = new CompassionOdooConnector($debug);
+                    $odoo = new CompassionOdooConnector();
 
                     foreach ($results as $result) {
 
@@ -446,7 +438,7 @@ class Compassion_Donation_Form {
                                 if (!empty($search)) {
                                     $partner_id = $search[0]['partner_id'][0];
 
-                                    if($debug) {
+                                    if(WP_DEBUG) {
                                         echo ' ###'.$partner_id.'### ';
                                     }
                                 }
@@ -456,12 +448,12 @@ class Compassion_Donation_Form {
 
                                 error_log('Searching partner with email, last_name, first_name, ...');
                                 $search = $odoo->searchPartnerByEmailNameCity($result->email, $result->last_name, $result->first_name, $result->city);
-                                if($debug) {
+                                if(WP_DEBUG) {
                                     print_r($search);
                                 }
                                 if (!empty($search)) {
                                     $partner_id = $search[0];
-                                    if($debug) {
+                                    if(WP_DEBUG) {
                                         echo ' ##'.$partner_id.'## ';
                                     }
                                 }
@@ -485,7 +477,7 @@ class Compassion_Donation_Form {
                                 $result->pf_pm, $result->pf_payid, $result->pf_brand, $result->utm_source,
                                 $result->utm_medium, $result->utm_campaign);
 
-                            if($debug) {
+                            if(WP_DEBUG) {
                                 print_r($invoice_id);
                             }
                             if (!empty($invoice_id)) {
@@ -503,10 +495,11 @@ class Compassion_Donation_Form {
             } catch (Exception $ex) {
 
                 echo 'Error occured. Please try again. ';
-                if ($debug) {
+                if (WP_DEBUG) {
                     print_r($ex);
                 }
             }
+
         }
 
         $content = ob_get_contents();

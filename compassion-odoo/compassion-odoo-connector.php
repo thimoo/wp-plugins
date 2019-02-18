@@ -20,16 +20,10 @@ class CompassionOdooConnector {
     private $odoo_db = ODOO_DB;
     private $odoo_user = ODOO_USER;
     private $odoo_password = ODOO_PASSWORD;
-    private $debug;
     private $uid;
     private $models;
     
     public function __construct() {
-        if ($_SERVER['HTTP_HOST'] == TEST_SERVER) {
-            $this->debug = true;
-        } else {
-            $this->debug = false;
-        }
         $common = ripcord::client($this->odoo_host . '/xmlrpc/2/common');
         $transport = new ripcord_Transport_Stream(array(
             'timeout' => 10 // in seconds.
