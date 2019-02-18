@@ -384,43 +384,23 @@ class Compassion_Donation_Form {
 
             $complus = filter_var($_GET['COMPLUS'], FILTER_SANITIZE_STRING);
 
-
-            $time_transaction = $wpdb->get_var(
-                $wpdb->prepare(
-                    "SELECT time FROM " . $table_name . " "
-                    . "WHERE transaction_id='%s' "
-                    . "AND odoo_status = '" . self::SUBMITTED_FROM_PF . "'"
-                    . "LIMIT 1", $complus));
-
-            // return from Postfinance should occur within 5 minutes, otherwise we ignore the db update.
             if ($debug) {
-                $additional_time = 1500000;
-            } else {
-                $additional_time = 72000;
+                echo 'continue donation process...';
             }
-            if (time() < (strtotime($time_transaction) + $additional_time )) {
+            error_log('Update transaction with parameters received from Postfinance');
 
-                if ($debug) {
-                    echo 'continue donation process...';
-                }
-                error_log('Update transaction with parameters received from Postfinance');
+            $wpdb->update($table_name, array(
+                'pf_pm' => $_GET['PM'],
+                'pf_payid' => $_GET['PAYID'],
+                'pf_brand' => $_GET['BRAND'],
+                'pf_raw' => json_encode($_GET),
+                'ip_address' => $_GET['IP'],
+                'odoo_status' => self::RECEIVED_FROM_PF
+            ), array('transaction_id' => $complus,
+                    'odoo_complete_time' => NULL)
+            );
 
-                $wpdb->update($table_name, array(
-                    'pf_pm' => $_GET['PM'],
-                    'pf_payid' => $_GET['PAYID'],
-                    'pf_brand' => $_GET['BRAND'],
-                    'pf_raw' => json_encode($_GET),
-                    'ip_address' => $_GET['IP'],
-                    'odoo_status' => self::RECEIVED_FROM_PF
-                ), array('transaction_id' => $complus,
-                        'odoo_complete_time' => NULL)
-                );
-
-                unset($_SESSION['transaction']);
-
-//        } else {
-//            wp_die('Request timeout. ');
-            }
+            unset($_SESSION['transaction']);
         }
 
 
