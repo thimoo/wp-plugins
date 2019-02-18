@@ -12,12 +12,14 @@ defined('ABSPATH') || die();
 global $donation_db_version;
 $donation_db_version = '1.25';
 
+const DONATION_TABLE_NAME = 'donation_to_odoo';
+
 function donation_db_install() {
 
     global $wpdb;
     global $donation_db_version;
 
-    $table_name = $wpdb->prefix . "donation_to_odoo";
+    $table_name = $wpdb->prefix . DONATION_TABLE_NAME;
 
     $charset_collate = $wpdb->get_charset_collate();
 
@@ -114,11 +116,17 @@ function guidv4()
 
 register_activation_hook(__FILE__, 'donation_db_install');
 
-class donationForm {
+class Compassion_Donation_Form {
 
     public static $alreadyEnqueued = false;
 
     private $step;
+
+    // Possible values for the odoo_status db field.
+    const SUBMITTED_TO_PF = 'submit_to_pf';
+    const RECEIVED_FROM_PF = 'received_from_pf';
+    const INVOICED = 'invoiced';
+    const VERIFICATION_ERROR = 'verification_error';
 
 
     public function __construct() {
@@ -152,7 +160,6 @@ class donationForm {
         wp_enqueue_style('donation-form', plugin_dir_url(__FILE__) . '/assets/stylesheets/screen.css', array(), null);
 
         //load scripts
-//        wp_enqueue_script('validation-js', plugin_dir_url(__FILE__) . 'bower_components/jquery-validation/dist/jquery.validate.min.js', array('jquery'));
         wp_enqueue_script('validation-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js', array('jquery'));
     }
 
@@ -204,11 +211,10 @@ class donationForm {
 //      include("templates/frontend/header.php");
         if ('donation' == $atts['form']) {
             include("templates/frontend/step-$this->step.php");
-        } else if ('csp' == $atts['form']){
-             include("templates/csp/step-$this->step.php");
-        }
-        else {
-             include("templates/cadeau/step-$this->step.php");
+        } elseif ('csp' == $atts['form']){
+            include("templates/csp/step-$this->step.php");
+        } else {
+            include("templates/cadeau/step-$this->step.php");
         }
 
         $content = ob_get_contents();
@@ -259,6 +265,7 @@ class donationForm {
         $final_amount = ($from_csp ? floatval(substr($session_data['fonds'], -2)) : $session_data['wert']);
 
         // Form data to send to postfinance (ogone)
+        $base_address = 'https://' . $_SERVER['HTTP_HOST'] . '/' . $my_current_lang;
         $form = array(
             'PSPID' => 'compassion_yp',
             'ORDERID' => trim($session_data['refenfant'] . '_' . $session_data['fonds']),
@@ -269,16 +276,16 @@ class donationForm {
             'EMAIL' => $session_data['email'],
             'COMPLUS' => $_SESSION['transaction'],
             'PARAMPLUS' => 'campaign_slug='.$_SESSION['campaign_slug'],
-'ACCEPTURL' => 'https://' . $_SERVER['HTTP_HOST'] . '/' . $my_current_lang .'/confirmation-don',
-           'DECLINEURL' => 'https://' . $_SERVER['HTTP_HOST'] . '/' .$my_current_lang.'/annulation-don',
-           'EXCEPTIONURL' => 'https://' . $_SERVER['HTTP_HOST'] . '/' .$my_current_lang.'/annulation-don',
-           'CANCELURL' => 'https://' . $_SERVER['HTTP_HOST'] . '/' .$my_current_lang.'/annulation-don',        );
+            'ACCEPTURL' =>  $base_address .'/confirmation-don',
+            'DECLINEURL' => $base_address .'/annulation-don',
+            'EXCEPTIONURL' => $base_address .'/annulation-don',
+            'CANCELURL' => $base_address .'/annulation-don',        );
 
         if($_SESSION['count_runs']==0) {
             $_SESSION['count_runs']++;
 
             $wpdb->insert(
-                    $wpdb->prefix . "donation_to_odoo",
+                    $wpdb->prefix . DONATION_TABLE_NAME,
                     array(
                         'time' => date('Y-m-d H:i:s'),
                         'ip_address' => $_SERVER['REMOTE_ADDR'],
@@ -301,7 +308,7 @@ class donationForm {
                         'partner_ref' => $this->cleanfordb($session_data['partner_ref']),
                         'transaction_id' => $transaction,
                         'session_id' => session_id(),
-                        'odoo_status' => 'submit_to_pf',
+                        'odoo_status' => self::SUBMITTED_TO_PF,
                     )
                 );
         }
@@ -368,8 +375,8 @@ class donationForm {
             $debug = false;
         }
 
-        $table_name = $wpdb->prefix . "donation_to_odoo";
         global $wpdb;
+        $table_name = $wpdb->prefix . DONATION_TABLE_NAME;
 
         if (isset($_GET['COMPLUS']) AND strlen($_GET['COMPLUS']) == 36) {
 
@@ -382,7 +389,7 @@ class donationForm {
                 $wpdb->prepare(
                     "SELECT time FROM " . $table_name . " "
                     . "WHERE transaction_id='%s' "
-                    . "AND odoo_status = 'submit_to_pf' "
+                    . "AND odoo_status = '" . self::SUBMITTED_FROM_PF . "'"
                     . "LIMIT 1", $complus));
 
             // return from Postfinance should occur within 5 minutes, otherwise we ignore the db update.
@@ -404,7 +411,7 @@ class donationForm {
                     'pf_brand' => $_GET['BRAND'],
                     'pf_raw' => json_encode($_GET),
                     'ip_address' => $_GET['IP'],
-                    'odoo_status' => 'received_from_pf'
+                    'odoo_status' => self::RECEIVED_FROM_PF
                 ), array('transaction_id' => $complus,
                         'odoo_complete_time' => NULL)
                 );
@@ -421,7 +428,7 @@ class donationForm {
 
             error_log('Looking for payments to export...');
 
-            $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE odoo_status = 'received_from_pf' ");
+            $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE odoo_status = '" . self::RECEIVED_FROM_PF . "'");
 
             if ($debug) {
                 print_r($results);
@@ -504,7 +511,7 @@ class donationForm {
                             if (!empty($invoice_id)) {
 
                                 $wpdb->update($table_name, array(
-                                    'odoo_status' => 'invoiced',
+                                    'odoo_status' => self::INVOICED,
                                     'odoo_invoice_id' => $invoice_id,
                                     'odoo_complete_time' => date('Y-m-d H:i:s'),
                                 ), array('transaction_id' => $result->transaction_id)
@@ -528,4 +535,4 @@ class donationForm {
     }
 }
 
-new donationForm();
+new Compassion_Donation_Form();
