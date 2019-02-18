@@ -357,6 +357,13 @@ class CompassionOdooConnector {
         ));
     }
 
+    /**
+     * Send the raw information about a donation to Odoo.
+     */
+    public function send_donation_info($donnation_infos) {
+        return $this->call_method('account.invoice', 'process_wp_confirmed_donation', array($donnation_infos));
+    }
+
      /**
      * Generic function to call any method on Odoo
      * @param $model   string: the name of odoo model

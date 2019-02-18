@@ -456,7 +456,7 @@ class Compassion_Donation_Form {
 
         if(isset($_GET) OR isset($_POST)) {
 
-            error_log('Looking for payments to export...');
+            error_log('Looking for donation(s) to export...');
 
             $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE odoo_status = '" . self::RECEIVED_FROM_PF . "'");
 
@@ -464,100 +464,35 @@ class Compassion_Donation_Form {
                 print_r($results);
             }
 
-            try {
-                if (sizeof($results) >= 1) {
+            if (sizeof($results) >= 1) {
 
-                    $odoo = new CompassionOdooConnector();
+                $odoo = new CompassionOdooConnector();
 
-                    foreach ($results as $result) {
+                foreach ($results as $result) {
 
-                        unset($search_partner);
-                        unset($partner);
-                        $partner_id = '';
+                    unset($invoice_id);
 
-                        try {
+                    try {
+                        $invoice_id = $odoo->send_donation_info($result);
 
-                            if ($result->email != '' AND strlen(trim($result->email))>=5 AND $result->child_id != '' AND strlen($result->child_id)>=8) {
-
-                                $search = $odoo->searchContractByPartnerEmailChildCode($result->email, $result->child_id);
-                                $partner_id = $search[0]['partner_id'][0];
-                            }
-
-                            if (empty($partner_id)) {
-                                error_log('Partner ID not found with email and child_id');
-                                throw new Exception('foo');
-                            }
-
-                        } catch (Exception $e) {
-
-                            if ($result->last_name != '' AND strlen(trim($result->last_name))>=3 AND $result->child_id != '' AND strlen($result->child_id)>=8) {
-
-                                $search = $odoo->searchContractByPartnerLastNameChildCode($result->last_name, $result->child_id);
-                                if (!empty($search)) {
-                                    $partner_id = $search[0]['partner_id'][0];
-
-                                    if(WP_DEBUG) {
-                                        echo ' ###'.$partner_id.'### ';
-                                    }
-                                }
-                            }
-
-                            if(empty($partner_id)) {
-
-                                error_log('Searching partner with email, last_name, first_name, ...');
-                                $search = $odoo->searchPartnerByEmailNameCity($result->email, $result->last_name, $result->first_name, $result->city);
-                                if(WP_DEBUG) {
-                                    print_r($search);
-                                }
-                                if (!empty($search)) {
-                                    $partner_id = $search[0];
-                                    if(WP_DEBUG) {
-                                        echo ' ##'.$partner_id.'## ';
-                                    }
-                                }
-                            }
-
-                            if(empty($partner_id)) {
-
-                                error_log('Let\'s create a partner');
-                                $partner_id = $odoo->createPartner(
-                                    $result->last_name, $result->first_name, $result->street, $result->zipcode, $result->city, $result->email, $result->country, $result->language);
-                            }
+                        if(WP_DEBUG) {
+                            print_r($invoice_id);
                         }
-
-                        if (!empty($partner_id)) {
-
-//                            $invoice_id = $odoo->createInvoiceWithObjects(
-//                                    $partner_id, date('Y-m-d H:i:s'), 'survie', '12.34', 'CHF', 'fund', $child_code, 'CreditCard', '1234567890', 'Mastercard');
-
-                            $invoice_id = $odoo->createInvoiceWithObjects(
-                                $partner_id, $result->orderid, $result->amount, $result->fund, $result->child_id,
-                                $result->pf_pm, $result->pf_payid, $result->pf_brand, $result->utm_source,
-                                $result->utm_medium, $result->utm_campaign);
-
-                            if(WP_DEBUG) {
-                                print_r($invoice_id);
-                            }
-                            if (!empty($invoice_id)) {
-
-                                $wpdb->update($table_name, array(
+                        if (!empty($invoice_id)) {
+                            $wpdb->update($table_name, array(
                                     'odoo_status' => self::INVOICED,
                                     'odoo_invoice_id' => $invoice_id,
                                     'odoo_complete_time' => date('Y-m-d H:i:s'),
                                 ), array('transaction_id' => $result->transaction_id)
-                                );
-                            }
+                            );
+                        } else {
+                            error_log("Donation '$result->transaction_id' did not receive an invoice_id.");
                         }
+                    } catch (Exception $e) {
+                        error_log("Error while exporting donation '$result->transaction_id' to odoo.");
                     }
                 }
-            } catch (Exception $ex) {
-
-                echo 'Error occured. Please try again. ';
-                if (WP_DEBUG) {
-                    print_r($ex);
-                }
             }
-
         }
 
         $content = ob_get_contents();
