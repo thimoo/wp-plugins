@@ -313,16 +313,7 @@ class Compassion_Donation_Form {
                 );
         }
 
-        //generate hash string
-        $arrayToHash = array();
-        foreach ($form as $key => $value) {
-            if ($value != '') {
-                $arrayToHash[] = strtoupper($key) . '=' . $value . POSTFINANCE_SHA_IN;
-            }
-        }
-        asort($arrayToHash);
-        $stringToHash = implode('', $arrayToHash);
-        $hashedString = sha1($stringToHash);
+        $sha_sign = self::compute_pf_sha_sign($form)
 
         ?>
         <html>
@@ -342,7 +333,7 @@ class Compassion_Donation_Form {
                     <input type="hidden" name="DECLINEURL" value="<?php echo $form['DECLINEURL']; ?>">
                     <input type="hidden" name="EXCEPTIONURL" value="<?php echo $form['EXCEPTIONURL']; ?>">
                     <input type="hidden" name="CANCELURL" value="<?php echo $form['CANCELURL']; ?>">
-                    <input type="hidden" name="SHASIGN" value="<?php echo $hashedString; ?>">
+                    <input type="hidden" name="SHASIGN" value="<?php echo $sha_sign; ?>">
                 </form>
                 <script type="text/javascript">
                     document.pf_for_contact_form.submit();
@@ -350,6 +341,62 @@ class Compassion_Donation_Form {
             </body>
         </html>
         <?php
+    }
+
+    private static function compute_pf_sha_sign($form) {
+        $arrayToHash = array();
+        foreach ($form as $key => $value) {
+            if ($value != '') {
+                $arrayToHash[] = strtoupper($key) . '=' . $value . POSTFINANCE_SHA_IN;
+            }
+        }
+        asort($arrayToHash);
+        $stringToHash = implode('', $arrayToHash);
+        $hashedString = sha1($stringToHash);
+
+        return $hashedString;
+    }
+
+    /**
+     * The sorted names of the parameters that can be sent by PostFinance after a successful payment.
+     * https://e-payment-postfinance.v-psp.com/~/media/kdb/integration%20guides/sha-out_params.ashx
+     */
+    const PF_CORRECT_PARAMETERS = array(
+        'AAVADDRESS',      'AAVCHECK',              'AAVMAIL',             'AAVNAME',
+        'AAVPHONE',        'AAVZIP',                'ACCEPTANCE',          'ALIAS',
+        'AMOUNT',          'BIC',                   'BIN',                 'BRAND',
+        'CARDNO',          'CCCTY',                 'CN',                  'COLLECTOR_BIC',
+        'COLLECTOR_IBAN',  'COMPLUS',               'CREATION_STATUS',     'CREDITDEBIT',
+        'CURRENCY',        'CVCCHECK',              'DCC_COMMPERCENTAGE',  'DCC_CONVAMOUNT',
+        'DCC_CONVCCY',     'DCC_EXCHRATE',          'DCC_EXCHRATESOURCE',  'DCC_EXCHRATETS',
+        'DCC_INDICATOR',   'DCC_MARGINPERCENTAGE',  'DCC_VALIDHOURS',      'DEVICEID',
+        'DIGESTCARDNO',    'ECI',                   'ED',                  'EMAIL',
+        'ENCCARDNO',       'FXAMOUNT',              'FXCURRENCY',          'IP',
+        'IPCTY',           'MANDATEID',             'MOBILEMODE',          'NBREMAILUSAGE',
+        'NBRIPUSAGE',      'NBRIPUSAGE_ALLTX',      'NBRUSAGE',            'NCERROR',
+        'ORDERID',         'PAYID',                 'PAYIDSUB',            'PAYMENT_REFERENCE',
+        'PM',              'SCO_CATEGORY',          'SCORING',             'SEQUENCETYPE',
+        'SIGNDATE',        'STATUS',                'SUBBRAND',            'SUBSCRIPTION_ID',
+        'TICKET',          'TRXDATE',               'VC'
+    );
+
+    public static function is_verified_pf_sha_sign($form) {
+        $upperized = array();
+        foreach ($form as $key => $value) {
+            $upperized[strtoupper($key)] = $value;
+        }
+
+        foreach (self::PF_CORRECT_PARAMETERS as $key) {
+            $value = $upperized[$key] ?? '';
+            if ($value != '') {
+                $arrayToHash[] = $key . '=' . $value . POSTFINANCE_SHA_OUT;
+            }
+        }
+
+        $stringToHash = implode('', $arrayToHash);
+        $hashedString = sha1($stringToHash);
+
+        return strtoupper($hashedString) == strtoupper($form['SHASIGN']);
     }
 
     /**
@@ -370,16 +417,27 @@ class Compassion_Donation_Form {
         global $wpdb;
         $table_name = $wpdb->prefix . DONATION_TABLE_NAME;
 
+        // Donation info has been received.
         if (isset($_GET['COMPLUS']) AND strlen($_GET['COMPLUS']) == 36) {
-
-            error_log('Process to export to Odoo is running now... ');
 
             $complus = filter_var($_GET['COMPLUS'], FILTER_SANITIZE_STRING);
 
-            if ($debug) {
-                echo 'continue donation process...';
+            // Check if donation infos truly comes from PostFinance
+            if(Compassion_Donation_Form::is_verified_pf_sha_sign($_GET)) {
+                error_log('Update transaction with parameters received from Postfinance');
+
+                $status = self::RECEIVED_FROM_PF;
+            } else {
+                // Two possibilities:
+                //   - An attempt at hacking with a falsified message.
+                //   - The POSTFINANCE_SHA_OUT constant does not match the real one.
+                // In case of the second possibility, keep the donation in the db but with a verification_error status.
+
+                error_log('Received falsified donation info. Please check that the POSTFINANCE_SHA_OUT constant is '
+                    . 'correct.');
+
+                $status = self::VERIFICATION_ERROR;
             }
-            error_log('Update transaction with parameters received from Postfinance');
 
             $wpdb->update($table_name, array(
                 'pf_pm' => $_GET['PM'],
@@ -387,7 +445,7 @@ class Compassion_Donation_Form {
                 'pf_brand' => $_GET['BRAND'],
                 'pf_raw' => json_encode($_GET),
                 'ip_address' => $_GET['IP'],
-                'odoo_status' => self::RECEIVED_FROM_PF
+                'odoo_status' => $status
             ), array('transaction_id' => $complus,
                     'odoo_complete_time' => NULL)
             );
