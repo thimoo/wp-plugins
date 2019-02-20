@@ -247,7 +247,7 @@ class Compassion_Donation_Form {
         $session_data = $data;
         $my_current_lang = apply_filters('wpml_current_language', NULL);
         if ($my_current_lang == 'fr') {
-            $lang = 'fr_FR';
+            $lang = 'fr_CH';
         } elseif ($my_current_lang == 'de') {
             $lang = 'de_DE';
         } elseif ($my_current_lang == 'it') {
