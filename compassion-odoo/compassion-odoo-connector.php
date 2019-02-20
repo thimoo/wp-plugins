@@ -20,16 +20,10 @@ class CompassionOdooConnector {
     private $odoo_db = ODOO_DB;
     private $odoo_user = ODOO_USER;
     private $odoo_password = ODOO_PASSWORD;
-    private $debug;
     private $uid;
     private $models;
     
     public function __construct() {
-        if ($_SERVER['HTTP_HOST'] == TEST_SERVER) {
-            $this->debug = true;
-        } else {
-            $this->debug = false;
-        }
         $common = ripcord::client($this->odoo_host . '/xmlrpc/2/common');
         $transport = new ripcord_Transport_Stream(array(
             'timeout' => 10 // in seconds.
@@ -361,6 +355,13 @@ class CompassionOdooConnector {
         return $this->models->execute_kw($this->odoo_db, $this->uid, $this->odoo_password, 'account.invoice', 'create_from_wordpress', array(
             $partner_id, $origin, $amount, $fund, $child_id, $pf_payid, $payment_mode, $utm_source, $utm_medium, $utm_campaign
         ));
+    }
+
+    /**
+     * Send the raw information about a donation to Odoo.
+     */
+    public function send_donation_info($donnation_infos) {
+        return $this->call_method('account.invoice', 'process_wp_confirmed_donation', array($donnation_infos));
     }
 
      /**
