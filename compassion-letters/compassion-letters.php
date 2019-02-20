@@ -151,7 +151,52 @@ class CompassionLetters
 
         $file = WP\Common::getFile('image', $this->uploads_folder);
 
+        $this->correct_image_orientation($file);
+
         return $file;
+    }
+
+    private function correct_image_orientation($image_path) {
+        if(function_exists('exif_read_data')) {
+            $exif = exif_read_data($image_path);
+            if($exif && isset($exif['Orientation'])) {
+                $orientation = $exif['Orientation'];
+                if($orientation != 1) {
+                    $img = imagecreatefromjpeg($image_path);
+                    $deg = 0;
+                    $flip = 0;
+                    switch ($orientation) {
+                        case 2:
+                            $flip = IMG_FLIP_HORIZONTAL;
+                            break;
+                        case 4:
+                            $flip = IMG_FLIP_HORIZONTAL;
+                        case 3:
+                            $deg = 180;
+                            break;
+                        case 5:
+                            $flip = IMG_FLIP_HORIZONTAL;
+                        case 6:
+                            $deg = 270;
+                            break;
+                        case 7:
+                            $flip = IMG_FLIP_HORIZONTAL;
+                        case 8:
+                            $deg = 90;
+                            break;
+                    }
+                    if($deg) {
+                        $img = imagerotate($img, $deg, 0);
+                    }
+                    if($flip) {
+                        imageflip($img, $flip);
+                    }
+                    imagejpeg($img, $image_path, 95);
+                }
+            }
+        } else {
+            error_log('The function exif_read_data does not exist !');
+        }
     }
 
     /**
