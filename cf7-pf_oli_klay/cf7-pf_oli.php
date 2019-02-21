@@ -12,12 +12,14 @@ defined('ABSPATH') || die();
 global $donation_db_version;
 $donation_db_version = '1.25';
 
+const DONATION_TABLE_NAME = 'donation_to_odoo';
+
 function donation_db_install() {
 
     global $wpdb;
     global $donation_db_version;
 
-    $table_name = $wpdb->prefix . "donation_to_odoo";
+    $table_name = $wpdb->prefix . DONATION_TABLE_NAME;
 
     $charset_collate = $wpdb->get_charset_collate();
 
@@ -114,11 +116,17 @@ function guidv4()
 
 register_activation_hook(__FILE__, 'donation_db_install');
 
-class donationForm {
+class Compassion_Donation_Form {
 
     public static $alreadyEnqueued = false;
 
     private $step;
+
+    // Possible values for the odoo_status db field.
+    const SUBMITTED_TO_PF = 'submit_to_pf';
+    const RECEIVED_FROM_PF = 'received_from_pf';
+    const INVOICED = 'invoiced';
+    const VERIFICATION_ERROR = 'verification_error';
 
 
     public function __construct() {
@@ -145,12 +153,13 @@ class donationForm {
 
         add_shortcode('donation-form', array($this, 'shortcode'));
 
+        add_shortcode('donation-confirmation', array($this, 'shortcode_confirmation'));
+
 
         // load styles
         wp_enqueue_style('donation-form', plugin_dir_url(__FILE__) . '/assets/stylesheets/screen.css', array(), null);
 
         //load scripts
-//        wp_enqueue_script('validation-js', plugin_dir_url(__FILE__) . 'bower_components/jquery-validation/dist/jquery.validate.min.js', array('jquery'));
         wp_enqueue_script('validation-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js', array('jquery'));
     }
 
@@ -202,11 +211,10 @@ class donationForm {
 //      include("templates/frontend/header.php");
         if ('donation' == $atts['form']) {
             include("templates/frontend/step-$this->step.php");
-        } else if ('csp' == $atts['form']){
-             include("templates/csp/step-$this->step.php");
-        }
-        else {
-             include("templates/cadeau/step-$this->step.php");
+        } elseif ('csp' == $atts['form']){
+            include("templates/csp/step-$this->step.php");
+        } else {
+            include("templates/cadeau/step-$this->step.php");
         }
 
         $content = ob_get_contents();
@@ -239,7 +247,7 @@ class donationForm {
         $session_data = $data;
         $my_current_lang = apply_filters('wpml_current_language', NULL);
         if ($my_current_lang == 'fr') {
-            $lang = 'fr_FR';
+            $lang = 'fr_CH';
         } elseif ($my_current_lang == 'de') {
             $lang = 'de_DE';
         } elseif ($my_current_lang == 'it') {
@@ -257,6 +265,7 @@ class donationForm {
         $final_amount = ($from_csp ? floatval(substr($session_data['fonds'], -2)) : $session_data['wert']);
 
         // Form data to send to postfinance (ogone)
+        $base_address = 'https://' . $_SERVER['HTTP_HOST'] . '/' . $my_current_lang;
         $form = array(
             'PSPID' => 'compassion_yp',
             'ORDERID' => trim($session_data['refenfant'] . '_' . $session_data['fonds']),
@@ -267,16 +276,16 @@ class donationForm {
             'EMAIL' => $session_data['email'],
             'COMPLUS' => $_SESSION['transaction'],
             'PARAMPLUS' => 'campaign_slug='.$_SESSION['campaign_slug'],
-'ACCEPTURL' => 'https://' . $_SERVER['HTTP_HOST'] . '/' . $my_current_lang .'/confirmation-don',
-           'DECLINEURL' => 'https://' . $_SERVER['HTTP_HOST'] . '/' .$my_current_lang.'/annulation-don',
-           'EXCEPTIONURL' => 'https://' . $_SERVER['HTTP_HOST'] . '/' .$my_current_lang.'/annulation-don',
-           'CANCELURL' => 'https://' . $_SERVER['HTTP_HOST'] . '/' .$my_current_lang.'/annulation-don',        );
+            'ACCEPTURL' =>  $base_address .'/confirmation-don',
+            'DECLINEURL' => $base_address .'/annulation-don',
+            'EXCEPTIONURL' => $base_address .'/annulation-don',
+            'CANCELURL' => $base_address .'/annulation-don',        );
 
         if($_SESSION['count_runs']==0) {
             $_SESSION['count_runs']++;
 
             $wpdb->insert(
-                    $wpdb->prefix . "donation_to_odoo",
+                    $wpdb->prefix . DONATION_TABLE_NAME,
                     array(
                         'time' => date('Y-m-d H:i:s'),
                         'ip_address' => $_SERVER['REMOTE_ADDR'],
@@ -299,21 +308,12 @@ class donationForm {
                         'partner_ref' => $this->cleanfordb($session_data['partner_ref']),
                         'transaction_id' => $transaction,
                         'session_id' => session_id(),
-                        'odoo_status' => 'submit_to_pf',
+                        'odoo_status' => self::SUBMITTED_TO_PF,
                     )
                 );
         }
 
-        //generate hash string
-        $arrayToHash = array();
-        foreach ($form as $key => $value) {
-            if ($value != '') {
-                $arrayToHash[] = strtoupper($key) . '=' . $value . 'stc0mp45510nypg3in2';
-            }
-        }
-        asort($arrayToHash);
-        $stringToHash = implode('', $arrayToHash);
-        $hashedString = sha1($stringToHash);
+        $sha_sign = self::compute_pf_sha_sign($form)
 
         ?>
         <html>
@@ -333,7 +333,7 @@ class donationForm {
                     <input type="hidden" name="DECLINEURL" value="<?php echo $form['DECLINEURL']; ?>">
                     <input type="hidden" name="EXCEPTIONURL" value="<?php echo $form['EXCEPTIONURL']; ?>">
                     <input type="hidden" name="CANCELURL" value="<?php echo $form['CANCELURL']; ?>">
-                    <input type="hidden" name="SHASIGN" value="<?php echo $hashedString; ?>">
+                    <input type="hidden" name="SHASIGN" value="<?php echo $sha_sign; ?>">
                 </form>
                 <script type="text/javascript">
                     document.pf_for_contact_form.submit();
@@ -343,6 +343,162 @@ class donationForm {
         <?php
     }
 
+    private static function compute_pf_sha_sign($form) {
+        $arrayToHash = array();
+        foreach ($form as $key => $value) {
+            if ($value != '') {
+                $arrayToHash[] = strtoupper($key) . '=' . $value . POSTFINANCE_SHA_IN;
+            }
+        }
+        asort($arrayToHash);
+        $stringToHash = implode('', $arrayToHash);
+        $hashedString = sha1($stringToHash);
+
+        return $hashedString;
+    }
+
+    /**
+     * The sorted names of the parameters that can be sent by PostFinance after a successful payment.
+     * https://e-payment-postfinance.v-psp.com/~/media/kdb/integration%20guides/sha-out_params.ashx
+     */
+    const PF_CORRECT_PARAMETERS = array(
+        'AAVADDRESS',      'AAVCHECK',              'AAVMAIL',             'AAVNAME',
+        'AAVPHONE',        'AAVZIP',                'ACCEPTANCE',          'ALIAS',
+        'AMOUNT',          'BIC',                   'BIN',                 'BRAND',
+        'CARDNO',          'CCCTY',                 'CN',                  'COLLECTOR_BIC',
+        'COLLECTOR_IBAN',  'COMPLUS',               'CREATION_STATUS',     'CREDITDEBIT',
+        'CURRENCY',        'CVCCHECK',              'DCC_COMMPERCENTAGE',  'DCC_CONVAMOUNT',
+        'DCC_CONVCCY',     'DCC_EXCHRATE',          'DCC_EXCHRATESOURCE',  'DCC_EXCHRATETS',
+        'DCC_INDICATOR',   'DCC_MARGINPERCENTAGE',  'DCC_VALIDHOURS',      'DEVICEID',
+        'DIGESTCARDNO',    'ECI',                   'ED',                  'EMAIL',
+        'ENCCARDNO',       'FXAMOUNT',              'FXCURRENCY',          'IP',
+        'IPCTY',           'MANDATEID',             'MOBILEMODE',          'NBREMAILUSAGE',
+        'NBRIPUSAGE',      'NBRIPUSAGE_ALLTX',      'NBRUSAGE',            'NCERROR',
+        'ORDERID',         'PAYID',                 'PAYIDSUB',            'PAYMENT_REFERENCE',
+        'PM',              'SCO_CATEGORY',          'SCORING',             'SEQUENCETYPE',
+        'SIGNDATE',        'STATUS',                'SUBBRAND',            'SUBSCRIPTION_ID',
+        'TICKET',          'TRXDATE',               'VC'
+    );
+
+    public static function is_verified_pf_sha_sign($form) {
+        $upperized = array();
+        foreach ($form as $key => $value) {
+            $upperized[strtoupper($key)] = $value;
+        }
+
+        foreach (self::PF_CORRECT_PARAMETERS as $key) {
+            $value = $upperized[$key] ?? '';
+            if ($value != '') {
+                $arrayToHash[] = $key . '=' . $value . POSTFINANCE_SHA_OUT;
+            }
+        }
+
+        $stringToHash = implode('', $arrayToHash);
+        $hashedString = sha1($stringToHash);
+
+        return strtoupper($hashedString) == strtoupper($form['SHASIGN']);
+    }
+
+    /**
+     * Generate shortcode for dealing with a PostFinance transaction.
+     *
+     * @return string
+     */
+    public function shortcode_confirmation($atts, $content) {
+
+        $atts = shortcode_atts(array(), $atts);
+
+        ob_start();
+
+        if (WP_DEBUG) {
+            print_r($_GET);
+        }
+
+        global $wpdb;
+        $table_name = $wpdb->prefix . DONATION_TABLE_NAME;
+
+        // Donation info has been received.
+        if (isset($_GET['COMPLUS']) AND strlen($_GET['COMPLUS']) == 36) {
+
+            $complus = filter_var($_GET['COMPLUS'], FILTER_SANITIZE_STRING);
+
+            // Check if donation infos truly comes from PostFinance
+            if(Compassion_Donation_Form::is_verified_pf_sha_sign($_GET)) {
+                error_log('Update transaction with parameters received from Postfinance');
+
+                $status = self::RECEIVED_FROM_PF;
+            } else {
+                // Two possibilities:
+                //   - An attempt at hacking with a falsified message.
+                //   - The POSTFINANCE_SHA_OUT constant does not match the real one.
+                // In case of the second possibility, keep the donation in the db but with a verification_error status.
+
+                error_log('Received falsified donation info. Please check that the POSTFINANCE_SHA_OUT constant is '
+                    . 'correct.');
+
+                $status = self::VERIFICATION_ERROR;
+            }
+
+            $wpdb->update($table_name, array(
+                'pf_pm' => $_GET['PM'],
+                'pf_payid' => $_GET['PAYID'],
+                'pf_brand' => $_GET['BRAND'],
+                'pf_raw' => json_encode($_GET),
+                'ip_address' => $_GET['IP'],
+                'odoo_status' => $status
+            ), array('transaction_id' => $complus,
+                    'odoo_complete_time' => NULL)
+            );
+
+            unset($_SESSION['transaction']);
+        }
+
+
+        if(isset($_GET) OR isset($_POST)) {
+
+            error_log('Looking for donation(s) to export...');
+
+            $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE odoo_status = '" . self::RECEIVED_FROM_PF . "'");
+
+            if (WP_DEBUG) {
+                print_r($results);
+            }
+
+            if (sizeof($results) >= 1) {
+
+                $odoo = new CompassionOdooConnector();
+
+                foreach ($results as $result) {
+
+                    unset($invoice_id);
+
+                    try {
+                        $invoice_id = $odoo->send_donation_info($result);
+
+                        if(WP_DEBUG) {
+                            print_r($invoice_id);
+                        }
+                        if (!empty($invoice_id)) {
+                            $wpdb->update($table_name, array(
+                                    'odoo_status' => self::INVOICED,
+                                    'odoo_invoice_id' => $invoice_id,
+                                    'odoo_complete_time' => date('Y-m-d H:i:s'),
+                                ), array('transaction_id' => $result->transaction_id)
+                            );
+                        } else {
+                            error_log("Donation '$result->transaction_id' did not receive an invoice_id.");
+                        }
+                    } catch (Exception $e) {
+                        error_log("Error while exporting donation '$result->transaction_id' to odoo.");
+                    }
+                }
+            }
+        }
+
+        $content = ob_get_contents();
+        ob_end_clean();
+        return $content;
+    }
 }
 
-new donationForm();
+new Compassion_Donation_Form();
