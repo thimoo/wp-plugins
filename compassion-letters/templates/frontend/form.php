@@ -121,7 +121,7 @@
                             <h5 class="text-uppercase"><?php _e('Vorlage 1 auswählen', 'compassion-letters'); ?></h5>
                         </div>
                                               </label>
-                        <button class="apercu hide-for-small-only" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
+                        <button class="apercu hide-for-small-only" type="button" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
 
                 </div>
                 <div class="medium-3 columns">
@@ -131,7 +131,7 @@
                             <h5 class="text-uppercase"><?php _e('Vorlage 2 auswählen', 'compassion-letters'); ?></h5>
                         </div>
                        </label>
-                       <button class="apercu hide-for-small-only" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
+                       <button class="apercu hide-for-small-only" type="button" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
                 </div>
                 <div class="medium-3 columns">
                     <input required data-msg="<?php _e('Vorlage erforderlich' , 'compassion-letters'); ?>" type="radio" id="template3" class="clear-pdf-on-change" value="school" name="template" /><label><?php _e('Vorlage 3', 'compassion-letters'); ?></label><label for="template3" class="template-label">
@@ -140,7 +140,7 @@
                             <h5 class="text-uppercase"><?php _e('Vorlage 3 auswählen', 'compassion-letters'); ?></h5>
                        </div>
                          </label>
-                        <button class="apercu hide-for-small-only" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
+                        <button class="apercu hide-for-small-only" type="button" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
 
                 </div>
 
@@ -151,7 +151,7 @@
                             <h5 class="text-uppercase"><?php _e('Vorlage 4 auswählen', 'compassion-letters'); ?></h5>
                          </div>
                         </label>
-                        <button class="apercu hide-for-small-only" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
+                        <button class="apercu hide-for-small-only" type="button" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
 
                 </div>
 
@@ -162,7 +162,7 @@
                             <h5 class="text-uppercase"><?php _e('Vorlage 5 auswählen', 'compassion-letters'); ?></h5>
                        </div>
                          </label>
-                        <button class="apercu hide-for-small-only" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
+                        <button class="apercu hide-for-small-only" type="button" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
 
                 </div>
 
@@ -173,7 +173,7 @@
                             <h5 class="text-uppercase"><?php _e('Vorlage 6 auswählen', 'compassion-letters'); ?></h5>
                         </div>
                          </label>
-                        <button class="apercu hide-for-small-only" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
+                        <button class="apercu hide-for-small-only" type="button" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
 
                 </div>
 
@@ -185,7 +185,7 @@
                         </div>
                          </label>
                         <!-- bouton qui ouvre la modal de prévisualisation du modèle de lettre -->
-                        <button class="apercu hide-for-small-only" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
+                        <button class="apercu hide-for-small-only" type="button" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
 
                 </div>
 
@@ -197,7 +197,7 @@
                         </div>
                          </label>
                           <!-- bouton qui ouvre la modal de prévisualisation du modèle de lettre -->
-                        <button class="apercu hide-for-small-only" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
+                        <button class="apercu hide-for-small-only" type="button" data-open="preview-modal2"><?php _e('Vorschau', 'compassion-letters'); ?></button>
 
                 </div>
 
