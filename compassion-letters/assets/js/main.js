@@ -39,6 +39,7 @@ jQuery(document).ready(function($) {
     var clearForm = function() {
         $('.compassion-letter-form')[0].reset();
         $(".iradio_flat-aero").removeClass('checked');
+        $(".icheckbox_flat-aero").removeClass('checked');
         $('.letter-count').text(0);
     };
 
