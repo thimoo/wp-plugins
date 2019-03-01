@@ -18,10 +18,11 @@ class PDFGenerator
      * Generate the pdf file
      *
      * @param $data
+     * @param $directory The path to the directory where the pdf will be generated
+     * @param $filename The name of the generated file (without extension)
      * @return string file-path
      */
-    public static function generate($data, $directory) {
-        $filename = time();
+    public static function generate($data, $directory, $filename) {
         $extension = '.pdf';
 
         $pdf = new FPDF();

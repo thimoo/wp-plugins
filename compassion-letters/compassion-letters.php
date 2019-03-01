@@ -41,7 +41,8 @@ class CompassionLetters
 
         $this->pdf_folder = trailingslashit(COMPASSION_LETTERS_FILES_DIR_PATH) . 'pdf/';
         $this->pdf_folder_url = trailingslashit(COMPASSION_LETTERS_FILES_DIR_URL) . 'pdf/';
-        $this->thumb_folder = trailingslashit(COMPASSION_LETTERS_FILES_DIR_PATH) . self::THUMB_FOLDER_NAME . '/';
+        $this->thumb_folder = trailingslashit(COMPASSION_LETTERS_FILES_DIR_PATH) . 'thumb/';
+        $this->thumb_folder_url = trailingslashit(COMPASSION_LETTERS_FILES_DIR_URL) . 'thumb/';
         $this->uploads_folder = trailingslashit(COMPASSION_LETTERS_FILES_DIR_PATH) . 'uploads';
         $this->uploads_folder_url = trailingslashit(COMPASSION_LETTERS_FILES_DIR_URL) . 'uploads/';
         $this->template_folder = trailingslashit(COMPASSION_LETTERS_PLUGIN_DIR_PATH) . 'templates/';
@@ -95,52 +96,29 @@ class CompassionLetters
     }
 
     public function cleanup_action() {
-
-        $timestamp = time() - 3600;
-
-        // pdf folder
-        $this->remove_old_files($this->pdf_folder, $timestamp);
-
-        // pdf folder
-        $this->remove_old_files($this->thumb_folder, $timestamp);
-
         // uploads
         if ($handle = opendir($this->uploads_folder)) {
             while (false !== ($file = readdir($handle))) {
                 if ('.' === $file) continue;
                 if ('..' === $file) continue;
 
-
                 unlink(trailingslashit($this->uploads_folder) . $file);
             }
             closedir($handle);
         }
-
     }
 
-    private function remove_old_files($directory, $timestamp) {
-
-        if ($handle = opendir($directory)) {
-            while (false !== ($file = readdir($handle))) {
-                if ('.' === $file) continue;
-                if ('..' === $file) continue;
-
-                $arr = explode("-", $file);
-                $filename = $arr[0];
-
-                $arr = explode("_", $filename);
-                $filename = $arr[0];
-
-                $arr = explode(".", $filename);
-                $filename = $arr[0];
-
-                if(intval($filename) < $timestamp) {
-                    unlink($directory . $file);
-                }
-            }
-            closedir($handle);
+    function get_pdf_name() {
+        if(!isset($_SESSION['letterid'])) {
+            $_SESSION['letterid'] = session_id() . time();
         }
+        return md5($_SESSION['letterid']);
+    }
 
+    function clean_pdf_files($pdf_path) {
+        unlink($this->pdf_folder . $pdf_path);
+        unlink($this->thumb_folder . basename($pdf_path, '.pdf') . '-0.jpg');
+        unlink($this->thumb_folder . basename($pdf_path, '.pdf') . '-1.jpg');
     }
 
     /**
@@ -179,14 +157,25 @@ class CompassionLetters
             $thumbnails = PDFGenerator::preview($this->pdf_folder . '/' . $form_data['pdf_path'], $this->thumb_folder, $thumb_filename);
 
         } else {
-            $pdf_path = PDFGenerator::generate($form_data, $this->pdf_folder);
+            $pdf_path = PDFGenerator::generate($form_data, $this->pdf_folder, $this->get_pdf_name());
             $thumbnails = PDFGenerator::preview($this->pdf_folder . $pdf_path, $this->thumb_folder, basename($pdf_path, ".pdf"));
         }
 
+        /*
+         * Count number of preview asked (to avoid caching)
+         */
+        if( !isset($_SESSION['preview_count']) ) {
+            $_SESSION['preview_count'] = 1;
+        } else {
+            $_SESSION['preview_count'] += 1;
+        }
+        foreach ($thumbnails as &$thumb) {
+            $thumb .= '?v=' . $_SESSION['preview_count'];
+        }
         echo json_encode([
             'thumbnails' => $thumbnails,
-            'thumbnailURL' => trailingslashit(COMPASSION_LETTERS_FILES_DIR_URL) . self::THUMB_FOLDER_NAME . '/',
-            'pdf' => $pdf_path
+            'thumbnailURL' => $this->thumb_folder_url,
+            'pdf' => $pdf_path,
         ]);
 
         wp_die();
@@ -227,10 +216,13 @@ class CompassionLetters
 
         $form_data['image'] = $this->handle_image_upload();
 
+        // Don't use the same filename for the next letter.
+        unset($_SESSION['letterid']);
+
         if( isset($form_data['pdf_path']) && !empty($form_data['pdf_path']) && file_exists($this->pdf_folder . '/' . $form_data['pdf_path']) ) {
             $pdf_path = $form_data['pdf_path'];
         } else {
-            $pdf_path = PDFGenerator::generate($form_data, $this->pdf_folder);
+            $pdf_path = PDFGenerator::generate($form_data, $this->pdf_folder, $this->get_pdf_name());
         }
         $file_to_attach = $this->pdf_folder_url . $pdf_path;
         $image_url = $this->uploads_folder_url . basename($form_data['image']);
@@ -264,6 +256,9 @@ class CompassionLetters
             // Disable Sendgrid Unsubscribe
             $email->addCustomHeader('X-SMTPAPI', '{"filters": {"subscriptiontrack" : {"settings" : {"enable" : 0}}}}');
             $email->Send();
+
+            $this->clean_pdf_files($pdf_path);
+
             wp_send_json_success([message => 'Letter imported']);
         }
 
