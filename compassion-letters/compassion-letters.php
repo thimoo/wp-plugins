@@ -40,8 +40,10 @@ class CompassionLetters
         add_action('init', [$this, '__init']);
 
         $this->pdf_folder = trailingslashit(COMPASSION_LETTERS_FILES_DIR_PATH) . 'pdf/';
+        $this->pdf_folder_url = trailingslashit(COMPASSION_LETTERS_FILES_DIR_URL) . 'pdf/';
         $this->thumb_folder = trailingslashit(COMPASSION_LETTERS_FILES_DIR_PATH) . self::THUMB_FOLDER_NAME . '/';
         $this->uploads_folder = trailingslashit(COMPASSION_LETTERS_FILES_DIR_PATH) . 'uploads';
+        $this->uploads_folder_url = trailingslashit(COMPASSION_LETTERS_FILES_DIR_URL) . 'uploads/';
         $this->template_folder = trailingslashit(COMPASSION_LETTERS_PLUGIN_DIR_PATH) . 'templates/';
 
         register_activation_hook(__FILE__, array($this, 'create_folder_structure'));
@@ -249,11 +251,12 @@ class CompassionLetters
         $form_data = $data;
 
         if ( $my_current_lang == "fr" ) {
-        include($this->template_folder . 'email/' . $template);}
-        elseif ( $my_current_lang == "de" ) {
-        include('templates/email_de/' . $template);}
-        elseif ( $my_current_lang == "it" ) {
-        include('templates/email_it/' . $template);}
+            include($this->template_folder . 'email/' . $template);
+        } elseif ( $my_current_lang == "de" ) {
+            include('templates/email_de/' . $template);
+        } elseif ( $my_current_lang == "it" ) {
+            include('templates/email_it/' . $template);
+        }
         $content = ob_get_contents();
         ob_end_clean();
         return $content;
@@ -274,11 +277,12 @@ class CompassionLetters
         } else {
             $pdf_path = PDFGenerator::generate($form_data, $this->pdf_folder);
         }
-        $file_to_attach = $this->pdf_folder . $pdf_path;
+        $file_to_attach = $this->pdf_folder_url . $pdf_path;
+        $image_url = $this->uploads_folder_url . basename($form_data['image']);
 
         if ($this->_sentToOdoo(
             $form_data['referenznummer'], $form_data['patenkind'], $form_data['message'],
-            $form_data['template'], $file_to_attach, $form_data['image'],
+            $form_data['template'], $file_to_attach, $image_url,
             $form_data['name'], $form_data['email']
             )
         ) {
@@ -351,10 +355,10 @@ class CompassionLetters
     /**
      * Functions for XMLRPC sending to Odoo
      */
-    private function _sentToOdoo($sponsor_number, $child_number, $letter_text, $template_name, $file_path, $attachment, $name, $email)
+    private function _sentToOdoo($sponsor_number, $child_number, $letter_text, $template_name, $file_url, $attachment_url, $name, $email)
     {
         $letter_text = str_replace("\\", "", $letter_text);
-        $ext = substr($attachment, -3, 3);
+        $ext = substr($attachment_url, -3, 3);
         if ($ext == "jpeg") {
             $ext = "jpg";
         }
@@ -375,7 +379,7 @@ class CompassionLetters
         }
         $res = $odoo->call_method(
             'import.letters.history', 'import_web_letter',
-            array($child_number, $sponsor_number, $name, $email, $letter_text, $template_name, $file_path, $attachment, $ext, $utm_source, $utm_medium, $utm_campaign));
+            array($child_number, $sponsor_number, $name, $email, $letter_text, $template_name, $file_url, $attachment_url, $ext, $utm_source, $utm_medium, $utm_campaign));
         if ($res and $res->faultString) {
             return false;
         }
