@@ -188,4 +188,20 @@ class CompassionChildren
 
         return $post_states;
     }
+
+    /**
+     * Get the id of a random child post.
+     */
+    public static function get_random_child() {
+        $args = array(
+            'post_type'			=>	'child',
+            'posts_per_page'	=>	'1',
+            'orderby'			=>	'rand'
+        );
+        $child_posts = get_posts($args);
+        foreach($child_posts as $post) {
+            return $post->ID;
+        }
+        return false;
+    }
 }
