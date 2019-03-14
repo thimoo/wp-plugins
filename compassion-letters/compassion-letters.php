@@ -125,7 +125,7 @@ class CompassionLetters
      * @return bool|null|string
      */
     private function handle_image_upload() {
-        if(empty($_FILES)) return null;
+        if(empty($_FILES) || isset($_FILES['image']) && $_FILES['image']['name'] == '') return null;
 
         $file = WP\Common::getFile('image', $this->uploads_folder);
 
@@ -268,7 +268,11 @@ class CompassionLetters
             $pdf_path = PDFGenerator::generate($form_data, $this->pdf_folder, $this->get_pdf_name());
         }
         $file_to_attach = $this->pdf_folder_url . $pdf_path;
-        $image_url = $this->uploads_folder_url . basename($form_data['image']);
+        if ($form_data['image'] !== NULL) {
+            $image_url = $this->uploads_folder_url . basename($form_data['image']);
+        } else {
+            $image_url = false;
+        }
 
         if ($this->_sentToOdoo(
             $form_data['referenznummer'], $form_data['patenkind'], $form_data['message'],

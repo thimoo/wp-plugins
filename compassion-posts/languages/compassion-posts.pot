@@ -1,0 +1,440 @@
+# Copyright (C) 2019 Christopher Meier <dev@c-meier.ch>
+# This file is distributed under the same license as the Compassion Posts plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Compassion Posts 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/compassion-posts\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-03-11T12:40:33+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.1.0\n"
+"X-Domain: compassion-posts\n"
+
+#. Plugin Name of the plugin
+msgid "Compassion Posts"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/CompassionCH/wp-plugins/tree/master/compassion-posts"
+msgstr ""
+
+#. Description of the plugin
+msgid "Create the different types of post for CompassionCH."
+msgstr ""
+
+#. Author of the plugin
+msgid "Christopher Meier <dev@c-meier.ch>"
+msgstr ""
+
+#: compassion-locations.php:24
+msgctxt "Post Type General Name"
+msgid "Standorte"
+msgstr ""
+
+#: compassion-locations.php:25
+msgctxt "Post Type Singular Name"
+msgid "Standort"
+msgstr ""
+
+#: compassion-locations.php:26
+#: compassion-locations.php:27
+#: compassion-locations.php:28
+#: compassion-locations.php:51
+msgid "Standorte"
+msgstr ""
+
+#: compassion-locations.php:29
+#: compassion-child.php:29
+#: compassion-downloads.php:28
+#: compassion-agendas.php:67
+msgid "Parent:"
+msgstr ""
+
+#: compassion-locations.php:30
+msgid "Alle Standorte"
+msgstr ""
+
+#: compassion-locations.php:31
+msgid "Neuen Standort eintragen"
+msgstr ""
+
+#: compassion-locations.php:32
+#: compassion-child.php:32
+#: compassion-downloads.php:31
+msgid "Neu"
+msgstr ""
+
+#: compassion-locations.php:33
+msgid "Neuer Standort"
+msgstr ""
+
+#: compassion-locations.php:34
+msgid "Standort bearbeiten"
+msgstr ""
+
+#: compassion-locations.php:35
+msgid "Standort aktualisieren"
+msgstr ""
+
+#: compassion-locations.php:36
+msgid "Standort ansehen"
+msgstr ""
+
+#: compassion-locations.php:37
+msgid "Standort suchen"
+msgstr ""
+
+#: compassion-locations.php:38
+#: compassion-child.php:38
+#: compassion-downloads.php:37
+#: compassion-agendas.php:76
+msgid "Nicht gefunden"
+msgstr ""
+
+#: compassion-locations.php:39
+#: compassion-child.php:39
+#: compassion-downloads.php:38
+#: compassion-agendas.php:77
+msgid "Nicht im Papierkorb gefunden"
+msgstr ""
+
+#: compassion-locations.php:40
+#: compassion-child.php:40
+msgid "Featured Image"
+msgstr ""
+
+#: compassion-locations.php:41
+#: compassion-child.php:41
+msgid "Set featured image"
+msgstr ""
+
+#: compassion-locations.php:42
+#: compassion-child.php:42
+msgid "Remove featured image"
+msgstr ""
+
+#: compassion-locations.php:43
+#: compassion-child.php:43
+msgid "Use as featured image"
+msgstr ""
+
+#: compassion-locations.php:44
+#: compassion-child.php:44
+msgid "Insert into item"
+msgstr ""
+
+#: compassion-locations.php:45
+#: compassion-child.php:45
+msgid "Uploaded to this item"
+msgstr ""
+
+#: compassion-locations.php:46
+#: compassion-child.php:46
+msgid "Items list"
+msgstr ""
+
+#: compassion-locations.php:47
+#: compassion-child.php:47
+msgid "Items list navigation"
+msgstr ""
+
+#: compassion-locations.php:48
+#: compassion-child.php:48
+msgid "Filter items list"
+msgstr ""
+
+#: compassion-locations.php:80
+msgid "Standort-Kategorie"
+msgstr ""
+
+#: compassion-locations.php:96
+msgid "Standort-Gruppe"
+msgstr ""
+
+#: compassion-locations.php:113
+#: compassion-downloads.php:85
+msgid "Zusätzliche Angaben"
+msgstr ""
+
+#: compassion-locations.php:118
+msgid "Text der Verlinkung"
+msgstr ""
+
+#: compassion-locations.php:124
+msgid "Pixel von oben"
+msgstr ""
+
+#: compassion-locations.php:126
+msgid "Bei Zentren handelt es sich um die Anzahl der Pixel von oben"
+msgstr ""
+
+#: compassion-locations.php:131
+msgid "Pixel von links"
+msgstr ""
+
+#: compassion-locations.php:133
+msgid "Bei Zentren handelt es sich um die Anzahl der Pixel von links"
+msgstr ""
+
+#: compassion-locations.php:138
+msgid "Längengrad"
+msgstr ""
+
+#: compassion-locations.php:144
+msgid "Breitengrad"
+msgstr ""
+
+#: compassion-locations.php:150
+msgid "Foto"
+msgstr ""
+
+#: compassion-locations.php:156
+msgid "Titel"
+msgstr ""
+
+#: compassion-locations.php:158
+msgid "z.B. für Philippinen: in den Philippinen"
+msgstr ""
+
+#: compassion-locations.php:163
+msgid "Über das Land"
+msgstr ""
+
+#: compassion-locations.php:169
+msgid "Ländercode"
+msgstr ""
+
+#: compassion-locations.php:175
+msgid "Externe URL"
+msgstr ""
+
+#: compassion-child.php:24
+msgctxt "Post Type General Name"
+msgid "Kind"
+msgstr ""
+
+#: compassion-child.php:25
+msgctxt "Post Type Singular Name"
+msgid "Kind"
+msgstr ""
+
+#: compassion-child.php:26
+#: compassion-child.php:27
+#: compassion-child.php:28
+#: compassion-child.php:51
+msgid "Kinder"
+msgstr ""
+
+#: compassion-child.php:30
+msgid "Alle Kinder"
+msgstr ""
+
+#: compassion-child.php:31
+msgid "Neues Kind eintragen"
+msgstr ""
+
+#: compassion-child.php:33
+msgid "Neues Kind"
+msgstr ""
+
+#: compassion-child.php:34
+msgid "Kind bearbeiten"
+msgstr ""
+
+#: compassion-child.php:35
+msgid "Kind aktualisieren"
+msgstr ""
+
+#: compassion-child.php:36
+msgid "Kind ansehen"
+msgstr ""
+
+#: compassion-child.php:37
+msgid "Kind suchen"
+msgstr ""
+
+#: compassion-child.php:80
+msgid "Land wählen"
+msgstr ""
+
+#: compassion-child.php:97
+msgid "Name"
+msgstr ""
+
+#: compassion-child.php:103
+msgid "Kurzbeschreibung"
+msgstr ""
+
+#: compassion-child.php:109
+msgid "Geburtstag"
+msgstr ""
+
+#: compassion-child.php:115
+msgid "Geschlecht"
+msgstr ""
+
+#: compassion-child.php:125
+msgid "Startdatum"
+msgstr ""
+
+#: compassion-child.php:131
+msgid "Beschreibung"
+msgstr ""
+
+#: compassion-child.php:137
+msgid "Über das Projekt"
+msgstr ""
+
+#: compassion-child.php:143
+msgid "Nummer"
+msgstr ""
+
+#: compassion-child.php:149
+msgid "Land"
+msgstr ""
+
+#: compassion-child.php:156
+msgid "Portrait"
+msgstr ""
+
+#: compassion-child.php:186
+msgid "Patenschaftsabschluss"
+msgstr ""
+
+#: compassion-downloads.php:23
+msgctxt "Post Type General Name"
+msgid "Downloads"
+msgstr ""
+
+#: compassion-downloads.php:24
+msgctxt "Post Type Singular Name"
+msgid "Download"
+msgstr ""
+
+#: compassion-downloads.php:25
+#: compassion-downloads.php:26
+#: compassion-downloads.php:27
+#: compassion-downloads.php:41
+msgid "Downloads"
+msgstr ""
+
+#: compassion-downloads.php:29
+msgid "Alle Downloads"
+msgstr ""
+
+#: compassion-downloads.php:30
+msgid "Neuen Download eintragen"
+msgstr ""
+
+#: compassion-downloads.php:32
+msgid "Neuen Download"
+msgstr ""
+
+#: compassion-downloads.php:33
+msgid "Download bearbeiten"
+msgstr ""
+
+#: compassion-downloads.php:34
+msgid "Download aktualisieren"
+msgstr ""
+
+#: compassion-downloads.php:35
+msgid "Download ansehen"
+msgstr ""
+
+#: compassion-downloads.php:36
+msgid "Download suchen"
+msgstr ""
+
+#: compassion-downloads.php:68
+msgid "Kategorien"
+msgstr ""
+
+#: compassion-downloads.php:90
+msgid "Bestellen"
+msgstr ""
+
+#: compassion-downloads.php:91
+msgid "Download für Bestellungen freigeben"
+msgstr ""
+
+#: compassion-downloads.php:97
+msgid "Button-Text"
+msgstr ""
+
+#: compassion-downloads.php:103
+msgid "Button-Link"
+msgstr ""
+
+#: compassion-agendas.php:52
+msgid "Expired"
+msgstr ""
+
+#: compassion-agendas.php:62
+msgctxt "Post Type General Name"
+msgid "Agendas"
+msgstr ""
+
+#: compassion-agendas.php:63
+msgctxt "Post Type Singular Name"
+msgid "Agenda"
+msgstr ""
+
+#: compassion-agendas.php:64
+#: compassion-agendas.php:65
+#: compassion-agendas.php:66
+#: compassion-agendas.php:80
+msgid "Agendas"
+msgstr ""
+
+#: compassion-agendas.php:68
+msgid "Tous les agendas"
+msgstr ""
+
+#: compassion-agendas.php:69
+msgid "Ajouter une nouvelle date"
+msgstr ""
+
+#: compassion-agendas.php:70
+msgid "Nouveau"
+msgstr ""
+
+#: compassion-agendas.php:71
+msgid "Nouvelle date"
+msgstr ""
+
+#: compassion-agendas.php:72
+msgid "Modifier la date"
+msgstr ""
+
+#: compassion-agendas.php:73
+msgid "Mettre à jour la date"
+msgstr ""
+
+#: compassion-agendas.php:74
+msgid "Voir la date"
+msgstr ""
+
+#: compassion-agendas.php:75
+msgid "Cherche une date"
+msgstr ""
+
+#: compassion-agendas.php:108
+msgid "categorie"
+msgstr ""
+
+#: compassion-agendas.php:160
+msgid "date"
+msgstr ""
+
+#: compassion-agendas.php:164
+msgid "Datum hinzufügen"
+msgstr ""
+
+#: compassion-agendas.php:170
+msgid "Enddatum"
+msgstr ""
