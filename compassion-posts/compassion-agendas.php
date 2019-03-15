@@ -25,6 +25,7 @@ class CompassionAgendas
      */
     public function activation() {
         $this->schedule_crons();
+        $this->update_meta_date_format();
     }
 
     /**
@@ -119,10 +120,10 @@ class CompassionAgendas
         );
         $agenda_posts = get_posts($args);
         foreach($agenda_posts as $post) {
-            $start_date = get_post_meta( $post->ID, '_agenda_date_agenda', true );
+            $start_date = get_post_meta( $post->ID, '_agenda_start_date', true );
 
             if( ! empty( $start_date ) ) {
-                $end_date = get_post_meta( $post->ID, '_agenda_date_agenda_fin', true );
+                $end_date = get_post_meta( $post->ID, '_agenda_end_date', true );
                 if(empty($end_date)) {
                     $expires = $start_date;
                 } else {
@@ -158,15 +159,65 @@ class CompassionAgendas
             'object_types'  => array( 'agendas' ),
         ) );
         $cmb->add_field( array(
-            'name'      => __( 'Datum hinzufügen', 'compassion-posts' ),
-            'id'        => $prefix . 'date_agenda',
-            'type'      => 'text_date',
+            'name'          => __( 'Datum hinzufügen', 'compassion-posts' ),
+            'id'            => $prefix . 'start_date',
+            'type'          => 'text_date',
+            'date_format'   => 'Y-m-d',
+            'attributes'    => array(
+                'required'      => 'required',
+            ),
         ) );
 
         $cmb->add_field( array(
-            'name'      => __( 'Enddatum', 'compassion-posts' ),
-            'id'        => $prefix . 'date_agenda_fin',
-            'type'      => 'text_date',
+            'name'          => __( 'Enddatum', 'compassion-posts' ),
+            'id'            => $prefix . 'end_date',
+            'type'          => 'text_date',
+            'date_format'   => 'Y-m-d',
         ) );
+    }
+
+    /**
+     * Called on activation to change the format of the start date and end date from "mm/dd/yyyy" to "yyyy-mm-dd".
+     *
+     * This allows the casting of the field as a MySQL Date and therefore the ordering of the agenda post by the
+     * start date or the end date.
+     */
+    public function update_meta_date_format() {
+        // Check if the update must be done.
+        $args = array(
+            'fields'        => 'ids',
+            'post_status'   => 'any',
+            'post_type'     => 'agendas',
+            'meta_query'    => array(
+                array(
+                    'key'       => '_agenda_date_agenda',
+                    'compare'   => 'EXISTS',
+                ),
+                array(
+                    'key'       => '_agenda_date_agenda_fin',
+                    'compare'   => 'EXISTS',
+                ),
+            ),
+            'numberposts'   => -1,
+            'posts_per_page'   => -1
+        );
+
+        $agenda_posts = get_posts($args);
+        foreach($agenda_posts as $postid) {
+            $start_date = get_post_meta( $postid, '_agenda_date_agenda', true );
+            if($start_date) {
+                $myDateTime = DateTime::createFromFormat('m/d/Y', $start_date);
+                $newDateString = $myDateTime->format('Y-m-d');
+                update_post_meta($postid, '_agenda_start_date', $newDateString);
+                delete_post_meta($postid, '_agenda_date_agenda');
+            }
+            $end_date = get_post_meta( $postid, '_agenda_date_agenda_fin', true );
+            if($end_date) {
+                $myDateTime = DateTime::createFromFormat('m/d/Y', $start_date);
+                $newDateString = $myDateTime->format('Y-m-d');
+                update_post_meta($postid, '_agenda_end_date', $newDateString);
+                delete_post_meta($postid, '_agenda_date_agenda_fin');
+            }
+        }
     }
 }
