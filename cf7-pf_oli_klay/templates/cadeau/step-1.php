@@ -167,7 +167,7 @@ jQuery( document ).ready(function($) {
 
             <div class="form-action">
 <!--                 <a href="?step=" class="button button-beige button-small"><?php _e('Zurück', 'child-sponsor-lang'); ?></a> -->
-                <input type="submit" class="button button-blue button-small" value="<?php _e('Jetzt Schenken', 'donation-form'); ?>"/>
+                <input type="submit" class="button button-blue button-small" value="<?php _e('Jetzt schenken', 'donation-form'); ?>"/>
             </div>
         </form>
     </div>
