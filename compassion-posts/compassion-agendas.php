@@ -8,9 +8,6 @@ class CompassionAgendas
         add_action('init', array($this, 'init'), 0);
         add_action('daily_expiration_check', array($this, 'cron_expire_old_agenda_events'));
         add_filter('cmb2_admin_init', array($this, 'agenda_settings'));
-
-        register_activation_hook(__FILE__, array($this, 'activation'));
-        register_deactivation_hook(__FILE__, array($this, 'deactivation'));
     }
 
     /**

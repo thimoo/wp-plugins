@@ -24,11 +24,38 @@ class CompassionPosts
 
     public function __construct()
     {
-        $this->agendas_post = new CompassionAgendas();
-        $this->downloads_post = new CompassionDownloads();
-        $this->locations_post = new CompassionLocations();
-        $this->children_post = new CompassionChildren();
+        $this->post_types = array(
+            'agendas' => new CompassionAgendas(),
+            'downloads' => new CompassionDownloads(),
+            'locations' => new CompassionLocations(),
+            'children' => new CompassionChildren(),
+        );
         add_action('plugins_loaded', array($this, 'loaded'));
+
+        register_activation_hook(__FILE__, array($this, 'activation'));
+        register_deactivation_hook(__FILE__, array($this, 'deactivation'));
+    }
+
+    /**
+     * Called on plugin activation.
+     */
+    public function activation() {
+        foreach ($this->post_types as $type => $obj) {
+            if(method_exists($obj, 'activation')) {
+                $obj->activation();
+            }
+        }
+    }
+
+    /**
+     * Called on plugin deactivation.
+     */
+    public function deactivation() {
+        foreach ($this->post_types as $type => $obj) {
+            if(method_exists($obj, 'deactivation')) {
+                $obj->deactivation();
+            }
+        }
     }
 
     /**
