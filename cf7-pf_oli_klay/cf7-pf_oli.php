@@ -410,10 +410,6 @@ class Compassion_Donation_Form {
 
         ob_start();
 
-        if (WP_DEBUG) {
-            print_r($_GET);
-        }
-
         global $wpdb;
         $table_name = $wpdb->prefix . DONATION_TABLE_NAME;
 
@@ -459,11 +455,6 @@ class Compassion_Donation_Form {
             error_log('Looking for donation(s) to export...');
 
             $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE odoo_status = '" . self::RECEIVED_FROM_PF . "'");
-
-            if (WP_DEBUG) {
-                print_r($results);
-            }
-
             if (sizeof($results) >= 1) {
 
                 $odoo = new CompassionOdooConnector();
@@ -474,10 +465,6 @@ class Compassion_Donation_Form {
 
                     try {
                         $invoice_id = $odoo->send_donation_info($result);
-
-                        if(WP_DEBUG) {
-                            print_r($invoice_id);
-                        }
                         if (!empty($invoice_id)) {
                             $wpdb->update($table_name, array(
                                     'odoo_status' => self::INVOICED,
