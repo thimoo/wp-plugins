@@ -213,7 +213,7 @@ class CompassionAgendas
             }
             $end_date = get_post_meta( $postid, '_agenda_date_agenda_fin', true );
             if($end_date) {
-                $myDateTime = DateTime::createFromFormat('m/d/Y', $start_date);
+                $myDateTime = DateTime::createFromFormat('m/d/Y', $end_date);
                 $newDateString = $myDateTime->format('Y-m-d');
                 update_post_meta($postid, '_agenda_end_date', $newDateString);
                 delete_post_meta($postid, '_agenda_date_agenda_fin');
