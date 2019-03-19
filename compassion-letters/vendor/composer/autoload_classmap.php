@@ -18,9 +18,11 @@ return array(
     'PHPMailerOAuthGoogle' => $vendorDir . '/phpmailer/phpmailer/class.phpmaileroauthgoogle.php',
     'POP3' => $vendorDir . '/phpmailer/phpmailer/class.pop3.php',
     'SMTP' => $vendorDir . '/phpmailer/phpmailer/class.smtp.php',
+    'TTFontFile' => $vendorDir . '/setasign/tfpdf/font/unifont/ttfonts.php',
     'fpdi_bridge' => $vendorDir . '/setasign/fpdi-fpdf/fpdi_bridge.php',
     'fpdi_pdf_parser' => $vendorDir . '/setasign/fpdi/fpdi_pdf_parser.php',
     'ntlm_sasl_client_class' => $vendorDir . '/phpmailer/phpmailer/extras/ntlm_sasl_client.php',
     'pdf_context' => $vendorDir . '/setasign/fpdi/pdf_context.php',
     'phpmailerException' => $vendorDir . '/phpmailer/phpmailer/class.phpmailer.php',
+    'tFPDF' => $vendorDir . '/setasign/tfpdf/tfpdf.php',
 );

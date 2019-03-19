@@ -25,22 +25,23 @@ class PDFGenerator
     public static function generate($data, $directory, $filename) {
         $extension = '.pdf';
 
-        $pdf = new FPDF();
+        $pdf = new tFPDF();
 
         $pdf->AddPage();
 
         $pdf->Image(COMPASSION_LETTERS_PLUGIN_DIR_PATH . '/assets/images/' . $data['template'] . '.jpg', 0, 0, 210, 297);
 
-        $pdf->SetFont('Arial','',10);
+        $pdf->AddFont('Roboto','','Roboto-Regular.ttf',true);
+        $pdf->SetFont('Roboto','',10);
 
         /*
          * Add box with user info
          */
 		$pdf->SetFillColor(255, 255, 255);
         $pdf->rect(100, 0, 75, 30, 'F');
-        $user_info = "\nRef. enfant:\t" . $data['patenkind'] . "\nRef. parrain:\t" . $data['referenznummer'] ;
+        $user_info = "\nRef. enfant: " . $data['patenkind'] . "\nRef. parrain: " . $data['referenznummer'] ;
         $pdf->SetXY(100, 0);
-        $pdf->MultiCell(73, 4, utf8_decode($user_info),0,'R',false);
+        $pdf->MultiCell(73, 4, $user_info,0,'R',false);
 
         /*
          * Coordinates transparent box
@@ -56,15 +57,15 @@ class PDFGenerator
 
            $pdf->rect(100, 0, 75, 36, 'F');
              $pdf->SetXY(100, 0);
-            $pdf->MultiCell(73, 6, utf8_decode($user_info),0,'R',false);
+            $pdf->MultiCell(73, 6, $user_info,0,'R',false);
 			$pdf->SetXY(12, 55);
-	          $pdf->MultiCell(88, 5, utf8_decode(str_replace("\\", "", $data['message'])));
+	          $pdf->MultiCell(88, 5, str_replace("\\", "", $data['message']));
 
 
 			$pdf->AddPage();
 			$pdf->Image(COMPASSION_LETTERS_PLUGIN_DIR_PATH . '/assets/images/' . $data['template'] . '.jpg', 0, 0, 210, 297);
 			$pdf->SetXY(100, 0);
-            $pdf->MultiCell(73, 6, utf8_decode($user_info),0,'R',false);
+            $pdf->MultiCell(73, 6, $user_info,0,'R',false);
             $pdf->SetXY(12, 55);
             $pdf->Image($data['image'], 12, 55, 88, 0);
 
@@ -76,9 +77,9 @@ class PDFGenerator
 	        $pdf->Image(COMPASSION_LETTERS_PLUGIN_DIR_PATH . '/assets/images/' . $data['template'] . '.jpg', 0, 0, 210, 297);
 			$pdf->rect(100, 0, 75, 36, 'F');
              $pdf->SetXY(100, 0);
-            $pdf->MultiCell(73, 6, utf8_decode($user_info),0,'R',false);
+            $pdf->MultiCell(73, 6, $user_info,0,'R',false);
 	        $pdf->SetXY(12, 55);
-	        $pdf->MultiCell(88, 5, utf8_decode(str_replace("\\", "", $data['message'])));
+	        $pdf->MultiCell(88, 5, str_replace("\\", "", $data['message']));
 	        $pdf->AddPage();
         }
     
