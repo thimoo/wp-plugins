@@ -10,12 +10,10 @@
         {"type":"composer","url":"https://composer.giftgruen.com"}
     ],
     "require": {
-        "setasign/fpdf": "1.8.1",
         "giftgruen/wp-helper": "^1.0.2",
-        "setasign/fpdi": "^1.6",
-        "setasign/fpdi-fpdf": "1.6.1",
         "phpmailer/phpmailer": "^5.2",
         "darkaonline/ripcord": "*",
-        "detectlanguage/detectlanguage": "*"
+        "detectlanguage/detectlanguage": "*",
+        "setasign/tfpdf": "1.25"
     }
 }
