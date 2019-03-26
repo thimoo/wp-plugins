@@ -79,7 +79,7 @@ msgid "ie : BO012301234"
 msgstr "p. ex : BO012301234"
 
 #: templates/cadeau/step-1.php:170
-msgid "Jetzt Schenken"
+msgid "Jetzt schenken"
 msgstr "Offrir maintenant"
 
 #: templates/cadeau/step-1.php:179 templates/csp/step-1.php:246
@@ -158,7 +158,7 @@ msgstr ""
 "suivants."
 
 #: templates/csp/step-1.php:232 templates/frontend/step-1.php:162
-msgid "Jetzt Spenden"
+msgid "Jetzt spenden"
 msgstr "Envoyer le don"
 
 #: templates/csp/step-1.php:250

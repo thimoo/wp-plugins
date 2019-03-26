@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="form-action">
-                    <input type="submit" class="button button-blue button-small" value="<?php _e('Jetzt Schenken', 'donation-form'); ?>"/>
+                    <input type="submit" class="button button-blue button-small" value="<?php _e('Jetzt spenden', 'donation-form'); ?>"/>
                 </div>
             </form>
         </div>
