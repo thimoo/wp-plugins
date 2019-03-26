@@ -9,7 +9,6 @@
  */
 header("Content-type: image/svg+xml; charset: UTF-8");
 ?>
-<?xml version="1.0" encoding="UTF-8"?>
 <svg version="1.2" viewBox="0 0 601.10547 306.14454" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
     <metadata>
         <rdf:RDF>
