@@ -9,6 +9,9 @@
  */
 defined('ABSPATH') || die();
 
+define('CF7PF_PLUGIN_DIR_PATH', plugin_dir_path(__FILE__));
+define('CF7PF_PLUGIN_DIR_URL', plugin_dir_url(__FILE__));
+
 global $donation_db_version;
 $donation_db_version = '1.25';
 
@@ -176,7 +179,7 @@ class Compassion_Donation_Form {
 //        $session_data = $_SESSION['donation-form'];
 
         switch ($this->step) {
-            case 2;
+            case 'redirect';
                 $this->send_data($data);
 //                session_destroy();
                 break;
@@ -184,19 +187,36 @@ class Compassion_Donation_Form {
     }
 
     /**
-     * Generate shortcode
+     * Generate the donation-form shortcode.
      *
-     * Process form data and load next template
+     * This shortcode adds a donation form to the calling page, It also process the form after its submitted.
+     *
+     * There MUST BE at most one donation form by page. Otherwise undefined behaviour occurs.
+     *
+     * Several type of donation are supported, the user can choose between them by setting the form attribute:
+     *  - 'donation' displays a form to donate to one of several fund.
+     *  - 'csp' displays a form to donate (once or monthly) for the welfare of unborn child and their mother.
+     *  - 'single' displays a form to donate to a specified found (set in the motif attribute).
+     *      - The motif attribute is separated by '|'. The first part is the displayed reason for the donation, the
+     *        second part is parsed by odoo to categorize the donation.
+     *  - 'cadeau' and any other values display a form to offer a gift to a specific child.
+     *
+     * Once a donation has been submitted, there is a redirection to Postfinance for the payment.
+     *
+     * Exemple:
+     *
+     *      [donation-form form=single motif="Toillette pour tous|toilette"]
      *
      * @return string
      */
     public function shortcode($atts, $content) {
 
-        $this->step = (isset($_GET['step'])) ? intval($_GET['step']) : 1;
-        $atts = shortcode_atts(
-                array(
-            'form' => '',
-                ), $atts);
+        $this->step = (isset($_GET['step'])) ? $_GET['step'] : 'form';
+        $atts = shortcode_atts(array(
+                'form' => '',
+                'motif' => '',
+            ), $atts);
+
         /**
          * process form data
          */
@@ -206,16 +226,34 @@ class Compassion_Donation_Form {
          * load template
          */
         ob_start();
-//        $session_data = $_SESSION['donation-form'];
 
-//      include("templates/frontend/header.php");
-        if ('donation' == $atts['form']) {
-            include("templates/frontend/step-$this->step.php");
-        } elseif ('csp' == $atts['form']){
-            include("templates/csp/step-$this->step.php");
-        } else {
-            include("templates/cadeau/step-$this->step.php");
+        switch ($atts['form']) {
+            case 'donation':
+                $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/frontend/inputs.php';
+                $bank_transfer_comment = __('Vielen Dank, dass Sie nicht vergessen, den Spendenzweck zu erwähnen.','donation-form' );
+                break;
+            case 'csp':
+                $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/csp/inputs.php';
+                $bank_transfer_comment = __('Bitte geben Sie an, ob Sie regelmässig oder einmalig für das Kinder-Überlebensprogramm spenden möchten. Spendenzweck (monatlich oder einmalig): Überlebensprogramm', 'donation-form');
+                $bank_transfer_reason = '<tspan x="0" dy="0">' . __('Überlebensprogramm', 'donation-form') . ' :</tspan>' .
+                                        '<tspan x="0" dy="1.4em"> ☐ ' . __('monatliche Spende', 'donation-form') . '</tspan>' .
+                                        '<tspan x="0" dy="1.4em"> ☐ ' . __('einmalige Spende', 'donation-form') . '</tspan>';
+                break;
+            case 'single':
+                $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/single/inputs.php';
+                if ($atts['motif']) {
+                    $parts = explode('|', $atts['motif']);
+                    $fonds = $parts[1];
+                    $bank_transfer_reason = $parts[0];
+                    $bank_transfer_comment = __('Vielen Dank, dass Sie nicht vergessen, den Spendenzweck zu erwähnen.','donation-form' );                }
+                break;
+            case 'cadeau':
+            default:
+                $bank_transfer_comment = __('Vielen Dank, dass Sie nicht vergessen, den Spendenzweck zu erwähnen.','donation-form' );
+                $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/cadeau/inputs.php';
+                break;
         }
+        include("templates/donation-$this->step.php");
 
         $content = ob_get_contents();
         ob_end_clean();
