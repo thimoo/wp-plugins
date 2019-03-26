@@ -215,3 +215,15 @@ msgstr ""
 #. Author of the plugin
 msgid "Olivier Requet / J. Kläy"
 msgstr ""
+
+#: cf7-pf_oli.php:224
+msgid "Überlebensprogramm"
+msgstr "CSP"
+
+#: cf7-pf_oli.php:225
+msgid "monatliche Spende"
+msgstr "Donazione mensile"
+
+#: cf7-pf_oli.php:226
+msgid "einmalige Spende"
+msgstr "Donazione singola"
