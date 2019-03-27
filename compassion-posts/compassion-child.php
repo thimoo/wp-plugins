@@ -9,6 +9,7 @@ class CompassionChildren
         add_filter('cmb2_admin_init', array($this, 'child_settings'));
         add_filter('views_edit-child', array($this, 'modified_views_so_15799171'));
         add_filter('display_post_states', array($this, 'child_post_states'), 10, 2 );
+        add_shortcode( 'insert_childs', array($this, 'display_children_shortcode'));
     }
 
     /**
@@ -203,5 +204,102 @@ class CompassionChildren
             return $post->ID;
         }
         return false;
+    }
+
+    /**
+     * Shortcode to display a filtered selection of children.
+     * @param $atts The attributes passed to the shortcode.
+     *      There are 4 valid attributes:
+     *       - 'number' : The number of children to display.
+     *       - 'gender' : One of 'boy', 'girl' or 'any'.
+     *       - 'age' : The age interval of the children as {min age}-{max-age]. For examples:
+     *              - "3-5" : only children that are at least 3 years old and less than 6 years old.
+     *              - "-10" : only children less than 11 years old.
+     *              - "6-" : only children that are at least 6 years old.
+     *              - "-" : children of all age.
+     *       - 'countries' : The ids of the countries where the children live. The ids are separated by comma.
+     *          The ids reference posts of type location which describe the countries.
+     * @param $content
+     * @return false|string
+     */
+    public function display_children_shortcode($atts, $content ) {
+
+        // query also in archive-child
+
+        $a = shortcode_atts(array(
+            'number' => 4,
+            'gender' => 'any',
+            'age' => '-',
+            'country' => '',
+        ), $atts);
+
+        $posts_per_page = $a['number'];
+        $args = array(
+            'post_type' => 'child',
+            'posts_per_page' => $posts_per_page,
+            'post_status' => 'publish',
+            'orderby' => 'rand',
+        );
+
+        $meta_query = array(
+            'relation' => 'AND',
+        );
+
+        $gender = $a['gender'];
+        if ($gender == 'boy' || $gender == 'girl') {
+            array_push($meta_query, array(
+                'key' => '_child_gender',
+                'value' => $gender,
+                'compare' => 'LIKE'));
+        }
+
+        $age_ranges = explode('-', $a['age']);
+        if ($age_ranges[0] != '') {
+            $birthday_end = time() - (365 * 24 * 60 * 60 * ($age_ranges[0] + 1));
+            array_push($meta_query, array(
+                'key' => '_child_birthday',
+                'value' => $birthday_end,
+                'compare' => '<',
+                'type' => 'numeric'));
+
+        }
+        if ($age_ranges[1] != '') {
+            $birthday_start = time() - (365 * 24 * 60 * 60 * ($age_ranges[1] + 1));
+            array_push($meta_query, array(
+                'key' => '_child_birthday',
+                'value' => $birthday_start,
+                'compare' => '>',
+                'type' => 'numeric'));
+        }
+
+        if ($a['country'] != '') {
+            $ids = explode(',', $a['country']);
+            array_push($meta_query, array(
+                'key' => '_child_country',
+                'value' => $ids,
+                'compare' => 'in'));
+        }
+
+        if (count($meta_query) > 1) {
+            $args = array_add($args, 'meta_query', $meta_query);
+        }
+
+        $query = new WP_Query( $args );
+
+        ob_start();
+
+        echo '<div class="row">';
+        if ($query->have_posts()) :
+            while ($query->have_posts()): $query->the_post();
+                get_template_part('template-parts/content', 'child-teaser');
+            endwhile;
+        else:
+            get_template_part('template-parts/content', 'none');
+        endif;
+        echo '</div>';
+
+        wp_reset_query();
+
+        return ob_get_clean();
     }
 }
