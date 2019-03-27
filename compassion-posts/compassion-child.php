@@ -9,7 +9,6 @@ class CompassionChildren
         add_filter('cmb2_admin_init', array($this, 'child_settings'));
         add_filter('views_edit-child', array($this, 'modified_views_so_15799171'));
         add_filter('display_post_states', array($this, 'child_post_states'), 10, 2 );
-        add_shortcode( 'insert_childs', array($this, 'display_children_shortcode'));
     }
 
     /**
@@ -18,6 +17,7 @@ class CompassionChildren
     public function init()
     {
         $this->register_post_type_child();
+        $this->register_shortcode_insert_children();
     }
 
     public function register_post_type_child() {
@@ -204,6 +204,57 @@ class CompassionChildren
             return $post->ID;
         }
         return false;
+    }
+
+    public function register_shortcode_insert_children() {
+        add_shortcode( 'insert_childs', array($this, 'display_children_shortcode'));
+        if(function_exists('shortcode_ui_register_for_shortcode')) {
+            $args = array(
+                'label' => __('Insert children', 'compassion-posts'),
+                'listItemImage' => 'dashicons-groups',
+                'attrs' => array(
+                    array(
+                        'label' => __('Number', 'compassion-posts'),
+                        'attr' => 'number',
+                        'description' => __('Number of children to display.'),
+                        'type' => 'number',
+                    ),
+                    array(
+                        'label' => __('Gender', 'compassion-posts'),
+                        'attr' => 'gender',
+                        'description' => __('The gender of the children to display.'),
+                        'type' => 'select',
+                        'options' => array(
+                            array('value' => 'any', 'label' => __('Any gender', 'compassion-posts')),
+                            array('value' => 'girl', 'label' => __('Girl', 'compassion-posts')),
+                            array('value' => 'boy', 'label' => __('Boy', 'compassion-posts')),
+                        ),
+                    ),
+                    array(
+                        'label' => __('Age group', 'compassion-posts'),
+                        'attr' => 'age',
+                        'description' => __('The age group of the children to display.'),
+                        'type' => 'select',
+                        'options' => array(
+                            array('value' => '0-3', 'label' => __('0 to 3 years old' , 'compassion-posts')),
+                            array('value' => '4-6', 'label' => __('4 to 6 years old', 'compassion-posts')),
+                            array('value' => '7-10', 'label' => __('7 to 10 years old', 'compassion-posts')),
+                            array('value' => '11-14', 'label' => __('11 to 14 years old', 'compassion-posts')),
+                            array('value' => '15-', 'label' => __('15 and older', 'compassion-posts')),
+                        ),
+                    ),
+                    array(
+                        'label' => __('Country', 'compassion-posts'),
+                        'attr' => 'country',
+                        'description' => __('The country where the children to display live.'),
+                        'type'     => 'post_select',
+                        'query'    => array( 'post_type' => 'location' ),
+                        'multiple' => true,
+                    ),
+                ),
+            );
+            shortcode_ui_register_for_shortcode('insert_childs', $args);
+        }
     }
 
     /**
