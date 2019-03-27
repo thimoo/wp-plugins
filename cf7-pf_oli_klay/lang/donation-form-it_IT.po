@@ -79,7 +79,7 @@ msgid "ie : BO012301234"
 msgstr "ie : BO012301234"
 
 #: templates/cadeau/step-1.php:170
-msgid "Jetzt Schenken"
+msgid "Jetzt schenken"
 msgstr "Fai un regalo ora"
 
 #: templates/cadeau/step-1.php:179 templates/csp/step-1.php:246
@@ -155,7 +155,7 @@ msgstr ""
 "invierà succesivamente le informazioni per eventuali trasferimenti."
 
 #: templates/csp/step-1.php:232 templates/frontend/step-1.php:162
-msgid "Jetzt Spenden"
+msgid "Jetzt spenden"
 msgstr "Fare la donazione"
 
 #: templates/csp/step-1.php:250
@@ -215,3 +215,15 @@ msgstr ""
 #. Author of the plugin
 msgid "Olivier Requet / J. Kläy"
 msgstr ""
+
+#: cf7-pf_oli.php:224
+msgid "Überlebensprogramm"
+msgstr "CSP"
+
+#: cf7-pf_oli.php:225
+msgid "monatliche Spende"
+msgstr "Donazione mensile"
+
+#: cf7-pf_oli.php:226
+msgid "einmalige Spende"
+msgstr "Donazione singola"
