@@ -135,7 +135,21 @@ class Compassion_Donation_Form {
     public function __construct() {
         add_action('init', [$this, '__init']);
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueueScripts' ) );
+        register_activation_hook(__FILE__, array($this, 'activation'));
+    }
 
+    /**
+     * Called on plugin activation.
+     */
+    public function activation() {
+        $this->check_dependencies();
+    }
+
+    public function check_dependencies() {
+        if(!class_exists('CompassionOdooConnector')) {
+            deactivate_plugins( plugin_basename( __FILE__ ) );
+            wp_die( sprintf(__( 'Please install and activate: %s.', 'compassion' ), 'compassion-odoo'), 'Plugin dependency check', array( 'back_link' => true ) );
+        }
     }
 
     public function enqueueScripts() {
