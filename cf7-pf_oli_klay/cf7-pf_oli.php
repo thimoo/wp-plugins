@@ -193,7 +193,7 @@ class Compassion_Donation_Form {
                     array(
                         'label' => __('Type of form', 'donation-form'),
                         'attr' => 'form',
-                        'description' => __('The gender of the children to display.', 'donation-form'),
+                        'description' => __('The type of donation form to display.', 'donation-form'),
                         'type' => 'select',
                         'options' => array(
                             array('value' => 'donation', 'label' => __('General funds', 'donation-form')),
