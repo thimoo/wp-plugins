@@ -17,6 +17,7 @@ class CompassionChildren
     public function init()
     {
         $this->register_post_type_child();
+        $this->register_shortcode_insert_children();
     }
 
     public function register_post_type_child() {
@@ -203,5 +204,153 @@ class CompassionChildren
             return $post->ID;
         }
         return false;
+    }
+
+    public function register_shortcode_insert_children() {
+        add_shortcode( 'insert_childs', array($this, 'display_children_shortcode'));
+        if(function_exists('shortcode_ui_register_for_shortcode')) {
+            $args = array(
+                'label' => __('Insert children', 'compassion-posts'),
+                'listItemImage' => 'dashicons-groups',
+                'attrs' => array(
+                    array(
+                        'label' => __('Number', 'compassion-posts'),
+                        'attr' => 'number',
+                        'description' => __('Number of children to display.'),
+                        'type' => 'number',
+                    ),
+                    array(
+                        'label' => __('Gender', 'compassion-posts'),
+                        'attr' => 'gender',
+                        'description' => __('The gender of the children to display.'),
+                        'type' => 'select',
+                        'options' => array(
+                            array('value' => 'any', 'label' => __('Any gender', 'compassion-posts')),
+                            array('value' => 'girl', 'label' => __('Girl', 'compassion-posts')),
+                            array('value' => 'boy', 'label' => __('Boy', 'compassion-posts')),
+                        ),
+                    ),
+                    array(
+                        'label' => __('Age group', 'compassion-posts'),
+                        'attr' => 'age',
+                        'description' => __('The age group of the children to display.'),
+                        'type' => 'select',
+                        'options' => array(
+                            array('value' => '0-3', 'label' => __('0 to 3 years old' , 'compassion-posts')),
+                            array('value' => '4-6', 'label' => __('4 to 6 years old', 'compassion-posts')),
+                            array('value' => '7-10', 'label' => __('7 to 10 years old', 'compassion-posts')),
+                            array('value' => '11-14', 'label' => __('11 to 14 years old', 'compassion-posts')),
+                            array('value' => '15-', 'label' => __('15 and older', 'compassion-posts')),
+                        ),
+                    ),
+                    array(
+                        'label' => __('Country', 'compassion-posts'),
+                        'attr' => 'country',
+                        'description' => __('The country where the children to display live.'),
+                        'type'     => 'post_select',
+                        'query'    => array( 'post_type' => 'location' ),
+                        'multiple' => true,
+                    ),
+                ),
+            );
+            shortcode_ui_register_for_shortcode('insert_childs', $args);
+        }
+    }
+
+    /**
+     * Shortcode to display a filtered selection of children.
+     * @param $atts The attributes passed to the shortcode.
+     *      There are 4 valid attributes:
+     *       - 'number' : The number of children to display.
+     *       - 'gender' : One of 'boy', 'girl' or 'any'.
+     *       - 'age' : The age interval of the children as {min age}-{max-age]. For examples:
+     *              - "3-5" : only children that are at least 3 years old and less than 6 years old.
+     *              - "-10" : only children less than 11 years old.
+     *              - "6-" : only children that are at least 6 years old.
+     *              - "-" : children of all age.
+     *       - 'countries' : The ids of the countries where the children live. The ids are separated by comma.
+     *          The ids reference posts of type location which describe the countries.
+     * @param $content
+     * @return false|string
+     */
+    public function display_children_shortcode($atts, $content ) {
+
+        // query also in archive-child
+
+        $a = shortcode_atts(array(
+            'number' => 4,
+            'gender' => 'any',
+            'age' => '-',
+            'country' => '',
+        ), $atts);
+
+        $posts_per_page = $a['number'];
+        $args = array(
+            'post_type' => 'child',
+            'posts_per_page' => $posts_per_page,
+            'post_status' => 'publish',
+            'orderby' => 'rand',
+        );
+
+        $meta_query = array(
+            'relation' => 'AND',
+        );
+
+        $gender = $a['gender'];
+        if ($gender == 'boy' || $gender == 'girl') {
+            array_push($meta_query, array(
+                'key' => '_child_gender',
+                'value' => $gender,
+                'compare' => 'LIKE'));
+        }
+
+        $age_ranges = explode('-', $a['age']);
+        if ($age_ranges[0] != '') {
+            $birthday_end = time() - (365 * 24 * 60 * 60 * ($age_ranges[0] + 1));
+            array_push($meta_query, array(
+                'key' => '_child_birthday',
+                'value' => $birthday_end,
+                'compare' => '<',
+                'type' => 'numeric'));
+
+        }
+        if ($age_ranges[1] != '') {
+            $birthday_start = time() - (365 * 24 * 60 * 60 * ($age_ranges[1] + 1));
+            array_push($meta_query, array(
+                'key' => '_child_birthday',
+                'value' => $birthday_start,
+                'compare' => '>',
+                'type' => 'numeric'));
+        }
+
+        if ($a['country'] != '') {
+            $ids = explode(',', $a['country']);
+            array_push($meta_query, array(
+                'key' => '_child_country',
+                'value' => $ids,
+                'compare' => 'in'));
+        }
+
+        if (count($meta_query) > 1) {
+            $args = array_add($args, 'meta_query', $meta_query);
+        }
+
+        $query = new WP_Query( $args );
+
+        ob_start();
+
+        echo '<div class="row">';
+        if ($query->have_posts()) :
+            while ($query->have_posts()): $query->the_post();
+                get_template_part('template-parts/content', 'child-teaser');
+            endwhile;
+        else:
+            get_template_part('template-parts/content', 'none');
+        endif;
+        echo '</div>';
+
+        wp_reset_query();
+
+        return ob_get_clean();
     }
 }

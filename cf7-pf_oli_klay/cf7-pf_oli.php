@@ -154,8 +154,7 @@ class Compassion_Donation_Form {
         @$_SESSION['count_runs']=0;
 //         error_log($_SESSION['campaign_slug']);
 
-        add_shortcode('donation-form', array($this, 'shortcode'));
-
+        $this->register_shortcode_donation_form();
         add_shortcode('donation-confirmation', array($this, 'shortcode_confirmation'));
 
 
@@ -165,8 +164,6 @@ class Compassion_Donation_Form {
         //load scripts
         wp_enqueue_script('validation-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js', array('jquery'));
     }
-
-
 
     /**
      * Process form data
@@ -183,6 +180,43 @@ class Compassion_Donation_Form {
                 $this->send_data($data);
 //                session_destroy();
                 break;
+        }
+    }
+
+    public function register_shortcode_donation_form() {
+        add_shortcode('donation-form', array($this, 'shortcode'));
+        if(function_exists('shortcode_ui_register_for_shortcode')) {
+            $args = array(
+                'label' => __('Donation form', 'donation-form'),
+                'listItemImage' => 'dashicons-heart',
+                'attrs' => array(
+                    array(
+                        'label' => __('Type of form', 'donation-form'),
+                        'attr' => 'form',
+                        'description' => __('The type of donation form to display.', 'donation-form'),
+                        'type' => 'select',
+                        'options' => array(
+                            array('value' => 'donation', 'label' => __('General funds', 'donation-form')),
+                            array('value' => 'csp', 'label' => __('CSP', 'donation-form')),
+                            array('value' => 'cadeau', 'label' => __('Gift to a child', 'donation-form')),
+                            array('value' => 'single', 'label' => __('Specific fund', 'donation-form')),
+                        ),
+                    ),
+                    array(
+                        'label' => __('Reason for the donation', 'donation-form'),
+                        'attr' => 'motif',
+                        'description' => sprintf(__('Only useful when the form type is : "%s". ' .
+                                            'The first part is the displayed reason. ' .
+                                            'The second part (separated by a "|") is the reason used by Odoo (corresponds to the internal reference of a product).', 'donation-form'), __('Specific fund', 'donation-form')),
+                        'type' => 'text',
+                        'meta' => array(
+                            'placeholder' => __( 'Toilettes for all|toilette', 'donation-form'),
+                            'data-test' => 1,
+                        ),
+                    ),
+                ),
+            );
+            shortcode_ui_register_for_shortcode('donation-form', $args);
         }
     }
 
