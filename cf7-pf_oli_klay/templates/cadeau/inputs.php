@@ -26,6 +26,6 @@
         <label class="text-left middle"><?php _e('Patenkindnummer', 'donation-form'); ?></label>
     </div>
     <div class="small-8 columns">
-        <input type="text" required data-msg="<?php _e('Patenkindnummer erforderlich', 'donation-form'); ?>" placeholder="<?php _e('ie : BO012301234', 'donation-form'); ?>" class="input-field" name="refenfant" value="<?php echo (isset($session_data['refenfant'])) ? $session_data['refenfant'] : ''; ?>">
+        <input type="text" required data-msg="<?php _e('Patenkindnummer erforderlich', 'donation-form'); ?>" placeholder="<?php _e('ie : BO012301234', 'donation-form'); ?>" class="input-field" id="refenfant" name="refenfant" value="<?php echo (isset($session_data['refenfant'])) ? $session_data['refenfant'] : ''; ?>">
     </div>
 </div>
