@@ -31,7 +31,7 @@
   width: 19px;
   height: 19px;
   background: #FFFFFF;
-  color: #0054a6;
+  color: #215eac;
   border-radius: 50%;
   text-align: center;
   margin-left: 10px;
@@ -92,7 +92,7 @@
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background: #0054a6 url(../images/off-canvas-close.png) center center no-repeat;
+    background: #215eac url(../images/off-canvas-close.png) center center no-repeat;
     background-size: 8px; }
   .compassion-letter-form .file-upload-wrapper #filename {
     display: inline-block;
@@ -199,7 +199,7 @@
   padding: 4px 10px;
   text-align: center;
   width: 100%;
-  color: #0054a6;
+  color: #215eac;
   border-radius: 4px;
   font-size: small; }
 

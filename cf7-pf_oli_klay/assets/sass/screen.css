@@ -54,7 +54,7 @@
       .child-sponsor .progress-steps li:last-child:after {
         display: none; }
   .child-sponsor .progress-steps li.active {
-    background: #0054a6;
+    background: #215eac;
     color: #FFFFFF; }
 
 .child-sponsor .reco-checkbox {
@@ -252,7 +252,7 @@
 
 .child-sponsor.step-2 .edit {
   float: right;
-  color: #0054a6;
+  color: #215eac;
   margin-top: 15px; }
 
 .child-sponsor.step-2 h3 {
