@@ -278,7 +278,7 @@ class CompassionChildren
         // query also in archive-child
 
         $a = shortcode_atts(array(
-            'number' => 4,
+            'number' => 3,
             'gender' => 'any',
             'age' => '-',
             'country' => '',
