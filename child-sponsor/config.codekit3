@@ -176,6 +176,13 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/assets/stylesheets/screen.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/assets/stylesheets/screen.css.map",
+		"oF": 0
+		},
 	"/bower.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -199,7 +206,8 @@
 		"oF": 0
 		},
 	"/config.rb": {
-		"ft": 131072,
+		"cB": 0,
+		"ft": 8192,
 		"oA": 0,
 		"oAP": "/config.rb",
 		"oF": 0
