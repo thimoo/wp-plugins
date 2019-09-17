@@ -348,13 +348,14 @@ class Compassion_Donation_Form {
             'EMAIL' => $session_data['email'],
             'COMPLUS' => $_SESSION['transaction'],
             'PARAMPLUS' => 'campaign_slug='.$_SESSION['campaign_slug'],
-            'ACCEPTURL' =>  $base_address .'/confirmation-don',
+            'ACCEPTURL' =>  $base_address . '/confirmation-don',
             'DECLINEURL' => $base_address .'/annulation-don',
             'EXCEPTIONURL' => $base_address .'/annulation-don',
             'CANCELURL' => $base_address .'/annulation-don',        );
 
         if($_SESSION['count_runs']==0) {
             $_SESSION['count_runs']++;
+
 
             $wpdb->insert(
                     $wpdb->prefix . DONATION_TABLE_NAME,
@@ -384,6 +385,9 @@ class Compassion_Donation_Form {
                     )
                 );
         }
+
+        //redirect thank you page for Christmas only
+       if($this->cleanfordb($session_data['fonds'])=='noel'){$form['ACCEPTURL'] = $base_address . '/confirmation-don-noel';}
 
         $sha_sign = self::compute_pf_sha_sign($form)
 

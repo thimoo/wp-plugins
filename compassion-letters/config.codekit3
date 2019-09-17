@@ -16,6 +16,17 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/assets/back.png": {
+		"ft": 32768,
+		"iS": 12240,
+		"oA": 0,
+		"oAP": "/assets/back.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/fonts/courier.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -797,6 +808,17 @@
 		"opt": 1,
 		"q": 100
 		},
+	"/assets/joy.png": {
+		"ft": 32768,
+		"iS": 53757,
+		"oA": 0,
+		"oAP": "/assets/joy.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/js/main-min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -945,8 +967,7 @@
 		"oF": 0
 		},
 	"/config.rb": {
-		"cB": 0,
-		"ft": 8192,
+		"ft": 131072,
 		"oA": 0,
 		"oAP": "/config.rb",
 		"oF": 0
