@@ -149,7 +149,7 @@
         <td>
             <div style="padding: 0 20px;">
 	            
-	            <?php if ($form_data['template'] == 'christmas_web_2018'){ ?>
+	            <?php if ($form_data['template'] == 'christmas_web_2019'){ ?>
 					<p>
                     <?php echo ($form_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters'); /* echo ' '.$form_data['salutation'];  */?> <?php echo $form_data['name']; ?><br /><br />
                 
@@ -158,7 +158,7 @@
 				<p> Ihre Karte wird – falls nötig – übersetzt und dann verschickt, damit sie rechtzeitig zum Weihnachtsfest im Kinderzentrum Ihres Patenkindes ankommt. Eine Kopie davon finden Sie in dieser Nachricht.<br/><br/>
 
 					 <strong>Sie haben auch die Möglichkeit, für unsere Weihnachtsaktion zu spenden.</strong><br/>
-					Jedes Kind - ob es nun bereits einen Paten hat oder noch auf einen wartet – wird auch dieses Jahr wieder ein Weihnachtsgeschenk bekommen. Mit Ihrem finanziellen Beitrag zu dieser Weihnachtsaktion helfen Sie mit, dass die Augen von über 1,9 Millionen Kindern und Familien in Armut erstrahlen. Sie erleben die Freude von Weihnachten und die Hoffnung, die uns geschenkt wird! Von Herzen Danke!
+					Jedes Kind - ob es nun bereits einen Paten hat oder noch auf einen wartet – wird auch dieses Jahr wieder ein Weihnachtsgeschenk bekommen. Mit Ihrem finanziellen Beitrag zu dieser Weihnachtsaktion helfen Sie mit, dass die Augen von über 2 Millionen Kindern und Familien in Armut erstrahlen. Sie erleben die Freude von Weihnachten und die Hoffnung, die uns geschenkt wird! Von Herzen Danke!
 <br/>
 <br/><br/>
 					<a href="https://compassion.ch/de/spendenformular/#fonds=noel">SPENDEN</a> 

@@ -144,9 +144,9 @@
         <div class="large-12 columns">
         </div>
         <div class="large-12 columns">
-                    <input required data-msg="<?php _e('Vorlage erforderlich', 'compassion-letters'); ?>" type="radio" id="template1" class="clear-pdf-on-change" checked="checked"  value="christmas_web_2018" name="template" />
+                    <input required data-msg="<?php _e('Vorlage erforderlich', 'compassion-letters'); ?>" type="radio" id="template1" class="clear-pdf-on-change" checked="checked"  value="christmas_web_2019" name="template" />
                     <label><?php _e('Vorlage 1', 'compassion-letters'); ?></label><label for="template1" class="template-label">
-                    <img src="<?php echo COMPASSION_LETTERS_PLUGIN_DIR_URL; ?>assets/images/christmas_web_2018-preview.jpg" />
+                    <img src="<?php echo COMPASSION_LETTERS_PLUGIN_DIR_URL; ?>assets/images/christmas_web_2019-preview.jpg" />
                     </label>
         </div>
     </div>
