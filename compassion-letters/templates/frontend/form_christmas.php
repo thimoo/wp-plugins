@@ -9,36 +9,8 @@
 </noscript>
 
 <script type="text/javascript">
-    
-    // Retrieve GET parameter value funcion
-    var getUrlParameter = function getUrlParameter(sParam) {
-        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-            sURLVariables = sPageURL.split('&'),
-            sParameterName,
-            i;
-
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
-
-            if (sParameterName[0] === sParam) {
-                return sParameterName[1] === undefined ? true : sParameterName[1];
-            }
-        }
-    };
-    
-    // Try to auto-fill form when page is loaded.
     jQuery( document ).ready(function() {
-        // First try to search in GET parameters all Form elements
-        jQuery('form.compassion-letter-form *').filter(':input').each(function () {
-            var element = jQuery(this);
-            var inputId = element.attr('id');
-            var inputVal = getUrlParameter(inputId);
-            if (inputVal) {
-                element.val(inputVal);
-            }
-        });
-        
-        // Old version fallback that used the hastag in the URL
+        // Handler for .ready() called.
         if(window.location.hash){
             var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
             for(var i = 0; i < hashParams.length; i++){
@@ -78,7 +50,7 @@
                     <label class="text-left middle"><?php _e('Vorname, Nachname', 'compassion-letters'); ?>*</label>
                 </div>
                 <div class="small-8 columns">
-                    <input type="text" required data-msg="<?php _e('Name erforderlich', 'compassion-letters'); ?>" class="input-field clear-pdf-on-change" name="name" id="name">
+                    <input type="text" required data-msg="<?php _e('Name erforderlich', 'compassion-letters'); ?>" class="input-field clear-pdf-on-change" name="name" id="pname">
                 </div>
             </div>
 
