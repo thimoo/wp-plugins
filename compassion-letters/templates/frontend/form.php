@@ -115,8 +115,8 @@
                     <p><?php _e('Bitte wählen Sie eine Vorlage: ', 'compassion-letters'); ?></p>
                 </div>
                 <div class="medium-3 columns">
-                    <input required data-msg="<?php _e('Vorlage erforderlich', 'compassion-letters'); ?>" type="radio" id="template1" class="clear-pdf-on-change" value="GodProvider" name="template" /><label><?php _e('Vorlage 1', 'compassion-letters'); ?></label><label for="template1" class="template-label">
-                        <img src="<?php echo COMPASSION_LETTERS_PLUGIN_DIR_URL; ?>assets/images/GodProvider-preview.jpg" />
+                    <input required data-msg="<?php _e('Vorlage erforderlich', 'compassion-letters'); ?>" type="radio" id="template1" class="clear-pdf-on-change" value="christmas_web_2019" name="template" /><label><?php _e('Vorlage 1', 'compassion-letters'); ?></label><label for="template1" class="template-label">
+                        <img src="<?php echo COMPASSION_LETTERS_PLUGIN_DIR_URL; ?>assets/images/christmas_web_2019-preview.jpg" />
                         <div class="hover-overlay">
                             <h5 class="text-uppercase"><?php _e('Vorlage 1 auswählen', 'compassion-letters'); ?></h5>
                         </div>
