@@ -162,7 +162,7 @@ if ($msk) {
                            <label><input type="radio" required data-msg="<?php _e('Zahlungsweise erforderlich', 'child-sponsor-lang'); ?>" name="zahlungsweise" value="lsv"> <?php _e('Direct Debit - LSV', 'child-sponsor-lang') ?></label>
 					 </div>
 					<div class="small-12 columns zahlung">
-						<p class="marg-top-10"><?php _e('Wenn Sie eine andere Zahlungsart wünschen, dann rufen Sie uns bitte an unter 0800 784 773.', 'child-sponsor-lang' )?></p>
+						<p class="marg-top-10"><?php _e('Wenn Sie eine andere Zahlungsart wünschen, dann rufen Sie uns bitte an unter 031 552 21 21.', 'child-sponsor-lang' )?></p>
 					</div>
 				</div>
             <hr>
