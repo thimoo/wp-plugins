@@ -103,7 +103,7 @@
                 <div class="small-9 columns">
                     <div class="file-upload input-field">
                         <a href="#" id="clear-file-input" class="has-tip right" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="<?php _e('Feld leeren', 'compassion-letters'); ?>"></a><label for="fileUpload" class="button button-blue button-medium"><?php _e('Bild hochladen', 'compassion-letters'); ?></label>
-                       <p class="text-right"><?php _e('Format: JPG/PNG, max. Grösse: 2MB', 'compassion-letters') ?></p>
+                       <p class="text-right"><?php _e('Format: JPG/PNG, max. Grösse: 10MB', 'compassion-letters') ?></p>
                         <input type="text" id="filename" readonly value="" />
                         <input type="file" id="fileUpload" class="input-field clear-pdf-on-change show-for-sr" name="image">
                     </div>

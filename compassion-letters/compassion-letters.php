@@ -130,8 +130,26 @@ class CompassionLetters
         $file = WP\Common::getFile('image', $this->uploads_folder);
 
         $this->correct_image_orientation($file);
+        $this->maybe_resize_image($file);
 
         return $file;
+    }
+
+    /**
+     * Resize the image if bigger that a target size.
+     */
+    private function maybe_resize_image($image_path) {
+        $image = new Imagick($image_path);
+        $imageLength = $image->getImageLength();
+        $maxImageLength = 2 * 1024 * 1024.0;
+        if($imageLength <= $maxImageLength) {
+            return;
+        }
+        $scalingRatio = $maxImageLength / $imageLength;
+        $new_width = round($image->getImageWidth() * $scalingRatio);
+        $new_height = round($image->getImageHeight() * $scalingRatio);
+        $image->resizeImage($new_width, $new_height, Imagick::FILTER_CUBIC, 0.5);
+        $image->writeImage($image_path);
     }
 
     private function correct_image_orientation($image_path) {
