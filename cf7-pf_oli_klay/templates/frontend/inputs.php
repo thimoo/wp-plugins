@@ -1,6 +1,6 @@
 <div class="row">
     <div class="small-4 columns">
-        <label class="text-left middle"><?php _e('Betrag Ihrer Spende in CHF', 'donation-form'); ?></label>
+        <label class="text-left middle"><?php _e('Betrag deiner Spende in CHF', 'donation-form'); ?></label>
     </div>
     <div class="small-8 columns">
         <input type="text" id="wert" placeholder="<?php _e('bitte nur Zahlen', 'donation-form'); ?>" required data-msg="<?php _e('Betrag erforderlich', 'donation-form'); ?>" class="input-field" name="wert" value="<?php echo (isset($session_data['wert'])) ? $session_data['wert'] : ''; ?>">

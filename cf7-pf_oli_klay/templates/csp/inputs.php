@@ -70,6 +70,6 @@
                 <option value="csp_mensuel_90" <?php echo (isset($session_data['fonds']) && $session_data['fonds'] == "mensuel 90") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 90.-', 'donation-form'); ?></option>
             </select>
         </div>
-        <p class="small"> <?php _e('Nach Ihrer ersten Spende wird Compassion Schweiz Ihnen einen Einzahlungsschein für die weiteren Spenden zusenden.', 'donation-form'); ?></p>
+        <p class="small"> <?php _e('Nach deiner ersten Spende wird dir Compassion Schweiz einen Einzahlungsschein für die weiteren Spenden zusenden.', 'donation-form'); ?></p>
     </div>
 </div>

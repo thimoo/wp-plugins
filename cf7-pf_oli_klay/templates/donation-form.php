@@ -133,7 +133,7 @@
     <div class="tabs-panel" id="panel-bank-transfer-donation">
         <div class="row">
             <div class="large-12 large-centered medium-12 medium-centered column">
-                <p class="text-center middle"><?php _e('Sie können per Post- oder Banküberweisung spenden.<br/>  Nachfolgend finden Sie die Informationen für die Zahlung. ', 'donation-form') ?></p>
+                <p class="text-center middle"><?php _e('Du kannst per Post- oder Banküberweisung spenden.<br/>  Nachfolgend findest du die Informationen für die Zahlung. ', 'donation-form') ?></p>
                 <h5 class="text-center middle">
                     Postfinance CCP 17-312562-0 <br/>
                     IBAN CH07 0900 0000 1731 2562 0<br/>
