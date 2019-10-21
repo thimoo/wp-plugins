@@ -61,23 +61,23 @@ jQuery(document).ready(function($) {
             $msk = isset($_SESSION['msk_name']) && isset($_SESSION['msk_participant_name']);
             if ($msk) { ?>
                 <h2 style="text-align: center;">
-                    <?= __('Danke, dass Sie sich für', 'child-sponsor-lang') ?> <?= $child_data['name'] ?> <?= __('einsetzen. Die Patenschaft wird das Leben dieses Kindes nachhaltig verändern.', 'child-sponsor-lang'); ?>
+                    <?= __('Danke, dass du dich für', 'child-sponsor-lang') ?> <?= $child_data['name'] ?> <?= __('einsetzt. Die Patenschaft wird das Leben dieses Kindes nachhaltig verändern.', 'child-sponsor-lang'); ?>
                 </h2>
             <?php } else { ?>
-                <h2 style="text-align: center;"><?php _e('Schön, dass Sie ', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?></h2>
+                <h2 style="text-align: center;"><?php _e('Schön, dass du ', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?></h2>
             <?php }
         } elseif ($my_current_lang == "de") { ?>
-            <h2 style="text-align: center;"><?php _e('Schön, dass Sie Pate von', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?>
-                <?php _e('werden möchten', 'child-sponsor-lang'); ?></h2>
+            <h2 style="text-align: center;"><?php _e('Schön, dass du Pate von', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?>
+                <?php _e('werden möchtest', 'child-sponsor-lang'); ?></h2>
         <?php } elseif ($my_current_lang == "it") {
             ?>
-            <h2 style="text-align: center;"><?php _e('Schön, dass Sie', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?></h2>
+            <h2 style="text-align: center;"><?php _e('Schön, dass du', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?></h2>
         <?php } ?>
         <p style="text-align: center;" class="subtitle">
             <?php if ($msk) { ?>
                 <?= $_SESSION['msk_participant_name'] ?>, <?= __('nimmt am', 'child-sponsor-lang') ?> <?= $_SESSION['msk_name'] ?><?= __(' teil.', 'child-sponsor-lang') ?> <?= __('und dankt Ihnen für Ihre Unterstützung!', 'child-sponsor-lang') ?>
             <?php } else {
-                _e('Sie werden das Leben des Kindes für immer verändern.', 'child-sponsor-lang');
+                _e('Du wirst das Leben des Kindes für immer verändern.', 'child-sponsor-lang');
             } ?>
         <p>
 	       

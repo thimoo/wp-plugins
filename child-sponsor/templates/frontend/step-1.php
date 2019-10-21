@@ -27,7 +27,7 @@ if ($msk) {
 <!--              Writeandpraystuff  -->
 			<?php if (!$wapr) { ?> 
 
-                <p><?php echo sprintf( wp_kses( __('Mit 42 CHF pro Monat können Sie %s aus der Armut befreien!', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></p>
+                <p><?php echo sprintf( wp_kses( __('Mit 42 CHF pro Monat kannst du %s aus der Armut befreien!', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></p>
            <?php } ?>
            
 <!--       emd Writeandpraystuff  -->
@@ -162,7 +162,7 @@ if ($msk) {
                            <label><input type="radio" required data-msg="<?php _e('Zahlungsweise erforderlich', 'child-sponsor-lang'); ?>" name="zahlungsweise" value="lsv"> <?php _e('Direct Debit - LSV', 'child-sponsor-lang') ?></label>
 					 </div>
 					<div class="small-12 columns zahlung">
-						<p class="marg-top-10"><?php _e('Wenn Sie eine andere Zahlungsart wünschen, dann rufen Sie uns bitte an unter 031 552 21 21.', 'child-sponsor-lang' )?></p>
+						<p class="marg-top-10"><?php _e('Wenn du eine andere Zahlungsart wünschst, dann rufe uns bitte an unter 031 552 21 21.', 'child-sponsor-lang' )?></p>
 					</div>
 				</div>
             <hr>
@@ -196,7 +196,7 @@ if ($msk) {
             <h4 class="text-uppercase" id="briefwechsel"><?php echo sprintf( wp_kses( __('Briefwechsel mit %s', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></h4>
             	<div class="row">
 	            	<div class="small-12 columns">
-						<p><?php _e('Selbstverständlich übersetzen wir Ihre Briefe gerne, Sie können Ihre Briefe aber auch direkt in der Sprache des Kindes oder auf Englisch schreiben. Dies spart Zeit und nimmt unseren freiwilligen Übersetzern Arbeit ab. Welche der folgenden Sprachen verstehen Sie?', 'child-sponsor-lang')?></p>
+						<p><?php _e('Selbstverständlich übersetzen wir deine Briefe gerne, du kannst deine Briefe aber auch direkt in der Sprache des Kindes oder auf Englisch schreiben. Dies spart Zeit und nimmt unseren freiwilligen Übersetzern Arbeit ab. Welche der folgenden Sprachen verstehst du?', 'child-sponsor-lang')?></p>
 	            	</div>
             	</div>
            	<div class="row">
@@ -227,7 +227,7 @@ if ($msk) {
 
             <hr>
 
-            <h4 class="text-uppercase" id="bank"><?= __('Wie haben Sie von Compassion erfahren?', 'child-sponsor-lang') ?></h4>
+            <h4 class="text-uppercase" id="bank"><?= __('WIE HAST DU VON COMPASSION ERFAHREN?', 'child-sponsor-lang') ?></h4>
             <div class="row">
                 <div class="small-4 columns">
                     <label class="text-left middle"><?= __('Ich bin aufmerksam geworden durch', 'child-sponsor-lang') ?></label>

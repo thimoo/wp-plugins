@@ -18,7 +18,7 @@ $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';
 <!--              Writeandpraystuff  -->
 			<?php if (!$wapr) { ?> 
 
-                <p><?php echo sprintf( wp_kses( __('Mit 42 CHF pro Monat können Sie %s aus der Armut befreien!', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></p>
+                <p><?php echo sprintf( wp_kses( __('Mit 42 CHF pro Monat kannst du %s aus der Armut befreien!', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></p>
            <?php } ?>
            
 <!--       emd Writeandpraystuff  -->
@@ -26,7 +26,7 @@ $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';
 
             <hr>
 
-            <h4><?php _e('Hier eine Übersicht Ihrer angegebenen Daten', 'child-sponsor-lang'); ?></h4>
+            <h4><?php _e('Hier eine Übersicht deiner angegebenen Daten', 'child-sponsor-lang'); ?></h4>
 
 
             <h4 class="text-uppercase"><?php _e('Persönliche Daten', 'child-sponsor-lang'); ?></h4>

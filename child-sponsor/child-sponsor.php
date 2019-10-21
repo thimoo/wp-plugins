@@ -95,7 +95,7 @@ class ChildSponsor {
         $email->CharSet = 'UTF-8';
         $email->From = 'compassion@compassion.ch';
         $email->FromName = __('Compassion Schweiz', 'child-sponsor-lang');
-        $email->Subject = __('Ihre Patenschaft', 'child-sponsor-lang');
+        $email->Subject = __('Deine Patenschaft', 'child-sponsor-lang');
         $email->Body = $this->get_email_template('user-new-sponsor.php', $session_data);
         $email->isHTML(true);
         $email->AddAddress($session_data['email']);
