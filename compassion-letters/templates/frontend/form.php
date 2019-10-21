@@ -78,7 +78,7 @@
                     <label class="text-left middle"><?php _e('Nachricht', 'compassion-letters'); ?>*</label>
                 </div>
                 <div class="small-8 columns">
-                    <textarea maxlength="1500" placeholder="<?php _e('Um den Verlust Ihres Briefes zu vermeiden, empfehlen wir Ihnen, diesen zuerst auf einem Word-Dokument zu schreiben und ihn danach hier einzufügen.', 'compassion-letters'); ?>" required data-msg="<?php _e('Nachricht erforderlich', 'compassion-letters'); ?>" name="message" class="input-field clear-pdf-on-change"></textarea>
+                    <textarea maxlength="1500" placeholder="<?php _e('Um den Verlust deines Briefes zu vermeiden, empfehlen wir dir, diesen zuerst auf einem Word-Dokument zu schreiben und ihn danach hier einzufügen.', 'compassion-letters'); ?>" required data-msg="<?php _e('Nachricht erforderlich', 'compassion-letters'); ?>" name="message" class="input-field clear-pdf-on-change"></textarea>
                     <p class="text-right letter-count-wrapper"><span class="letter-count">0</span> <?php _e('von 1300 Zeichen', 'compassion-letters'); ?></p>
                 </div>
             </div>
@@ -112,7 +112,7 @@
 
             <div class="row choose-template radio-wrapper">
                 <div class="large-12 columns">
-                    <p><?php _e('Bitte wählen Sie eine Vorlage: ', 'compassion-letters'); ?></p>
+                    <p><?php _e('Bitte wähle eine Vorlage: ', 'compassion-letters'); ?></p>
                 </div>
                 <div class="medium-3 columns">
                     <input required data-msg="<?php _e('Vorlage erforderlich', 'compassion-letters'); ?>" type="radio" id="template1" class="clear-pdf-on-change" value="christmas_web_2019" name="template" /><label><?php _e('Vorlage 1', 'compassion-letters'); ?></label><label for="template1" class="template-label">
@@ -243,11 +243,11 @@
     <div id="loading-modal" class="reveal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
         <div class="content">
 
-            <h4 class="preview-loading"><?php _e('Ihre Vorschau wird generiert...', 'compassion-letters') ?></h4>
-            <h4 class="send-loading"><?php _e('Ihr Brief wird generiert...', 'compassion-letters') ?></h4>
-            <h4 class="send-success"><?php _e('Ihr Brief wurde verschickt. Sie erhalten eine Kopie per E-Mail.', 'compassion-letters') ?></h4>
+            <h4 class="preview-loading"><?php _e('Deine Vorschau wird generiert...', 'compassion-letters') ?></h4>
+            <h4 class="send-loading"><?php _e('Dein Brief wird generiert...', 'compassion-letters') ?></h4>
+            <h4 class="send-success"><?php _e('Dein Brief wurde verschickt. Du erhältst eine Kopie per E-Mail.', 'compassion-letters') ?></h4>
             <h4 class="send-fail"><?php _e('Es ist ein Fehler!', 'compassion-letters') ?></h4>
-            <p class="send-fail"><?php _e('Wir haben derzeit ein Problem mit dem Online Senden von Briefen. Unsere Informatiker arbeiten an dem Fehler. Vielen Dank für Ihr Verständnis. In der Zwischenzeit, senden Sie bitte Ihren Brief an info@compassion.ch.', 'compassion-letters') ?></p>
+            <p class="send-fail"><?php _e('Wir haben derzeit ein Problem mit dem Online Senden von Briefen. Unsere Informatiker arbeiten an dem Fehler. Vielen Dank für dein Verständnis. In der Zwischenzeit sende bitte deinen Brief an info@compassion.ch.', 'compassion-letters') ?></p>
 
             <div class="loading-icon">
                 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
