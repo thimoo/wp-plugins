@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-18 06:12+0000\n"
+"POT-Creation-Date: 2019-10-21 05:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -99,8 +99,8 @@ msgstr ""
 
 #: templates/frontend/form.php:81 templates/frontend/form_christmas.php:81
 msgid ""
-"Um den Verlust Ihres Briefes zu vermeiden, empfehlen wir Ihnen, diesen "
-"zuerst auf einem Word-Dokument zu schreiben und ihn danach hier einzufügen."
+"Um den Verlust deines Briefes zu vermeiden, empfehlen wir dir, diesen zuerst "
+"auf einem Word-Dokument zu schreiben und ihn danach hier einzufügen."
 msgstr ""
 
 #: templates/frontend/form.php:81 templates/frontend/form_christmas.php:81
