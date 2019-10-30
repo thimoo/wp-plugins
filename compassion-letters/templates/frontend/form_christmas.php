@@ -85,7 +85,7 @@
             <div class="row">
                 <div class="small-12 columns condgenerale">
 	            <input class="condgene" type="checkbox" required data-msg="<?php _e('Angabe erforderlich', 'child-sponsor-lang'); ?>"  <?php echo (isset($session_data['condgen']) && $session_data['condgen']['checkbox'] == 'on') ? 'checked' : ''; ?> name="condgen[checkbox]"> <span class="marg-left-10"> <?php _e('Ja, ich habe die <a target="_blank" href="https://compassion.ch/wp-content/uploads/documents_compassion/GDPR-compassion_DE.pdf">Datenschutzbestimmungen gelesen.</a>', 'child-sponsor-lang')?> </span>
-<br/>	  <br/>	                  <small><a href="mailto:info@compassion.ch?subject=<?php _e('Ich finde meine Nummer gerade nicht! Bitte sendet mir die Informationen per E-Mail', 'compassion-letters'); ?>&body=<?php _e('Vorname, Nachname', 'compassion-letters'); ?>:"><?php _e('Ich finde meine Nummer gerade nicht! Bitte senden Sie mir die Informationen per E-Mail. (Das kann einen Arbeitstag dauern)', 'compassion-letters'); ?></a> </small>
+<br/>	  <br/>	                  <small><a href="mailto:info@compassion.ch?subject=<?php _e('Ich finde meine Nummer gerade nicht! Bitte sendet mir die Informationen per E-Mail', 'compassion-letters'); ?>&body=<?php _e('Vorname, Nachname', 'compassion-letters'); ?>:"><?php _e('Ich finde meine Nummer gerade nicht! Bitte sendet mir die Informationen per E-Mail', 'compassion-letters'); ?></a> </small>
 
 
                 </div>
