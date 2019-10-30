@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Compassion Letters\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-21 05:51+0000\n"
-"PO-Revision-Date: 2019-10-21 05:54+0000\n"
+"POT-Creation-Date: 2019-10-30 09:57+0000\n"
+"PO-Revision-Date: 2019-10-30 09:59+0000\n"
 "Last-Translator: olivier <orequet@compassion.ch>\n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.3.0; wp-5.2.4"
+"X-Loco-Version: 2.3.1; wp-5.2.4"
 
 #: compassion-letters.php:313
 msgid "Compassion Schweiz"
@@ -113,13 +113,13 @@ msgstr "Le champ est obligatoire"
 msgid "von 1300 Zeichen"
 msgstr "de 1300 caractères"
 
-#: templates/frontend/form.php:88 templates/frontend/form_christmas.php:88
+#: templates/frontend/form.php:88
 msgid ""
-"Ich finde meine Nummer gerade nicht! Bitte senden Sie mir die Informationen "
-"per E-Mail"
+"Ich finde meine Nummer gerade nicht! Bitte sendet  die Informationen per E-"
+"Mail"
 msgstr ""
 "Je ne retrouve plus mes informations de parrain, merci de me les renvoyer "
-"par email"
+"par email (peut prendre un jour ouvrable)."
 
 #: templates/frontend/form.php:88 templates/frontend/form_christmas.php:88
 msgid ""
@@ -143,7 +143,7 @@ msgstr "Télécharger une photo"
 
 #: templates/frontend/form.php:106
 msgid "Format: JPG/PNG, max. Grösse: 10MB"
-msgstr ""
+msgstr "Format: JPG/PNG, taille max: 10MB"
 
 #: templates/frontend/form.php:115
 msgid "Bitte wähle eine Vorlage: "
@@ -264,6 +264,14 @@ msgstr ""
 "Nous avons actuellement un problème avec l'envoi de lettres, nos "
 "informaticiens travaillent sur l'erreur. Merci pour votre compréhension. "
 "Veuillez envoyer votre lettre à : info@compassion.ch"
+
+#: templates/frontend/form_christmas.php:88
+msgid ""
+"Ich finde meine Nummer gerade nicht! Bitte sendet mir die Informationen per "
+"E-Mail"
+msgstr ""
+"Je ne retrouve plus mes informations de parrain, merci de me les renvoyer "
+"par email (peut prendre un jour ouvrable)."
 
 #: templates/frontend/form_christmas.php:107
 msgid "Format: JPG/PNG, max. Grösse: 2MB"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-21 05:51+0000\n"
+"POT-Creation-Date: 2019-10-30 09:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -111,10 +111,10 @@ msgstr ""
 msgid "von 1300 Zeichen"
 msgstr ""
 
-#: templates/frontend/form.php:88 templates/frontend/form_christmas.php:88
+#: templates/frontend/form.php:88
 msgid ""
-"Ich finde meine Nummer gerade nicht! Bitte senden Sie mir die Informationen "
-"per E-Mail"
+"Ich finde meine Nummer gerade nicht! Bitte sendet  die Informationen per E-"
+"Mail"
 msgstr ""
 
 #: templates/frontend/form.php:88 templates/frontend/form_christmas.php:88
@@ -254,6 +254,12 @@ msgid ""
 "Wir haben derzeit ein Problem mit dem Online Senden von Briefen. Unsere "
 "Informatiker arbeiten an dem Fehler. Vielen Dank für dein Verständnis. In "
 "der Zwischenzeit sende bitte deinen Brief an info@compassion.ch."
+msgstr ""
+
+#: templates/frontend/form_christmas.php:88
+msgid ""
+"Ich finde meine Nummer gerade nicht! Bitte sendet mir die Informationen per "
+"E-Mail"
 msgstr ""
 
 #: templates/frontend/form_christmas.php:107
