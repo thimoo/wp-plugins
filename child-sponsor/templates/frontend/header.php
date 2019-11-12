@@ -10,7 +10,24 @@ $my_current_lang = apply_filters('wpml_current_language', NULL);
 jQuery(document).ready(function($) {
     // Validate the forms
     $.validator.addMethod("slashDate", function(value, element) {
-        return /(0[1-9]|[1-2][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d\d\d\d/.test(value);
+        /*
+          In order to be more flexible for Germans, we accept different
+          separators: . (dot) - (hyphen) / (slash)
+          and then reformat the date for odoo
+
+          original regexp:
+            /(0[1-9]|[1-2][0-9]|3[01])\/(0[1-9]|1[0-2])\/(\d\d\d\d)/
+        */
+        regexp = /^(0?[1-9]|[1-2][0-9]|3[01])[\.\/\-](0?[1-9]|1[0-2])[\.\/\-](\d\d\d\d)$/
+        var match = regexp.test(value);
+        if (!match)
+          return false;
+          
+        value = value.replace(/[\.\-]/g, "/");
+        value = value.replace(/^([1-9])\//, "0$1/");
+        value = value.replace(/\/([1-9])\//, "/0$1/");
+        $(element).val(value);
+        return true;
     }, "Please enter a valid date");
 
     $('.child-sponsor form').validate({
@@ -38,7 +55,7 @@ jQuery(document).ready(function($) {
             $('.consumer-source-text-wrapper').find('input').addClass('ignore');
 	} else {
       	    $('.place').attr('placeholder', placeholder);
-	    
+
 	    $('.consumer-source-text-wrapper').removeClass('hide');
             $('.consumer-source-text-wrapper').find('input').removeClass('ignore');
 	}
@@ -80,7 +97,7 @@ jQuery(document).ready(function($) {
                 _e('Du wirst das Leben des Kindes für immer verändern.', 'child-sponsor-lang');
             } ?>
         <p>
-	       
+
     </div>
 
 </div>

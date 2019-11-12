@@ -25,11 +25,11 @@ if ($msk) {
                     <li>3</li>
                 </ul>
 <!--              Writeandpraystuff  -->
-			<?php if (!$wapr) { ?> 
+			<?php if (!$wapr) { ?>
 
                 <p><?php echo sprintf( wp_kses( __('Mit 42 CHF pro Monat kannst du %s aus der Armut befreien!', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></p>
            <?php } ?>
-           
+
 <!--       emd Writeandpraystuff  -->
                             </div>
 
@@ -111,7 +111,7 @@ if ($msk) {
                     <label class="text-left middle"><?php _e('Geburtsdatum', 'child-sponsor-lang'); ?></label>
                 </div>
                 <div class="small-8 columns">
-                    <input type="text" placeholder="31/12/2000" class="input-field" required data-msg="<?php _e('Geburtsdatum erforderlich', 'child-sponsor-lang'); ?>" name="birthday" value="<?php echo (isset($session_data['birthday'])) ? $session_data['birthday'] : ''; ?>">
+                    <input type="text" id="datepicker" placeholder="31/12/2000" class="input-field" required data-msg="<?php _e('Geburtsdatum erforderlich', 'child-sponsor-lang'); ?>" name="birthday" value="<?php echo (isset($session_data['birthday'])) ? $session_data['birthday'] : ''; ?>">
                 </div>
             </div>
 
@@ -150,10 +150,10 @@ if ($msk) {
             </div>
 
 			<hr>
-			
+
 			<!--              Writeandpraystuff  -->
 
-              <?php if (!$wapr) { ?> 
+              <?php if (!$wapr) { ?>
 
             <h4 class="text-uppercase" id="bank"><?php _e('Zahlungsweise', 'child-sponsor-lang'); ?></h4>
 				<div class="row">
@@ -166,7 +166,7 @@ if ($msk) {
 					</div>
 				</div>
             <hr>
-            
+
              <h4 class="text-uppercase" id="Patenschaftplus"><?php _e('Patenschaft plus', 'child-sponsor-lang'); ?></h4>
              	<div class="row">
                 <div class="small-12 columns">
@@ -177,7 +177,7 @@ if ($msk) {
                 </div>
                 </div>
          <?php } else { ?>
-         
+
        <h4 class="text-uppercase" id="Patenschaftplus"><?php _e('Write & Pray', 'child-sponsor-lang'); ?></h4>
              	<div class="row">
                 <div class="small-12 columns">
@@ -187,7 +187,7 @@ if ($msk) {
                 </div>
 
           <?php } ?>
-          
+
           <!--        end Writeandpraystuff  -->
 
 
@@ -202,26 +202,26 @@ if ($msk) {
            	<div class="row">
                 <div class="small-12 medium-6 columns language">
 	                 <ul>
-					 <li><input id="language" type="checkbox" name="language[]"  value="französich" <?php echo (isset($session_data['language']) && $session_data['language'] == 'französich') ? 'checked' : ''; ?>><label><?php _e('Französisch', 'child-sponsor-lang') ?></label>              
-		            </li>	                 
-					<li><input id="language" type="checkbox" name="language[]"   value="italienisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'italienisch') ? 'checked' : ''; ?>><label><?php _e('Italienisch', 'child-sponsor-lang') ?></label>              
-		            </li>	                 
-        
+					 <li><input id="language" type="checkbox" name="language[]"  value="französich" <?php echo (isset($session_data['language']) && $session_data['language'] == 'französich') ? 'checked' : ''; ?>><label><?php _e('Französisch', 'child-sponsor-lang') ?></label>
+		            </li>
+					<li><input id="language" type="checkbox" name="language[]"   value="italienisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'italienisch') ? 'checked' : ''; ?>><label><?php _e('Italienisch', 'child-sponsor-lang') ?></label>
+		            </li>
+
 	                 </ul>
-		          
+
 		        </div>
                 <div class="small-12 medium-6 columns language " >
 	                <ul>
-		          <li><input id="language" type="checkbox"   name="language[]" value="spanisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'spanisch') ? 'checked' : ''; ?>><label><?php _e('Spanisch', 'child-sponsor-lang') ?></label>              
+		          <li><input id="language" type="checkbox"   name="language[]" value="spanisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'spanisch') ? 'checked' : ''; ?>><label><?php _e('Spanisch', 'child-sponsor-lang') ?></label>
 		            </li>
-	                 <li><input id="language" type="checkbox" name="language[]"  value="englisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'englisch') ? 'checked' : ''; ?>><label><?php _e('Englisch', 'child-sponsor-lang') ?></label>              
+	                 <li><input id="language" type="checkbox" name="language[]"  value="englisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'englisch') ? 'checked' : ''; ?>><label><?php _e('Englisch', 'child-sponsor-lang') ?></label>
 		            </li>
-					<li><input id="language" type="checkbox" name="language[]"  value="portugiesisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'portugiesisch') ? 'checked' : ''; ?>><label><?php _e('Portugiesisch', 'child-sponsor-lang') ?></label>              
+					<li><input id="language" type="checkbox" name="language[]"  value="portugiesisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'portugiesisch') ? 'checked' : ''; ?>><label><?php _e('Portugiesisch', 'child-sponsor-lang') ?></label>
 		            </li>
 
 	                </ul>
 				</div>
-				
+
 			</div>
 
 
@@ -282,7 +282,7 @@ if ($msk) {
             </div>
             <?php } ?>
             <hr>
-            
+
              <h4 class="text-uppercase" id="Patenschaftplus"><?php _e('Mithelfen', 'child-sponsor-lang'); ?></h4>
              	<div class="row">
                 <div class="small-12 columns">
@@ -301,3 +301,17 @@ if ($msk) {
     </div>
 
 </div>
+
+<script>
+    jQuery(document).ready(function($) {
+        $.datepicker.setDefaults({
+            changeYear: true,
+            yearRange : "c-70:c+0",
+            dateFormat: "dd/mm/yy",
+            constrainInput: false
+        });
+        $("#datepicker").datepicker({
+          dateFormat: "dd/mm/yy",
+        });
+    });
+</script>
