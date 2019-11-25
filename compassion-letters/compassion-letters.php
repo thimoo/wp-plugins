@@ -141,7 +141,7 @@ class CompassionLetters
     private function maybe_resize_image($image_path) {
         $image = new Imagick($image_path);
         $imageLength = $image->getImageLength();
-        $maxImageLength = 2 * 1024 * 1024.0;
+        $maxImageLength = 0.5 * 1024 * 1024.0;
         if($imageLength <= $maxImageLength) {
             return;
         }
