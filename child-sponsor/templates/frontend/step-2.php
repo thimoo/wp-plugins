@@ -276,7 +276,7 @@ $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';
 
             <div class="form-action">
                 <a href="?step=1" class="button button-beige button-small"><?php _e('Zurück', 'child-sponsor-lang'); ?></a>
-                <input type="submit" class="button button-blue button-small" value="<?php _e('Bestätigen', 'child-sponsor-lang'); ?>"/>
+                <input type="submit" class="button button-blue button-small sponsor_ok" value="<?php _e('Bestätigen', 'child-sponsor-lang'); ?>"/>
             </div>
 
         </form>
