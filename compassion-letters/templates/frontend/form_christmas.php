@@ -9,8 +9,36 @@
 </noscript>
 
 <script type="text/javascript">
+    
+    // Retrieve GET parameter value funcion
+    var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+    };
+    
+    // Try to auto-fill form when page is loaded.
     jQuery( document ).ready(function() {
-        // Handler for .ready() called.
+        // First try to search in GET parameters all Form elements
+        jQuery('form.compassion-letter-form *').filter(':input').each(function () {
+            var element = jQuery(this);
+            var inputId = element.attr('id');
+            var inputVal = getUrlParameter(inputId);
+            if (inputVal) {
+                element.val(inputVal);
+            }
+        });
+        
+        // Old version fallback that used the hastag in the URL
         if(window.location.hash){
             var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
             for(var i = 0; i < hashParams.length; i++){
@@ -50,7 +78,7 @@
                     <label class="text-left middle"><?php _e('Vorname, Nachname', 'compassion-letters'); ?>*</label>
                 </div>
                 <div class="small-8 columns">
-                    <input type="text" required data-msg="<?php _e('Name erforderlich', 'compassion-letters'); ?>" class="input-field clear-pdf-on-change" name="name" id="pname">
+                    <input type="text" required data-msg="<?php _e('Name erforderlich', 'compassion-letters'); ?>" class="input-field clear-pdf-on-change" name="name" id="name">
                 </div>
             </div>
 
@@ -78,14 +106,14 @@
                     <label class="text-left middle"><?php _e('Nachricht', 'compassion-letters'); ?>*</label>
                 </div>
                 <div class="small-8 columns">
-                    <textarea maxlength="1500" placeholder="<?php _e('Um den Verlust deines Briefes zu vermeiden, empfehlen wir dir, diesen zuerst auf einem Word-Dokument zu schreiben und ihn danach hier einzufügen.', 'compassion-letters'); ?>" required data-msg="<?php _e('Nachricht erforderlich', 'compassion-letters'); ?>" name="message" class="input-field clear-pdf-on-change"></textarea>
+                    <textarea maxlength="1500" placeholder="<?php _e('Um den Verlust Ihres Briefes zu vermeiden, empfehlen wir Ihnen, diesen zuerst auf einem Word-Dokument zu schreiben und ihn danach hier einzufügen.', 'compassion-letters'); ?>" required data-msg="<?php _e('Nachricht erforderlich', 'compassion-letters'); ?>" name="message" class="input-field clear-pdf-on-change"></textarea>
                     <p class="text-right letter-count-wrapper"><span class="letter-count">0</span> <?php _e('von 1300 Zeichen', 'compassion-letters'); ?></p>
                 </div>
             </div>
             <div class="row">
                 <div class="small-12 columns condgenerale">
 	            <input class="condgene" type="checkbox" required data-msg="<?php _e('Angabe erforderlich', 'child-sponsor-lang'); ?>"  <?php echo (isset($session_data['condgen']) && $session_data['condgen']['checkbox'] == 'on') ? 'checked' : ''; ?> name="condgen[checkbox]"> <span class="marg-left-10"> <?php _e('Ja, ich habe die <a target="_blank" href="https://compassion.ch/wp-content/uploads/documents_compassion/GDPR-compassion_DE.pdf">Datenschutzbestimmungen gelesen.</a>', 'child-sponsor-lang')?> </span>
-<br/>	  <br/>	                  <small><a href="mailto:info@compassion.ch?subject=<?php _e('Ich finde meine Nummer gerade nicht! Bitte sendet mir die Informationen per E-Mail', 'compassion-letters'); ?>&body=<?php _e('Vorname, Nachname', 'compassion-letters'); ?>:"><?php _e('Ich finde meine Nummer gerade nicht! Bitte sendet mir die Informationen per E-Mail', 'compassion-letters'); ?></a> </small>
+<br/>	  <br/>	                  <small><a href="mailto:info@compassion.ch?subject=<?php _e('Ich finde meine Nummer gerade nicht! Bitte senden Sie mir die Informationen per E-Mail', 'compassion-letters'); ?>&body=<?php _e('Vorname, Nachname', 'compassion-letters'); ?>:"><?php _e('Ich finde meine Nummer gerade nicht! Bitte senden Sie mir die Informationen per E-Mail. (Das kann einen Arbeitstag dauern)', 'compassion-letters'); ?></a> </small>
 
 
                 </div>
@@ -116,9 +144,9 @@
         <div class="large-12 columns">
         </div>
         <div class="large-12 columns">
-                    <input required data-msg="<?php _e('Vorlage erforderlich', 'compassion-letters'); ?>" type="radio" id="template1" class="clear-pdf-on-change" checked="checked"  value="christmas_web_2019" name="template" />
+                    <input required data-msg="<?php _e('Vorlage erforderlich', 'compassion-letters'); ?>" type="radio" id="template1" class="clear-pdf-on-change" checked="checked"  value="christmas_web_2018" name="template" />
                     <label><?php _e('Vorlage 1', 'compassion-letters'); ?></label><label for="template1" class="template-label">
-                    <img src="<?php echo COMPASSION_LETTERS_PLUGIN_DIR_URL; ?>assets/images/christmas_web_2019-preview.jpg" />
+                    <img src="<?php echo COMPASSION_LETTERS_PLUGIN_DIR_URL; ?>assets/images/christmas_web_2018-preview.jpg" />
                     </label>
         </div>
     </div>
@@ -165,11 +193,12 @@
     <div id="loading-modal" class="reveal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
         <div class="content">
 
-            <h4 class="preview-loading"><?php _e('Deine Vorschau wird generiert...', 'compassion-letters') ?></h4>
-            <h4 class="send-loading"><?php _e('Dein Brief wird generiert...', 'compassion-letters') ?></h4>
-            <h4 class="send-success"><?php _e('Dein Brief wurde verschickt. Du erhältst eine Kopie per E-Mail.', 'compassion-letters') ?></h4>
+            <h4 class="preview-loading"><?php _e('Ihre Vorschau wird generiert...', 'compassion-letters') ?></h4>
+            <h4 class="send-loading"><?php _e('Ihr Brief wird generiert...', 'compassion-letters') ?></h4>
+            <h4 class="send-success"><?php _e('Ihr Brief wurde verschickt. Sie erhalten eine Kopie per E-Mail.', 'compassion-letters') ?><br/><br/><a class="close-reveal-modal button button-medium button-blue" id="schliess-button"><?php _e('Schliessen', 'compassion-letters'); ?></a>
+ </h4>
             <h4 class="send-fail"><?php _e('Es ist ein Fehler!', 'compassion-letters') ?></h4>
-            <p class="send-fail"><?php _e('Wir haben derzeit ein Problem mit dem Online Senden von Briefen. Unsere Informatiker arbeiten an dem Fehler. Vielen Dank für dein Verständnis. In der Zwischenzeit sende bitte deinen Brief an info@compassion.ch.', 'compassion-letters') ?></p>
+            <p class="send-fail"><?php _e('Wir haben derzeit ein Problem mit dem Online Senden von Briefen. Unsere Informatiker arbeiten an dem Fehler. Vielen Dank für Ihr Verständnis. In der Zwischenzeit, senden Sie bitte Ihren Brief an info@compassion.ch.', 'compassion-letters') ?></p>
 
             <div class="loading-icon">
                 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -191,7 +220,11 @@
             </div>
         </div>
 
-
+        <script>
+        jQuery('#schliess-button').click(function(){
+	 jQuery(document).scrollTop(jQuery('#rowdon').offset().top);
+});
+     </script>   
 
 <!--         <a class="close-reveal-modal" aria-label="Close"></a> -->
     </div>
