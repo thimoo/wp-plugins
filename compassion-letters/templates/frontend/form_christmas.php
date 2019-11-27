@@ -193,12 +193,12 @@
     <div id="loading-modal" class="reveal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
         <div class="content">
 
-            <h4 class="preview-loading"><?php _e('Ihre Vorschau wird generiert...', 'compassion-letters') ?></h4>
-            <h4 class="send-loading"><?php _e('Ihr Brief wird generiert...', 'compassion-letters') ?></h4>
-            <h4 class="send-success"><?php _e('Ihr Brief wurde verschickt. Sie erhalten eine Kopie per E-Mail.', 'compassion-letters') ?><br/><br/><a class="close-reveal-modal button button-medium button-blue" id="schliess-button"><?php _e('Schliessen', 'compassion-letters'); ?></a>
+            <h4 class="preview-loading"><?php _e('Deine Vorschau wird generiert...', 'compassion-letters') ?></h4>
+            <h4 class="send-loading"><?php _e('Dein Brief wird generiert...', 'compassion-letters') ?></h4>
+            <h4 class="send-success"><?php _e('Dein Brief wurde verschickt. Du erhältst eine Kopie per E-Mail.', 'compassion-letters') ?><br/><br/><a class="close-reveal-modal button button-medium button-blue" id="schliess-button"><?php _e('Schliessen', 'compassion-letters'); ?></a>
  </h4>
             <h4 class="send-fail"><?php _e('Es ist ein Fehler!', 'compassion-letters') ?></h4>
-            <p class="send-fail"><?php _e('Wir haben derzeit ein Problem mit dem Online Senden von Briefen. Unsere Informatiker arbeiten an dem Fehler. Vielen Dank für Ihr Verständnis. In der Zwischenzeit, senden Sie bitte Ihren Brief an info@compassion.ch.', 'compassion-letters') ?></p>
+            <p class="send-fail"><?php _e('Wir haben derzeit ein Problem mit dem Online Senden von Briefen. Unsere Informatiker arbeiten an dem Fehler. Vielen Dank für dein Verständnis. In der Zwischenzeit sende bitte deinen Brief an info@compassion.ch.', 'compassion-letters') ?></p>
 
             <div class="loading-icon">
                 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
