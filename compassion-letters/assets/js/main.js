@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
         },
         'Bitte beachten Sie die Vorgaben für den Bild-Upload/Merci de respecter les indications pour l\'envoi d\'une photo'
     );
-    
+
     var showLoadingModal = function(classname) {
         $('.send-fail').hide();
         $('#loading-modal').removeClass('preview-loading send-loading send-success send-fail').addClass(classname).foundation('open');
@@ -232,5 +232,10 @@ jQuery(document).ready(function($) {
     $('body').on('click', '.close-reveal-modal', function() {
        $(this).parents('.reveal').foundation('close');
     });
-
+    $('.send-success > #schliess-button').on('click', function(){
+      var scrollTo = $("#rowdon");
+      if (scrollTo.length){
+        $("html, body").delay(300).animate({ scrollTop: scrollTo.offset().top - 50}, 1000);
+      }
+    })
 });
