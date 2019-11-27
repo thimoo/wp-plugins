@@ -191,11 +191,7 @@
             </div>
         </div>
 
-        <script>
-        jQuery('#schliess-button').click(function(){
-	 jQuery(document).scrollTop(jQuery('#rowdon').offset().top);
-});
-     </script>   
+
 
 <!--         <a class="close-reveal-modal" aria-label="Close"></a> -->
     </div>
