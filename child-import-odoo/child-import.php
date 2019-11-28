@@ -17,6 +17,21 @@ function addQuotes($childNumber) {
 }
 
 
+/**
+ * Called on plugin activation.
+ */
+function child_import_activation() {
+    child_import_check_dependencies();
+}
+register_activation_hook(__FILE__, 'child_import_activation');
+
+function child_import_check_dependencies() {
+    if(!class_exists('CompassionPosts')) {
+        deactivate_plugins( plugin_basename( __FILE__ ) );
+        wp_die( sprintf(__( 'Please install and activate: %s.', 'compassion' ), 'compassion-posts'), 'Plugin dependency check', array( 'back_link' => true ) );
+    }
+}
+
 class ChildOdooImport
 {
     public function __construct()

@@ -232,6 +232,13 @@ jQuery(document).ready(function($) {
     $('body').on('click', '.close-reveal-modal', function() {
        $(this).parents('.reveal').foundation('close');
     });
+    $('.send-success > #schliess-button').on('click', function(){
+      var scrollTo = $("#rowdon");
+      if (scrollTo.length){
+        $("html, body").delay(300).animate({ scrollTop: scrollTo.offset().top - 50}, 1000);
+      }
+    })
+});
 
     $('.send-success > #schliess-button').on('click', function(){
       var scrollTo = $("#rowdon");
