@@ -86,7 +86,7 @@ class CompassionLetters
 //        wp_enqueue_script('validation-js', plugin_dir_url(__FILE__) . 'bower_components/jquery-validation/dist/jquery.validate.min.js', array('jquery'));
         wp_enqueue_script('validation-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js', array('jquery'));
 
-        wp_register_script( 'compassion-letters-js', plugin_dir_url(__FILE__) . 'assets/js/main-min.js' );
+        wp_register_script( 'compassion-letters-js', plugin_dir_url(__FILE__) . 'assets/js/main.js' );
         wp_localize_script( 'compassion-letters-js', 'wp_data', [
             'admin_ajax' => admin_url( 'admin-ajax.php' ),
             'lang' => apply_filters( 'wpml_current_language', 'fr' )
@@ -145,8 +145,26 @@ class CompassionLetters
         $file = WP\Common::getFile('image', $this->uploads_folder);
 
         $this->correct_image_orientation($file);
+        $this->maybe_resize_image($file);
 
         return $file;
+    }
+
+    /**
+     * Resize the image if bigger that a target size.
+     */
+    private function maybe_resize_image($image_path) {
+        $image = new Imagick($image_path);
+        $imageLength = $image->getImageLength();
+        $maxImageLength = 0.5 * 1024 * 1024.0;
+        if($imageLength <= $maxImageLength) {
+            return;
+        }
+        $scalingRatio = $maxImageLength / $imageLength;
+        $new_width = round($image->getImageWidth() * $scalingRatio);
+        $new_height = round($image->getImageHeight() * $scalingRatio);
+        $image->resizeImage($new_width, $new_height, Imagick::FILTER_CUBIC, 0.5);
+        $image->writeImage($image_path);
     }
 
     private function correct_image_orientation($image_path) {
@@ -269,7 +287,7 @@ class CompassionLetters
      * Send PDF to compassion and user
      */
     public function ajax_action_send() {
-        
+
         $form_data = $_POST;
 
         $form_data['image'] = $this->handle_image_upload();
@@ -347,8 +365,8 @@ class CompassionLetters
 
         return $content;
     }
-    
-    
+
+
      public function shortcodech()
     {
 

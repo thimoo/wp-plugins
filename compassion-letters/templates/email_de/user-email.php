@@ -149,22 +149,22 @@
         <td>
             <div style="padding: 0 20px;">
 	            
-	            <?php if ($form_data['template'] == 'christmas_web_2018'){ ?>
+	            <?php if ($form_data['template'] == 'christmas_web_2019'){ ?>
 					<p>
                     <?php echo ($form_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters'); /* echo ' '.$form_data['salutation'];  */?> <?php echo $form_data['name']; ?><br /><br />
-                
-               Danke, dass Sie sich Zeit genommen haben, Ihrem Patenkind eine Weihnachtskarte zu schreiben!
-			   	<br/> So zeigen Sie Ihrem Patenkind, dass Sie in dieser ganz besonderen Zeit an ihn/sie denken.
-				<p> Ihre Karte wird – falls nötig – übersetzt und dann verschickt, damit sie rechtzeitig zum Weihnachtsfest im Kinderzentrum Ihres Patenkindes ankommt. Eine Kopie davon finden Sie in dieser Nachricht.<br/><br/>
 
-					 <strong>Sie haben auch die Möglichkeit, für unsere Weihnachtsaktion zu spenden.</strong><br/>
-					Jedes Kind - ob es nun bereits einen Paten hat oder noch auf einen wartet – wird auch dieses Jahr wieder ein Weihnachtsgeschenk bekommen. Mit Ihrem finanziellen Beitrag zu dieser Weihnachtsaktion helfen Sie mit, dass die Augen von über 1,9 Millionen Kindern und Familien in Armut erstrahlen. Sie erleben die Freude von Weihnachten und die Hoffnung, die uns geschenkt wird! Von Herzen Danke!
+                Danke, dass du dir Zeit genommen hast, deinem Patenkind eine Weihnachtskarte zu schreiben!
+			   	<br/> So zeigst du deinem Patenkind, dass du in dieser ganz besonderen Zeit an ihn/sie denkst.
+				<p> Deine Karte wird – falls nötig – übersetzt und dann verschickt, damit sie rechtzeitig zum Weihnachtsfest im Kinderzentrum deines Patenkindes ankommt. Eine Kopie davon findest du in dieser Nachricht.<br/><br/>
+
+					 <strong>Du hast auch die Möglichkeit, für unsere Weihnachtsaktion zu spenden.</strong><br/>
+					Jedes Kind - ob es nun bereits einen Paten hat oder noch auf einen wartet – wird auch dieses Jahr wieder ein Weihnachtsgeschenk bekommen. Mit deinem finanziellen Beitrag zu dieser Weihnachtsaktion hilfst du mit, dass die Augen von über 2 Millionen Kindern und Familien in Armut erstrahlen. Du erlebst die Freude von Weihnachten und die Hoffnung, die uns geschenkt wird! Von Herzen Danke!
 <br/>
 <br/><br/>
 					<a href="https://compassion.ch/de/spendenformular/#fonds=noel">SPENDEN</a> 
 				</p><br/>
 								  
-				<p>Vielen Dank für Ihren Einsatz und Ihre Unterstützung.<br/>Herzliche Grüsse,</p>
+				<p>Vielen Dank für deinen Einsatz und deine Unterstützung.<br/>Liebe Grüsse,</p>
 				 <!-- conditional donation christmas -->
 					
 				<?php } else { ?>
@@ -173,17 +173,17 @@
 
                 <p>
                     <?php echo ($form_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters'); /* echo ' '.$form_data['salutation'];  */?> <?php echo $form_data['name']; ?>,<br />
-                Danke, dass Sie sich Zeit genommen haben, Ihrem Patenkind zu schreiben. Die Patenbriefe sind eine grosse Ermutigung für die Kinder, und die Freude ist immer riesig, wenn ein Brief ankommt. <p>
+                    Danke, dass du dir Zeit genommen hast, deinem Patenkind zu schreiben. Die Patenbriefe sind eine grosse Ermutigung für die Kinder, und die Freude ist immer riesig, wenn ein Brief ankommt. <p>
 
-				 <p> Ihr Brief wird nun wenn nötig übersetzt und dann so schnell wie möglich übermittelt. Wir schicken Ihnen hier noch eine Kopie des Textes.<br/>
+				 <p> Dein Brief wird nun wenn nötig übersetzt und dann so schnell wie möglich übermittelt. Wir schicken dir hier noch eine Kopie des Textes.<br/>
 
-				  Wenn Sie noch Fragen zum Briefeschreiben oder allgemein zu den Patenschaften haben, melden Sie sich bitte bei uns unter der unten stehenden Nummer oder per E-Mail. Wir stehen Ihnen gerne zur Verfügung.<br/><p>
+                        Wenn du noch Fragen zum Briefeschreiben oder allgemein zu den Patenschaften hast, melde dich bitte bei uns unter der unten stehenden Nummer oder per E-Mail. Wir stehen dir gerne zur Verfügung.<br/><p>
 
 				  <p>Tel : 031 552 21 21 (Montag bis Freitag von 8.00-16.00 Uhr)<br/>
 				  E-Mail: info@compassion.ch</p>
 				  
-				<p>Herzlichen Dank für Ihr konkretes Engagement um das Leben eines Kindes zu ändern!<br/>
-					Freundliche Grüsse,</p>
+				<p>Vielen Dank für dein konkretes Engagement um das Leben eines Kindes zu ändern!<br/>
+					Liebe Grüsse,</p>
 					
 					<?php  }?>
 

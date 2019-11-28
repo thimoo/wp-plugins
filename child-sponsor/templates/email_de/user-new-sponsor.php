@@ -148,16 +148,15 @@
     <tr>
         <td>
 
-            <h1 style="text-align: center; padding: 25px 0;">Ein grosses MERCI für Dein Engagement	</h1>
+            <h1 style="text-align: center; padding: 25px 0;">Ein grosses MERCI für dein Engagement	</h1>
 			<?php $child_meta = get_child_meta($session_data['childID']);?>
 			
 			<div style="padding: 0 30px;">
 			 <p>
-			<?php echo ($session_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters');?> <?php  $salutation = apply_filters( 'wpml_object_id', $session_data['salutation'], 'post', TRUE);
-	                    echo _e($salutation, 'child-sponsor-lang');?> <?php echo $session_data['first_name']; ?> <br /><br />
+			<?php echo ($session_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters');?> <?php echo $session_data['first_name']; ?> <br /><br />
 			Du hast dich entschieden, <?php echo $child_meta['name']; ?> durch eine Patenschaft zu unterstützen. Vielen Dank, dass mit deiner Hilfe das Leben dieses Kindes verändert wird! Kannst du dir die Riesenfreude vorstellen, wenn unsere Mitarbeitenden vor Ort dem Kind mitteilen können, dass es jetzt auf der anderen Seite der Welt eine Patin oder einen Paten hat? DANKE im Namen von <?php echo $child_meta['name']; ?> und seiner/ihrer Familie!
 			 </p>
-			 <p>Du wirst bald per Post alle Informationen über deine Patenschaft erhalten. Dafür überprüfe bitte deine Angaben:</p>
+			 <p>Du wirst bald per Post alle Informationen über deine Patenschaft erhalten. Überprüfe dazu bitte deine Angaben:</p>
 			
 				 						
           <div style="padding: 0 30px;">
@@ -288,7 +287,7 @@
                 
                <p>Wenn du noch Fragen zu deiner Patenschaft hast, melde dich gerne bei uns: Tel : 031 552 21 21 (Montag bis Freitag von 8.00-16.00 Uhr) - Email: info@compassion.ch</p>
 
-			   <p>Herzlich Willkommen in der grossen internationalen Familie von Compassion!<br/>
+			   <p>Herzlich willkommen in der grossen internationalen Familie von Compassion!<br/>
 				   Freundliche Grüsse,<br/>Carole Rochat und das Compassion Schweiz Team.</p>
             </div>
             

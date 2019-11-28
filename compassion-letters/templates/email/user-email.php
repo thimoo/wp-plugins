@@ -150,7 +150,7 @@
             <div style="padding: 0 20px;">
 	            
 	            
-	            	<?php if ($form_data['template'] == 'christmas_web_2018'){ ?>
+	            	<?php if ($form_data['template'] == 'christmas_web_2019'){ ?>
 					<p>
                     <?php echo ($form_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters'); /* echo ' '.$form_data['salutation'];  */?> <?php echo $form_data['name']; ?>,<br />
                 
@@ -160,7 +160,7 @@
 
 					 
 					 <strong>Vous avez aussi la possibilité d’effectuer un don pour notre action «cadeaux de Noël».</strong><br/><br/>
-					 En effet, chaque enfant, qu’il soit parrainé ou en attente d’un parrain, recevra à nouveau cette année un cadeau de Noël. Vous illuminerez ainsi tout particulièrement cette fête pour les 1,9 millions d'enfants démunis et de leur famille. 					Merci de tout coeur!<br/>
+					 En effet, chaque enfant, qu’il soit parrainé ou en attente d’un parrain, recevra à nouveau cette année un cadeau de Noël. Vous illuminerez ainsi tout particulièrement cette fête pour les 2 millions d'enfants démunis et de leur famille. 					Merci de tout coeur!<br/>
 <br/><br/>
 					<a href="https://compassion.ch/formulaire-pour-dons/#fonds=noel">EFFECTUER UN DON</a> 
 				</p><br/><br/>

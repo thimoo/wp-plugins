@@ -10,7 +10,24 @@ $my_current_lang = apply_filters('wpml_current_language', NULL);
 jQuery(document).ready(function($) {
     // Validate the forms
     $.validator.addMethod("slashDate", function(value, element) {
-        return /(0[1-9]|[1-2][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d\d\d\d/.test(value);
+        /*
+          In order to be more flexible for Germans, we accept different
+          separators: . (dot) - (hyphen) / (slash)
+          and then reformat the date for odoo
+
+          original regexp:
+            /(0[1-9]|[1-2][0-9]|3[01])\/(0[1-9]|1[0-2])\/(\d\d\d\d)/
+        */
+        regexp = /^(0?[1-9]|[1-2][0-9]|3[01])[\.\/\-](0?[1-9]|1[0-2])[\.\/\-](\d\d\d\d)$/
+        var match = regexp.test(value);
+        if (!match)
+          return false;
+          
+        value = value.replace(/[\.\-]/g, "/");
+        value = value.replace(/^([1-9])\//, "0$1/");
+        value = value.replace(/\/([1-9])\//, "/0$1/");
+        $(element).val(value);
+        return true;
     }, "Please enter a valid date");
 
     $('.child-sponsor form').validate({
@@ -38,7 +55,7 @@ jQuery(document).ready(function($) {
             $('.consumer-source-text-wrapper').find('input').addClass('ignore');
 	} else {
       	    $('.place').attr('placeholder', placeholder);
-	    
+
 	    $('.consumer-source-text-wrapper').removeClass('hide');
             $('.consumer-source-text-wrapper').find('input').removeClass('ignore');
 	}
@@ -61,26 +78,26 @@ jQuery(document).ready(function($) {
             $msk = isset($_SESSION['msk_name']) && isset($_SESSION['msk_participant_name']);
             if ($msk) { ?>
                 <h2 style="text-align: center;">
-                    <?= __('Danke, dass Sie sich für', 'child-sponsor-lang') ?> <?= $child_data['name'] ?> <?= __('einsetzen. Die Patenschaft wird das Leben dieses Kindes nachhaltig verändern.', 'child-sponsor-lang'); ?>
+                    <?= __('Danke, dass du dich für', 'child-sponsor-lang') ?> <?= $child_data['name'] ?> <?= __('einsetzt. Die Patenschaft wird das Leben dieses Kindes nachhaltig verändern.', 'child-sponsor-lang'); ?>
                 </h2>
             <?php } else { ?>
-                <h2 style="text-align: center;"><?php _e('Schön, dass Sie ', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?></h2>
+                <h2 style="text-align: center;"><?php _e('Schön, dass du ', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?></h2>
             <?php }
         } elseif ($my_current_lang == "de") { ?>
-            <h2 style="text-align: center;"><?php _e('Schön, dass Sie Pate von', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?>
-                <?php _e('werden möchten', 'child-sponsor-lang'); ?></h2>
+            <h2 style="text-align: center;"><?php _e('Schön, dass du Pate von', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?>
+                <?php _e('werden möchtest', 'child-sponsor-lang'); ?></h2>
         <?php } elseif ($my_current_lang == "it") {
             ?>
-            <h2 style="text-align: center;"><?php _e('Schön, dass Sie', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?></h2>
+            <h2 style="text-align: center;"><?php _e('Schön, dass du', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?></h2>
         <?php } ?>
         <p style="text-align: center;" class="subtitle">
             <?php if ($msk) { ?>
                 <?= $_SESSION['msk_participant_name'] ?>, <?= __('nimmt am', 'child-sponsor-lang') ?> <?= $_SESSION['msk_name'] ?><?= __(' teil.', 'child-sponsor-lang') ?> <?= __('und dankt Ihnen für Ihre Unterstützung!', 'child-sponsor-lang') ?>
             <?php } else {
-                _e('Sie werden das Leben des Kindes für immer verändern.', 'child-sponsor-lang');
+                _e('Du wirst das Leben des Kindes für immer verändern.', 'child-sponsor-lang');
             } ?>
         <p>
-	       
+
     </div>
 
 </div>

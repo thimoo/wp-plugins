@@ -25,11 +25,11 @@ if ($msk) {
                     <li>3</li>
                 </ul>
 <!--              Writeandpraystuff  -->
-			<?php if (!$wapr) { ?> 
+			<?php if (!$wapr) { ?>
 
-                <p><?php echo sprintf( wp_kses( __('Mit 42 CHF pro Monat können Sie %s aus der Armut befreien!', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></p>
+                <p><?php echo sprintf( wp_kses( __('Mit 42 CHF pro Monat kannst du %s aus der Armut befreien!', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></p>
            <?php } ?>
-           
+
 <!--       emd Writeandpraystuff  -->
                             </div>
 
@@ -111,7 +111,7 @@ if ($msk) {
                     <label class="text-left middle"><?php _e('Geburtsdatum', 'child-sponsor-lang'); ?></label>
                 </div>
                 <div class="small-8 columns">
-                    <input type="text" placeholder="31/12/2000" class="input-field" required data-msg="<?php _e('Geburtsdatum erforderlich', 'child-sponsor-lang'); ?>" name="birthday" value="<?php echo (isset($session_data['birthday'])) ? $session_data['birthday'] : ''; ?>">
+                    <input type="text" id="datepicker" placeholder="31/12/2000" class="input-field" required data-msg="<?php _e('Geburtsdatum erforderlich', 'child-sponsor-lang'); ?>" name="birthday" value="<?php echo (isset($session_data['birthday'])) ? $session_data['birthday'] : ''; ?>">
                 </div>
             </div>
 
@@ -150,10 +150,10 @@ if ($msk) {
             </div>
 
 			<hr>
-			
+
 			<!--              Writeandpraystuff  -->
 
-              <?php if (!$wapr) { ?> 
+              <?php if (!$wapr) { ?>
 
             <h4 class="text-uppercase" id="bank"><?php _e('Zahlungsweise', 'child-sponsor-lang'); ?></h4>
 				<div class="row">
@@ -162,11 +162,11 @@ if ($msk) {
                            <label><input type="radio" required data-msg="<?php _e('Zahlungsweise erforderlich', 'child-sponsor-lang'); ?>" name="zahlungsweise" value="lsv"> <?php _e('Direct Debit - LSV', 'child-sponsor-lang') ?></label>
 					 </div>
 					<div class="small-12 columns zahlung">
-						<p class="marg-top-10"><?php _e('Wenn Sie eine andere Zahlungsart wünschen, dann rufen Sie uns bitte an unter 0800 784 773.', 'child-sponsor-lang' )?></p>
+						<p class="marg-top-10"><?php _e('Wenn du eine andere Zahlungsart wünschst, dann rufe uns bitte an unter 031 552 21 21.', 'child-sponsor-lang' )?></p>
 					</div>
 				</div>
             <hr>
-            
+
              <h4 class="text-uppercase" id="Patenschaftplus"><?php _e('Patenschaft plus', 'child-sponsor-lang'); ?></h4>
              	<div class="row">
                 <div class="small-12 columns">
@@ -177,7 +177,7 @@ if ($msk) {
                 </div>
                 </div>
          <?php } else { ?>
-         
+
        <h4 class="text-uppercase" id="Patenschaftplus"><?php _e('Write & Pray', 'child-sponsor-lang'); ?></h4>
              	<div class="row">
                 <div class="small-12 columns">
@@ -187,7 +187,7 @@ if ($msk) {
                 </div>
 
           <?php } ?>
-          
+
           <!--        end Writeandpraystuff  -->
 
 
@@ -196,38 +196,38 @@ if ($msk) {
             <h4 class="text-uppercase" id="briefwechsel"><?php echo sprintf( wp_kses( __('Briefwechsel mit %s', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></h4>
             	<div class="row">
 	            	<div class="small-12 columns">
-						<p><?php _e('Selbstverständlich übersetzen wir Ihre Briefe gerne, Sie können Ihre Briefe aber auch direkt in der Sprache des Kindes oder auf Englisch schreiben. Dies spart Zeit und nimmt unseren freiwilligen Übersetzern Arbeit ab. Welche der folgenden Sprachen verstehen Sie?', 'child-sponsor-lang')?></p>
+						<p><?php _e('Selbstverständlich übersetzen wir deine Briefe gerne, du kannst deine Briefe aber auch direkt in der Sprache des Kindes oder auf Englisch schreiben. Dies spart Zeit und nimmt unseren freiwilligen Übersetzern Arbeit ab. Welche der folgenden Sprachen verstehst du?', 'child-sponsor-lang')?></p>
 	            	</div>
             	</div>
            	<div class="row">
                 <div class="small-12 medium-6 columns language">
 	                 <ul>
-					 <li><input id="language" type="checkbox" name="language[]"  value="französich" <?php echo (isset($session_data['language']) && $session_data['language'] == 'französich') ? 'checked' : ''; ?>><label><?php _e('Französisch', 'child-sponsor-lang') ?></label>              
-		            </li>	                 
-					<li><input id="language" type="checkbox" name="language[]"   value="italienisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'italienisch') ? 'checked' : ''; ?>><label><?php _e('Italienisch', 'child-sponsor-lang') ?></label>              
-		            </li>	                 
-        
+					 <li><input id="language" type="checkbox" name="language[]"  value="französich" <?php echo (isset($session_data['language']) && $session_data['language'] == 'französich') ? 'checked' : ''; ?>><label><?php _e('Französisch', 'child-sponsor-lang') ?></label>
+		            </li>
+					<li><input id="language" type="checkbox" name="language[]"   value="italienisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'italienisch') ? 'checked' : ''; ?>><label><?php _e('Italienisch', 'child-sponsor-lang') ?></label>
+		            </li>
+
 	                 </ul>
-		          
+
 		        </div>
                 <div class="small-12 medium-6 columns language " >
 	                <ul>
-		          <li><input id="language" type="checkbox"   name="language[]" value="spanisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'spanisch') ? 'checked' : ''; ?>><label><?php _e('Spanisch', 'child-sponsor-lang') ?></label>              
+		          <li><input id="language" type="checkbox"   name="language[]" value="spanisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'spanisch') ? 'checked' : ''; ?>><label><?php _e('Spanisch', 'child-sponsor-lang') ?></label>
 		            </li>
-	                 <li><input id="language" type="checkbox" name="language[]"  value="englisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'englisch') ? 'checked' : ''; ?>><label><?php _e('Englisch', 'child-sponsor-lang') ?></label>              
+	                 <li><input id="language" type="checkbox" name="language[]"  value="englisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'englisch') ? 'checked' : ''; ?>><label><?php _e('Englisch', 'child-sponsor-lang') ?></label>
 		            </li>
-					<li><input id="language" type="checkbox" name="language[]"  value="portugiesisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'portugiesisch') ? 'checked' : ''; ?>><label><?php _e('Portugiesisch', 'child-sponsor-lang') ?></label>              
+					<li><input id="language" type="checkbox" name="language[]"  value="portugiesisch" <?php echo (isset($session_data['language']) && $session_data['language'] == 'portugiesisch') ? 'checked' : ''; ?>><label><?php _e('Portugiesisch', 'child-sponsor-lang') ?></label>
 		            </li>
 
 	                </ul>
 				</div>
-				
+
 			</div>
 
 
             <hr>
 
-            <h4 class="text-uppercase" id="bank"><?= __('Wie haben Sie von Compassion erfahren?', 'child-sponsor-lang') ?></h4>
+            <h4 class="text-uppercase" id="bank"><?= __('WIE HAST DU VON COMPASSION ERFAHREN?', 'child-sponsor-lang') ?></h4>
             <div class="row">
                 <div class="small-4 columns">
                     <label class="text-left middle"><?= __('Ich bin aufmerksam geworden durch', 'child-sponsor-lang') ?></label>
@@ -282,7 +282,7 @@ if ($msk) {
             </div>
             <?php } ?>
             <hr>
-            
+
              <h4 class="text-uppercase" id="Patenschaftplus"><?php _e('Mithelfen', 'child-sponsor-lang'); ?></h4>
              	<div class="row">
                 <div class="small-12 columns">
@@ -301,3 +301,17 @@ if ($msk) {
     </div>
 
 </div>
+
+<script>
+    jQuery(document).ready(function($) {
+        $.datepicker.setDefaults({
+            changeYear: true,
+            yearRange : "c-70:c+0",
+            dateFormat: "dd/mm/yy",
+            constrainInput: false
+        });
+        $("#datepicker").datepicker({
+          dateFormat: "dd/mm/yy",
+        });
+    });
+</script>

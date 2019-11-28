@@ -1,5 +1,5 @@
 $color_light_blue: #b2cbe4;
-$color_blue: #0054a6;
+$color_blue: #005eb8;
 $color_light_grey: #f0f0e9;
 $color_white: #FFFFFF;
 $color_text: #424040;
@@ -228,8 +228,8 @@ $color_dark_blue: #0c3f79;
 
       h5 {
         opacity: 0;
-        -webkit-transform: -webkit-translateY(100px);
-        -moz-transform: -moz-translateY(100px);
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
         transform: translateY(100px);
         transition: all 0.45s ease-in-out;
         color: $color_white;
@@ -243,8 +243,8 @@ $color_dark_blue: #0c3f79;
 
       h5 {
         opacity: 1;
-        -webkit-transform: -webkit-translate(0);
-        -moz-transform: -moz-translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
         transform: translate(0);
       }
     }
@@ -279,7 +279,7 @@ $color_dark_blue: #0c3f79;
     padding: 4px 10px;
     text-align: center;
     width: 100%;
-    color: #0054a6;
+    color: #005eb8;
     border-radius: 4px;
     font-size: small;}
     

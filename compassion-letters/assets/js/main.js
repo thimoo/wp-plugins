@@ -239,3 +239,10 @@ jQuery(document).ready(function($) {
       }
     })
 });
+
+    $('.send-success > #schliess-button').on('click', function(){
+      var scrollTo = $("#rowdon");
+      if (scrollTo.length)
+        $("html, body").delay(300).animate({ scrollTop: scrollTo.offset().top - 50}, 1000);
+    })
+});

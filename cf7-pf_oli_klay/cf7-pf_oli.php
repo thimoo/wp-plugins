@@ -278,11 +278,11 @@ class Compassion_Donation_Form {
         switch ($atts['form']) {
             case 'donation':
                 $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/frontend/inputs.php';
-                $bank_transfer_comment = __('Vielen Dank, dass Sie nicht vergessen, den Spendenzweck zu erwähnen.','donation-form' );
+                $bank_transfer_comment = __('Vielen Dank, dass du nicht vergisst, den Spendenzweck zu erwähnen.','donation-form' );
                 break;
             case 'csp':
                 $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/csp/inputs.php';
-                $bank_transfer_comment = __('Bitte geben Sie an, ob Sie regelmässig oder einmalig für das Kinder-Überlebensprogramm spenden möchten. Spendenzweck (monatlich oder einmalig): Überlebensprogramm', 'donation-form');
+                $bank_transfer_comment = __('Bitte gib an, ob du regelmässig oder einmalig für das Kinder-Überlebensprogramm spenden möchtest. Spendenzweck (monatlich oder einmalig): Überlebensprogramm', 'donation-form');
                 $bank_transfer_reason = '<tspan x="0" dy="0">' . __('Überlebensprogramm', 'donation-form') . ' :</tspan>' .
                                         '<tspan x="0" dy="1.4em"> ☐ ' . __('monatliche Spende', 'donation-form') . '</tspan>' .
                                         '<tspan x="0" dy="1.4em"> ☐ ' . __('einmalige Spende', 'donation-form') . '</tspan>';
@@ -293,11 +293,11 @@ class Compassion_Donation_Form {
                     $parts = explode('|', $atts['motif']);
                     $fonds = $parts[1];
                     $bank_transfer_reason = $parts[0];
-                    $bank_transfer_comment = __('Vielen Dank, dass Sie nicht vergessen, den Spendenzweck zu erwähnen.','donation-form' );                }
+                    $bank_transfer_comment = __('Vielen Dank, dass du nicht vergisst, den Spendenzweck zu erwähnen.','donation-form' );                }
                 break;
             case 'cadeau':
             default:
-                $bank_transfer_comment = __('Vielen Dank, dass Sie nicht vergessen, den Spendenzweck zu erwähnen.','donation-form' );
+                $bank_transfer_comment = __('Vielen Dank, dass du nicht vergisst, den Spendenzweck zu erwähnen.','donation-form' );
                 $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/cadeau/inputs.php';
                 break;
         }
@@ -362,13 +362,14 @@ class Compassion_Donation_Form {
             'EMAIL' => $session_data['email'],
             'COMPLUS' => $_SESSION['transaction'],
             'PARAMPLUS' => 'campaign_slug='.$_SESSION['campaign_slug'],
-            'ACCEPTURL' =>  $base_address .'/confirmation-don',
+            'ACCEPTURL' =>  $base_address . '/confirmation-don',
             'DECLINEURL' => $base_address .'/annulation-don',
             'EXCEPTIONURL' => $base_address .'/annulation-don',
             'CANCELURL' => $base_address .'/annulation-don',        );
 
         if($_SESSION['count_runs']==0) {
             $_SESSION['count_runs']++;
+
 
             $wpdb->insert(
                     $wpdb->prefix . DONATION_TABLE_NAME,
@@ -398,6 +399,9 @@ class Compassion_Donation_Form {
                     )
                 );
         }
+
+        //redirect thank you page for Christmas only
+       if($this->cleanfordb($session_data['fonds'])=='noel'){$form['ACCEPTURL'] = $base_address . '/confirmation-don-noel';}
 
         $sha_sign = self::compute_pf_sha_sign($form)
 

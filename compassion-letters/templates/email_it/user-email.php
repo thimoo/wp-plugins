@@ -149,7 +149,7 @@
         <td>
             <div style="padding: 0 20px;">
 	            
-	              <?php if ($form_data['template'] == 'christmas_web_2018'){ ?>
+	              <?php if ($form_data['template'] == 'christmas_web_2019'){ ?>
 					<p>
                     <?php echo ($form_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters'); /* echo ' '.$form_data['salutation'];  */?> <?php echo $form_data['name']; ?>,<br /><br />
                 
@@ -159,7 +159,7 @@
 				<p> La sua cartolina sarà tradotta, se necessario, e inviata per arrivare in tempo per la festa nel suo centro. Troverà anche una copia in questo messaggio.<br/><br/>
 
 					 <strong>Ha anche la possibilità di fare una donazione per la nostra azione "Regali di Natale".</strong><br/>
-					Infatti, ogni bambino, sostenuto o in attesa di un sostenitore, riceverà di nuovo un regalo di Natale quest'anno. Questo sarà un momento speciale per tutti i 1,9 milioni di bambini bisognosi e le loro famiglie. Grazie mille!
+					Infatti, ogni bambino, sostenuto o in attesa di un sostenitore, riceverà di nuovo un regalo di Natale quest'anno. Questo sarà un momento speciale per tutti i 2 milioni di bambini bisognosi e le loro famiglie. Grazie mille!
 					<br/>
 					<br/>
 					<a href="https://compassion.ch/it/formulario-per-donazioni/#fonds=noel">FAI UNA DONAZIONE</a> 

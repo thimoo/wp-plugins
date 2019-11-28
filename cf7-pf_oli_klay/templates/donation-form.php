@@ -66,7 +66,7 @@
     <div class="tabs-panel is-active" id="panel-online-donation">
         <div class="row">
             <form method="POST" action="?step=redirect"  class="large-12 large-centered medium-12 medium-centered column" >
-                <p><?php _e('Spenden Sie über eine sichere Online-Zahlung, mit Postfinance oder Kreditkarte.','donation-form' )?></p>
+                <p><?php _e('Spende über eine sichere Online-Zahlung, mit Postfinance oder Kreditkarte.','donation-form' )?></p>
 
                 <?php include($donation_inputs_template); ?>
 
@@ -76,7 +76,7 @@
                         <label class="text-left middle"><?php _e('Nachname', 'child-sponsor-lang'); ?></label>
                     </div>
                     <div class="small-8 columns">
-                        <input type="text" required data-msg="<?php _e('Nachname erforderlich', 'child-sponsor-lang'); ?>" class="input-field" name="last_name" value="<?php echo (isset($session_data['last_name'])) ? $session_data['last_name'] : ''; ?>">
+                        <input type="text" required data-msg="<?php _e('Nachname erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="last_name" name="last_name" value="<?php echo (isset($session_data['last_name'])) ? $session_data['last_name'] : ''; ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -84,7 +84,7 @@
                         <label class="text-left middle"><?php _e('Vorname', 'child-sponsor-lang'); ?></label>
                     </div>
                     <div class="small-8 columns">
-                        <input type="text" required data-msg="<?php _e('Vorname erforderlich', 'child-sponsor-lang'); ?>" class="input-field" name="first_name" value="<?php echo (isset($session_data['first_name'])) ? $session_data['first_name'] : ''; ?>">
+                        <input type="text" required data-msg="<?php _e('Vorname erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="first_name" name="first_name" value="<?php echo (isset($session_data['first_name'])) ? $session_data['first_name'] : ''; ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -92,7 +92,7 @@
                         <label class="text-left middle"><?php _e('Strasse/Hausnr.', 'child-sponsor-lang'); ?></label>
                     </div>
                     <div class="small-8 columns">
-                        <input type="text" required data-msg="<?php _e('Strasse erforderlich', 'child-sponsor-lang'); ?>" class="input-field" name="street" value="<?php echo (isset($session_data['street'])) ? $session_data['street'] : ''; ?>">
+                        <input type="text" required data-msg="<?php _e('Strasse erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="street" name="street" value="<?php echo (isset($session_data['street'])) ? $session_data['street'] : ''; ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -100,10 +100,10 @@
                         <label class="text-left middle"><?php _e('PLZ/Ort', 'child-sponsor-lang'); ?></label>
                     </div>
                     <div class="small-2 columns">
-                        <input type="text" required data-msg="<?php _e('PLZ erforderlich', 'child-sponsor-lang'); ?>" class="input-field" name="zipcode" value="<?php echo (isset($session_data['zipcode'])) ? $session_data['zipcode'] : ''; ?>">
+                        <input type="text" required data-msg="<?php _e('PLZ erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="zipcode" name="zipcode" value="<?php echo (isset($session_data['zipcode'])) ? $session_data['zipcode'] : ''; ?>">
                     </div>
                     <div class="small-6 columns no-padding-left">
-                        <input type="text" required data-msg="<?php _e('Stadt erforderlich', 'child-sponsor-lang'); ?>" class="input-field" name="city" value="<?php echo (isset($session_data['city'])) ? $session_data['city'] : ''; ?>">
+                        <input type="text" required data-msg="<?php _e('Stadt erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="city" name="city" value="<?php echo (isset($session_data['city'])) ? $session_data['city'] : ''; ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -111,7 +111,7 @@
                         <label class="text-left middle"><?php _e('Land', 'child-sponsor-lang'); ?></label>
                     </div>
                     <div class="small-8 columns">
-                        <input type="text" required data-msg="<?php _e('Länd erforderlich', 'child-sponsor-lang'); ?>" class="input-field" name="country" value="<?php echo (isset($session_data['country'])) ? $session_data['country'] : ''; ?>">
+                        <input type="text" required data-msg="<?php _e('Länd erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="country" name="country" value="<?php echo (isset($session_data['country'])) ? $session_data['country'] : ''; ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -119,12 +119,12 @@
                         <label class="text-left middle"><?php _e('E-Mail-Adresse', 'child-sponsor-lang'); ?></label>
                     </div>
                     <div class="small-8 columns">
-                        <input type="email" class="input-field" required data-msg="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" name="email" value="<?php echo (isset($session_data['email'])) ? $session_data['email'] : ''; ?>">
+                        <input type="email" class="input-field" required data-msg="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" id="email" name="email" value="<?php echo (isset($session_data['email'])) ? $session_data['email'] : ''; ?>">
                     </div>
                 </div>
 
                 <div class="form-action">
-                    <input type="submit" class="button button-blue button-small" value="<?php _e('Jetzt spenden', 'donation-form'); ?>"/>
+                    <input type="submit" class="button button-blue button-small click_donate" value="<?php _e('Jetzt spenden', 'donation-form'); ?>"/>
                 </div>
             </form>
         </div>
@@ -133,7 +133,7 @@
     <div class="tabs-panel" id="panel-bank-transfer-donation">
         <div class="row">
             <div class="large-12 large-centered medium-12 medium-centered column">
-                <p class="text-center middle"><?php _e('Sie können per Post- oder Banküberweisung spenden.<br/>  Nachfolgend finden Sie die Informationen für die Zahlung. ', 'donation-form') ?></p>
+                <p class="text-center middle"><?php _e('Du kannst per Post- oder Banküberweisung spenden.<br/>  Nachfolgend findest du die Informationen für die Zahlung. ', 'donation-form') ?></p>
                 <h5 class="text-center middle">
                     Postfinance CCP 17-312562-0 <br/>
                     IBAN CH07 0900 0000 1731 2562 0<br/>

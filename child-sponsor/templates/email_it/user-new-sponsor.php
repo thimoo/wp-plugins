@@ -29,7 +29,7 @@
         /** Hotmail header color reset: Hotmail replaces your header color styles with a green color on H2, H3, H4, H5, and H6 tags. In this example, the color is reset to black for a non-linked header, blue for a linked header, red for an active header (limited support), and purple for a visited header (limited support).  Replace with your choice of color. The !important is really what is overriding Hotmail's styling. Hotmail also sets the H1 and H2 tags to the same size.
         Bring inline: Yes.
         **/
-        h1, h2, h3, h4, h5, h6 {color: #0054a6 !important;}
+        h1, h2, h3, h4, h5, h6 {color: #005eb8 !important;}
         h4 {
             margin-top: 25px;
         }
@@ -56,7 +56,7 @@
         Bring inline: Yes. */
         a.lsv-box{padding:5px 8px;margin:10px 0 10px 10px; background-color:red; color:white !important;}
         
-        a {color:#0054a6; text-decoration: underline}
+        a {color:#005eb8; text-decoration: underline}
 
         ul li {
             line-height: 22px;
