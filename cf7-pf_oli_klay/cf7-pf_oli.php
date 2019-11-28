@@ -511,8 +511,11 @@ class Compassion_Donation_Form {
             // Check if donation infos truly comes from PostFinance
             if(Compassion_Donation_Form::is_verified_pf_sha_sign($_GET)) {
                 error_log('Update transaction with parameters received from Postfinance');
-
-                $status = self::RECEIVED_FROM_PF;
+                if (isset($_GET['STATUS']) AND in_array($_GET['STATUS'], array(5, 9))) {
+                    $status = self::RECEIVED_FROM_PF;
+                } else {
+                    $status = self::SUBMITTED_TO_PF;
+                }
             } else {
                 // Two possibilities:
                 //   - An attempt at hacking with a falsified message.
