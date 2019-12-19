@@ -10,7 +10,7 @@
 
 <script type="text/javascript">
     
-    // Retrieve GET parameter value funcion
+    // Retrieve GET parameter value function
     var getUrlParameter = function getUrlParameter(sParam) {
         var sPageURL = decodeURIComponent(window.location.search.substring(1)),
             sURLVariables = sPageURL.split('&'),
@@ -25,6 +25,40 @@
             }
         }
     };
+
+    var autoFillChristmasText = function(childName, childReference, sponsorName) {
+        var textEN = "Dear {name}, " +
+        "\n\n" +
+        "I wish you a Merry Christmas! At Christmas, we remember the coming of Jesus among us, to show us God's love for us. Here in Switzerland, December is a rather dark month, with shorter days. But in many streets, there are garlands of lights. They remind us that Jesus is the light of the world! He promised us that he would always be with us." +
+            "\n\n" +
+        "I wish you and your loved ones the best for the New Year." +
+            "\n\n" +
+        "{parrain}";
+        var textFR = "Bonjour {name}, " +
+        "\n\n" +
+        "Je te souhaite un beau Noël! A Noël, nous nous souvenons de la venue de Jésus parmi nous, pour nous montrer l’amour de Dieu pour nous. Ici en Suisse, le mois de décembre est plutôt sombre, avec des jours plus courts. Mais dans de nombreuses rues, il y a des guirlandes de lumières. Elles nous rappellent que Jésus est la lumière du monde! Il nous a promis d’être toujours avec nous." +
+        "\n\n" +
+        "Je te souhaite, ainsi qu’à tes proches, le meilleur pour la nouvelle année." +
+            "\n\n" +
+        "{parrain}";
+        var textES = "Para {name}." +
+            "\n\n" +
+        "¡Te deseo una feliz Navidad! En Navidad recordamos la venida de Jesús entre nosotros para mostrarnos el amor de Dios por nosotros. Aquí en Suiza, diciembre es un mes sin mucho sol, con días muy cortos. Pero en muchas calles hay guirnaldas de luces. Nos recuerdan que Jesús es la luz del mundo. Él nos prometió que siempre estaría con nosotros." +
+            "\n\n" +
+        "¡Te deseo a ti y a tus seres queridos lo mejor para el Año Nuevo!" +
+            "\n\n" +
+        "{parrain}";
+        var country = childReference.substring(0, 2);
+        var french = ["BF", "TG"];
+        var spanish = ["BO", "CO", "DR", "EC", "ES", "GU", "HO", "ME", "NI"];
+        var finalText = textEN;
+        if (french.indexOf(country) > -1)
+            finalText = textFR;
+        if (spanish.indexOf(country) > -1)
+            finalText = textES;
+        finalText = finalText.replace("{name}", childName).replace("{parrain}", sponsorName);
+        return finalText;
+    };
     
     // Try to auto-fill form when page is loaded.
     jQuery( document ).ready(function() {
@@ -37,8 +71,15 @@
                 element.val(inputVal);
             }
         });
+
+        // Auto-fill the text for the Christmas template
+        var childRef = jQuery('#child_ref').val();
+        var childName = getUrlParameter("child_name");
+        var sponsorName = getUrlParameter("pname");
+        if (childName)
+            jQuery('#message').text(autoFillChristmasText(childName, childRef, sponsorName));
         
-        // Old version fallback that used the hastag in the URL
+        // Old version fallback that used the hashtag in the URL
         if(window.location.hash){
             var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
             for(var i = 0; i < hashParams.length; i++){
@@ -106,7 +147,7 @@
                     <label class="text-left middle"><?php _e('Nachricht', 'compassion-letters'); ?>*</label>
                 </div>
                 <div class="small-8 columns">
-                    <textarea maxlength="1500" placeholder="<?php _e('Um den Verlust Ihres Briefes zu vermeiden, empfehlen wir Ihnen, diesen zuerst auf einem Word-Dokument zu schreiben und ihn danach hier einzufügen.', 'compassion-letters'); ?>" required data-msg="<?php _e('Nachricht erforderlich', 'compassion-letters'); ?>" name="message" class="input-field clear-pdf-on-change"></textarea>
+                    <textarea maxlength="1500" placeholder="<?php _e('Um den Verlust Ihres Briefes zu vermeiden, empfehlen wir Ihnen, diesen zuerst auf einem Word-Dokument zu schreiben und ihn danach hier einzufügen.', 'compassion-letters'); ?>" required data-msg="<?php _e('Nachricht erforderlich', 'compassion-letters'); ?>" name="message" id="message" class="input-field clear-pdf-on-change"></textarea>
                     <p class="text-right letter-count-wrapper"><span class="letter-count">0</span> <?php _e('von 1300 Zeichen', 'compassion-letters'); ?></p>
                 </div>
             </div>
