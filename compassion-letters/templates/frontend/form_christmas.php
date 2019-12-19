@@ -24,6 +24,17 @@
                 return sParameterName[1] === undefined ? true : sParameterName[1];
             }
         }
+
+        // Old version fallback that used the hashtag in the URL
+        if(window.location.hash){
+            var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+            for(var i = 0; i < hashParams.length; i++) {
+                var p = hashParams[i].split('=');
+                if (p[0] === sParam) {
+                    return p[1] === undefined ? true : decodeURIComponent(p[1]);
+                }
+            }
+        }
     };
 
     var autoFillChristmasText = function(childName, childReference, sponsorName) {
@@ -78,16 +89,6 @@
         var sponsorName = getUrlParameter("pname");
         if (childName)
             jQuery('#message').text(autoFillChristmasText(childName, childRef, sponsorName));
-        
-        // Old version fallback that used the hashtag in the URL
-        if(window.location.hash){
-            var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
-            for(var i = 0; i < hashParams.length; i++){
-                var p = hashParams[i].split('=');
-                console.log(p);
-                document.getElementById(p[0]).value = decodeURIComponent(p[1]);
-            }
-        }
     });
 </script>
 
