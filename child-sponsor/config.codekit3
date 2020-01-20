@@ -191,6 +191,13 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/child-sponsor-backup-201910210635260.pot~": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/child-sponsor-backup-201910210635260.pot~",
+		"oF": 0
+		},
 	"/child-sponsor.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -206,9 +213,17 @@
 		"oF": 0
 		},
 	"/config.rb": {
-		"ft": 131072,
+		"cB": 0,
+		"ft": 8192,
 		"oA": 0,
 		"oAP": "/config.rb",
+		"oF": 0
+		},
+	"/lang/child-sponsor-lang-fr_FR-backup-201910210646100.po~": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/lang/child-sponsor-lang-fr_FR-backup-201910210646100.po~",
 		"oF": 0
 		},
 	"/lang/child-sponsor-lang-fr_FR.mo": {
@@ -223,6 +238,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "/lang/child-sponsor-lang-fr_FR.po",
+		"oF": 0
+		},
+	"/lang/child-sponsor-lang-it_IT-backup-201910210650090.po~": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/lang/child-sponsor-lang-it_IT-backup-201910210650090.po~",
 		"oF": 0
 		},
 	"/lang/child-sponsor-lang-it_IT.mo": {

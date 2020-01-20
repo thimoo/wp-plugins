@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-30 09:57+0000\n"
+"POT-Creation-Date: 2019-12-04 12:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,11 +14,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: compassion-letters.php:313
+#: compassion-letters.php:328
 msgid "Compassion Schweiz"
 msgstr ""
 
-#: compassion-letters.php:314
+#: compassion-letters.php:329
 msgid "Der Brief an Ihr Patenkind"
 msgstr ""
 
@@ -34,104 +34,98 @@ msgstr ""
 msgid "Liebe"
 msgstr ""
 
-#: templates/frontend/form.php:32 templates/frontend/form_christmas.php:32
+#: templates/frontend/form.php:32 templates/frontend/form_christmas.php:60
 msgid "Anrede"
 msgstr ""
 
-#: templates/frontend/form.php:35 templates/frontend/form_christmas.php:35
-#: templates/frontend/form_christmas.php:35
+#: templates/frontend/form.php:35 templates/frontend/form_christmas.php:63
+#: templates/frontend/form_christmas.php:63
 msgid "Anrede erforderlich"
 msgstr ""
 
-#: templates/frontend/form.php:35 templates/frontend/form_christmas.php:35
+#: templates/frontend/form.php:35 templates/frontend/form_christmas.php:63
 msgid "Frau"
 msgstr ""
 
-#: templates/frontend/form.php:35 templates/frontend/form_christmas.php:35
+#: templates/frontend/form.php:35 templates/frontend/form_christmas.php:63
 msgid "Herr"
 msgstr ""
 
-#: templates/frontend/form.php:41 templates/frontend/form_christmas.php:41
+#: templates/frontend/form.php:41 templates/frontend/form_christmas.php:69
 msgid "E-Mail"
 msgstr ""
 
-#: templates/frontend/form.php:44 templates/frontend/form_christmas.php:44
+#: templates/frontend/form.php:44 templates/frontend/form_christmas.php:72
 msgid "E-Mailadresse erforderlich"
 msgstr ""
 
 #: templates/frontend/form.php:50 templates/frontend/form.php:88
-#: templates/frontend/form_christmas.php:50
-#: templates/frontend/form_christmas.php:88
+#: templates/frontend/form_christmas.php:78
+#: templates/frontend/form_christmas.php:116
 msgid "Vorname, Nachname"
 msgstr ""
 
-#: templates/frontend/form.php:53 templates/frontend/form_christmas.php:53
+#: templates/frontend/form.php:53 templates/frontend/form_christmas.php:81
 msgid "Name erforderlich"
 msgstr ""
 
-#: templates/frontend/form.php:60 templates/frontend/form_christmas.php:60
+#: templates/frontend/form.php:60 templates/frontend/form_christmas.php:88
 msgid "Patennummer (ohne CH)"
 msgstr ""
 
-#: templates/frontend/form.php:63 templates/frontend/form_christmas.php:63
+#: templates/frontend/form.php:63 templates/frontend/form_christmas.php:91
 msgid "Bitte gültige Nummer eingeben (ohne CH)"
 msgstr ""
 
-#: templates/frontend/form.php:63 templates/frontend/form_christmas.php:63
+#: templates/frontend/form.php:63 templates/frontend/form_christmas.php:91
 msgid "Patennummer erforderlich"
 msgstr ""
 
-#: templates/frontend/form.php:69 templates/frontend/form_christmas.php:69
+#: templates/frontend/form.php:69 templates/frontend/form_christmas.php:97
 msgid "Patenkindnummer"
 msgstr ""
 
-#: templates/frontend/form.php:72 templates/frontend/form_christmas.php:72
+#: templates/frontend/form.php:72 templates/frontend/form_christmas.php:100
 msgid "Patenkindnummer erforderlich"
 msgstr ""
 
-#: templates/frontend/form.php:72 templates/frontend/form_christmas.php:72
+#: templates/frontend/form.php:72 templates/frontend/form_christmas.php:100
 msgid "Bitte gültige Patenkindnummer eingeben"
 msgstr ""
 
-#: templates/frontend/form.php:78 templates/frontend/form_christmas.php:78
+#: templates/frontend/form.php:78 templates/frontend/form_christmas.php:106
 msgid "Nachricht"
 msgstr ""
 
-#: templates/frontend/form.php:81 templates/frontend/form_christmas.php:81
+#: templates/frontend/form.php:81
 msgid ""
 "Um den Verlust deines Briefes zu vermeiden, empfehlen wir dir, diesen zuerst "
 "auf einem Word-Dokument zu schreiben und ihn danach hier einzufügen."
 msgstr ""
 
-#: templates/frontend/form.php:81 templates/frontend/form_christmas.php:81
+#: templates/frontend/form.php:81 templates/frontend/form_christmas.php:109
 msgid "Nachricht erforderlich"
 msgstr ""
 
-#: templates/frontend/form.php:82 templates/frontend/form_christmas.php:82
+#: templates/frontend/form.php:82 templates/frontend/form_christmas.php:110
 msgid "von 1300 Zeichen"
 msgstr ""
 
 #: templates/frontend/form.php:88
 msgid ""
-"Ich finde meine Nummer gerade nicht! Bitte sendet  die Informationen per E-"
-"Mail"
+"Ich finde meine Nummer gerade nicht! Bitte sendet mir die Informationen per "
+"E-Mail"
 msgstr ""
 
-#: templates/frontend/form.php:88 templates/frontend/form_christmas.php:88
-msgid ""
-"Ich finde meine Nummer gerade nicht! Bitte senden Sie mir die Informationen "
-"per E-Mail. (Das kann einen Arbeitstag dauern)"
-msgstr ""
-
-#: templates/frontend/form.php:101 templates/frontend/form_christmas.php:102
+#: templates/frontend/form.php:101 templates/frontend/form_christmas.php:130
 msgid "Bild"
 msgstr ""
 
-#: templates/frontend/form.php:105 templates/frontend/form_christmas.php:106
+#: templates/frontend/form.php:105 templates/frontend/form_christmas.php:134
 msgid "Feld leeren"
 msgstr ""
 
-#: templates/frontend/form.php:105 templates/frontend/form_christmas.php:106
+#: templates/frontend/form.php:105 templates/frontend/form_christmas.php:134
 msgid "Bild hochladen"
 msgstr ""
 
@@ -147,11 +141,11 @@ msgstr ""
 #: templates/frontend/form.php:137 templates/frontend/form.php:148
 #: templates/frontend/form.php:159 templates/frontend/form.php:170
 #: templates/frontend/form.php:181 templates/frontend/form.php:193
-#: templates/frontend/form_christmas.php:119
+#: templates/frontend/form_christmas.php:147
 msgid "Vorlage erforderlich"
 msgstr ""
 
-#: templates/frontend/form.php:118 templates/frontend/form_christmas.php:120
+#: templates/frontend/form.php:118 templates/frontend/form_christmas.php:148
 msgid "Vorlage 1"
 msgstr ""
 
@@ -163,7 +157,7 @@ msgstr ""
 #: templates/frontend/form.php:143 templates/frontend/form.php:154
 #: templates/frontend/form.php:165 templates/frontend/form.php:176
 #: templates/frontend/form.php:188 templates/frontend/form.php:200
-#: templates/frontend/form.php:229 templates/frontend/form_christmas.php:150
+#: templates/frontend/form.php:229 templates/frontend/form_christmas.php:178
 msgid "Vorschau"
 msgstr ""
 
@@ -224,46 +218,62 @@ msgid "Vorlage 8 auswählen"
 msgstr ""
 
 #: templates/frontend/form.php:229 templates/frontend/form.php:237
-#: templates/frontend/form_christmas.php:150
-#: templates/frontend/form_christmas.php:159
+#: templates/frontend/form_christmas.php:178
+#: templates/frontend/form_christmas.php:187
 msgid "Absenden"
 msgstr ""
 
-#: templates/frontend/form.php:230 templates/frontend/form_christmas.php:152
+#: templates/frontend/form.php:230 templates/frontend/form_christmas.php:180
 msgid "Tipps fürs Briefeschreiben"
 msgstr ""
 
-#: templates/frontend/form.php:246 templates/frontend/form_christmas.php:168
+#: templates/frontend/form.php:246 templates/frontend/form_christmas.php:196
 msgid "Deine Vorschau wird generiert..."
 msgstr ""
 
-#: templates/frontend/form.php:247 templates/frontend/form_christmas.php:169
+#: templates/frontend/form.php:247 templates/frontend/form_christmas.php:197
 msgid "Dein Brief wird generiert..."
 msgstr ""
 
-#: templates/frontend/form.php:248 templates/frontend/form_christmas.php:170
+#: templates/frontend/form.php:248 templates/frontend/form_christmas.php:198
 msgid "Dein Brief wurde verschickt. Du erhältst eine Kopie per E-Mail."
 msgstr ""
 
-#: templates/frontend/form.php:249 templates/frontend/form_christmas.php:171
+#: templates/frontend/form.php:249 templates/frontend/form_christmas.php:200
 msgid "Es ist ein Fehler!"
 msgstr ""
 
-#: templates/frontend/form.php:250 templates/frontend/form_christmas.php:172
+#: templates/frontend/form.php:250 templates/frontend/form_christmas.php:201
 msgid ""
 "Wir haben derzeit ein Problem mit dem Online Senden von Briefen. Unsere "
 "Informatiker arbeiten an dem Fehler. Vielen Dank für dein Verständnis. In "
 "der Zwischenzeit sende bitte deinen Brief an info@compassion.ch."
 msgstr ""
 
-#: templates/frontend/form_christmas.php:88
+#: templates/frontend/form_christmas.php:109
 msgid ""
-"Ich finde meine Nummer gerade nicht! Bitte sendet mir die Informationen per "
-"E-Mail"
+"Um den Verlust Ihres Briefes zu vermeiden, empfehlen wir Ihnen, diesen "
+"zuerst auf einem Word-Dokument zu schreiben und ihn danach hier einzufügen."
 msgstr ""
 
-#: templates/frontend/form_christmas.php:107
+#: templates/frontend/form_christmas.php:116
+msgid ""
+"Ich finde meine Nummer gerade nicht! Bitte senden Sie mir die Informationen "
+"per E-Mail"
+msgstr ""
+
+#: templates/frontend/form_christmas.php:116
+msgid ""
+"Ich finde meine Nummer gerade nicht! Bitte senden Sie mir die Informationen "
+"per E-Mail. (Das kann einen Arbeitstag dauern)"
+msgstr ""
+
+#: templates/frontend/form_christmas.php:135
 msgid "Format: JPG/PNG, max. Grösse: 2MB"
+msgstr ""
+
+#: templates/frontend/form_christmas.php:198
+msgid "Schliessen"
 msgstr ""
 
 #. Name of the plugin
