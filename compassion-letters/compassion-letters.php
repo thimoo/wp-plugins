@@ -156,15 +156,15 @@ class CompassionLetters
      */
     private function maybe_resize_image($image_path) {
         $image = new Imagick($image_path);
-	
-	$write = False;
-	if($image->getImageFormat() != 'jpeg'){
-	    $write = True;
+
+        $write = False;
+        if($image->getImageFormat() != 'jpeg'){
+            $write = True;
             // PNGs may contain transparency
-	    $image->setImageBackgroundColor(new ImagickPixel('white'));
+            $image->setImageBackgroundColor(new ImagickPixel('white'));
             // Write format
-	    $image->setImageFormat('jpeg');
-	}
+            $image->setImageFormat('jpeg');
+        }
 
         $imageLength = $image->getImageLength();
         $maxImageLength = 0.5 * 1024 * 1024.0;
