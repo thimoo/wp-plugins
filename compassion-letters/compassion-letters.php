@@ -151,20 +151,34 @@ class CompassionLetters
     }
 
     /**
-     * Resize the image if bigger that a target size.
+     * Resize and compress large images.
+     * Convert pngs to jpg (Odoo has some issues with them)
      */
     private function maybe_resize_image($image_path) {
         $image = new Imagick($image_path);
+	
+	$write = False;
+	if($image->getImageFormat() != 'jpeg'){
+	    $write = True;
+            // PNGs may contain transparency
+	    $image->setImageBackgroundColor(new ImagickPixel('white'));
+            // Write format
+	    $image->setImageFormat('jpeg');
+	}
+
         $imageLength = $image->getImageLength();
         $maxImageLength = 0.5 * 1024 * 1024.0;
-        if($imageLength <= $maxImageLength) {
-            return;
+        if($imageLength > $maxImageLength) {
+            $write = True;
+            $scalingRatio = $maxImageLength / $imageLength;
+            $new_width = round($image->getImageWidth() * $scalingRatio);
+            $new_height = round($image->getImageHeight() * $scalingRatio);
+            $image->resizeImage($new_width, $new_height, Imagick::FILTER_CUBIC, 0.5);
         }
-        $scalingRatio = $maxImageLength / $imageLength;
-        $new_width = round($image->getImageWidth() * $scalingRatio);
-        $new_height = round($image->getImageHeight() * $scalingRatio);
-        $image->resizeImage($new_width, $new_height, Imagick::FILTER_CUBIC, 0.5);
-        $image->writeImage($image_path);
+        if($write){
+            // override the file with our changes
+            $image->writeImage($image_path);
+        }
     }
 
     private function correct_image_orientation($image_path) {
