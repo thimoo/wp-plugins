@@ -137,16 +137,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/assets/sass/screen.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/sass/screen-min.css",
-		"oF": 0,
-		"oS": 0
-		},
 	"/assets/sass/screen.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -190,6 +180,13 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/assets/stylesheets/screen.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/assets/stylesheets/screen.css.map",
+		"oF": 0
+		},
 	"/cf7-pf_oli.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -204,11 +201,25 @@
 		"oAP": "/cf7-pf_oli_klay.pot",
 		"oF": 0
 		},
+	"/donation-form-backup-201910210806140.pot~": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/donation-form-backup-201910210806140.pot~",
+		"oF": 0
+		},
 	"/donation-form.pot": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "/donation-form.pot",
+		"oF": 0
+		},
+	"/lang/donation-form-fr_FR-backup-201910210823020.po~": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/lang/donation-form-fr_FR-backup-201910210823020.po~",
 		"oF": 0
 		},
 	"/lang/donation-form-fr_FR.mo": {
@@ -223,6 +234,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "/lang/donation-form-fr_FR.po",
+		"oF": 0
+		},
+	"/lang/donation-form-it_IT-backup-201910210825080.po~": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/lang/donation-form-it_IT-backup-201910210825080.po~",
 		"oF": 0
 		},
 	"/lang/donation-form-it_IT.mo": {

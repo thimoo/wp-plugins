@@ -17,21 +17,6 @@ function addQuotes($childNumber) {
 }
 
 
-/**
- * Called on plugin activation.
- */
-function child_import_activation() {
-    child_import_check_dependencies();
-}
-register_activation_hook(__FILE__, 'child_import_activation');
-
-function child_import_check_dependencies() {
-    if(!class_exists('CompassionPosts')) {
-        deactivate_plugins( plugin_basename( __FILE__ ) );
-        wp_die( sprintf(__( 'Please install and activate: %s.', 'compassion' ), 'compassion-posts'), 'Plugin dependency check', array( 'back_link' => true ) );
-    }
-}
-
 class ChildOdooImport
 {
     public function __construct()
@@ -63,7 +48,7 @@ class ChildOdooImport
             error_log('******* Child is already online ********  : '.sizeof($check_if_exists));
             return 1;
         }
-        
+
         if($child['first_name']!='' AND $child['desc']!='' AND $child['number']!='') {
             /**
              * Insert children
@@ -143,13 +128,13 @@ class ChildOdooImport
                 error_log("Child ".$child['first_name']." imported successfully.");
                 return 1;
             }
-            
+
             return 0;
-            
+
         }
 
         return 0;
-        
+
      }
 
     public function deleteChildren($children) {
@@ -170,7 +155,7 @@ class ChildOdooImport
             $query_pm = "DELETE FROM compassion_postmeta WHERE post_id IN (%s)";
             $wpdb->query(sprintf($query, implode($post_ids, ",")));
             $wpdb->query(sprintf($query_pm, implode($post_ids, ",")));
-            
+
         }
 
         $picturePath = ABSPATH . 'wp-content/uploads/child-import/*';
@@ -186,7 +171,7 @@ class ChildOdooImport
 
         return true;
     }
-    
+
     public function deleteAllChildren() {
         $this->deleteChildren($this->getChildrenCodesWithoutReserved());
     }
@@ -218,7 +203,7 @@ class ChildOdooImport
         }
         return $a;
     }
-     
+
 }
 
 
@@ -236,11 +221,11 @@ function child_import_addChild( $args ) {
     $password  = $args[1];
     $childarray = $args[2];
     if(sizeof($childarray)>1 AND isset($childarray['name']) AND isset($childarray['local_id'])) {
-	error_log('Cloudinary URL : '.$childarray['cloudinary_url']);
-	error_log('Name : '.$childarray['name']);
-	error_log('Local ID : '.$childarray['local_id']);
+        error_log('Cloudinary URL : '.$childarray['cloudinary_url']);
+        error_log('Name : '.$childarray['name']);
+        error_log('Local ID : '.$childarray['local_id']);
     } else {
-	error_log('array not found');
+        error_log('array not found');
         return false;
     }
 
@@ -250,13 +235,13 @@ function child_import_addChild( $args ) {
     error_log('########## start to import ###########');
 
     $childOdooImport = new ChildOdooImport();
-    if($childOdooImport->importChild($childarray)) { 
+    if($childOdooImport->importChild($childarray)) {
+          fifu_db_insert_attachment();
+          update_option('fifu_fake_created', true, 'no');
         return '1';
     }
     return '0';
-    
 };
-
 /**
  * XMLRPC Call to delete given children (by child code).
  * @param $args (user, password, children_codes)
