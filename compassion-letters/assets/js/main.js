@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
     $.validator.addMethod(
         "maxfilesize",
         function (value, element) {
-            return this.optional(element) || (element.files && element.files[0] && element.files[0].size < 1024 * 1024 * 2 && (element.files[0].type == 'image/png' || element.files[0].type == 'image/jpg' || element.files[0].type == 'image/jpeg'));
+            return this.optional(element) || (element.files && element.files[0] && element.files[0].size < 1024 * 1024 * 10.5 && (element.files[0].type == 'image/png' || element.files[0].type == 'image/jpg' || element.files[0].type == 'image/jpeg'));
         },
         'Bitte beachten Sie die Vorgaben für den Bild-Upload/Merci de respecter les indications pour l\'envoi d\'une photo'
     );
@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
                     }
                 },
                 error: function(data) {
-                    console.log('Error: ' + data);
+                    console.log('Error: ', data);
                     failModal();
                 }
             });
@@ -170,7 +170,7 @@ jQuery(document).ready(function($) {
             },
             error: function(data) {
                 failModal();
-                console.log('Error: ' + data);
+                console.log('Error: ', data);
             }
         });
 
@@ -221,7 +221,7 @@ jQuery(document).ready(function($) {
                     $('#pdf_path').val(data.pdf);
                 },
                 error: function(data) {
-                    console.log('Error: ' + data);
+                    console.log('Error: ', data);
                 }
             });
         }

@@ -144,70 +144,76 @@ class CompassionLetters
 
         $file = WP\Common::getFile('image', $this->uploads_folder);
 
-        $this->correct_image_orientation($file);
-        $this->maybe_resize_image($file);
+        $image = new Imagick($file);
 
+        if($image->getImageFormat() != 'JPEG'){
+            $this->convert_image_to_jpg($image);
+            $file = $file . '.jpg';
+        }
+        $this->correct_image_orientation($image);
+        $this->maybe_resize_image($image);
+
+        $image->writeImage($file);
         return $file;
     }
 
-    /**
-     * Resize the image if bigger that a target size.
-     */
-    private function maybe_resize_image($image_path) {
-        $image = new Imagick($image_path);
-        $imageLength = $image->getImageLength();
-        $maxImageLength = 0.5 * 1024 * 1024.0;
-        if($imageLength <= $maxImageLength) {
-            return;
-        }
-        $scalingRatio = $maxImageLength / $imageLength;
-        $new_width = round($image->getImageWidth() * $scalingRatio);
-        $new_height = round($image->getImageHeight() * $scalingRatio);
-        $image->resizeImage($new_width, $new_height, Imagick::FILTER_CUBIC, 0.5);
-        $image->writeImage($image_path);
+    private function convert_image_to_jpg(Imagick &$image){
+        // PNGs may contain transparency
+        $white = new Imagick();
+        $white->newImage($image->getImageHeight(), $image->getImageHeight(), "white");
+        $white->compositeimage($image, Imagick::COMPOSITE_OVER, 0, 0);
+        $white->setImageFormat('jpg');
+        $image = $white;
     }
 
-    private function correct_image_orientation($image_path) {
-        if(function_exists('exif_read_data')) {
-            $exif = exif_read_data($image_path);
-            if($exif && isset($exif['Orientation'])) {
-                $orientation = $exif['Orientation'];
-                if($orientation != 1) {
-                    $img = imagecreatefromjpeg($image_path);
-                    $deg = 0;
-                    $flip = 0;
-                    switch ($orientation) {
-                        case 2:
-                            $flip = IMG_FLIP_HORIZONTAL;
-                            break;
-                        case 4:
-                            $flip = IMG_FLIP_HORIZONTAL;
-                        case 3:
-                            $deg = 180;
-                            break;
-                        case 5:
-                            $flip = IMG_FLIP_HORIZONTAL;
-                        case 6:
-                            $deg = 270;
-                            break;
-                        case 7:
-                            $flip = IMG_FLIP_HORIZONTAL;
-                        case 8:
-                            $deg = 90;
-                            break;
-                    }
-                    if($deg) {
-                        $img = imagerotate($img, $deg, 0);
-                    }
-                    if($flip) {
-                        imageflip($img, $flip);
-                    }
-                    imagejpeg($img, $image_path, 95);
-                }
-            }
-        } else {
-            error_log('The function exif_read_data does not exist !');
+    /**
+     * Resize and compress large images.
+     * Convert pngs to jpg (Odoo has some issues with them)
+     */
+    private function maybe_resize_image(Imagick $image) {
+        $imageLength = $image->getImageLength();
+        $maxImageLength = 0.5 * 1024 * 1024.0;
+        if($imageLength > $maxImageLength) {
+            $scalingRatio = $maxImageLength / $imageLength;
+            $new_width = round($image->getImageWidth() * $scalingRatio);
+            $new_height = round($image->getImageHeight() * $scalingRatio);
+            $image->resizeImage($new_width, $new_height, Imagick::FILTER_CUBIC, 0.5);
         }
+    }
+
+    private function correct_image_orientation(Imagick $image) {
+        switch ($image->getImageOrientation()) {
+        case Imagick::ORIENTATION_TOPLEFT:
+            break;
+        case Imagick::ORIENTATION_TOPRIGHT:
+            $image->flopImage();
+            break;
+        case Imagick::ORIENTATION_BOTTOMRIGHT:
+            $image->rotateImage("#000", 180);
+            break;
+        case Imagick::ORIENTATION_BOTTOMLEFT:
+            $image->flopImage();
+            $image->rotateImage("#000", 180);
+            break;
+        case Imagick::ORIENTATION_LEFTTOP:
+            $image->flopImage();
+            $image->rotateImage("#000", -90);
+            break;
+        case Imagick::ORIENTATION_RIGHTTOP:
+            $image->rotateImage("#000", 90);
+            break;
+        case Imagick::ORIENTATION_RIGHTBOTTOM:
+            $image->flopImage();
+            $image->rotateImage("#000", 90);
+            break;
+        case Imagick::ORIENTATION_LEFTBOTTOM:
+            $image->rotateImage("#000", -90);
+            break;
+        default: // Invalid orientation
+            break;
+        }
+        $image->setImageOrientation(Imagick::ORIENTATION_TOPLEFT);
+        return $image;
     }
 
     /**
@@ -339,10 +345,10 @@ class CompassionLetters
 
             $this->clean_pdf_files($pdf_path);
 
-            wp_send_json_success([message => 'Letter imported']);
+            wp_send_json_success(['message' => 'Letter imported']);
         }
 
-        wp_send_json_error([message => 'Import error']);
+        wp_send_json_error(['message' => 'Import error']);
     }
 
     /**
