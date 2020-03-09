@@ -7,11 +7,12 @@
 		"uuidString": "42C0B3A7-39DE-4B48-A7E6-7309BB2CA9A4"
 		}
 	],
-"creatorBuild": "28905",
+"creatorBuild": "31934",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/.gitignore",
 		"oF": 0
@@ -19,6 +20,7 @@
 	"/assets/fonts/courier.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/courier.php",
 		"oF": 0
@@ -26,6 +28,7 @@
 	"/assets/fonts/courierb.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/courierb.php",
 		"oF": 0
@@ -33,6 +36,7 @@
 	"/assets/fonts/courierbi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/courierbi.php",
 		"oF": 0
@@ -40,6 +44,7 @@
 	"/assets/fonts/courieri.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/courieri.php",
 		"oF": 0
@@ -47,6 +52,7 @@
 	"/assets/fonts/helvetica.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/helvetica.php",
 		"oF": 0
@@ -54,6 +60,7 @@
 	"/assets/fonts/helveticab.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/helveticab.php",
 		"oF": 0
@@ -61,6 +68,7 @@
 	"/assets/fonts/helveticabi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/helveticabi.php",
 		"oF": 0
@@ -68,6 +76,7 @@
 	"/assets/fonts/helveticai.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/helveticai.php",
 		"oF": 0
@@ -75,6 +84,7 @@
 	"/assets/fonts/LT_54530.z": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/LT_54530.z",
 		"oF": 0
@@ -82,6 +92,7 @@
 	"/assets/fonts/symbol.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/symbol.php",
 		"oF": 0
@@ -89,6 +100,7 @@
 	"/assets/fonts/tetria.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/tetria.php",
 		"oF": 0
@@ -96,6 +108,7 @@
 	"/assets/fonts/times.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/times.php",
 		"oF": 0
@@ -103,6 +116,7 @@
 	"/assets/fonts/timesb.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/timesb.php",
 		"oF": 0
@@ -110,6 +124,7 @@
 	"/assets/fonts/timesbi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/timesbi.php",
 		"oF": 0
@@ -117,6 +132,7 @@
 	"/assets/fonts/timesi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/timesi.php",
 		"oF": 0
@@ -124,6 +140,7 @@
 	"/assets/fonts/unifont/DejaVu_LICENSE.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVu_LICENSE.txt",
 		"oF": 0
@@ -131,6 +148,7 @@
 	"/assets/fonts/unifont/DejaVuSans-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSans-Bold.ttf",
 		"oF": 0
@@ -138,6 +156,7 @@
 	"/assets/fonts/unifont/DejaVuSans-BoldOblique.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSans-BoldOblique.ttf",
 		"oF": 0
@@ -145,6 +164,7 @@
 	"/assets/fonts/unifont/DejaVuSans-ExtraLight.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSans-ExtraLight.ttf",
 		"oF": 0
@@ -152,6 +172,7 @@
 	"/assets/fonts/unifont/DejaVuSans-Oblique.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSans-Oblique.ttf",
 		"oF": 0
@@ -159,6 +180,7 @@
 	"/assets/fonts/unifont/DejaVuSans.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSans.ttf",
 		"oF": 0
@@ -166,6 +188,7 @@
 	"/assets/fonts/unifont/DejaVuSansCondensed-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSansCondensed-Bold.ttf",
 		"oF": 0
@@ -173,6 +196,7 @@
 	"/assets/fonts/unifont/DejaVuSansCondensed-BoldOblique.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSansCondensed-BoldOblique.ttf",
 		"oF": 0
@@ -180,6 +204,7 @@
 	"/assets/fonts/unifont/DejaVuSansCondensed-Oblique.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSansCondensed-Oblique.ttf",
 		"oF": 0
@@ -187,6 +212,7 @@
 	"/assets/fonts/unifont/DejaVuSansCondensed.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSansCondensed.ttf",
 		"oF": 0
@@ -194,6 +220,7 @@
 	"/assets/fonts/unifont/DejaVuSansMono-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSansMono-Bold.ttf",
 		"oF": 0
@@ -201,6 +228,7 @@
 	"/assets/fonts/unifont/DejaVuSansMono-BoldOblique.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSansMono-BoldOblique.ttf",
 		"oF": 0
@@ -208,6 +236,7 @@
 	"/assets/fonts/unifont/DejaVuSansMono-Oblique.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSansMono-Oblique.ttf",
 		"oF": 0
@@ -215,6 +244,7 @@
 	"/assets/fonts/unifont/DejaVuSansMono.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSansMono.ttf",
 		"oF": 0
@@ -222,6 +252,7 @@
 	"/assets/fonts/unifont/DejaVuSerif-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSerif-Bold.ttf",
 		"oF": 0
@@ -229,6 +260,7 @@
 	"/assets/fonts/unifont/DejaVuSerif-BoldItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSerif-BoldItalic.ttf",
 		"oF": 0
@@ -236,6 +268,7 @@
 	"/assets/fonts/unifont/DejaVuSerif-Italic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSerif-Italic.ttf",
 		"oF": 0
@@ -243,6 +276,7 @@
 	"/assets/fonts/unifont/DejaVuSerif.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSerif.ttf",
 		"oF": 0
@@ -250,6 +284,7 @@
 	"/assets/fonts/unifont/DejaVuSerifCondensed-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSerifCondensed-Bold.ttf",
 		"oF": 0
@@ -257,6 +292,7 @@
 	"/assets/fonts/unifont/DejaVuSerifCondensed-BoldItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSerifCondensed-BoldItalic.ttf",
 		"oF": 0
@@ -264,6 +300,7 @@
 	"/assets/fonts/unifont/DejaVuSerifCondensed-Italic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSerifCondensed-Italic.ttf",
 		"oF": 0
@@ -271,6 +308,7 @@
 	"/assets/fonts/unifont/DejaVuSerifCondensed.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/DejaVuSerifCondensed.ttf",
 		"oF": 0
@@ -278,6 +316,7 @@
 	"/assets/fonts/unifont/Roboto-Black.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/Roboto-Black.ttf",
 		"oF": 0
@@ -285,6 +324,7 @@
 	"/assets/fonts/unifont/Roboto-BlackItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/Roboto-BlackItalic.ttf",
 		"oF": 0
@@ -292,6 +332,7 @@
 	"/assets/fonts/unifont/Roboto-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/Roboto-Bold.ttf",
 		"oF": 0
@@ -299,6 +340,7 @@
 	"/assets/fonts/unifont/Roboto-BoldItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/Roboto-BoldItalic.ttf",
 		"oF": 0
@@ -306,6 +348,7 @@
 	"/assets/fonts/unifont/Roboto-Italic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/Roboto-Italic.ttf",
 		"oF": 0
@@ -313,6 +356,7 @@
 	"/assets/fonts/unifont/Roboto-Light.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/Roboto-Light.ttf",
 		"oF": 0
@@ -320,6 +364,7 @@
 	"/assets/fonts/unifont/Roboto-LightItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/Roboto-LightItalic.ttf",
 		"oF": 0
@@ -327,6 +372,7 @@
 	"/assets/fonts/unifont/Roboto-Medium.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/Roboto-Medium.ttf",
 		"oF": 0
@@ -334,6 +380,7 @@
 	"/assets/fonts/unifont/Roboto-MediumItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/Roboto-MediumItalic.ttf",
 		"oF": 0
@@ -341,6 +388,7 @@
 	"/assets/fonts/unifont/roboto-regular.cw.dat": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/roboto-regular.cw.dat",
 		"oF": 0
@@ -348,6 +396,7 @@
 	"/assets/fonts/unifont/roboto-regular.cw127.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/roboto-regular.cw127.php",
 		"oF": 0
@@ -355,6 +404,7 @@
 	"/assets/fonts/unifont/roboto-regular.mtx.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/roboto-regular.mtx.php",
 		"oF": 0
@@ -362,6 +412,7 @@
 	"/assets/fonts/unifont/Roboto-Regular.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/Roboto-Regular.ttf",
 		"oF": 0
@@ -369,6 +420,7 @@
 	"/assets/fonts/unifont/Roboto-Thin.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/Roboto-Thin.ttf",
 		"oF": 0
@@ -376,6 +428,7 @@
 	"/assets/fonts/unifont/Roboto-ThinItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/Roboto-ThinItalic.ttf",
 		"oF": 0
@@ -383,6 +436,7 @@
 	"/assets/fonts/unifont/Roboto_LICENSE.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/Roboto_LICENSE.txt",
 		"oF": 0
@@ -390,6 +444,7 @@
 	"/assets/fonts/unifont/ttfonts.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/unifont/ttfonts.php",
 		"oF": 0
@@ -397,6 +452,7 @@
 	"/assets/fonts/zapfdingbats.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/zapfdingbats.php",
 		"oF": 0
@@ -852,6 +908,7 @@
 		"q": 100
 		},
 	"/assets/js/main-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -862,6 +919,7 @@
 		"tS": 0
 		},
 	"/assets/js/main.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -943,6 +1001,7 @@
 	"/assets/stylesheets/screen.css.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/stylesheets/screen.css.map",
 		"oF": 0
@@ -958,6 +1017,7 @@
 	"/compassion-letters-backup-201910180612250.pot~": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/compassion-letters-backup-201910180612250.pot~",
 		"oF": 0
@@ -965,6 +1025,7 @@
 	"/compassion-letters-backup-201910210551330.pot~": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/compassion-letters-backup-201910210551330.pot~",
 		"oF": 0
@@ -972,6 +1033,7 @@
 	"/compassion-letters-backup-201910300957550.pot~": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/compassion-letters-backup-201910300957550.pot~",
 		"oF": 0
@@ -979,6 +1041,7 @@
 	"/compassion-letters-it_IT.mo": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/compassion-letters-it_IT.mo",
 		"oF": 0
@@ -986,6 +1049,7 @@
 	"/compassion-letters-it_IT.po": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/compassion-letters-it_IT.po",
 		"oF": 0
@@ -993,6 +1057,7 @@
 	"/compassion-letters.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/compassion-letters.php",
 		"oF": 0
@@ -1000,6 +1065,7 @@
 	"/compassion-letters.pot": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/compassion-letters.pot",
 		"oF": 0
@@ -1015,6 +1081,7 @@
 	"/composer.lock": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/composer.lock",
 		"oF": 0
@@ -1028,6 +1095,7 @@
 	"/debug.log": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/debug.log",
 		"oF": 0
@@ -1035,6 +1103,7 @@
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/index.html",
 		"oF": 0
@@ -1042,6 +1111,7 @@
 	"/lang/compassion-letters-fr_FR-backup-201910180613310.po~": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/compassion-letters-fr_FR-backup-201910180613310.po~",
 		"oF": 0
@@ -1049,6 +1119,7 @@
 	"/lang/compassion-letters-fr_FR-backup-201910210554030.po~": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/compassion-letters-fr_FR-backup-201910210554030.po~",
 		"oF": 0
@@ -1056,6 +1127,7 @@
 	"/lang/compassion-letters-fr_FR-backup-201910300959380.po~": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/compassion-letters-fr_FR-backup-201910300959380.po~",
 		"oF": 0
@@ -1063,6 +1135,7 @@
 	"/lang/compassion-letters-fr_FR.mo": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/compassion-letters-fr_FR.mo",
 		"oF": 0
@@ -1070,6 +1143,7 @@
 	"/lang/compassion-letters-fr_FR.po": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/compassion-letters-fr_FR.po",
 		"oF": 0
@@ -1077,6 +1151,7 @@
 	"/lang/compassion-letters-it_IT-backup-201910180615350.po~": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/compassion-letters-it_IT-backup-201910180615350.po~",
 		"oF": 0
@@ -1084,6 +1159,7 @@
 	"/lang/compassion-letters-it_IT-backup-201910210553370.po~": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/compassion-letters-it_IT-backup-201910210553370.po~",
 		"oF": 0
@@ -1091,6 +1167,7 @@
 	"/lang/compassion-letters-it_IT-backup-201910300959580.po~": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/compassion-letters-it_IT-backup-201910300959580.po~",
 		"oF": 0
@@ -1098,6 +1175,7 @@
 	"/lang/compassion-letters-it_IT.mo": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/compassion-letters-it_IT.mo",
 		"oF": 0
@@ -1105,6 +1183,7 @@
 	"/lang/compassion-letters-it_IT.po": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/compassion-letters-it_IT.po",
 		"oF": 0
@@ -1112,6 +1191,7 @@
 	"/PDFGenerator.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/PDFGenerator.php",
 		"oF": 0
@@ -1119,6 +1199,7 @@
 	"/templates/email/admin-email.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/email/admin-email.php",
 		"oF": 0
@@ -1126,6 +1207,7 @@
 	"/templates/email/user-email.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/email/user-email.php",
 		"oF": 0
@@ -1133,6 +1215,7 @@
 	"/templates/email_de/admin-email.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/email_de/admin-email.php",
 		"oF": 0
@@ -1140,6 +1223,7 @@
 	"/templates/email_de/user-email.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/email_de/user-email.php",
 		"oF": 0
@@ -1147,6 +1231,7 @@
 	"/templates/email_it/admin-email.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/email_it/admin-email.php",
 		"oF": 0
@@ -1154,6 +1239,7 @@
 	"/templates/email_it/user-email.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/email_it/user-email.php",
 		"oF": 0
@@ -1161,6 +1247,7 @@
 	"/templates/frontend/form.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/frontend/form.php",
 		"oF": 0
@@ -1168,6 +1255,7 @@
 	"/templates/frontend/form_christmas.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/frontend/form_christmas.php",
 		"oF": 0
@@ -1175,6 +1263,7 @@
 	"/vendor/autoload.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/autoload.php",
 		"oF": 0
@@ -1182,6 +1271,7 @@
 	"/vendor/composer/autoload_classmap.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/composer/autoload_classmap.php",
 		"oF": 0
@@ -1189,6 +1279,7 @@
 	"/vendor/composer/autoload_namespaces.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/composer/autoload_namespaces.php",
 		"oF": 0
@@ -1196,6 +1287,7 @@
 	"/vendor/composer/autoload_psr4.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/composer/autoload_psr4.php",
 		"oF": 0
@@ -1203,6 +1295,7 @@
 	"/vendor/composer/autoload_real.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/composer/autoload_real.php",
 		"oF": 0
@@ -1210,6 +1303,7 @@
 	"/vendor/composer/autoload_static.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/composer/autoload_static.php",
 		"oF": 0
@@ -1217,6 +1311,7 @@
 	"/vendor/composer/ClassLoader.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/composer/ClassLoader.php",
 		"oF": 0
@@ -1232,6 +1327,7 @@
 	"/vendor/composer/LICENSE": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/composer/LICENSE",
 		"oF": 0
@@ -1239,6 +1335,7 @@
 	"/vendor/darkaonline/ripcord/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/.gitignore",
 		"oF": 0
@@ -1259,6 +1356,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/vendor/darkaonline/ripcord/Readme.html",
 		"oF": 0,
@@ -1272,6 +1370,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Client/Call.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Client/Call.php",
 		"oF": 0
@@ -1279,6 +1378,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Client/Client.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Client/Client.php",
 		"oF": 0
@@ -1286,6 +1386,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Client/Contracts/Transport.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Client/Contracts/Transport.php",
 		"oF": 0
@@ -1293,6 +1394,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Client/MultiCall.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Client/MultiCall.php",
 		"oF": 0
@@ -1300,6 +1402,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Client/Transport/Curl.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Client/Transport/Curl.php",
 		"oF": 0
@@ -1307,6 +1410,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Client/Transport/Stream.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Client/Transport/Stream.php",
 		"oF": 0
@@ -1314,6 +1418,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Documentor/Contracts/Documentator.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Documentor/Contracts/Documentator.php",
 		"oF": 0
@@ -1321,6 +1426,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Documentor/Contracts/Parser.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Documentor/Contracts/Parser.php",
 		"oF": 0
@@ -1328,6 +1434,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Documentor/Documentor.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Documentor/Documentor.php",
 		"oF": 0
@@ -1335,6 +1442,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Documentor/Parsers/PhpDoc.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Documentor/Parsers/PhpDoc.php",
 		"oF": 0
@@ -1342,6 +1450,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Exceptions/BadMethodCallException.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Exceptions/BadMethodCallException.php",
 		"oF": 0
@@ -1349,6 +1458,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Exceptions/ConfigurationException.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Exceptions/ConfigurationException.php",
 		"oF": 0
@@ -1356,6 +1466,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Exceptions/Contracts/Exception.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Exceptions/Contracts/Exception.php",
 		"oF": 0
@@ -1363,6 +1474,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Exceptions/InvalidArgumentException.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Exceptions/InvalidArgumentException.php",
 		"oF": 0
@@ -1370,6 +1482,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Exceptions/RemoteException.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Exceptions/RemoteException.php",
 		"oF": 0
@@ -1377,6 +1490,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Exceptions/TransportException.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Exceptions/TransportException.php",
 		"oF": 0
@@ -1384,6 +1498,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Providers/Laravel/config/ripcord.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Providers/Laravel/config/ripcord.php",
 		"oF": 0
@@ -1391,6 +1506,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Providers/Laravel/Console/PublishCommand.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Providers/Laravel/Console/PublishCommand.php",
 		"oF": 0
@@ -1398,6 +1514,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Providers/Laravel/Ripcord.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Providers/Laravel/Ripcord.php",
 		"oF": 0
@@ -1405,6 +1522,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Providers/Laravel/ServiceProvider.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Providers/Laravel/ServiceProvider.php",
 		"oF": 0
@@ -1412,6 +1530,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Ripcord.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Ripcord.php",
 		"oF": 0
@@ -1419,6 +1538,7 @@
 	"/vendor/darkaonline/ripcord/src/Ripcord/Server/Server.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/darkaonline/ripcord/src/Ripcord/Server/Server.php",
 		"oF": 0
@@ -1426,6 +1546,7 @@
 	"/vendor/detectlanguage/detectlanguage/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/detectlanguage/detectlanguage/.gitignore",
 		"oF": 0
@@ -1433,6 +1554,7 @@
 	"/vendor/detectlanguage/detectlanguage/.travis.yml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/detectlanguage/detectlanguage/.travis.yml",
 		"oF": 0
@@ -1448,6 +1570,7 @@
 	"/vendor/detectlanguage/detectlanguage/lib/detectlanguage.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/detectlanguage/detectlanguage/lib/detectlanguage.php",
 		"oF": 0
@@ -1455,6 +1578,7 @@
 	"/vendor/detectlanguage/detectlanguage/lib/DetectLanguage/Client.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/detectlanguage/detectlanguage/lib/DetectLanguage/Client.php",
 		"oF": 0
@@ -1462,6 +1586,7 @@
 	"/vendor/detectlanguage/detectlanguage/lib/DetectLanguage/DetectLanguage.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/detectlanguage/detectlanguage/lib/DetectLanguage/DetectLanguage.php",
 		"oF": 0
@@ -1469,6 +1594,7 @@
 	"/vendor/detectlanguage/detectlanguage/lib/DetectLanguage/Error.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/detectlanguage/detectlanguage/lib/DetectLanguage/Error.php",
 		"oF": 0
@@ -1476,6 +1602,7 @@
 	"/vendor/detectlanguage/detectlanguage/LICENSE": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/detectlanguage/detectlanguage/LICENSE",
 		"oF": 0
@@ -1483,6 +1610,7 @@
 	"/vendor/detectlanguage/detectlanguage/phpunit.xml.dist": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/detectlanguage/detectlanguage/phpunit.xml.dist",
 		"oF": 0
@@ -1495,6 +1623,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/vendor/detectlanguage/detectlanguage/README.html",
 		"oF": 0,
@@ -1508,6 +1637,7 @@
 	"/vendor/detectlanguage/detectlanguage/tests/DetectLanguage/DetectLanguageTest.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/detectlanguage/detectlanguage/tests/DetectLanguage/DetectLanguageTest.php",
 		"oF": 0
@@ -1515,6 +1645,7 @@
 	"/vendor/giftgruen/wp-helper/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/.gitignore",
 		"oF": 0
@@ -1522,6 +1653,7 @@
 	"/vendor/giftgruen/wp-helper/.gitlab-ci.yml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/.gitlab-ci.yml",
 		"oF": 0
@@ -1529,6 +1661,7 @@
 	"/vendor/giftgruen/wp-helper/.idea/compiler.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/.idea/compiler.xml",
 		"oF": 0
@@ -1536,6 +1669,7 @@
 	"/vendor/giftgruen/wp-helper/.idea/composerJson.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/.idea/composerJson.xml",
 		"oF": 0
@@ -1543,6 +1677,7 @@
 	"/vendor/giftgruen/wp-helper/.idea/copyright/profiles_settings.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/.idea/copyright/profiles_settings.xml",
 		"oF": 0
@@ -1550,6 +1685,7 @@
 	"/vendor/giftgruen/wp-helper/.idea/deployment.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/.idea/deployment.xml",
 		"oF": 0
@@ -1557,6 +1693,7 @@
 	"/vendor/giftgruen/wp-helper/.idea/dictionaries/lukas.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/.idea/dictionaries/lukas.xml",
 		"oF": 0
@@ -1564,6 +1701,7 @@
 	"/vendor/giftgruen/wp-helper/.idea/misc.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/.idea/misc.xml",
 		"oF": 0
@@ -1571,6 +1709,7 @@
 	"/vendor/giftgruen/wp-helper/.idea/modules.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/.idea/modules.xml",
 		"oF": 0
@@ -1578,6 +1717,7 @@
 	"/vendor/giftgruen/wp-helper/.idea/vcs.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/.idea/vcs.xml",
 		"oF": 0
@@ -1585,6 +1725,7 @@
 	"/vendor/giftgruen/wp-helper/.idea/workspace.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/.idea/workspace.xml",
 		"oF": 0
@@ -1592,6 +1733,7 @@
 	"/vendor/giftgruen/wp-helper/.idea/wp-helper.iml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/.idea/wp-helper.iml",
 		"oF": 0
@@ -1599,6 +1741,7 @@
 	"/vendor/giftgruen/wp-helper/ci.sh": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/ci.sh",
 		"oF": 0
@@ -1614,6 +1757,7 @@
 	"/vendor/giftgruen/wp-helper/lib/Dockerfile": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/lib/Dockerfile",
 		"oF": 0
@@ -1636,6 +1780,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/vendor/giftgruen/wp-helper/README.html",
 		"oF": 0,
@@ -1649,6 +1794,7 @@
 	"/vendor/giftgruen/wp-helper/render.rb": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/render.rb",
 		"oF": 0
@@ -1656,6 +1802,7 @@
 	"/vendor/giftgruen/wp-helper/src/Backend.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/src/Backend.php",
 		"oF": 0
@@ -1663,6 +1810,7 @@
 	"/vendor/giftgruen/wp-helper/src/Base.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/src/Base.php",
 		"oF": 0
@@ -1670,6 +1818,7 @@
 	"/vendor/giftgruen/wp-helper/src/Cache.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/src/Cache.php",
 		"oF": 0
@@ -1677,6 +1826,7 @@
 	"/vendor/giftgruen/wp-helper/src/Common.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/src/Common.php",
 		"oF": 0
@@ -1684,6 +1834,7 @@
 	"/vendor/giftgruen/wp-helper/src/Loader.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/giftgruen/wp-helper/src/Loader.php",
 		"oF": 0
@@ -1691,6 +1842,7 @@
 	"/vendor/phpmailer/phpmailer/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/.gitignore",
 		"oF": 0
@@ -1698,6 +1850,7 @@
 	"/vendor/phpmailer/phpmailer/.scrutinizer.yml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/.scrutinizer.yml",
 		"oF": 0
@@ -1705,6 +1858,7 @@
 	"/vendor/phpmailer/phpmailer/.travis.yml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/.travis.yml",
 		"oF": 0
@@ -1717,6 +1871,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/vendor/phpmailer/phpmailer/changelog.html",
 		"oF": 0,
@@ -1730,6 +1885,7 @@
 	"/vendor/phpmailer/phpmailer/class.phpmailer.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/class.phpmailer.php",
 		"oF": 0
@@ -1737,6 +1893,7 @@
 	"/vendor/phpmailer/phpmailer/class.phpmaileroauth.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/class.phpmaileroauth.php",
 		"oF": 0
@@ -1744,6 +1901,7 @@
 	"/vendor/phpmailer/phpmailer/class.phpmaileroauthgoogle.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/class.phpmaileroauthgoogle.php",
 		"oF": 0
@@ -1751,6 +1909,7 @@
 	"/vendor/phpmailer/phpmailer/class.pop3.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/class.pop3.php",
 		"oF": 0
@@ -1758,6 +1917,7 @@
 	"/vendor/phpmailer/phpmailer/class.smtp.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/class.smtp.php",
 		"oF": 0
@@ -1773,6 +1933,7 @@
 	"/vendor/phpmailer/phpmailer/composer.lock": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/composer.lock",
 		"oF": 0
@@ -1780,6 +1941,7 @@
 	"/vendor/phpmailer/phpmailer/docs/Callback_function_notes.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/docs/Callback_function_notes.txt",
 		"oF": 0
@@ -1787,6 +1949,7 @@
 	"/vendor/phpmailer/phpmailer/docs/DomainKeys_notes.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/docs/DomainKeys_notes.txt",
 		"oF": 0
@@ -1794,6 +1957,7 @@
 	"/vendor/phpmailer/phpmailer/docs/extending.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/docs/extending.html",
 		"oF": 0
@@ -1801,6 +1965,7 @@
 	"/vendor/phpmailer/phpmailer/docs/faq.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/docs/faq.html",
 		"oF": 0
@@ -1808,6 +1973,7 @@
 	"/vendor/phpmailer/phpmailer/docs/generatedocs.sh": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/docs/generatedocs.sh",
 		"oF": 0
@@ -1815,6 +1981,7 @@
 	"/vendor/phpmailer/phpmailer/docs/Note_for_SMTP_debugging.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/docs/Note_for_SMTP_debugging.txt",
 		"oF": 0
@@ -1822,6 +1989,7 @@
 	"/vendor/phpmailer/phpmailer/docs/pop3_article.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/docs/pop3_article.txt",
 		"oF": 0
@@ -1829,6 +1997,7 @@
 	"/vendor/phpmailer/phpmailer/examples/code_generator.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/code_generator.phps",
 		"oF": 0
@@ -1836,6 +2005,7 @@
 	"/vendor/phpmailer/phpmailer/examples/contents.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/contents.html",
 		"oF": 0
@@ -1843,6 +2013,7 @@
 	"/vendor/phpmailer/phpmailer/examples/contentsutf8.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/contentsutf8.html",
 		"oF": 0
@@ -1850,6 +2021,7 @@
 	"/vendor/phpmailer/phpmailer/examples/DKIM.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/DKIM.phps",
 		"oF": 0
@@ -1857,6 +2029,7 @@
 	"/vendor/phpmailer/phpmailer/examples/exceptions.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/exceptions.phps",
 		"oF": 0
@@ -1864,6 +2037,7 @@
 	"/vendor/phpmailer/phpmailer/examples/gmail.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/gmail.phps",
 		"oF": 0
@@ -1871,6 +2045,7 @@
 	"/vendor/phpmailer/phpmailer/examples/gmail_xoauth.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/gmail_xoauth.phps",
 		"oF": 0
@@ -1900,6 +2075,7 @@
 	"/vendor/phpmailer/phpmailer/examples/index.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/index.html",
 		"oF": 0
@@ -1907,6 +2083,7 @@
 	"/vendor/phpmailer/phpmailer/examples/mail.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/mail.phps",
 		"oF": 0
@@ -1914,6 +2091,7 @@
 	"/vendor/phpmailer/phpmailer/examples/mailing_list.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/mailing_list.phps",
 		"oF": 0
@@ -1921,11 +2099,13 @@
 	"/vendor/phpmailer/phpmailer/examples/pop_before_smtp.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/pop_before_smtp.phps",
 		"oF": 0
 		},
 	"/vendor/phpmailer/phpmailer/examples/scripts/shAutoloader.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1936,6 +2116,7 @@
 		"tS": 0
 		},
 	"/vendor/phpmailer/phpmailer/examples/scripts/shBrushPhp.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1946,6 +2127,7 @@
 		"tS": 0
 		},
 	"/vendor/phpmailer/phpmailer/examples/scripts/shCore.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1956,6 +2138,7 @@
 		"tS": 0
 		},
 	"/vendor/phpmailer/phpmailer/examples/scripts/shLegacy.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1966,6 +2149,7 @@
 		"tS": 0
 		},
 	"/vendor/phpmailer/phpmailer/examples/scripts/XRegExp.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1978,6 +2162,7 @@
 	"/vendor/phpmailer/phpmailer/examples/send_file_upload.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/send_file_upload.phps",
 		"oF": 0
@@ -1985,6 +2170,7 @@
 	"/vendor/phpmailer/phpmailer/examples/send_multiple_file_upload.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/send_multiple_file_upload.phps",
 		"oF": 0
@@ -1992,6 +2178,7 @@
 	"/vendor/phpmailer/phpmailer/examples/sendmail.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/sendmail.phps",
 		"oF": 0
@@ -1999,6 +2186,7 @@
 	"/vendor/phpmailer/phpmailer/examples/signed-mail.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/signed-mail.phps",
 		"oF": 0
@@ -2006,6 +2194,7 @@
 	"/vendor/phpmailer/phpmailer/examples/smtp.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/smtp.phps",
 		"oF": 0
@@ -2013,6 +2202,7 @@
 	"/vendor/phpmailer/phpmailer/examples/smtp_check.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/smtp_check.phps",
 		"oF": 0
@@ -2020,6 +2210,7 @@
 	"/vendor/phpmailer/phpmailer/examples/smtp_no_auth.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/smtp_no_auth.phps",
 		"oF": 0
@@ -2027,6 +2218,7 @@
 	"/vendor/phpmailer/phpmailer/examples/ssl_options.phps": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/examples/ssl_options.phps",
 		"oF": 0
@@ -2235,6 +2427,7 @@
 	"/vendor/phpmailer/phpmailer/extras/EasyPeasyICS.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/extras/EasyPeasyICS.php",
 		"oF": 0
@@ -2242,6 +2435,7 @@
 	"/vendor/phpmailer/phpmailer/extras/htmlfilter.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/extras/htmlfilter.php",
 		"oF": 0
@@ -2249,6 +2443,7 @@
 	"/vendor/phpmailer/phpmailer/extras/ntlm_sasl_client.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/extras/ntlm_sasl_client.php",
 		"oF": 0
@@ -2261,6 +2456,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/vendor/phpmailer/phpmailer/extras/README.html",
 		"oF": 0,
@@ -2274,6 +2470,7 @@
 	"/vendor/phpmailer/phpmailer/get_oauth_token.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/get_oauth_token.php",
 		"oF": 0
@@ -2281,6 +2478,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-am.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-am.php",
 		"oF": 0
@@ -2288,6 +2486,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-ar.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-ar.php",
 		"oF": 0
@@ -2295,6 +2494,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-az.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-az.php",
 		"oF": 0
@@ -2302,6 +2502,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-be.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-be.php",
 		"oF": 0
@@ -2309,6 +2510,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-bg.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-bg.php",
 		"oF": 0
@@ -2316,6 +2518,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-br.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-br.php",
 		"oF": 0
@@ -2323,6 +2526,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-ca.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-ca.php",
 		"oF": 0
@@ -2330,6 +2534,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-ch.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-ch.php",
 		"oF": 0
@@ -2337,6 +2542,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-cs.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-cs.php",
 		"oF": 0
@@ -2344,6 +2550,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-cz.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-cz.php",
 		"oF": 0
@@ -2351,6 +2558,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-da.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-da.php",
 		"oF": 0
@@ -2358,6 +2566,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-de.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-de.php",
 		"oF": 0
@@ -2365,6 +2574,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-dk.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-dk.php",
 		"oF": 0
@@ -2372,6 +2582,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-el.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-el.php",
 		"oF": 0
@@ -2379,6 +2590,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-eo.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-eo.php",
 		"oF": 0
@@ -2386,6 +2598,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-es.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-es.php",
 		"oF": 0
@@ -2393,6 +2606,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-et.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-et.php",
 		"oF": 0
@@ -2400,6 +2614,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-fa.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-fa.php",
 		"oF": 0
@@ -2407,6 +2622,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-fi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-fi.php",
 		"oF": 0
@@ -2414,6 +2630,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-fo.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-fo.php",
 		"oF": 0
@@ -2421,6 +2638,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-fr.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-fr.php",
 		"oF": 0
@@ -2428,6 +2646,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-gl.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-gl.php",
 		"oF": 0
@@ -2435,6 +2654,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-he.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-he.php",
 		"oF": 0
@@ -2442,6 +2662,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-hr.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-hr.php",
 		"oF": 0
@@ -2449,6 +2670,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-hu.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-hu.php",
 		"oF": 0
@@ -2456,6 +2678,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-id.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-id.php",
 		"oF": 0
@@ -2463,6 +2686,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-it.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-it.php",
 		"oF": 0
@@ -2470,6 +2694,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-ja.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-ja.php",
 		"oF": 0
@@ -2477,6 +2702,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-ka.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-ka.php",
 		"oF": 0
@@ -2484,6 +2710,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-ko.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-ko.php",
 		"oF": 0
@@ -2491,6 +2718,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-lt.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-lt.php",
 		"oF": 0
@@ -2498,6 +2726,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-lv.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-lv.php",
 		"oF": 0
@@ -2505,6 +2734,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-ms.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-ms.php",
 		"oF": 0
@@ -2512,6 +2742,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-nb.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-nb.php",
 		"oF": 0
@@ -2519,6 +2750,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-nl.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-nl.php",
 		"oF": 0
@@ -2526,6 +2758,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-no.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-no.php",
 		"oF": 0
@@ -2533,6 +2766,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-pl.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-pl.php",
 		"oF": 0
@@ -2540,6 +2774,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-pt.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-pt.php",
 		"oF": 0
@@ -2547,6 +2782,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-pt_br.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-pt_br.php",
 		"oF": 0
@@ -2554,6 +2790,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-ro.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-ro.php",
 		"oF": 0
@@ -2561,6 +2798,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-ru.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-ru.php",
 		"oF": 0
@@ -2568,6 +2806,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-se.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-se.php",
 		"oF": 0
@@ -2575,6 +2814,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-sk.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-sk.php",
 		"oF": 0
@@ -2582,6 +2822,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-sl.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-sl.php",
 		"oF": 0
@@ -2589,6 +2830,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-sr.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-sr.php",
 		"oF": 0
@@ -2596,6 +2838,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-sv.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-sv.php",
 		"oF": 0
@@ -2603,6 +2846,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-tr.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-tr.php",
 		"oF": 0
@@ -2610,6 +2854,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-uk.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-uk.php",
 		"oF": 0
@@ -2617,6 +2862,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-vi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-vi.php",
 		"oF": 0
@@ -2624,6 +2870,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-zh.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-zh.php",
 		"oF": 0
@@ -2631,6 +2878,7 @@
 	"/vendor/phpmailer/phpmailer/language/phpmailer.lang-zh_cn.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/language/phpmailer.lang-zh_cn.php",
 		"oF": 0
@@ -2638,6 +2886,7 @@
 	"/vendor/phpmailer/phpmailer/LICENSE": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/LICENSE",
 		"oF": 0
@@ -2645,6 +2894,7 @@
 	"/vendor/phpmailer/phpmailer/PHPMailerAutoload.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/PHPMailerAutoload.php",
 		"oF": 0
@@ -2657,6 +2907,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/vendor/phpmailer/phpmailer/README.html",
 		"oF": 0,
@@ -2670,6 +2921,7 @@
 	"/vendor/phpmailer/phpmailer/test/bootstrap.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/test/bootstrap.php",
 		"oF": 0
@@ -2677,6 +2929,7 @@
 	"/vendor/phpmailer/phpmailer/test/fakepopserver.sh": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/test/fakepopserver.sh",
 		"oF": 0
@@ -2684,6 +2937,7 @@
 	"/vendor/phpmailer/phpmailer/test/fakesendmail.sh": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/test/fakesendmail.sh",
 		"oF": 0
@@ -2691,6 +2945,7 @@
 	"/vendor/phpmailer/phpmailer/test/phpmailerLangTest.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/test/phpmailerLangTest.php",
 		"oF": 0
@@ -2698,6 +2953,7 @@
 	"/vendor/phpmailer/phpmailer/test/phpmailerTest.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/test/phpmailerTest.php",
 		"oF": 0
@@ -2705,6 +2961,7 @@
 	"/vendor/phpmailer/phpmailer/test/runfakepopserver.sh": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/test/runfakepopserver.sh",
 		"oF": 0
@@ -2712,6 +2969,7 @@
 	"/vendor/phpmailer/phpmailer/test/test_callback.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/test/test_callback.php",
 		"oF": 0
@@ -2719,6 +2977,7 @@
 	"/vendor/phpmailer/phpmailer/test/testbootstrap-dist.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/test/testbootstrap-dist.php",
 		"oF": 0
@@ -2726,6 +2985,7 @@
 	"/vendor/phpmailer/phpmailer/travis.phpunit.xml.dist": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/travis.phpunit.xml.dist",
 		"oF": 0
@@ -2733,6 +2993,7 @@
 	"/vendor/phpmailer/phpmailer/VERSION": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/phpmailer/phpmailer/VERSION",
 		"oF": 0
@@ -2740,6 +3001,7 @@
 	"/vendor/setasign/fpdf/changelog.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/changelog.htm",
 		"oF": 0
@@ -2755,6 +3017,7 @@
 	"/vendor/setasign/fpdf/doc/__construct.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/vendor/setasign/fpdf/doc/__construct.htm",
 		"oF": 0
@@ -2762,6 +3025,7 @@
 	"/vendor/setasign/fpdf/doc/acceptpagebreak.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/acceptpagebreak.htm",
 		"oF": 0
@@ -2769,6 +3033,7 @@
 	"/vendor/setasign/fpdf/doc/addfont.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/addfont.htm",
 		"oF": 0
@@ -2776,6 +3041,7 @@
 	"/vendor/setasign/fpdf/doc/addlink.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/addlink.htm",
 		"oF": 0
@@ -2783,6 +3049,7 @@
 	"/vendor/setasign/fpdf/doc/addpage.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/addpage.htm",
 		"oF": 0
@@ -2790,6 +3057,7 @@
 	"/vendor/setasign/fpdf/doc/aliasnbpages.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/aliasnbpages.htm",
 		"oF": 0
@@ -2797,6 +3065,7 @@
 	"/vendor/setasign/fpdf/doc/cell.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/cell.htm",
 		"oF": 0
@@ -2804,6 +3073,7 @@
 	"/vendor/setasign/fpdf/doc/close.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/close.htm",
 		"oF": 0
@@ -2811,6 +3081,7 @@
 	"/vendor/setasign/fpdf/doc/error.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/error.htm",
 		"oF": 0
@@ -2818,6 +3089,7 @@
 	"/vendor/setasign/fpdf/doc/footer.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/footer.htm",
 		"oF": 0
@@ -2825,6 +3097,7 @@
 	"/vendor/setasign/fpdf/doc/getpageheight.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/getpageheight.htm",
 		"oF": 0
@@ -2832,6 +3105,7 @@
 	"/vendor/setasign/fpdf/doc/getpagewidth.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/getpagewidth.htm",
 		"oF": 0
@@ -2839,6 +3113,7 @@
 	"/vendor/setasign/fpdf/doc/getstringwidth.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/getstringwidth.htm",
 		"oF": 0
@@ -2846,6 +3121,7 @@
 	"/vendor/setasign/fpdf/doc/getx.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/getx.htm",
 		"oF": 0
@@ -2853,6 +3129,7 @@
 	"/vendor/setasign/fpdf/doc/gety.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/gety.htm",
 		"oF": 0
@@ -2860,6 +3137,7 @@
 	"/vendor/setasign/fpdf/doc/header.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/header.htm",
 		"oF": 0
@@ -2867,6 +3145,7 @@
 	"/vendor/setasign/fpdf/doc/image.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/image.htm",
 		"oF": 0
@@ -2874,6 +3153,7 @@
 	"/vendor/setasign/fpdf/doc/index.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/index.htm",
 		"oF": 0
@@ -2881,6 +3161,7 @@
 	"/vendor/setasign/fpdf/doc/line.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/line.htm",
 		"oF": 0
@@ -2888,6 +3169,7 @@
 	"/vendor/setasign/fpdf/doc/link.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/link.htm",
 		"oF": 0
@@ -2895,6 +3177,7 @@
 	"/vendor/setasign/fpdf/doc/ln.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/ln.htm",
 		"oF": 0
@@ -2902,6 +3185,7 @@
 	"/vendor/setasign/fpdf/doc/multicell.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/multicell.htm",
 		"oF": 0
@@ -2909,6 +3193,7 @@
 	"/vendor/setasign/fpdf/doc/output.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/output.htm",
 		"oF": 0
@@ -2916,6 +3201,7 @@
 	"/vendor/setasign/fpdf/doc/pageno.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/pageno.htm",
 		"oF": 0
@@ -2923,6 +3209,7 @@
 	"/vendor/setasign/fpdf/doc/rect.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/rect.htm",
 		"oF": 0
@@ -2930,6 +3217,7 @@
 	"/vendor/setasign/fpdf/doc/setauthor.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setauthor.htm",
 		"oF": 0
@@ -2937,6 +3225,7 @@
 	"/vendor/setasign/fpdf/doc/setautopagebreak.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setautopagebreak.htm",
 		"oF": 0
@@ -2944,6 +3233,7 @@
 	"/vendor/setasign/fpdf/doc/setcompression.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setcompression.htm",
 		"oF": 0
@@ -2951,6 +3241,7 @@
 	"/vendor/setasign/fpdf/doc/setcreator.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setcreator.htm",
 		"oF": 0
@@ -2958,6 +3249,7 @@
 	"/vendor/setasign/fpdf/doc/setdisplaymode.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setdisplaymode.htm",
 		"oF": 0
@@ -2965,6 +3257,7 @@
 	"/vendor/setasign/fpdf/doc/setdrawcolor.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setdrawcolor.htm",
 		"oF": 0
@@ -2972,6 +3265,7 @@
 	"/vendor/setasign/fpdf/doc/setfillcolor.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setfillcolor.htm",
 		"oF": 0
@@ -2979,6 +3273,7 @@
 	"/vendor/setasign/fpdf/doc/setfont.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setfont.htm",
 		"oF": 0
@@ -2986,6 +3281,7 @@
 	"/vendor/setasign/fpdf/doc/setfontsize.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setfontsize.htm",
 		"oF": 0
@@ -2993,6 +3289,7 @@
 	"/vendor/setasign/fpdf/doc/setkeywords.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setkeywords.htm",
 		"oF": 0
@@ -3000,6 +3297,7 @@
 	"/vendor/setasign/fpdf/doc/setleftmargin.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setleftmargin.htm",
 		"oF": 0
@@ -3007,6 +3305,7 @@
 	"/vendor/setasign/fpdf/doc/setlinewidth.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setlinewidth.htm",
 		"oF": 0
@@ -3014,6 +3313,7 @@
 	"/vendor/setasign/fpdf/doc/setlink.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setlink.htm",
 		"oF": 0
@@ -3021,6 +3321,7 @@
 	"/vendor/setasign/fpdf/doc/setmargins.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setmargins.htm",
 		"oF": 0
@@ -3028,6 +3329,7 @@
 	"/vendor/setasign/fpdf/doc/setrightmargin.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setrightmargin.htm",
 		"oF": 0
@@ -3035,6 +3337,7 @@
 	"/vendor/setasign/fpdf/doc/setsubject.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setsubject.htm",
 		"oF": 0
@@ -3042,6 +3345,7 @@
 	"/vendor/setasign/fpdf/doc/settextcolor.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/settextcolor.htm",
 		"oF": 0
@@ -3049,6 +3353,7 @@
 	"/vendor/setasign/fpdf/doc/settitle.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/settitle.htm",
 		"oF": 0
@@ -3056,6 +3361,7 @@
 	"/vendor/setasign/fpdf/doc/settopmargin.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/settopmargin.htm",
 		"oF": 0
@@ -3063,6 +3369,7 @@
 	"/vendor/setasign/fpdf/doc/setx.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setx.htm",
 		"oF": 0
@@ -3070,6 +3377,7 @@
 	"/vendor/setasign/fpdf/doc/setxy.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/setxy.htm",
 		"oF": 0
@@ -3077,6 +3385,7 @@
 	"/vendor/setasign/fpdf/doc/sety.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/sety.htm",
 		"oF": 0
@@ -3084,6 +3393,7 @@
 	"/vendor/setasign/fpdf/doc/text.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/text.htm",
 		"oF": 0
@@ -3091,6 +3401,7 @@
 	"/vendor/setasign/fpdf/doc/write.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/doc/write.htm",
 		"oF": 0
@@ -3098,6 +3409,7 @@
 	"/vendor/setasign/fpdf/FAQ.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/FAQ.htm",
 		"oF": 0
@@ -3105,6 +3417,7 @@
 	"/vendor/setasign/fpdf/font/courier.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/courier.php",
 		"oF": 0
@@ -3112,6 +3425,7 @@
 	"/vendor/setasign/fpdf/font/courierb.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/courierb.php",
 		"oF": 0
@@ -3119,6 +3433,7 @@
 	"/vendor/setasign/fpdf/font/courierbi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/courierbi.php",
 		"oF": 0
@@ -3126,6 +3441,7 @@
 	"/vendor/setasign/fpdf/font/courieri.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/courieri.php",
 		"oF": 0
@@ -3133,6 +3449,7 @@
 	"/vendor/setasign/fpdf/font/helvetica.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/helvetica.php",
 		"oF": 0
@@ -3140,6 +3457,7 @@
 	"/vendor/setasign/fpdf/font/helveticab.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/helveticab.php",
 		"oF": 0
@@ -3147,6 +3465,7 @@
 	"/vendor/setasign/fpdf/font/helveticabi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/helveticabi.php",
 		"oF": 0
@@ -3154,6 +3473,7 @@
 	"/vendor/setasign/fpdf/font/helveticai.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/helveticai.php",
 		"oF": 0
@@ -3161,6 +3481,7 @@
 	"/vendor/setasign/fpdf/font/symbol.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/symbol.php",
 		"oF": 0
@@ -3168,6 +3489,7 @@
 	"/vendor/setasign/fpdf/font/times.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/times.php",
 		"oF": 0
@@ -3175,6 +3497,7 @@
 	"/vendor/setasign/fpdf/font/timesb.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/timesb.php",
 		"oF": 0
@@ -3182,6 +3505,7 @@
 	"/vendor/setasign/fpdf/font/timesbi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/timesbi.php",
 		"oF": 0
@@ -3189,6 +3513,7 @@
 	"/vendor/setasign/fpdf/font/timesi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/timesi.php",
 		"oF": 0
@@ -3196,6 +3521,7 @@
 	"/vendor/setasign/fpdf/font/zapfdingbats.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/font/zapfdingbats.php",
 		"oF": 0
@@ -3213,6 +3539,7 @@
 	"/vendor/setasign/fpdf/fpdf.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/fpdf.php",
 		"oF": 0
@@ -3220,6 +3547,7 @@
 	"/vendor/setasign/fpdf/install.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/install.txt",
 		"oF": 0
@@ -3227,6 +3555,7 @@
 	"/vendor/setasign/fpdf/license.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/license.txt",
 		"oF": 0
@@ -3234,6 +3563,7 @@
 	"/vendor/setasign/fpdf/makefont/cp1250.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/cp1250.map",
 		"oF": 0
@@ -3241,6 +3571,7 @@
 	"/vendor/setasign/fpdf/makefont/cp1251.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/cp1251.map",
 		"oF": 0
@@ -3248,6 +3579,7 @@
 	"/vendor/setasign/fpdf/makefont/cp1252.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/cp1252.map",
 		"oF": 0
@@ -3255,6 +3587,7 @@
 	"/vendor/setasign/fpdf/makefont/cp1253.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/cp1253.map",
 		"oF": 0
@@ -3262,6 +3595,7 @@
 	"/vendor/setasign/fpdf/makefont/cp1254.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/cp1254.map",
 		"oF": 0
@@ -3269,6 +3603,7 @@
 	"/vendor/setasign/fpdf/makefont/cp1255.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/cp1255.map",
 		"oF": 0
@@ -3276,6 +3611,7 @@
 	"/vendor/setasign/fpdf/makefont/cp1257.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/cp1257.map",
 		"oF": 0
@@ -3283,6 +3619,7 @@
 	"/vendor/setasign/fpdf/makefont/cp1258.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/cp1258.map",
 		"oF": 0
@@ -3290,6 +3627,7 @@
 	"/vendor/setasign/fpdf/makefont/cp874.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/cp874.map",
 		"oF": 0
@@ -3297,6 +3635,7 @@
 	"/vendor/setasign/fpdf/makefont/iso-8859-1.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/iso-8859-1.map",
 		"oF": 0
@@ -3304,6 +3643,7 @@
 	"/vendor/setasign/fpdf/makefont/iso-8859-11.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/iso-8859-11.map",
 		"oF": 0
@@ -3311,6 +3651,7 @@
 	"/vendor/setasign/fpdf/makefont/iso-8859-15.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/iso-8859-15.map",
 		"oF": 0
@@ -3318,6 +3659,7 @@
 	"/vendor/setasign/fpdf/makefont/iso-8859-16.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/iso-8859-16.map",
 		"oF": 0
@@ -3325,6 +3667,7 @@
 	"/vendor/setasign/fpdf/makefont/iso-8859-2.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/iso-8859-2.map",
 		"oF": 0
@@ -3332,6 +3675,7 @@
 	"/vendor/setasign/fpdf/makefont/iso-8859-4.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/iso-8859-4.map",
 		"oF": 0
@@ -3339,6 +3683,7 @@
 	"/vendor/setasign/fpdf/makefont/iso-8859-5.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/iso-8859-5.map",
 		"oF": 0
@@ -3346,6 +3691,7 @@
 	"/vendor/setasign/fpdf/makefont/iso-8859-7.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/iso-8859-7.map",
 		"oF": 0
@@ -3353,6 +3699,7 @@
 	"/vendor/setasign/fpdf/makefont/iso-8859-9.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/iso-8859-9.map",
 		"oF": 0
@@ -3360,6 +3707,7 @@
 	"/vendor/setasign/fpdf/makefont/koi8-r.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/koi8-r.map",
 		"oF": 0
@@ -3367,6 +3715,7 @@
 	"/vendor/setasign/fpdf/makefont/koi8-u.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/koi8-u.map",
 		"oF": 0
@@ -3374,6 +3723,7 @@
 	"/vendor/setasign/fpdf/makefont/makefont.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/makefont.php",
 		"oF": 0
@@ -3381,6 +3731,7 @@
 	"/vendor/setasign/fpdf/makefont/ttfparser.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/makefont/ttfparser.php",
 		"oF": 0
@@ -3393,6 +3744,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/vendor/setasign/fpdf/README.html",
 		"oF": 0,
@@ -3406,6 +3758,7 @@
 	"/vendor/setasign/fpdf/tutorial/20k_c1.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/20k_c1.txt",
 		"oF": 0
@@ -3413,6 +3766,7 @@
 	"/vendor/setasign/fpdf/tutorial/20k_c2.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/20k_c2.txt",
 		"oF": 0
@@ -3420,6 +3774,7 @@
 	"/vendor/setasign/fpdf/tutorial/calligra.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/calligra.php",
 		"oF": 0
@@ -3427,6 +3782,7 @@
 	"/vendor/setasign/fpdf/tutorial/calligra.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/calligra.ttf",
 		"oF": 0
@@ -3434,6 +3790,7 @@
 	"/vendor/setasign/fpdf/tutorial/calligra.z": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/calligra.z",
 		"oF": 0
@@ -3441,6 +3798,7 @@
 	"/vendor/setasign/fpdf/tutorial/countries.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/countries.txt",
 		"oF": 0
@@ -3448,6 +3806,7 @@
 	"/vendor/setasign/fpdf/tutorial/index.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/index.htm",
 		"oF": 0
@@ -3466,6 +3825,7 @@
 	"/vendor/setasign/fpdf/tutorial/makefont.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/makefont.php",
 		"oF": 0
@@ -3473,6 +3833,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto1.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto1.htm",
 		"oF": 0
@@ -3480,6 +3841,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto1.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto1.php",
 		"oF": 0
@@ -3487,6 +3849,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto2.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto2.htm",
 		"oF": 0
@@ -3494,6 +3857,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto2.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto2.php",
 		"oF": 0
@@ -3501,6 +3865,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto3.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto3.htm",
 		"oF": 0
@@ -3508,6 +3873,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto3.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto3.php",
 		"oF": 0
@@ -3515,6 +3881,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto4.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto4.htm",
 		"oF": 0
@@ -3522,6 +3889,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto4.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto4.php",
 		"oF": 0
@@ -3529,6 +3897,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto5.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto5.htm",
 		"oF": 0
@@ -3536,6 +3905,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto5.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto5.php",
 		"oF": 0
@@ -3543,6 +3913,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto6.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto6.htm",
 		"oF": 0
@@ -3550,6 +3921,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto6.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto6.php",
 		"oF": 0
@@ -3557,6 +3929,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto7.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto7.htm",
 		"oF": 0
@@ -3564,6 +3937,7 @@
 	"/vendor/setasign/fpdf/tutorial/tuto7.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdf/tutorial/tuto7.php",
 		"oF": 0
@@ -3579,6 +3953,7 @@
 	"/vendor/setasign/fpdi-fpdf/fpdi_bridge.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdi-fpdf/fpdi_bridge.php",
 		"oF": 0
@@ -3586,6 +3961,7 @@
 	"/vendor/setasign/fpdi-fpdf/LICENSE": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdi-fpdf/LICENSE",
 		"oF": 0
@@ -3598,6 +3974,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/vendor/setasign/fpdi-fpdf/README.html",
 		"oF": 0,
@@ -3619,6 +3996,7 @@
 	"/vendor/setasign/fpdi/filters/FilterASCII85.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdi/filters/FilterASCII85.php",
 		"oF": 0
@@ -3626,6 +4004,7 @@
 	"/vendor/setasign/fpdi/filters/FilterASCIIHexDecode.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdi/filters/FilterASCIIHexDecode.php",
 		"oF": 0
@@ -3633,6 +4012,7 @@
 	"/vendor/setasign/fpdi/filters/FilterLZW.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdi/filters/FilterLZW.php",
 		"oF": 0
@@ -3640,6 +4020,7 @@
 	"/vendor/setasign/fpdi/fpdf_tpl.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdi/fpdf_tpl.php",
 		"oF": 0
@@ -3647,6 +4028,7 @@
 	"/vendor/setasign/fpdi/fpdi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdi/fpdi.php",
 		"oF": 0
@@ -3654,6 +4036,7 @@
 	"/vendor/setasign/fpdi/fpdi_bridge.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdi/fpdi_bridge.php",
 		"oF": 0
@@ -3661,6 +4044,7 @@
 	"/vendor/setasign/fpdi/fpdi_pdf_parser.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdi/fpdi_pdf_parser.php",
 		"oF": 0
@@ -3668,6 +4052,7 @@
 	"/vendor/setasign/fpdi/LICENSE": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdi/LICENSE",
 		"oF": 0
@@ -3675,6 +4060,7 @@
 	"/vendor/setasign/fpdi/pdf_context.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdi/pdf_context.php",
 		"oF": 0
@@ -3682,6 +4068,7 @@
 	"/vendor/setasign/fpdi/pdf_parser.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/fpdi/pdf_parser.php",
 		"oF": 0
@@ -3694,6 +4081,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/vendor/setasign/fpdi/README.html",
 		"oF": 0,
@@ -3707,6 +4095,7 @@
 	"/vendor/setasign/tfpdf/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/.gitignore",
 		"oF": 0
@@ -3722,6 +4111,7 @@
 	"/vendor/setasign/tfpdf/ex.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/ex.pdf",
 		"oF": 0
@@ -3729,6 +4119,7 @@
 	"/vendor/setasign/tfpdf/ex.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/ex.php",
 		"oF": 0
@@ -3736,6 +4127,7 @@
 	"/vendor/setasign/tfpdf/font/courier.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/courier.php",
 		"oF": 0
@@ -3743,6 +4135,7 @@
 	"/vendor/setasign/tfpdf/font/courierb.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/courierb.php",
 		"oF": 0
@@ -3750,6 +4143,7 @@
 	"/vendor/setasign/tfpdf/font/courierbi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/courierbi.php",
 		"oF": 0
@@ -3757,6 +4151,7 @@
 	"/vendor/setasign/tfpdf/font/courieri.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/courieri.php",
 		"oF": 0
@@ -3764,6 +4159,7 @@
 	"/vendor/setasign/tfpdf/font/helvetica.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/helvetica.php",
 		"oF": 0
@@ -3771,6 +4167,7 @@
 	"/vendor/setasign/tfpdf/font/helveticab.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/helveticab.php",
 		"oF": 0
@@ -3778,6 +4175,7 @@
 	"/vendor/setasign/tfpdf/font/helveticabi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/helveticabi.php",
 		"oF": 0
@@ -3785,6 +4183,7 @@
 	"/vendor/setasign/tfpdf/font/helveticai.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/helveticai.php",
 		"oF": 0
@@ -3792,6 +4191,7 @@
 	"/vendor/setasign/tfpdf/font/symbol.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/symbol.php",
 		"oF": 0
@@ -3799,6 +4199,7 @@
 	"/vendor/setasign/tfpdf/font/times.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/times.php",
 		"oF": 0
@@ -3806,6 +4207,7 @@
 	"/vendor/setasign/tfpdf/font/timesb.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/timesb.php",
 		"oF": 0
@@ -3813,6 +4215,7 @@
 	"/vendor/setasign/tfpdf/font/timesbi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/timesbi.php",
 		"oF": 0
@@ -3820,6 +4223,7 @@
 	"/vendor/setasign/tfpdf/font/timesi.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/timesi.php",
 		"oF": 0
@@ -3827,6 +4231,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVu_LICENSE.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVu_LICENSE.txt",
 		"oF": 0
@@ -3834,6 +4239,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSans-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSans-Bold.ttf",
 		"oF": 0
@@ -3841,6 +4247,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSans-BoldOblique.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSans-BoldOblique.ttf",
 		"oF": 0
@@ -3848,6 +4255,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSans-ExtraLight.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSans-ExtraLight.ttf",
 		"oF": 0
@@ -3855,6 +4263,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSans-Oblique.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSans-Oblique.ttf",
 		"oF": 0
@@ -3862,6 +4271,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSans.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSans.ttf",
 		"oF": 0
@@ -3869,6 +4279,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSansCondensed-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSansCondensed-Bold.ttf",
 		"oF": 0
@@ -3876,6 +4287,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSansCondensed-BoldOblique.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSansCondensed-BoldOblique.ttf",
 		"oF": 0
@@ -3883,6 +4295,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSansCondensed-Oblique.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSansCondensed-Oblique.ttf",
 		"oF": 0
@@ -3890,6 +4303,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSansCondensed.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSansCondensed.ttf",
 		"oF": 0
@@ -3897,6 +4311,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSansMono-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSansMono-Bold.ttf",
 		"oF": 0
@@ -3904,6 +4319,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSansMono-BoldOblique.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSansMono-BoldOblique.ttf",
 		"oF": 0
@@ -3911,6 +4327,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSansMono-Oblique.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSansMono-Oblique.ttf",
 		"oF": 0
@@ -3918,6 +4335,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSansMono.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSansMono.ttf",
 		"oF": 0
@@ -3925,6 +4343,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSerif-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSerif-Bold.ttf",
 		"oF": 0
@@ -3932,6 +4351,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSerif-BoldItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSerif-BoldItalic.ttf",
 		"oF": 0
@@ -3939,6 +4359,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSerif-Italic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSerif-Italic.ttf",
 		"oF": 0
@@ -3946,6 +4367,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSerif.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSerif.ttf",
 		"oF": 0
@@ -3953,6 +4375,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSerifCondensed-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSerifCondensed-Bold.ttf",
 		"oF": 0
@@ -3960,6 +4383,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSerifCondensed-BoldItalic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSerifCondensed-BoldItalic.ttf",
 		"oF": 0
@@ -3967,6 +4391,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSerifCondensed-Italic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSerifCondensed-Italic.ttf",
 		"oF": 0
@@ -3974,6 +4399,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/DejaVuSerifCondensed.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/DejaVuSerifCondensed.ttf",
 		"oF": 0
@@ -3981,6 +4407,7 @@
 	"/vendor/setasign/tfpdf/font/unifont/ttfonts.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/unifont/ttfonts.php",
 		"oF": 0
@@ -3988,6 +4415,7 @@
 	"/vendor/setasign/tfpdf/font/zapfdingbats.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/font/zapfdingbats.php",
 		"oF": 0
@@ -3995,6 +4423,7 @@
 	"/vendor/setasign/tfpdf/HelloWorld.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/HelloWorld.txt",
 		"oF": 0
@@ -4002,6 +4431,7 @@
 	"/vendor/setasign/tfpdf/info.htm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/info.htm",
 		"oF": 0
@@ -4014,6 +4444,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/vendor/setasign/tfpdf/README.html",
 		"oF": 0,
@@ -4027,6 +4458,7 @@
 	"/vendor/setasign/tfpdf/README.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/README.txt",
 		"oF": 0
@@ -4034,6 +4466,7 @@
 	"/vendor/setasign/tfpdf/tfpdf.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/vendor/setasign/tfpdf/tfpdf.php",
 		"oF": 0
@@ -4052,6 +4485,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
+	"allowInjectionReloads": 1,
 	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
@@ -4063,6 +4497,7 @@
 	"babelConfigType": 0,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
+	"babelExcludeString": "/\\/node_modules\\//, /\\/core-js\\//, /\\/bower_components\\//",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
@@ -4133,6 +4568,12 @@
 		"function-sent": {
 			"active": 0
 			},
+		"inline-consecutive-adds": {
+			"active": 0
+			},
+		"inline-environment-variables": {
+			"active": 0
+			},
 		"instanceof": {
 			"active": 0
 			},
@@ -4154,6 +4595,36 @@
 		"minify-booleans": {
 			"active": 0
 			},
+		"minify-builtins": {
+			"active": 0
+			},
+		"minify-constant-folding": {
+			"active": 0
+			},
+		"minify-dead-code-elimination": {
+			"active": 0
+			},
+		"minify-flip-comparisons": {
+			"active": 0
+			},
+		"minify-guarded-expressions": {
+			"active": 0
+			},
+		"minify-infinity": {
+			"active": 0
+			},
+		"minify-mangle-names": {
+			"active": 0
+			},
+		"minify-numeric-literals": {
+			"active": 0
+			},
+		"minify-simplify": {
+			"active": 0
+			},
+		"minify-type-constructors": {
+			"active": 0
+			},
 		"modules-amd": {
 			"active": 0
 			},
@@ -4164,6 +4635,9 @@
 			"active": 0
 			},
 		"modules-umd": {
+			"active": 0
+			},
+		"named-capturing-groups-regex": {
 			"active": 0
 			},
 		"new-target": {
@@ -4199,7 +4673,13 @@
 		"parameters": {
 			"active": 0
 			},
+		"partial-application": {
+			"active": 0
+			},
 		"pipeline-operator": {
+			"active": 0
+			},
+		"private-methods": {
 			"active": 0
 			},
 		"property-literals": {
@@ -4235,10 +4715,16 @@
 		"regenerator": {
 			"active": 0
 			},
+		"regexp-constructors": {
+			"active": 0
+			},
 		"remove-console": {
 			"active": 0
 			},
 		"remove-debugger": {
+			"active": 0
+			},
+		"remove-undefined": {
 			"active": 0
 			},
 		"reserved-words": {
@@ -4282,11 +4768,10 @@
 			}
 		},
 	"babelRetainLines": 0,
+	"babelUseBuiltInsType": 0,
 	"bowerAbbreviatedPath": "bower_components",
-	"bowerAutoCreateInfoFile": 1,
-	"bowerInstallDevDependencies": 0,
-	"bowerSaveDependencies": 1,
-	"bowerSaveDevDependencies": 0,
+	"bowerForceLatestOnConflict": 1,
+	"bowerTargetDependencyListType": 1,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
 	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
@@ -4431,6 +4916,7 @@
 			"flagValue": -1
 			}
 		},
+	"environmentVariablesString": "NODE_ENV:::production",
 	"esLintConfigFileHandlingType": 0,
 	"esLintECMAVersion": 7,
 	"esLintEnvironmentsMask": 1,
@@ -4532,6 +5018,10 @@
 			"optionString": "'all'"
 			},
 		"default-case": {
+			"active": 0,
+			"optionString": ""
+			},
+		"default-param-last": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -4883,6 +5373,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-import-assign": {
+			"active": 1,
+			"optionString": ""
+			},
 		"no-inline-comments": {
 			"active": 0,
 			"optionString": ""
@@ -5187,6 +5681,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-useless-catch": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-useless-computed-key": {
 			"active": 1,
 			"optionString": ""
@@ -5287,6 +5785,10 @@
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
 			},
+		"prefer-named-capture-group": {
+			"active": 0,
+			"optionString": ""
+			},
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
@@ -5298,6 +5800,10 @@
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
+			},
+		"prefer-regex-literals": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -5849,6 +6355,7 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -5870,6 +6377,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"bundleFormat": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"syntaxCheckerStyle": 1,
@@ -5892,7 +6400,8 @@
 		"autoOutputPathReplace1": "kit",
 		"autoOutputPathReplace2": "html",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -5904,7 +6413,6 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
 		"enableJavascript": 0,
-		"ieCompatibility": 1,
 		"mathStyle": 0,
 		"outputStyle": 0,
 		"rewriteURLStyle": 0,
@@ -5931,6 +6439,7 @@
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
 		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -5940,7 +6449,8 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -5961,7 +6471,8 @@
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
 		"outputStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -5990,7 +6501,8 @@
 		"outputFormat": 0,
 		"outputStyle": 1,
 		"railsCompatible": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
@@ -6033,8 +6545,16 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"npmAbbreviatedPath": "",
+	"npmCreatePackageLock": 1,
+	"npmInstallOptionalDependencies": 0,
+	"npmSaveExactVersion": 0,
+	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
+	"rollupExternals": "",
+	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
+	"rollupTreeshakingEnabled": 1,
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
@@ -6078,16 +6598,20 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"ascii_only": {
-			"active": 0,
+		"arrows": {
+			"active": 1,
 			"flagValue": -1
 			},
-		"bare_returns": {
+		"ascii_only": {
 			"active": 0,
 			"flagValue": -1
 			},
 		"booleans": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"booleans_as_integers": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"braces": {
@@ -6099,14 +6623,14 @@
 			"flagValue": -1
 			},
 		"comments": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"comparisons": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"compress": {
+		"computed_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -6129,6 +6653,10 @@
 		"drop_debugger": {
 			"active": 1,
 			"flagValue": -1
+			},
+		"ecma": {
+			"active": 1,
+			"flagValue": 5
 			},
 		"eval": {
 			"active": 0,
@@ -6154,10 +6682,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"html5_comments": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"ie8": {
 			"active": 0,
 			"flagValue": -1
@@ -6166,13 +6690,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"indent-start": {
-			"active": 0,
-			"flagValue": 0
-			},
 		"indent_level": {
 			"active": 0,
 			"flagValue": 4
+			},
+		"indent_start": {
+			"active": 0,
+			"flagValue": 0
 			},
 		"inline": {
 			"active": 1,
@@ -6184,6 +6708,10 @@
 			},
 		"join_vars": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"keep_classnames": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"keep_fargs": {
@@ -6206,13 +6734,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"mangle": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
+			},
+		"module": {
+			"active": 0,
+			"flagValue": -1
 			},
 		"negate_iife": {
 			"active": 1,
@@ -6221,10 +6749,6 @@
 		"passes": {
 			"active": 1,
 			"flagValue": 1
-			},
-		"preserve_line": {
-			"active": 0,
-			"flagValue": -1
 			},
 		"properties": {
 			"active": 1,
@@ -6248,6 +6772,10 @@
 			},
 		"reduce_vars": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"safari10": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"semicolons": {
@@ -6282,6 +6810,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"unsafe_arrows": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"unsafe_comps": {
 			"active": 0,
 			"flagValue": -1
@@ -6291,6 +6823,10 @@
 			"flagValue": -1
 			},
 		"unsafe_math": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_methods": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -6318,15 +6854,12 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"width": {
-			"active": 1,
-			"flagValue": 80
-			},
 		"wrap_iife": {
 			"active": 0,
 			"flagValue": -1
 			}
 		},
+	"uglifyMangleNames": 1,
 	"uglifyReservedNamesString": "$",
 	"websiteRelativeRoot": ""
 	},
