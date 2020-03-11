@@ -157,7 +157,8 @@
         <?php } else {   ?>
             <h1 style="text-align: center; padding: 25px 0;">Un grande GRAZIE per il vostro impegno</h1>
         <?php } ?>
-            <div style="padding: 0 30px;">
+
+			<div style="padding: 0 30px;">
 			 <p>
         <?php if ($wapr) {   ?>
 			<?php echo ($session_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters');?> <?php echo $session_data['first_name']; ?>  <br /><br />
@@ -170,15 +171,14 @@
         <?php } else {   ?>
 
                 <?php echo ($session_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters');?> <?php  $salutation = apply_filters( 'wpml_object_id', $session_data['salutation'], 'post', TRUE);
-                echo _e($salutation, 'child-sponsor-lang');?> <?php echo $session_data['first_name']; ?> <?php echo $session_data['last_name']; ?> <br /><br />
-                Avete deciso di sostenere <?php echo $child_meta['name']; ?>. Grazie del vostro impegno nel cambiare la vita di questo bambino! È difficile immaginare la gioia che i bambini sentono nel momento in cui i collaboratori dei Centri Compassion gli annunciano che dall'altra parte del globo c'è un sostenitore che si prende cura di loro. Oggi voi siete fonte di grande gioia! A nome di <?php echo $child_meta['name']; ?>, GRAZIE!
-                </p>
-                <p> Presto riceverete per posta tutte le informazioni per il vostro sostegno. Per questo, grazie di verificare i vostri dati e il vostro indirizzo postale.</p>
+	                    echo _e($salutation, 'child-sponsor-lang');?> <?php echo $session_data['first_name']; ?> <?php echo $session_data['last_name']; ?> <br /><br />
+			Avete deciso di sostenere <?php echo $child_meta['name']; ?>. Grazie del vostro impegno nel cambiare la vita di questo bambino! È difficile immaginare la gioia che i bambini sentono nel momento in cui i collaboratori dei Centri Compassion gli annunciano che dall'altra parte del globo c'è un sostenitore che si prende cura di loro. Oggi voi siete fonte di grande gioia! A nome di <?php echo $child_meta['name']; ?>, GRAZIE!
+			 </p>
+			 <p> Presto riceverete per posta tutte le informazioni per il vostro sostegno. Per questo, grazie di verificare i vostri dati e il vostro indirizzo postale.</p>
 
 
-                <h4> Avete trasmetto le informazioni seguenti:</h4>
-        <?php } ?>
-
+			<h4> Avete trasmetto le informazioni seguenti:</h4>
+<?php } ?>
 
           <div style="padding: 0 30px;">
 
@@ -252,7 +252,6 @@
                         ?>
                       <?php } ?>
                 <h3>Corrispondenza con <?php echo $child_meta['name']; ?></h3>
-
                    <?php
 	            if(!empty($session_data['language'])) {
 				foreach($session_data['language'] as $check) {
@@ -284,7 +283,7 @@
 				}
 				}
 				?>
-             <?php if ($wapr) {
+<?php if ($wapr) {
              ?>
 				<h3>La tua risposta alla domanda: Come ha conosciuto Compassion?</h3>
 
@@ -293,7 +292,6 @@
               <h3>La vostra risposta alla domanda: Come ha conosciuto Compassion?</h3>
 
               <?php } ?>
-
                <ul>
                    <li>
                        <?php
@@ -314,7 +312,7 @@
 				  ?>
 
                 <hr>
-              <?php if ($wapr) {
+<?php if ($wapr) {
               ?>
                <p>Se hai domande sul sostegno siamo a tua completa disposizione: <br/>
 	               Tel: 031 552 21 24(il martedì e il giovedì: 8h00-16h00)<br/>
