@@ -7,7 +7,7 @@
 		"uuidString": "4E309C44-4C2F-4A49-AA57-5F564250AD50"
 		}
 	],
-"creatorBuild": "28905",
+"creatorBuild": "31934",
 "files": {
 	"/assets/images/bv_compassion.jpg": {
 		"ft": 16384,
@@ -53,6 +53,7 @@
 		"q": 100
 		},
 	"/assets/js/main-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -63,6 +64,7 @@
 		"tS": 0
 		},
 	"/assets/js/main.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -183,6 +185,7 @@
 	"/assets/stylesheets/screen.css.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/stylesheets/screen.css.map",
 		"oF": 0
@@ -190,6 +193,7 @@
 	"/cf7-pf_oli.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/cf7-pf_oli.php",
 		"oF": 0
@@ -197,6 +201,7 @@
 	"/cf7-pf_oli_klay.pot": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/cf7-pf_oli_klay.pot",
 		"oF": 0
@@ -204,6 +209,7 @@
 	"/donation-form-backup-201910210806140.pot~": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/donation-form-backup-201910210806140.pot~",
 		"oF": 0
@@ -211,6 +217,7 @@
 	"/donation-form.pot": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/donation-form.pot",
 		"oF": 0
@@ -218,6 +225,7 @@
 	"/lang/donation-form-fr_FR-backup-201910210823020.po~": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/donation-form-fr_FR-backup-201910210823020.po~",
 		"oF": 0
@@ -225,6 +233,7 @@
 	"/lang/donation-form-fr_FR.mo": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/donation-form-fr_FR.mo",
 		"oF": 0
@@ -232,6 +241,7 @@
 	"/lang/donation-form-fr_FR.po": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/donation-form-fr_FR.po",
 		"oF": 0
@@ -239,6 +249,7 @@
 	"/lang/donation-form-it_IT-backup-201910210825080.po~": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/donation-form-it_IT-backup-201910210825080.po~",
 		"oF": 0
@@ -246,6 +257,7 @@
 	"/lang/donation-form-it_IT.mo": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/donation-form-it_IT.mo",
 		"oF": 0
@@ -253,6 +265,7 @@
 	"/lang/donation-form-it_IT.po": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/lang/donation-form-it_IT.po",
 		"oF": 0
@@ -260,6 +273,7 @@
 	"/templates/bank-transfer.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/bank-transfer.php",
 		"oF": 0
@@ -267,6 +281,7 @@
 	"/templates/cadeau/inputs.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/cadeau/inputs.php",
 		"oF": 0
@@ -274,6 +289,7 @@
 	"/templates/csp/inputs.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/csp/inputs.php",
 		"oF": 0
@@ -281,6 +297,7 @@
 	"/templates/donation-form.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/donation-form.php",
 		"oF": 0
@@ -288,6 +305,7 @@
 	"/templates/donation-redirect.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/donation-redirect.php",
 		"oF": 0
@@ -295,6 +313,7 @@
 	"/templates/frontend/inputs.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/frontend/inputs.php",
 		"oF": 0
@@ -302,6 +321,7 @@
 	"/templates/single/inputs.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/single/inputs.php",
 		"oF": 0
@@ -320,6 +340,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
+	"allowInjectionReloads": 1,
 	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
@@ -331,6 +352,7 @@
 	"babelConfigType": 0,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
+	"babelExcludeString": "/\\/node_modules\\//, /\\/core-js\\//, /\\/bower_components\\//",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
@@ -401,6 +423,12 @@
 		"function-sent": {
 			"active": 0
 			},
+		"inline-consecutive-adds": {
+			"active": 0
+			},
+		"inline-environment-variables": {
+			"active": 0
+			},
 		"instanceof": {
 			"active": 0
 			},
@@ -422,6 +450,36 @@
 		"minify-booleans": {
 			"active": 0
 			},
+		"minify-builtins": {
+			"active": 0
+			},
+		"minify-constant-folding": {
+			"active": 0
+			},
+		"minify-dead-code-elimination": {
+			"active": 0
+			},
+		"minify-flip-comparisons": {
+			"active": 0
+			},
+		"minify-guarded-expressions": {
+			"active": 0
+			},
+		"minify-infinity": {
+			"active": 0
+			},
+		"minify-mangle-names": {
+			"active": 0
+			},
+		"minify-numeric-literals": {
+			"active": 0
+			},
+		"minify-simplify": {
+			"active": 0
+			},
+		"minify-type-constructors": {
+			"active": 0
+			},
 		"modules-amd": {
 			"active": 0
 			},
@@ -432,6 +490,9 @@
 			"active": 0
 			},
 		"modules-umd": {
+			"active": 0
+			},
+		"named-capturing-groups-regex": {
 			"active": 0
 			},
 		"new-target": {
@@ -467,7 +528,13 @@
 		"parameters": {
 			"active": 0
 			},
+		"partial-application": {
+			"active": 0
+			},
 		"pipeline-operator": {
+			"active": 0
+			},
+		"private-methods": {
 			"active": 0
 			},
 		"property-literals": {
@@ -503,10 +570,16 @@
 		"regenerator": {
 			"active": 0
 			},
+		"regexp-constructors": {
+			"active": 0
+			},
 		"remove-console": {
 			"active": 0
 			},
 		"remove-debugger": {
+			"active": 0
+			},
+		"remove-undefined": {
 			"active": 0
 			},
 		"reserved-words": {
@@ -550,11 +623,10 @@
 			}
 		},
 	"babelRetainLines": 0,
+	"babelUseBuiltInsType": 0,
 	"bowerAbbreviatedPath": "bower_components",
-	"bowerAutoCreateInfoFile": 1,
-	"bowerInstallDevDependencies": 0,
-	"bowerSaveDependencies": 1,
-	"bowerSaveDevDependencies": 0,
+	"bowerForceLatestOnConflict": 1,
+	"bowerTargetDependencyListType": 1,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
 	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
@@ -699,6 +771,7 @@
 			"flagValue": -1
 			}
 		},
+	"environmentVariablesString": "NODE_ENV:::production",
 	"esLintConfigFileHandlingType": 0,
 	"esLintECMAVersion": 7,
 	"esLintEnvironmentsMask": 1,
@@ -800,6 +873,10 @@
 			"optionString": "'all'"
 			},
 		"default-case": {
+			"active": 0,
+			"optionString": ""
+			},
+		"default-param-last": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -1151,6 +1228,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-import-assign": {
+			"active": 1,
+			"optionString": ""
+			},
 		"no-inline-comments": {
 			"active": 0,
 			"optionString": ""
@@ -1455,6 +1536,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-useless-catch": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-useless-computed-key": {
 			"active": 1,
 			"optionString": ""
@@ -1555,6 +1640,10 @@
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
 			},
+		"prefer-named-capture-group": {
+			"active": 0,
+			"optionString": ""
+			},
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
@@ -1566,6 +1655,10 @@
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
+			},
+		"prefer-regex-literals": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -2117,6 +2210,7 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -2138,6 +2232,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"bundleFormat": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"syntaxCheckerStyle": 1,
@@ -2160,7 +2255,8 @@
 		"autoOutputPathReplace1": "kit",
 		"autoOutputPathReplace2": "html",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -2172,7 +2268,6 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
 		"enableJavascript": 0,
-		"ieCompatibility": 1,
 		"mathStyle": 0,
 		"outputStyle": 0,
 		"rewriteURLStyle": 0,
@@ -2199,6 +2294,7 @@
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
 		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -2208,7 +2304,8 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -2229,7 +2326,8 @@
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
 		"outputStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -2258,7 +2356,8 @@
 		"outputFormat": 0,
 		"outputStyle": 1,
 		"railsCompatible": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
@@ -2301,8 +2400,16 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"npmAbbreviatedPath": "",
+	"npmCreatePackageLock": 1,
+	"npmInstallOptionalDependencies": 0,
+	"npmSaveExactVersion": 0,
+	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
+	"rollupExternals": "",
+	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
+	"rollupTreeshakingEnabled": 1,
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
@@ -2346,16 +2453,20 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"ascii_only": {
-			"active": 0,
+		"arrows": {
+			"active": 1,
 			"flagValue": -1
 			},
-		"bare_returns": {
+		"ascii_only": {
 			"active": 0,
 			"flagValue": -1
 			},
 		"booleans": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"booleans_as_integers": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"braces": {
@@ -2367,14 +2478,14 @@
 			"flagValue": -1
 			},
 		"comments": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"comparisons": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"compress": {
+		"computed_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -2397,6 +2508,10 @@
 		"drop_debugger": {
 			"active": 1,
 			"flagValue": -1
+			},
+		"ecma": {
+			"active": 1,
+			"flagValue": 5
 			},
 		"eval": {
 			"active": 0,
@@ -2422,10 +2537,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"html5_comments": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"ie8": {
 			"active": 0,
 			"flagValue": -1
@@ -2434,13 +2545,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"indent-start": {
-			"active": 0,
-			"flagValue": 0
-			},
 		"indent_level": {
 			"active": 0,
 			"flagValue": 4
+			},
+		"indent_start": {
+			"active": 0,
+			"flagValue": 0
 			},
 		"inline": {
 			"active": 1,
@@ -2452,6 +2563,10 @@
 			},
 		"join_vars": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"keep_classnames": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"keep_fargs": {
@@ -2474,13 +2589,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"mangle": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
+			},
+		"module": {
+			"active": 0,
+			"flagValue": -1
 			},
 		"negate_iife": {
 			"active": 1,
@@ -2489,10 +2604,6 @@
 		"passes": {
 			"active": 1,
 			"flagValue": 1
-			},
-		"preserve_line": {
-			"active": 0,
-			"flagValue": -1
 			},
 		"properties": {
 			"active": 1,
@@ -2516,6 +2627,10 @@
 			},
 		"reduce_vars": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"safari10": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"semicolons": {
@@ -2550,6 +2665,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"unsafe_arrows": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"unsafe_comps": {
 			"active": 0,
 			"flagValue": -1
@@ -2559,6 +2678,10 @@
 			"flagValue": -1
 			},
 		"unsafe_math": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_methods": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -2586,15 +2709,12 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"width": {
-			"active": 1,
-			"flagValue": 80
-			},
 		"wrap_iife": {
 			"active": 0,
 			"flagValue": -1
 			}
 		},
+	"uglifyMangleNames": 1,
 	"uglifyReservedNamesString": "$",
 	"websiteRelativeRoot": ""
 	},

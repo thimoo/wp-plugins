@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
                     }
                 },
                 error: function(data) {
-                    console.log('Error: ' + data);
+                    console.log('Error: ', data);
                     failModal();
                 }
             });
@@ -170,7 +170,7 @@ jQuery(document).ready(function($) {
             },
             error: function(data) {
                 failModal();
-                console.log('Error: ' + data);
+                console.log('Error: ', data);
             }
         });
 
@@ -221,7 +221,7 @@ jQuery(document).ready(function($) {
                     $('#pdf_path').val(data.pdf);
                 },
                 error: function(data) {
-                    console.log('Error: ' + data);
+                    console.log('Error: ', data);
                 }
             });
         }

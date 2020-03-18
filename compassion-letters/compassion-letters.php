@@ -21,9 +21,10 @@ function wan_load_textdomain() {
     load_plugin_textdomain( 'compassion-letters', false, dirname( plugin_basename(__FILE__) ) . '/lang/' );
 }
 
-require_once 'vendor/autoload.php';
+//require_once 'vendor/autoload.php';
 require_once 'PDFGenerator.php';
-
+require_once ABSPATH . WPINC . '/class-phpmailer.php';
+require_once ABSPATH . WPINC . '/class-smtp.php';
 use \WPHelper as WP;
 //use \CompassionOdooConnector as Odoo;
 
@@ -288,6 +289,7 @@ class CompassionLetters
         return $content;
 
     }
+
 
     /**
      * Send PDF to compassion and user
