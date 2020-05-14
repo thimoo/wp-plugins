@@ -135,21 +135,7 @@ class Compassion_Donation_Form {
     public function __construct() {
         add_action('init', [$this, '__init']);
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueueScripts' ) );
-        register_activation_hook(__FILE__, array($this, 'activation'));
-    }
 
-    /**
-     * Called on plugin activation.
-     */
-    public function activation() {
-        $this->check_dependencies();
-    }
-
-    public function check_dependencies() {
-        if(!class_exists('CompassionOdooConnector')) {
-            deactivate_plugins( plugin_basename( __FILE__ ) );
-            wp_die( sprintf(__( 'Please install and activate: %s.', 'compassion' ), 'compassion-odoo'), 'Plugin dependency check', array( 'back_link' => true ) );
-        }
     }
 
     public function enqueueScripts() {
@@ -349,18 +335,22 @@ class Compassion_Donation_Form {
 
         $from_csp = substr($session_data['fonds'], 0, strlen('csp_mensuel')) == 'csp_mensuel';
         $final_amount = ($from_csp ? floatval(substr($session_data['fonds'], -2)) : $session_data['wert']);
+        $session_data['fonds'] = $from_csp ? 'csp' : $session_data['fonds'];
+        $session_data['choix_don_unique_mensuel'] = $from_csp ? 'monthly' : $session_data['choix_don_unique_mensuel'];
 
         // Form data to send to postfinance (ogone)
         $base_address = 'https://' . $_SERVER['HTTP_HOST'] . '/' . $my_current_lang;
         $form = array(
             'PSPID' => 'compassion_yp',
-            'ORDERID' => trim($session_data['refenfant'] . '_' . $session_data['fonds']),
+//             'ORDERID' => trim($session_data['refenfant'].'_' .$session_data['fonds']),
+            'ORDERID' => trim($session_data['refenfant'] .' '.  $session_data['choix_don_unique_mensuel'].' '.$session_data['fonds']),
             'AMOUNT' => $final_amount * 100,
             'CURRENCY' => 'CHF',
             'LANGUAGE' => $lang,
             'CN' => $session_data['first_name'] . ' ' . $session_data['last_name'],
             'EMAIL' => $session_data['email'],
             'COMPLUS' => $_SESSION['transaction'],
+            'PAYMENT_REFERENCE' => $_SESSION['choix_don_unique_mensuel'],
             'PARAMPLUS' => 'campaign_slug='.$_SESSION['campaign_slug'],
             'ACCEPTURL' =>  $base_address . '/confirmation-don',
             'DECLINEURL' => $base_address .'/annulation-don',
@@ -377,7 +367,7 @@ class Compassion_Donation_Form {
                         'time' => date('Y-m-d H:i:s'),
                         'ip_address' => $_SERVER['REMOTE_ADDR'],
                         'email' => $this->cleanfordb($data['email']),
-                        'orderid' => $this->cleanfordb($session_data['refenfant'] . '_' . $session_data['fonds']),
+                        'orderid' => $this->cleanfordb($session_data['refenfant'] .' '.  $session_data['choix_don_unique_mensuel'].' '.  $session_data['fonds']),
                         'utm_source' => $this->cleanfordb($_SESSION['utm_source']),
                         'utm_medium' => $this->cleanfordb($_SESSION['utm_medium']),
                         'utm_campaign' => $this->cleanfordb($_SESSION['utm_campaign']),
@@ -511,11 +501,8 @@ class Compassion_Donation_Form {
             // Check if donation infos truly comes from PostFinance
             if(Compassion_Donation_Form::is_verified_pf_sha_sign($_GET)) {
                 error_log('Update transaction with parameters received from Postfinance');
-                if (isset($_GET['STATUS']) AND in_array($_GET['STATUS'], array(5, 9))) {
-                    $status = self::RECEIVED_FROM_PF;
-                } else {
-                    $status = self::SUBMITTED_TO_PF;
-                }
+
+                $status = self::RECEIVED_FROM_PF;
             } else {
                 // Two possibilities:
                 //   - An attempt at hacking with a falsified message.
