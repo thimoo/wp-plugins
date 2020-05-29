@@ -164,7 +164,7 @@
 
 			<div style="padding: 0 30px;">
 			 <p>
-                 <?php  echo ($session_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters');?> <?php echo $session_data['first_name']; ?> <br /><br />
+                 <?php  echo ($session_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters');?> <?php echo $session_data['first_name']; ?>, <br /><br />
 			Bienvenue dans la grande famille de Compassion. <br/> Tu as décidé de parrainer <?php echo $child_meta['name']; ?>. Merci de t'engager à changer la vie de cet enfant! C’est un jour de fête pour chaque enfant et sa famille lorsque les collaborateurs d’un centre d’accueil l’informent qu’un parrain s’intéresse à lui et a choisi de le soutenir. Tu es aujourd’hui la source d’une très grande joie! Au nom de <?php echo $child_meta['name']; ?>, MERCI !
 			 </p>
 			 <p> Tu recevras dans les prochains jours toutes les informations concernant ton parrainage, par poste. Pour cela, merci de bien vérifier tes données ainsi que ton adresse postale.</p>
