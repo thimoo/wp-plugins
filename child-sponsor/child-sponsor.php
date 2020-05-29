@@ -8,7 +8,7 @@
 defined('ABSPATH') || die();
 
 define('COMPASSION_CHILD_SPONSOR_DIR_URL', plugin_dir_url(__FILE__));
-
+$wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';
 add_action('plugins_loaded', 'sponsor_load_textdomain');
 function sponsor_load_textdomain()
 {
@@ -238,6 +238,7 @@ class ChildSponsor {
          * load template
          */
         ob_start();
+
 
         include("templates/frontend/header.php");
         include("templates/frontend/step-$this->step.php");

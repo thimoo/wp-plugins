@@ -225,6 +225,16 @@
 		"oAP": "/config.rb",
 		"oF": 0
 		},
+	"/insta.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/insta.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/lang/child-sponsor-lang-fr_FR-backup-201910210646100.po~": {
 		"cB": 0,
 		"ft": 8192,
@@ -376,6 +386,16 @@
 		"oA": 2,
 		"oAP": "/templates/frontend/step-4.php",
 		"oF": 0
+		},
+	"/vimeo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/vimeo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		}
 	},
 "hooks": [

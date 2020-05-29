@@ -55,7 +55,7 @@
         /* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email, bring your styles inline.  Your link colors will be uniform across clients when brought inline.
         Bring inline: Yes. */
         a.lsv-box{padding:5px 8px;margin:10px 0 10px 10px; background-color:red; color:white !important;}
-        
+
         a {color:#005eb8; text-decoration: underline}
 
         ul li {
@@ -149,28 +149,44 @@
 <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
     <tr>
         <td>
-
+            <?php $child_meta = get_child_meta($session_data['childID']);
+            $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';
+            ?>
+        <?php if ($wapr) {   ?>
+            <h1 style="text-align: center; padding: 25px 0;">Un grande GRAZIE per il tuo impegno</h1>
+        <?php } else {   ?>
             <h1 style="text-align: center; padding: 25px 0;">Un grande GRAZIE per il vostro impegno</h1>
-			<?php $child_meta = get_child_meta($session_data['childID']);?>
-			
-			<div style="padding: 0 30px;">
+        <?php } ?>
+            <div style="padding: 0 30px;">
 			 <p>
-			<?php echo ($session_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters');?> <?php  $salutation = apply_filters( 'wpml_object_id', $session_data['salutation'], 'post', TRUE);
-	                    echo _e($salutation, 'child-sponsor-lang');?> <?php echo $session_data['first_name']; ?> <?php echo $session_data['last_name']; ?> <br /><br />
-			Avete deciso di sostenere <?php echo $child_meta['name']; ?>. Grazie del vostro impegno nel cambiare la vita di questo bambino! È difficile immaginare la gioia che i bambini sentono nel momento in cui i collaboratori dei Centri Compassion gli annunciano che dall'altra parte del globo c'è un sostenitore che si prende cura di loro. Oggi voi siete fonte di grande gioia! A nome di <?php echo $child_meta['name']; ?>, GRAZIE!
+        <?php if ($wapr) {   ?>
+			<?php echo ($session_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters');?> <?php echo $session_data['first_name']; ?>  <br /><br />
+                 Hai deciso di sostenere <?php echo $child_meta['name']; ?>. Grazie per il tuo impegno nel cambiare la sua vita! È difficile immaginare la gioia che i bambini sentono nel momento in cui vengono informati dai collaboratori dei centri Compassion che dall'altra parte del globo c'è un sostenitore che si prende cura di loro. Oggi TU sei fonte di grande gioia! A nome di <?php echo $child_meta['name']; ?>, GRAZIE!
 			 </p>
-			 <p> Presto riceverete per posta tutte le informazioni per il vostro sostegno. Per questo, grazie di verificare i vostri dati e il vostro indirizzo postale.</p>
-			
-			
-			<h4> Avete trasmetto le informazioni seguenti:</h4>
-				 						
+			 <p> Presto riceverai per posta tutte le informazioni per il tuo sostegno. Grazie di verificare tutti i tuoi dati.</p>
+
+
+			<h4> Hai trasmesso queste info:</h4>
+        <?php } else {   ?>
+
+                <?php echo ($session_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters');?> <?php  $salutation = apply_filters( 'wpml_object_id', $session_data['salutation'], 'post', TRUE);
+                echo _e($salutation, 'child-sponsor-lang');?> <?php echo $session_data['first_name']; ?> <?php echo $session_data['last_name']; ?> <br /><br />
+                Avete deciso di sostenere <?php echo $child_meta['name']; ?>. Grazie del vostro impegno nel cambiare la vita di questo bambino! È difficile immaginare la gioia che i bambini sentono nel momento in cui i collaboratori dei Centri Compassion gli annunciano che dall'altra parte del globo c'è un sostenitore che si prende cura di loro. Oggi voi siete fonte di grande gioia! A nome di <?php echo $child_meta['name']; ?>, GRAZIE!
+                </p>
+                <p> Presto riceverete per posta tutte le informazioni per il vostro sostegno. Per questo, grazie di verificare i vostri dati e il vostro indirizzo postale.</p>
+
+
+                <h4> Avete trasmetto le informazioni seguenti:</h4>
+        <?php } ?>
+
+
           <div style="padding: 0 30px;">
-	          
+
 	          	<p>Prendo l'incarico di sostenere:<strong> <?php echo $child_meta['name']; ?></strong></p>
 
-	          
+
                 <h3>Bambino</h3>
-              
+
                 <ul>
                     <li><?php _e('Name', 'child-sponsor-lang'); ?>: <?php echo $child_meta['name']; ?></li>
                     <li><?php _e('Land','child-sponsor-lang'); ?>: <?php echo $child_meta['country']; ?></li>
@@ -197,43 +213,46 @@
                     <li><?php _e('Beruf', 'child-sponsor-lang'); ?>: <?php echo $session_data['Beruf']; ?></li>
 
                 </ul>
-                   <!--              Writeandpraystuff  -->
-                
-				<?php    $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';?> 
 
-                <?php if ($wapr) { ?> 
-				<h3>Sostegno Write & Pray</h3>
-               
-                 <?php if (isset($session_data['writepray'])) {
-	          echo _e('JA', 'child-sponsor-lang'); 
-	          } else {echo _e('NEIN', 'child-sponsor-lang');}
-           		?> 
-		   	
-		   	<?php } else { ?>
+        <!--              Writeandpraystuff  -->
+        <?php
+        if ($wapr) {
+            echo "<h3>Sostegno Write & Pray</h3>";
+            if (isset($session_data['writepray'])) {
+                if ($session_data['writepray'] == 'WRPR'){
+                    echo _e('Ich engagiere mich für mein Patenkind zu beten und ihm regelmässsig zu schreiben.  Ich habe verstanden, dass eine andere Person die Finanzierung dieser Patenschaft übernimmt und ich gegenüber dem Kind der/die offizielle Pate/Patin bin.', 'child-sponsor-lang');
+                } else if($session_data['writepray'] == 'WRPR+DON'){
+                    echo _e('Ich erkläre mich bereit, regelmässig für mein Patenkind zu beten und zu schreiben, und ich kann das Kind monatlich mit folgenden Betrage unterstützen: ', 'child-sponsor-lang');
+                    echo '<b>' . $session_data['writepray-contribution'] . ' CHF</b><br/><br/>';
+                    echo _e('Ich habe verstanden, dass eine andere Person den Rest der Finanzierung für diese Patenschaft übernimmt, dass ich aber der offizielle Pate/ die Patin des Kindes bin.', 'child-sponsor-lang');
+                }
+            }
+        } else {
+            ?>
 		   	<!--              END Writeandpraystuff  -->
 
 				<h3>Sostegno plus</h3>
 				  <?php if (isset($session_data['patenschaftplus'])) {
-				  		echo _e('JA', 'child-sponsor-lang'); 
+				  		echo _e('JA', 'child-sponsor-lang');
 				  		} else {echo _e('NEIN', 'child-sponsor-lang');}
-				  ?> 
+				  ?>
 
 				<h3>Metodo di pagamento</h3>
-				
+
 					<?php
-                        $zahlung = ($session_data['zahlungsweise']);	                        
+                        $zahlung = ($session_data['zahlungsweise']);
 	                        if ($zahlung == 'dauerauftrag'){
 		                        echo _e('Monatlicher Dauerauftrag', 'child-sponsor-lang');
-	                        } 
+	                        }
 	                        elseif ($zahlung == 'lsv'){
 		                        echo _e('Direct Debit - LSV', 'child-sponsor-lang');
 		                        echo '&nbsp;<a class="lsv-box" href="https://www.compassion.ch/wp-content/uploads/documents_compassion/Formulaire_LSV_DD_IT.pdf">' . _e("Téléchargez le formulaire de demande LSV", "child-sponsor-lang") . '</a>';
 	                        }
-                                                 
+
                         ?>
-                      <?php } ?>          
-                <h3>Scambio di lettere con <?php echo $child_meta['name']; ?></h3>
-                
+                      <?php } ?>
+                <h3>Corrispondenza con <?php echo $child_meta['name']; ?></h3>
+
                    <?php
 	            if(!empty($session_data['language'])) {
 				foreach($session_data['language'] as $check) {
@@ -248,15 +267,15 @@
 				case 'italienisch':
 				echo _e('Italienisch','child-sponsor-lang');
 				break;
-				
+
 				case 'spanisch':
 				echo _e('Spanisch','child-sponsor-lang');
 				break;
-				
+
 				case 'englisch':
 				echo _e('Englisch','child-sponsor-lang');
 				break;
-				
+
 				case 'portugiesisch':
 				echo _e('Portugiesisch','child-sponsor-lang');
 				break;
@@ -265,8 +284,16 @@
 				}
 				}
 				?>
-				
-				<h3>La vostra risposta alla questione: Come ha conosciuto Compassion?</h3>
+             <?php if ($wapr) {
+             ?>
+				<h3>La tua risposta alla domanda: Come ha conosciuto Compassion?</h3>
+
+              <?php } else { ?>
+
+              <h3>La vostra risposta alla domanda: Come ha conosciuto Compassion?</h3>
+
+              <?php } ?>
+
                <ul>
                    <li>
                        <?php
@@ -278,25 +305,37 @@
                            echo _e($session_data['consumer_source_text'], 'child-sponsor-lang');
                        }?>
                    </li>
-                </ul> 
-				
+                </ul>
+
 				<h3>Inviatemi maggiori informazioni su come posso aiutare i bambini nel bisogno.</h3>
 						<?php if (isset($session_data['mithelfen'])) {
-				  		echo _e('JA', 'child-sponsor-lang'); 
+				  		echo _e('JA', 'child-sponsor-lang');
 				  		} else {echo _e('NEIN', 'child-sponsor-lang');}
-				  ?> 
+				  ?>
 
                 <hr>
-                
-               <p>Se avete domande sul vostro sostegno, siamo volentieri a vostra disposizione: <br/>
+              <?php if ($wapr) {
+              ?>
+               <p>Se hai domande sul sostegno siamo a tua completa disposizione: <br/>
 	               Tel: 031 552 21 24(il martedì e il giovedì: 8h00-16h00)<br/>
 	               o per email a: info@compassion.ch</p>
 
-			   <p>Vi diamo il benvenuto nella grande famiglia internazionale di Compassion.
-				  Grazie con tutto il cuore per il vostro impegno concreto che cambia la vita di un bambino.
-				  <br/>Carole Rochat per il team di Compassion Svizzera</p>
+			   <p>Ti diamo il benvenuto nella grande famiglia internazionale di Compassion.
+                   Grazie di cuore per il tuo impegno concreto che cambia la vita di un bambino!
+                   <br/>Carole Rochat per il team di Compassion Svizzera</p>
+              <?php } else { ?>
+
+              <p>Se avete domande sul vostro sostegno, siamo volentieri a vostra disposizione: <br/>
+                  Tel: 031 552 21 24(il martedì e il giovedì: 8h00-16h00)<br/>
+                  o per email a: info@compassion.ch</p>
+
+              <p>Vi diamo il benvenuto nella grande famiglia internazionale di Compassion.
+                  Grazie con tutto il cuore per il vostro impegno concreto che cambia la vita di un bambino.
+                  <br/>Carole Rochat per il team di Compassion Svizzera</p>
+              <?php } ?>
+
             </div>
-            
+
             <p style="text-align: center;padding-top:30px"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/compassion-logo-dark-it.png" width="242" height="93" alt="" /><p>
 
 
