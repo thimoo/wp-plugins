@@ -11,7 +11,6 @@
     ],
     "require": {
         "giftgruen/wp-helper": "^1.0.2",
-        "phpmailer/phpmailer": "^5.2",
         "darkaonline/ripcord": "*",
         "detectlanguage/detectlanguage": "*",
         "setasign/tfpdf": "1.25"
