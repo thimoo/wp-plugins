@@ -32,8 +32,8 @@
             <select name="fonds" id="fonds" class="input-field">
                 <option value="humanitaire" <?php echo (isset($session_data['fonds']) && $session_data['fonds'] == "humanitaire") ? 'selected' : '' ?>><?php _e('Aktuelle Nothilfe', 'donation-form'); ?></option>
                 <option value="noel" <?php echo (isset($session_data['fonds']) && $session_data['fonds'] == "noel") ? 'selected' : '' ?>><?php _e('Weihnachtsgeschenk', 'donation-form'); ?></option>
-                <option value="eau" <?php echo (isset($session_data['fonds']) && $session_data['fonds'] == "wash") ? 'selected' : '' ?>><?php _e('Sauberes Wasser', 'donation-form'); ?></option>
-                <option value="survie" <?php echo (isset($session_data['fonds']) && $session_data['fonds'] == "csp") ? 'selected' : '' ?>><?php _e('Babys und Müttern helfen', 'donation-form'); ?></option>
+                <option value="wash" <?php echo (isset($session_data['fonds']) && $session_data['fonds'] == "wash") ? 'selected' : '' ?>><?php _e('Sauberes Wasser', 'donation-form'); ?></option>
+                <option value="csp" <?php echo (isset($session_data['fonds']) && $session_data['fonds'] == "csp") ? 'selected' : '' ?>><?php _e('Babys und Müttern helfen', 'donation-form'); ?></option>
                 <option value="sansparrain" <?php echo (isset($session_data['fonds']) && $session_data['fonds'] == "sansparrain") ? 'selected' : '' ?>><?php _e('Kinder, die ihren Paten verloren haben', 'donation-form'); ?></option>
                 <option value="medical" <?php echo (isset($session_data['fonds']) && $session_data['fonds'] == "medical") ? 'selected' : '' ?>><?php _e('Medizinische Hilfe', 'donation-form'); ?></option>
                 <option value="bible" <?php echo (isset($session_data['fonds']) && $session_data['fonds'] == "bible") ? 'selected' : '' ?>><?php _e('Bibelfonds', 'donation-form'); ?></option>
