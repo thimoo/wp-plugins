@@ -100,13 +100,13 @@ class ChildSponsor {
         require_once ABSPATH . WPINC . '/class-phpmailer.php';
         require_once ABSPATH . WPINC . '/class-smtp.php';
 
-        $email = new PHPMailer();
-        $email->isSMTP();                                      // Set mailer to use SMTP
-        $email->Host = 'smtp.sendgrid.net';  // Specify main and backup SMTP servers
-        $email->SMTPAuth = true;                               // Enable SMTP authentication
-        $email->Username = 'apikey';                 // SMTP username
-        $email->Password = SENDGRID_API_KEY;                           // SMTP password
-        $email->Port = 587;
+         $email = new PHPMailer();
+            $email->isSMTP();                                      // Set mailer to use SMTP
+            $email->Host = 'mail.infomaniak.com';  // Specify main and backup SMTP servers
+            $email->SMTPAuth = true;                               // Enable SMTP authentication
+            $email->Username = 'postmaster@filmgottesdienst.ch';                 // SMTP username
+            $email->Password = TEST_SMTP_KEY;                           // SMTP password
+            $email->Port = 587;
         $email->CharSet = 'UTF-8';
         $email->From = 'compassion@compassion.ch';
         $email->FromName = __('Compassion Schweiz', 'child-sponsor-lang');

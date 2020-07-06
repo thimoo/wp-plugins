@@ -21,10 +21,9 @@ function wan_load_textdomain() {
     load_plugin_textdomain( 'compassion-letters', false, dirname( plugin_basename(__FILE__) ) . '/lang/' );
 }
 
-//require_once 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
 require_once 'PDFGenerator.php';
-require_once ABSPATH . WPINC . '/class-phpmailer.php';
-require_once ABSPATH . WPINC . '/class-smtp.php';
+
 use \WPHelper as WP;
 //use \CompassionOdooConnector as Odoo;
 
@@ -290,7 +289,6 @@ class CompassionLetters
 
     }
 
-
     /**
      * Send PDF to compassion and user
      */
@@ -314,6 +312,7 @@ class CompassionLetters
         } else {
             $image_url = false;
         }
+        
 
         if ($this->_sentToOdoo(
             $form_data['referenznummer'], $form_data['patenkind'], $form_data['message'],
@@ -326,13 +325,13 @@ class CompassionLetters
              */
             $email = new PHPMailer();
             $email->isSMTP();                                      // Set mailer to use SMTP
-            $email->Host = 'smtp.sendgrid.net';  // Specify main and backup SMTP servers
+            $email->Host = 'mail.infomaniak.com';  // Specify main and backup SMTP servers
             $email->SMTPAuth = true;                               // Enable SMTP authentication
-            $email->Username = 'apikey';                 // SMTP username
-            $email->Password = SENDGRID_API_KEY;                           // SMTP password
+            $email->Username = 'postmaster@filmgottesdienst.ch';                 // SMTP username
+            $email->Password = TEST_SMTP_KEY;                           // SMTP password
             $email->Port = 587;
             $email->CharSet = 'UTF-8';
-            $email->From = 'info@compassion.ch';
+            $email->From = 'postmaster@filmgottesdienst.ch';
             $email->FromName = __('Compassion Schweiz', 'compassion-letters');
             $email->Subject = __('Der Brief an Ihr Patenkind', 'compassion-letters');
             $email->Body = $this->get_email_template1('user-email.php', $form_data);
