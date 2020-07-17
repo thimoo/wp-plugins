@@ -233,7 +233,7 @@ class CompassionChildren
                     array(
                         'label' => __('Age group', 'compassion-posts'),
                         'attr' => 'age',
-                        'description' => __('The age group of the children to display.'),
+                        'description' => __('The age group of the children to display. for any age, just remove the age range in the shortcode once created'),
                         'type' => 'select',
                         'options' => array(
                             array('value' => '0-3', 'label' => __('0 to 3 years old' , 'compassion-posts')),
