@@ -331,10 +331,10 @@ class CompassionChildren
                 'compare' => 'in'));
         }
 
-        if (count($meta_query) > 1) {
-            $args = array_add($args, 'meta_query', $meta_query);
-        }
 
+        if (count($meta_query) > 1) {
+            $args['meta_query'] = $meta_query;
+        }
         $query = new WP_Query( $args );
 
         ob_start();
