@@ -135,15 +135,15 @@ class ChildSponsor {
         }
         wp_update_post([
             'ID' => $postupdate,
-            'post_status' => 'draft'
+            'post_status' => 'Trash'
         ]);
         wp_update_post([
             'ID' => $postupdate1,
-            'post_status' => 'draft'
+            'post_status' => 'Trash'
         ]);
         wp_update_post([
             'ID' => $session_data['childID'],
-            'post_status' => 'draft'
+            'post_status' => 'Trash'
         ]);
 
         // Call Odoo to insert Sponsorship

@@ -168,8 +168,8 @@ class CompassionChildren
     public function modified_views_so_15799171( $views )
     {
 
-        if( isset( $views['draft'] ) )
-            $views['draft'] = str_replace( 'Entwürfe ', 'Patenschaftsabschluss ', $views['draft'] );
+        if( isset( $views['trash'] ) )
+            $views['trash'] = str_replace( 'Entwürfe ', 'Patenschaftsabschluss ', $views['trash'] );
 
         return $views;
     }
@@ -183,8 +183,8 @@ class CompassionChildren
     public function child_post_states( $post_states, $post )
     {
 
-        if(get_post_type($post->ID) == 'child' && isset($post_states['draft']))
-            $post_states['draft'] = __('Patenschaftsabschluss', 'compassion-posts');
+        if(get_post_type($post->ID) == 'child' && isset($post_states['trash']))
+            $post_states['trash'] = __('Patenschaftsabschluss', 'compassion-posts');
 
 
         return $post_states;
