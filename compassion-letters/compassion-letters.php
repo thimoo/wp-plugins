@@ -321,9 +321,11 @@ class CompassionLetters
             )
         ) {
             /**
-             * send email to user
+             * send email to user changed phpmailer paths since wp 5.5
              */
-            $email = new PHPMailer();
+            require_once ABSPATH . WPINC . '/PHPMailer/PHPMailer.php';
+            require_once ABSPATH . WPINC . '/PHPMailer/SMTP.php';
+            $email = new PHPMailer\PHPMailer\PHPMailer();
             $email->isSMTP();                                      // Set mailer to use SMTP
             $email->Host = 'mail.infomaniak.com';  // Specify main and backup SMTP servers
             $email->SMTPAuth = true;                               // Enable SMTP authentication
