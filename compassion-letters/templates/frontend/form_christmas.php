@@ -148,7 +148,7 @@
                     <label class="text-left middle"><?php _e('Nachricht', 'compassion-letters'); ?>*</label>
                 </div>
                 <div class="small-8 columns">
-                    <textarea maxlength="1500" placeholder="<?php _e('Um den Verlust Ihres Briefes zu vermeiden, empfehlen wir Ihnen, diesen zuerst auf einem Word-Dokument zu schreiben und ihn danach hier einzufügen.', 'compassion-letters'); ?>" required data-msg="<?php _e('Nachricht erforderlich', 'compassion-letters'); ?>" name="message" id="message" class="input-field clear-pdf-on-change"></textarea>
+                    <textarea maxlength="1500" placeholder="<?php _e('Um den Verlust deines Briefes zu vermeiden, empfehlen wir dir, diesen zuerst auf einem Word-Dokument zu schreiben und ihn danach hier einzufügen.', 'compassion-letters'); ?>" required data-msg="<?php _e('Nachricht erforderlich', 'compassion-letters'); ?>" name="message" id="message" class="input-field clear-pdf-on-change"></textarea>
                     <p class="text-right letter-count-wrapper"><span class="letter-count">0</span> <?php _e('von 1300 Zeichen', 'compassion-letters'); ?></p>
                 </div>
             </div>
