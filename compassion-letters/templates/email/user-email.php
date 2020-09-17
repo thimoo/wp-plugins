@@ -150,7 +150,7 @@
             <div style="padding: 0 20px;">
 	            
 	            
-	            	<?php if ($form_data['template'] == 'christmas_web_2019'){ ?>
+	            	<?php if ($form_data['template'] == 'christmas_web_2020'){ ?>
 					<p>
                     <?php echo ($form_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters'); /* echo ' '.$form_data['salutation'];  */?> <?php echo $form_data['name']; ?>,<br />
                 
