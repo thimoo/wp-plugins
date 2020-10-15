@@ -163,12 +163,39 @@ class ChildSponsor {
             $utm_campaign = $_SESSION['utm_campaign'];
         }
         $odoo = new CompassionOdooConnector();
-        $odoo->call_method(
-            'recurring.contract', 'create_sponsorship',
-            array($child_meta['number'], $session_data, $my_current_lang, $utm_source, $utm_medium, $utm_campaign)
-        );
+        try {
+            $result = $odoo->call_method(
+                'recurring.contract', 'create_sponsorship',
+                array($child_meta['number'], $session_data, $my_current_lang, $utm_source, $utm_medium, $utm_campaign)
+            );
+            if (!$result)
+                $this->send_fail_email($data);
+        } catch (Exception $e) {
+            $this->send_fail_email($data);
+        }
 
         ob_end_clean();
+    }
+
+    private function send_fail_email($data) {
+        // Send info in case of failure
+        $email = new PHPMailer\PHPMailer\PHPMailer();
+        $email->isSMTP();                                      // Set mailer to use SMTP
+        $email->Host = 'mail.infomaniak.com';  // Specify main and backup SMTP servers
+        $email->SMTPAuth = true;                               // Enable SMTP authentication
+        $email->Username = 'postmaster@filmgottesdienst.ch';                 // SMTP username
+        $email->Password = TEST_SMTP_KEY;                           // SMTP password
+        $email->Port = 587;
+        $email->CharSet = 'UTF-8';
+        $email->From = 'wordpress@compassion.ch';
+        $email->FromName = 'Compassion Website';
+        $email->Subject = 'Error while processing sponsorship from the website';
+        $email->Body = $this->get_email_template('user-new-sponsor.php', $data);
+        $email->isHTML(true);
+        $email->AddAddress('info@compassion.ch');
+        //$email->AddBCC('ecino@compassion.ch', 'Compassion Suisse');
+        $email->addCustomHeader('X-SMTPAPI', '{"filters": {"subscriptiontrack" : {"settings" : {"enable" : 0}}}}');
+        $email->Send();
     }
 
     /**
