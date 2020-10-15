@@ -151,7 +151,7 @@
 	            
 	              <?php if ($form_data['template'] == 'christmas_web_2020'){ ?>
 					<p>
-                    <?php echo ($form_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters'); /* echo ' '.$form_data['salutation'];  */?> <?php echo $form_data['name']; ?>,<br /><br />
+                    <?php echo $form_data['name']; ?>,<br /><br />
                 
                Grazie per aver dedicato del tempo nello scrivere una cartolina di Natale al suo bambino.
 			   	<br/> Ricevere un biglietto per Natale significa per molti bambini sostenuti attraverso Compassion, che qualcuno sta pensando a loro in questo momento speciale.
@@ -173,7 +173,7 @@
 	            
 
                 <p>
-                    <?php echo ($form_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters'); /* echo ' '.$form_data['salutation'];  */?> <?php echo $form_data['name']; ?>,<br />
+                    <?php echo $form_data['name']; ?>,<br />
                  Grazie per il tempo che dedicate alla corrispondenza con il vostro bambino. Le lettere sono una vera fonte di incoraggiamento per il bambino sostenuto ed è sempre molto felice di riceverle.<p>
 
 				 <p> La vostra lettera sarà tradotta, se necessario, e verrà inviata al più presto. Troverete anche una copia della lettera in questo messaggio.<br/>

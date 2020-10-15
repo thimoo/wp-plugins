@@ -53,7 +53,7 @@
                placeholder="<?php _e('bitte nur Zahlen', 'donation-form'); ?>"
                data-msg="<?php _e('Betrag erforderlich', 'donation-form'); ?>" class="input-field"
                name="wert"
-               value="<?php echo (isset($session_data['wert'])) ? $session_data['wert'] : ''; ?>">
+               value="<?php echo $_SESSION["fund_amount"]?>">
     </div>
 </div>
 
@@ -65,9 +65,9 @@
         <div class="select-wrapper">
             <select name="fonds" id="fonds" class="input-field">
                 <option value="csp_mensuel_30"
-                        selected="selected" <?php echo (isset($session_data['fonds']) && $session_data['fonds'] == "mensuel 30") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 30.-', 'donation-form'); ?></option>
-                <option value="csp_mensuel_60" <?php echo (isset($session_data['fonds']) && $session_data['fonds'] == "mensuel 60") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 60.-', 'donation-form'); ?></option>
-                <option value="csp_mensuel_90" <?php echo (isset($session_data['fonds']) && $session_data['fonds'] == "mensuel 90") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 90.-', 'donation-form'); ?></option>
+                        selected="selected" <?php echo ($_SESSION["fund_code"] == "mensuel 30") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 30.-', 'donation-form'); ?></option>
+                <option value="csp_mensuel_60" <?php echo ($_SESSION["fund_code"] == "mensuel 60") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 60.-', 'donation-form'); ?></option>
+                <option value="csp_mensuel_90" <?php echo ($_SESSION["fund_code"] == "mensuel 90") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 90.-', 'donation-form'); ?></option>
             </select>
         </div>
         <p class="small"> <?php _e('Nach deiner ersten Spende wird dir Compassion Schweiz einen Einzahlungsschein für die weiteren Spenden zusenden.', 'donation-form'); ?></p>
