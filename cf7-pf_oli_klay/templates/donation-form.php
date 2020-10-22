@@ -76,7 +76,7 @@
                         <label class="text-left middle"><?php _e('Nachname', 'child-sponsor-lang'); ?></label>
                     </div>
                     <div class="small-8 columns">
-                        <input type="text" required data-msg="<?php _e('Nachname erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="last_name" name="last_name" value="<?php echo (isset($session_data['last_name'])) ? $session_data['last_name'] : ''; ?>">
+                        <input type="text" required data-msg="<?php _e('Nachname erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="last_name" name="last_name" value="<?php echo $_SESSION["pname"]?>">
                     </div>
                 </div>
                 <div class="row">
@@ -84,7 +84,7 @@
                         <label class="text-left middle"><?php _e('Vorname', 'child-sponsor-lang'); ?></label>
                     </div>
                     <div class="small-8 columns">
-                        <input type="text" required data-msg="<?php _e('Vorname erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="first_name" name="first_name" value="<?php echo (isset($session_data['first_name'])) ? $session_data['first_name'] : ''; ?>">
+                        <input type="text" required data-msg="<?php _e('Vorname erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="first_name" name="first_name" value="<?php echo $_SESSION["firstname"]?>">
                     </div>
                 </div>
                 <div class="row">
@@ -92,7 +92,7 @@
                         <label class="text-left middle"><?php _e('Strasse/Hausnr.', 'child-sponsor-lang'); ?></label>
                     </div>
                     <div class="small-8 columns">
-                        <input type="text" required data-msg="<?php _e('Strasse erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="street" name="street" value="<?php echo (isset($session_data['street'])) ? $session_data['street'] : ''; ?>">
+                        <input type="text" required data-msg="<?php _e('Strasse erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="street" name="street" value="<?php echo $_SESSION["pstreet"]?>">
                     </div>
                 </div>
                 <div class="row">
@@ -100,10 +100,10 @@
                         <label class="text-left middle"><?php _e('PLZ/Ort', 'child-sponsor-lang'); ?></label>
                     </div>
                     <div class="small-2 columns">
-                        <input type="text" required data-msg="<?php _e('PLZ erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="zipcode" name="zipcode" value="<?php echo (isset($session_data['zipcode'])) ? $session_data['zipcode'] : ''; ?>">
+                        <input type="text" required data-msg="<?php _e('PLZ erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="zipcode" name="zipcode" value="<?php echo $_SESSION["pzip"]?>">
                     </div>
                     <div class="small-6 columns no-padding-left">
-                        <input type="text" required data-msg="<?php _e('Stadt erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="city" name="city" value="<?php echo (isset($session_data['city'])) ? $session_data['city'] : ''; ?>">
+                        <input type="text" required data-msg="<?php _e('Stadt erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="city" name="city" value="<?php echo $_SESSION["pcity"]?>">
                     </div>
                 </div>
                 <div class="row">
@@ -111,7 +111,7 @@
                         <label class="text-left middle"><?php _e('Land', 'child-sponsor-lang'); ?></label>
                     </div>
                     <div class="small-8 columns">
-                        <input type="text" required data-msg="<?php _e('Länd erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="country" name="country" value="<?php echo (isset($session_data['country'])) ? $session_data['country'] : ''; ?>">
+                        <input type="text" required data-msg="<?php _e('Länd erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="country" name="country" value="<?php echo $_SESSION["pcountry"]?>">
                     </div>
                 </div>
                 <div class="row">
@@ -119,7 +119,7 @@
                         <label class="text-left middle"><?php _e('E-Mail-Adresse', 'child-sponsor-lang'); ?></label>
                     </div>
                     <div class="small-8 columns">
-                        <input type="email" class="input-field" required data-msg="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" id="email" name="email" value="<?php echo (isset($session_data['email'])) ? $session_data['email'] : ''; ?>">
+                        <input type="email" class="input-field" required data-msg="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" id="email" name="email" value="<?php echo $_SESSION["email"]?>">
                     </div>
                 </div>
 
