@@ -152,7 +152,7 @@
 	            
 	            	<?php if ($form_data['template'] == 'christmas_web_2020'){ ?>
 					<p>
-                    <?php echo ($form_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters'); /* echo ' '.$form_data['salutation'];  */?> <?php echo $form_data['name']; ?>,<br />
+                    <?php echo $form_data['name']; ?>,<br />
                 
                 Merci d’avoir pris le temps d’écrire une carte de Noël à votre filleul/le.<br/> Recevoir une carte pour Noël, signifie pour beaucoup d’enfants parrainés au travers de Compassion, que quelqu’un pense à eux dans cette période si spéciale.
 
@@ -172,7 +172,7 @@
 
 
                 <p>
-                    <?php echo ($form_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters'); /* echo ' '.$form_data['salutation'];  */?> <?php echo $form_data['name']; ?>,<br />
+                    <?php echo $form_data['name']; ?>,<br />
                  Merci d’avoir pris le temps d’écrire une lettre à votre filleul. Les courriers sont une véritable source d’encouragement pour l'enfant parrainé. Ce dernier est toujours très heureux de les recevoir.<p>
 
 				 <p> Votre lettre va être traduite si nécessaire et lui être envoyée dans les meilleurs délais. Vous en trouverez également une copie dans ce message.<br/>

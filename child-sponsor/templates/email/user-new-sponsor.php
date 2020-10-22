@@ -161,7 +161,6 @@
             ?>
             <h1 style="text-align: center; padding: 25px 0;">Un grand MERCI pour ton engagement</h1>
 
-
 			<div style="padding: 0 30px;">
 			 <p>
                  <?php  echo ($session_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters');?> <?php echo $session_data['first_name']; ?>, <br /><br />
@@ -179,18 +178,17 @@
                 <div style="padding: 0 30px;">
                     <p>
                         <?php echo ($session_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters');?> <?php  $salutation = apply_filters( 'wpml_object_id', $session_data['salutation'], 'post', TRUE);
-                        echo _e($salutation, 'child-sponsor-lang');?> <?php echo $session_data['first_name']; ?> <?php echo $session_data['last_name']; ?> <br /><br />
-                        Bienvenue dans la grande famille de Compassion. Vous avez décidé de parrainer <?php echo $child_meta['name']; ?>. Merci de vous engager à changer la vie de cet enfant! C’est un jour de fête pour chaque enfant et sa famille lorsque les collaborateurs d’un centre d’accueil l’informent qu’un parrain s’intéresse à lui et a choisi de le soutenir. Vous êtes aujourd’hui la source d’une très grande joie! Au nom de <?php echo $child_meta['name']; ?>, MERCI !
-                    </p>
-                    <p> Vous recevrez dans les tous prochains jours toutes les informations concernant votre parrainage, par poste. Pour cela, merci de bien vérifier vos données ainsi que votre adresse postale.</p>
+	                    echo _e($salutation, 'child-sponsor-lang');?> <?php echo $session_data['first_name']; ?> <?php echo $session_data['last_name']; ?> <br /><br />
+			Bienvenue dans la grande famille de Compassion. Vous avez décidé de parrainer <?php echo $child_meta['name']; ?>. Merci de vous engager à changer la vie de cet enfant! C’est un jour de fête pour chaque enfant et sa famille lorsque les collaborateurs d’un centre d’accueil l’informent qu’un parrain s’intéresse à lui et a choisi de le soutenir. Vous êtes aujourd’hui la source d’une très grande joie! Au nom de <?php echo $child_meta['name']; ?>, MERCI !
+			 </p>
+			 <p> Vous recevrez dans les tous prochains jours toutes les informations concernant votre parrainage, par poste. Pour cela, merci de bien vérifier vos données ainsi que votre adresse postale.</p>
 
 
-                    <h4> Vous nous avez transmis les informations suivantes:</h4>
-                    <?php
+			<h4> Vous nous avez transmis les informations suivantes:</h4>
+<?php
                     }
 
                     ?>
-
           <div style="padding: 0 30px;">
 
 	          	<p>Je prends en charge le parrainage de:  <strong><?php echo $child_meta['name']; ?></strong></p>
@@ -294,7 +292,7 @@
 				}
 				}
 				?>
-              <?php
+<?php
               if ($wapr) {
               ?>
               <h3>Ta réponse à la question : Comment as-tu connu Compassion ?</h3>
@@ -327,7 +325,7 @@
 				  ?>
 
                 <hr>
-              <?php
+<?php
               if ($wapr) {
                   ?>
                   <p>Si tu as des questions au sujet de ton parrainage, nous restons volontiers à ta disposition: Téléphone: 024 434 21 24 (lundi à vendredi de 8h00 à 16h00) – Adresse e-mail:
@@ -339,7 +337,6 @@
               <?php
               }
               ?>
-
 
               <p>Merci du fond du cœur d’avoir choisi d’investir dans la vie d’un enfant. Michelle aux Philippines a grandi dans un quartier pauvre où régnait trafic et consommation de drogue et prostitution. Parrainée, elle a pu aller à l’école, suivre des études. Aujourd’hui, elle dirige l’ONG qu’elle a créée et vient en aide aux femmes victimes d’esclavage moderne. Votre parrainage va transformer une vie durablement.<br/><br/>
 				   Très cordialement,<br/>Carole Rochat pour l’équipe de Compassion Suisse</p>

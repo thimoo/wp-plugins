@@ -97,21 +97,12 @@
     <div class="row">
 
         <div class="medium-12 large-6 column">
-             <div class="row">
-                <div class="small-4 columns">
-                    <label class="text-left middle"><?php _e('Anrede', 'compassion-letters'); ?>*</label>
-                </div>
-                <div class="small-8 columns anrede radio-wrapper">
-                    <input id="radio_frau" required data-msg="<?php _e('Anrede erforderlich', 'compassion-letters'); ?>" type="radio" name="salutation" value="Frau" <?php echo (isset($session_data['salutation']) && $session_data['salutation'] == 'Frau') ? 'checked' : ''; ?>><label for="radio_frau"><?php _e('Frau', 'compassion-letters'); ?></label><input id="radio_herr" required data-msg="<?php _e('Anrede erforderlich', 'compassion-letters'); ?>" type="radio" name="salutation" value="Herr" <?php echo (isset($session_data['salutation']) && $session_data['salutation'] == 'Herr') ? 'checked' : ''; ?>><label for="radio_herr"><?php _e('Herr', 'compassion-letters'); ?></label>
-                </div>
-            </div>
-
             <div class="row">
                 <div class="small-4 columns">
                     <label class="text-left middle"><?php _e('E-Mail', 'compassion-letters'); ?>*</label>
                 </div>
                 <div class="small-8 columns">
-                    <input type="email" id="email" required data-msg="<?php _e('E-Mailadresse erforderlich', 'compassion-letters'); ?>" class="input-field clear-pdf-on-change" name="email">
+                    <input type="email" id="email" required data-msg="<?php _e('E-Mailadresse erforderlich', 'compassion-letters'); ?>" class="input-field clear-pdf-on-change" name="email" value="<?php echo $_SESSION["email"]?>">
                 </div>
             </div>
             
@@ -120,7 +111,7 @@
                     <label class="text-left middle"><?php _e('Vorname, Nachname', 'compassion-letters'); ?>*</label>
                 </div>
                 <div class="small-8 columns">
-                    <input type="text" required data-msg="<?php _e('Name erforderlich', 'compassion-letters'); ?>" class="input-field clear-pdf-on-change" name="name" id="pname">
+                    <input type="text" required data-msg="<?php _e('Name erforderlich', 'compassion-letters'); ?>" class="input-field clear-pdf-on-change" name="name" id="pname" value="<?php echo $_SESSION["pname"]?>">
                 </div>
             </div>
 
@@ -130,7 +121,7 @@
                     <label class="text-left middle"><?php _e('Patennummer (ohne CH)', 'compassion-letters'); ?>*</label>
                 </div>
                 <div class="small-8 columns">
-                    <input type="text" placeholder="1510000" required data-msg-referenznummer="<?php _e('Bitte gültige Nummer eingeben (ohne CH)', 'compassion-letters') ?>" data-msg="<?php _e('Patennummer erforderlich', 'compassion-letters'); ?>" class="input-field clear-pdf-on-change" name="referenznummer" id="sponsor_ref">
+                    <input type="text" placeholder="1510000" required data-msg-referenznummer="<?php _e('Bitte gültige Nummer eingeben (ohne CH)', 'compassion-letters') ?>" data-msg="<?php _e('Patennummer erforderlich', 'compassion-letters'); ?>" class="input-field clear-pdf-on-change" name="referenznummer" id="sponsor_ref" value="<?php echo $_SESSION["sponsor_ref"]?>">
                 </div>
             </div>
 
@@ -139,7 +130,7 @@
                     <label class="text-left middle"><?php _e('Patenkindnummer', 'compassion-letters'); ?>*</label>
                 </div>
                 <div class="small-8 columns">
-                    <input type="text" placeholder="AB014900332" required data-msg="<?php _e('Patenkindnummer erforderlich', 'compassion-letters'); ?>" data-msg-patenkindnummer="<?php _e('Bitte gültige Patenkindnummer eingeben', 'compassion-letters') ?>" class="input-field clear-pdf-on-change" name="patenkind" id="child_ref">
+                    <input type="text" placeholder="AB014900332" required data-msg="<?php _e('Patenkindnummer erforderlich', 'compassion-letters'); ?>" data-msg-patenkindnummer="<?php _e('Bitte gültige Patenkindnummer eingeben', 'compassion-letters') ?>" class="input-field clear-pdf-on-change" name="patenkind" id="child_ref" value="<?php echo $_SESSION["child_ref"]?>">
                 </div>
             </div>
 

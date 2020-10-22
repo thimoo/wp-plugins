@@ -151,7 +151,7 @@
 	            
 	            <?php if ($form_data['template'] == 'christmas_web_2020'){ ?>
 					<p>
-                    <?php echo ($form_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters'); /* echo ' '.$form_data['salutation'];  */?> <?php echo $form_data['name']; ?><br /><br />
+                    <?php echo $form_data['name']; ?><br /><br />
 
                 Danke, dass du dir Zeit genommen hast, deinem Patenkind eine Weihnachtskarte zu schreiben!
 			   	<br/> So zeigst du deinem Patenkind, dass du in dieser ganz besonderen Zeit an ihn/sie denkst.
@@ -172,7 +172,7 @@
 	            
 
                 <p>
-                    <?php echo ($form_data['salutation'] == 'Herr') ? __('Lieber', 'compassion-letters') : __('Liebe', 'compassion-letters'); /* echo ' '.$form_data['salutation'];  */?> <?php echo $form_data['name']; ?>,<br />
+                    <?php echo $form_data['name']; ?>,<br />
                     Danke, dass du dir Zeit genommen hast, deinem Patenkind zu schreiben. Die Patenbriefe sind eine grosse Ermutigung für die Kinder, und die Freude ist immer riesig, wenn ein Brief ankommt. <p>
 
 				 <p> Dein Brief wird nun wenn nötig übersetzt und dann so schnell wie möglich übermittelt. Wir schicken dir hier noch eine Kopie des Textes.<br/>

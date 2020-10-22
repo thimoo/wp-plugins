@@ -153,7 +153,6 @@
             <div style="padding: 0 30px;">
                 <h3>Daten:</h3>
                 <ul>
-                    <li><?php _e('Anrede', 'compassion'); ?>: <?php echo $form_data['salutation']; ?></li>
                     <li><?php _e('Name', 'compassion'); ?>: <?php echo $form_data['name']; ?></li>
                     <li><?php _e('E-Mail','compassion'); ?>: <?php echo $form_data['email']; ?></li>
                     <li><?php _e('Patennummer','compassion'); ?>: <?php echo $form_data['Patennummer']; ?></li>
