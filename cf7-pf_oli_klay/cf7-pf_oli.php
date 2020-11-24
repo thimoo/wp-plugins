@@ -4,7 +4,7 @@
   Plugin URI: http://compassion.ch/
   Description:
   Author: Olivier Requet / J. Kläy
-  Version: 0.2
+  Version: 0.3
   Author URI: http://compassion.ch/
  */
 defined('ABSPATH') || die();
@@ -13,7 +13,7 @@ define('CF7PF_PLUGIN_DIR_PATH', plugin_dir_path(__FILE__));
 define('CF7PF_PLUGIN_DIR_URL', plugin_dir_url(__FILE__));
 
 global $donation_db_version;
-$donation_db_version = '1.25';
+$donation_db_version = '1.26';
 
 const DONATION_TABLE_NAME = 'donation_to_odoo';
 
@@ -33,8 +33,7 @@ function donation_db_install() {
              email tinytext NOT NULL,
              orderid tinytext NULL,
              campaign_slug tinytext NULL,
-             last_name tinytext NOT NULL,
-             first_name tinytext NOT NULL,
+             name tinytext NOT NULL,
              street tinytext NOT NULL,
              zipcode tinytext NOT NULL,
              city tinytext NOT NULL,
@@ -61,43 +60,6 @@ function donation_db_install() {
     dbDelta($sql);
 
     add_option('donation_db_version', $donation_db_version);
-
-    if (version_compare($donation_db_version, '1.24') < 0) {
-        $sql = "CREATE TABLE $table_name (
-                 id int(1) NOT NULL AUTO_INCREMENT,
-                 time datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
-                 ip_address tinytext NOT NULL,
-                 email tinytext NOT NULL,
-                 orderid tinytext NULL,
-                 campaign_slug tinytext NULL,
-                 last_name tinytext NOT NULL,
-                 first_name tinytext NOT NULL,
-                 street tinytext NOT NULL,
-                 zipcode tinytext NOT NULL,
-                 city tinytext NOT NULL,
-                 country tinytext NOT NULL,
-                 language varchar(5) NOT NULL,
-                 amount decimal(10,2) NULL,
-                 currency varchar(5) NOT NULL,
-                 fund tinytext NULL,
-                 child_id tinytext NULL,
-                 partner_ref tinytext NULL,
-                 transaction_id tinytext NOT NULL,
-                 session_id tinytext NOT NULL,
-                 pf_pm tinytext NULL,
-                 pf_payid varchar(16) NULL,
-                 pf_brand tinytext NULL,
-                 pf_raw text NULL,
-                 odoo_status tinytext NOT NULL,
-                 odoo_complete_time datetime NULL,
-                 odoo_invoice_id int(1) NULL,
-                 PRIMARY KEY (id)
-                ) $charset_collate; ";
-        dbDelta($sql);
-        error_log('update to version 1.25');
-
-        update_option('donation_db_version', '1.25');
-    }
 }
 
 add_action('plugins_loaded', 'donate_load_textdomain');
@@ -347,7 +309,7 @@ class Compassion_Donation_Form {
             'AMOUNT' => $final_amount * 100,
             'CURRENCY' => 'CHF',
             'LANGUAGE' => $lang,
-            'CN' => $session_data['first_name'] . ' ' . $session_data['last_name'],
+            'CN' => $session_data['pname'],
             'EMAIL' => $session_data['email'],
             'COMPLUS' => $_SESSION['transaction'],
             'PAYMENT_REFERENCE' => $_SESSION['choix_don_unique_mensuel'],
@@ -371,8 +333,7 @@ class Compassion_Donation_Form {
                         'utm_source' => $this->cleanfordb($_SESSION['utm_source']),
                         'utm_medium' => $this->cleanfordb($_SESSION['utm_medium']),
                         'utm_campaign' => $this->cleanfordb($_SESSION['utm_campaign']),
-                        'first_name' => $this->cleanfordb($data['first_name']),
-                        'last_name' => $this->cleanfordb($data['last_name']),
+                        'name' => $this->cleanfordb($data['pname']),
                         'street' => $this->cleanfordb($data['street']),
                         'zipcode' => $this->cleanfordb($data['zipcode']),
                         'city' => $this->cleanfordb($data['city']),
