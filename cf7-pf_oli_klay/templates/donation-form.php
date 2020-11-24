@@ -73,7 +73,7 @@
                 <h4 class="text-uppercase"><?php _e('Meine persönlichen Daten', 'child-sponsor-lang'); ?></h4>
                 <div class="row">
                     <div class="small-4 columns">
-                        <label class="text-left middle"><?php _e('Vorname, Nachname', 'child-sponsor-lang'); ?></label>
+                        <label class="text-left middle"><?php _e('Vorname, Nachname', 'compassion-letters'); ?></label>
                     </div>
                     <div class="small-8 columns">
                         <input type="text" required data-msg="<?php _e('Name erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="pname" name="pname" value="<?php echo $_SESSION["pname"]?>">
