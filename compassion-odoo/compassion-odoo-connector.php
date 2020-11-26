@@ -26,7 +26,7 @@ class CompassionOdooConnector {
     public function __construct() {
         $common = ripcord::client($this->odoo_host . '/xmlrpc/2/common');
         $transport = new ripcord_Transport_Stream(array(
-            'timeout' => 10 // in seconds.
+            'timeout' => 5 // in seconds.
         ));
         $this->uid = $common->authenticate($this->odoo_db, $this->odoo_user, $this->odoo_password, array());
         $this->models = ripcord::client("$this->odoo_host/xmlrpc/2/object", null, $transport);

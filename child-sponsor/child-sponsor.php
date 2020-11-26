@@ -100,23 +100,6 @@ class ChildSponsor {
         require_once ABSPATH . WPINC . '/PHPMailer/PHPMailer.php';
         require_once ABSPATH . WPINC . '/PHPMailer/SMTP.php';
 
-        $email = new PHPMailer\PHPMailer\PHPMailer();
-        $email->isSMTP();                                      // Set mailer to use SMTP
-            $email->Host = 'mail.infomaniak.com';  // Specify main and backup SMTP servers
-            $email->SMTPAuth = true;                               // Enable SMTP authentication
-            $email->Username = 'postmaster@filmgottesdienst.ch';                 // SMTP username
-            $email->Password = TEST_SMTP_KEY;                           // SMTP password
-            $email->Port = 587;
-        $email->CharSet = 'UTF-8';
-        $email->From = 'compassion@compassion.ch';
-        $email->FromName = __('Compassion Schweiz', 'child-sponsor-lang');
-        $email->Subject = __('Deine Patenschaft', 'child-sponsor-lang');
-        $email->Body = $this->get_email_template('user-new-sponsor.php', $session_data);
-        $email->isHTML(true);
-        $email->AddAddress($session_data['email']);
-        //$email->AddBCC('ecino@compassion.ch', 'Compassion Suisse');
-        $email->addCustomHeader('X-SMTPAPI', '{"filters": {"subscriptiontrack" : {"settings" : {"enable" : 0}}}}');
-        $email->Send();
 
         /**
          * deactivate child
@@ -162,8 +145,8 @@ class ChildSponsor {
         if(isset($_SESSION) AND isset($_SESSION['utm_campaign'])) {
             $utm_campaign = $_SESSION['utm_campaign'];
         }
-        $odoo = new CompassionOdooConnector();
         try {
+            $odoo = new CompassionOdooConnector();
             $result = $odoo->call_method(
                 'recurring.contract', 'create_sponsorship',
                 array($child_meta['number'], $session_data, $my_current_lang, $utm_source, $utm_medium, $utm_campaign)
@@ -173,6 +156,24 @@ class ChildSponsor {
         } catch (Exception $e) {
             $this->send_fail_email($data);
         }
+
+        $email = new PHPMailer\PHPMailer\PHPMailer();
+        $email->isSMTP();                                      // Set mailer to use SMTP
+        $email->Host = 'mail.infomaniak.com';  // Specify main and backup SMTP servers
+        $email->SMTPAuth = true;                               // Enable SMTP authentication
+        $email->Username = 'postmaster@filmgottesdienst.ch';                 // SMTP username
+        $email->Password = TEST_SMTP_KEY;                           // SMTP password
+        $email->Port = 587;
+        $email->CharSet = 'UTF-8';
+        $email->From = 'compassion@compassion.ch';
+        $email->FromName = __('Compassion Schweiz', 'child-sponsor-lang');
+        $email->Subject = __('Deine Patenschaft', 'child-sponsor-lang');
+        $email->Body = $this->get_email_template('user-new-sponsor.php', $session_data);
+        $email->isHTML(true);
+        $email->AddAddress($session_data['email']);
+        //$email->AddBCC('ecino@compassion.ch', 'Compassion Suisse');
+        $email->addCustomHeader('X-SMTPAPI', '{"filters": {"subscriptiontrack" : {"settings" : {"enable" : 0}}}}');
+        $email->Send();
 
         ob_end_clean();
     }
@@ -193,7 +194,7 @@ class ChildSponsor {
         $email->Body = $this->get_email_template('user-new-sponsor.php', $data);
         $email->isHTML(true);
         $email->AddAddress('info@compassion.ch');
-        //$email->AddBCC('ecino@compassion.ch', 'Compassion Suisse');
+        $email->AddCC('ecino@compassion.ch');
         $email->addCustomHeader('X-SMTPAPI', '{"filters": {"subscriptiontrack" : {"settings" : {"enable" : 0}}}}');
         $email->Send();
     }
