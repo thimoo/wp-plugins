@@ -42,6 +42,15 @@
         finalText = finalText.replace("{name}", childName).replace("{parrain}", sponsorName);
         return finalText;
     };
+    // Try to auto-fill form when page is loaded.
+    jQuery( document ).ready(function() {
+        // Auto-fill the text for the Christmas template
+        var childRef = jQuery('#child_ref').val();
+        var childName = getUrlParameter("child_name");
+        var sponsorName = getUrlParameter("pname");
+        if (childName)
+            jQuery('#message').text(autoFillChristmasText(childName, childRef, sponsorName));
+    });
 </script>
 
 <form action="" class="compassion-letter-form" enctype="multipart/form-data">
