@@ -31,23 +31,50 @@
         "¡Te deseo a ti y a tus seres queridos lo mejor para el Año Nuevo!" +
             "\n\n" +
         "{parrain}";
+        var textPO = "Para PORTUGUESE {name}." +
+            "\n\n" +
+            "¡Te deseo una feliz Navidad! En Navidad recordamos la venida de Jesús entre nosotros para mostrarnos el amor de Dios por nosotros. Aquí en Suiza, diciembre es un mes sin mucho sol, con días muy cortos. Pero en muchas calles hay guirnaldas de luces. Nos recuerdan que Jesús es la luz del mundo. Él nos prometió que siempre estaría con nosotros." +
+            "\n\n" +
+            "¡Te deseo a ti y a tus seres queridos lo mejor para el Año Nuevo!" +
+            "\n\n" +
+            "{parrain}";
         var country = childReference.substring(0, 2);
         var french = ["BF", "TG"];
         var spanish = ["BO", "CO", "DR", "EC", "ES", "GU", "HO", "ME", "NI"];
+        var portuguese = ["BR"];
         var finalText = textEN;
         if (french.indexOf(country) > -1)
             finalText = textFR;
         if (spanish.indexOf(country) > -1)
             finalText = textES;
+        if (portuguese.indexOf(country) > -1)
+            finalText = textPO;
         finalText = finalText.replace("{name}", childName).replace("{parrain}", sponsorName);
         return finalText;
     };
+
+    // Retrieve GET parameter value function
+    var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+    };
+
     // Try to auto-fill form when page is loaded.
     jQuery( document ).ready(function() {
         // Auto-fill the text for the Christmas template
         var childRef = jQuery('#child_ref').val();
-        var childName = getUrlParameter("child_name");
-        var sponsorName = getUrlParameter("pname");
+        var childName = getUrlParameter("child_name").replaceAll('+', ' ');
+        var sponsorName = getUrlParameter("pname").replaceAll('+', ' ');
         if (childName)
             jQuery('#message').text(autoFillChristmasText(childName, childRef, sponsorName));
     });
