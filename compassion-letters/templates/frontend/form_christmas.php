@@ -12,35 +12,43 @@
     var autoFillChristmasText = function(childName, childReference, sponsorName) {
         var textEN = "Dear {name}, " +
         "\n\n" +
-        "I wish you a Merry Christmas! At Christmas, we remember the coming of Jesus among us, to show us God's love for us. Here in Switzerland, December is a rather dark month, with shorter days. But in many streets, there are garlands of lights. They remind us that Jesus is the light of the world! He promised us that he would always be with us." +
+        "I wish you a lovely, peaceful Christmas! At Christmas, we are reminded of Jesus' coming to us, to show God's love for us." +
             "\n\n" +
-        "I wish you and your loved ones the best for the New Year." +
+        "This year has been disrupted by the Covid-19 pandemic across the whole world. Fortunately, Christmas reminds us that Jesus is the light of the world! He has promised to always be with us." +
+            "\n\n" +
+            "I wish you and your loved ones all the best for the New Year." +
             "\n\n" +
         "{parrain}";
         var textFR = "Bonjour {name}, " +
         "\n\n" +
-        "Je te souhaite un beau Noël! A Noël, nous nous souvenons de la venue de Jésus parmi nous, pour nous montrer l’amour de Dieu pour nous. Ici en Suisse, le mois de décembre est plutôt sombre, avec des jours plus courts. Mais dans de nombreuses rues, il y a des guirlandes de lumières. Elles nous rappellent que Jésus est la lumière du monde! Il nous a promis d’être toujours avec nous." +
+        "Je te souhaite un beau et paisible Noël! A Noël, nous nous souvenons de la venue de Jésus parmi nous, pour nous montrer l’amour de Dieu pour nous. Cette année a été marquée dans le monde entier par la pandémie Covid-19." +
+        "\n\n" +
+        "Heureusement, Noël nous rappelle que Jésus est la lumière du monde! Il nous a promis d’être toujours avec nous." +
         "\n\n" +
         "Je te souhaite, ainsi qu’à tes proches, le meilleur pour la nouvelle année." +
             "\n\n" +
         "{parrain}";
-        var textES = "Para {name}." +
+        var textES = "Hola {name}," +
             "\n\n" +
-        "¡Te deseo una feliz Navidad! En Navidad recordamos la venida de Jesús entre nosotros para mostrarnos el amor de Dios por nosotros. Aquí en Suiza, diciembre es un mes sin mucho sol, con días muy cortos. Pero en muchas calles hay guirnaldas de luces. Nos recuerdan que Jesús es la luz del mundo. Él nos prometió que siempre estaría con nosotros." +
+        "¡Te deseo una maravillosa y feliz Navidad! En Navidad recordamos la venida de Jesús entre nosotros para mostrarnos el amor de Dios por nosotros. Este año ha estado marcado en todo el mundo por la pandemia de Covid-19." +
             "\n\n" +
-        "¡Te deseo a ti y a tus seres queridos lo mejor para el Año Nuevo!" +
+        "Afortunadamente, la Navidad nos recuerda que Jesús es la luz del mundo. Prometió estar siempre con nosotros." +
+            "\n\n" +
+            "Te deseo a ti y tus queridos todo lo mejor para el Año Nuevo." +
             "\n\n" +
         "{parrain}";
-        var textPO = "Para PORTUGUESE {name}." +
+        var textPO = "Bom dia {name}," +
             "\n\n" +
-            "¡Te deseo una feliz Navidad! En Navidad recordamos la venida de Jesús entre nosotros para mostrarnos el amor de Dios por nosotros. Aquí en Suiza, diciembre es un mes sin mucho sol, con días muy cortos. Pero en muchas calles hay guirnaldas de luces. Nos recuerdan que Jesús es la luz del mundo. Él nos prometió que siempre estaría con nosotros." +
+            "Eu lhe desejo um bom Natal cheio de Paz! No Natal nós lembramos da vinda de JESUS no meio de nós, para nos mostrar o amor de Deus por nós. Este ano foi marcado no mundo inteiro pela pandemia do covid-19." +
             "\n\n" +
-            "¡Te deseo a ti y a tus seres queridos lo mejor para el Año Nuevo!" +
+            "Felizmente, Natal nos faz lembrar que JESUS é a luz do mundo! Ele nos prometeu de estar sempre conosco." +
+            "\n\n" +
+            "Desejo à você e a sua família, o melhor para o próximo ano de 2021." +
             "\n\n" +
             "{parrain}";
         var country = childReference.substring(0, 2);
         var french = ["BF", "TG"];
-        var spanish = ["BO", "CO", "DR", "EC", "ES", "GU", "HO", "ME", "NI"];
+        var spanish = ["BO", "CO", "DR", "EC", "ES", "GU", "HO", "ME", "NI","PE"];
         var portuguese = ["BR"];
         var finalText = textEN;
         if (french.indexOf(country) > -1)
