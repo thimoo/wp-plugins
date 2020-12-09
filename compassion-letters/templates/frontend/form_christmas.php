@@ -21,7 +21,7 @@
         "{parrain}";
         var textFR = "Bonjour {name}, " +
         "\n\n" +
-        "Je te souhaite un beau et paisible Noël! A Noël, nous nous souvenons de la venue de Jésus parmi nous, pour nous montrer l’amour de Dieu pour nous. Cette année a été marquée dans le monde entier par la pandémie Covid-19." +
+        "Je te souhaite un beau et paisible Noël! A Noël, nous nous souvenons de la venue de Jésus parmi nous, pour nous montrer l’amour de Dieu. Cette année a été marquée dans le monde entier par la pandémie Covid-19." +
         "\n\n" +
         "Heureusement, Noël nous rappelle que Jésus est la lumière du monde! Il nous a promis d’être toujours avec nous." +
         "\n\n" +
