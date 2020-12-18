@@ -132,7 +132,7 @@ class ChildSponsor {
         // Call Odoo to insert Sponsorship
         $child_meta = get_child_meta($session_data['childID']);
 
-        // Call method in Odoo to insert new web letter
+        // Call method in Odoo to send sponsorship
         $utm_source = false;
         $utm_medium = false;
         $utm_campaign = false;
@@ -156,6 +156,7 @@ class ChildSponsor {
         } catch (Exception $e) {
             $this->send_fail_email($data);
         }
+
         ob_end_clean();
     }
 
