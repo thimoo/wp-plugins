@@ -64,10 +64,10 @@
     <div class="small-8 columns">
         <div class="select-wrapper">
             <select name="fonds" id="fonds" class="input-field">
-                <option value="csp_mensuel_30"
-                        selected="selected" <?php echo ($_SESSION["fund_code"] == "mensuel 30") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 30.-', 'donation-form'); ?></option>
+                <option value="csp_mensuel_15"
+                        selected="selected" <?php echo ($_SESSION["fund_code"] == "mensuel 15") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 15.-', 'donation-form'); ?></option>
+                <option value="csp_mensuel_30" <?php echo ($_SESSION["fund_code"] == "mensuel 30") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 30.-', 'donation-form'); ?></option>
                 <option value="csp_mensuel_60" <?php echo ($_SESSION["fund_code"] == "mensuel 60") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 60.-', 'donation-form'); ?></option>
-                <option value="csp_mensuel_90" <?php echo ($_SESSION["fund_code"] == "mensuel 90") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 90.-', 'donation-form'); ?></option>
             </select>
         </div>
         <p class="small"> <?php _e('Nach deiner ersten Spende wird dir Compassion Schweiz einen Einzahlungsschein für die weiteren Spenden zusenden.', 'donation-form'); ?></p>
