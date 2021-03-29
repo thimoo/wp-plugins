@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-21 08:06+0000\n"
+"POT-Creation-Date: 2021-03-29 14:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,101 +14,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: cf7-pf_oli.php:190
-msgid "Donation form"
+#: templates/frontend/inputs.php:33
+msgid "Aktuelle Nothilfe"
 msgstr ""
 
-#: cf7-pf_oli.php:194
-msgid "Type of form"
+#: templates/cadeau/inputs.php:18
+msgid "Allgemeines Geschenk"
 msgstr ""
 
-#: cf7-pf_oli.php:196
-msgid "The type of donation form to display."
+#: templates/cadeau/inputs.php:11
+msgid "Anlass"
 msgstr ""
 
-#: cf7-pf_oli.php:199
-msgid "General funds"
+#: templates/frontend/inputs.php:36
+msgid "Babys und Müttern helfen"
 msgstr ""
 
-#: cf7-pf_oli.php:200
-msgid "CSP"
-msgstr ""
-
-#: cf7-pf_oli.php:201
-msgid "Gift to a child"
-msgstr ""
-
-#: cf7-pf_oli.php:202 cf7-pf_oli.php:210
-msgid "Specific fund"
-msgstr ""
-
-#: cf7-pf_oli.php:206
-msgid "Reason for the donation"
-msgstr ""
-
-#: cf7-pf_oli.php:208
-msgid ""
-"The second part (separated by a \"|\") is the reason used by Odoo "
-"(corresponds to the internal reference of a product)."
-msgstr ""
-
-#: cf7-pf_oli.php:213
-msgid "Toilettes for all|toilette"
-msgstr ""
-
-#: cf7-pf_oli.php:267 cf7-pf_oli.php:282 cf7-pf_oli.php:286
-msgid "Vielen Dank, dass du nicht vergisst, den Spendenzweck zu erwähnen."
-msgstr ""
-
-#: cf7-pf_oli.php:271
-msgid ""
-"Bitte gib an, ob du regelmässig oder einmalig für das Kinder-"
-"Überlebensprogramm spenden möchtest. Spendenzweck (monatlich oder einmalig): "
-"Überlebensprogramm"
-msgstr ""
-
-#: cf7-pf_oli.php:272
-msgid "Überlebensprogramm"
-msgstr ""
-
-#: cf7-pf_oli.php:273
-msgid "monatliche Spende"
-msgstr ""
-
-#: cf7-pf_oli.php:274
-msgid "einmalige Spende"
-msgstr ""
-
-#: templates/donation-form.php:55
-msgid "Online spenden"
-msgstr ""
-
-#: templates/donation-form.php:61
-msgid "Spende per Banküberweisung"
-msgstr ""
-
-#: templates/donation-form.php:69
-msgid ""
-"Spende über eine sichere Online-Zahlung, mit Postfinance oder Kreditkarte."
-msgstr ""
-
-#: templates/donation-form.php:127
-msgid "Jetzt spenden"
-msgstr ""
-
-#: templates/donation-form.php:136
-msgid ""
-"Du kannst per Post- oder Banküberweisung spenden.<br/>  Nachfolgend findest "
-"du die Informationen für die Zahlung. "
-msgstr ""
-
-#: templates/cadeau/inputs.php:3
-msgid "Mein Betrag in CHF"
-msgstr ""
-
-#: templates/cadeau/inputs.php:6 templates/csp/inputs.php:53
-#: templates/frontend/inputs.php:6 templates/single/inputs.php:6
-msgid "bitte nur Zahlen"
+#: templates/frontend/inputs.php:3 templates/single/inputs.php:3
+msgid "Betrag deiner Spende in CHF"
 msgstr ""
 
 #: templates/cadeau/inputs.php:6 templates/csp/inputs.php:54
@@ -116,24 +39,136 @@ msgstr ""
 msgid "Betrag erforderlich"
 msgstr ""
 
-#: templates/cadeau/inputs.php:11
-msgid "Anlass"
+#: templates/frontend/inputs.php:39
+msgid "Bibelfonds"
 msgstr ""
 
-#: templates/cadeau/inputs.php:16
-msgid "Geburtstagsgeschenk"
+#: cf7-pf_oli.php:233
+msgid ""
+"Bitte gib an, ob du regelmässig oder einmalig für das Kinder-"
+"Überlebensprogramm spenden möchtest. Spendenzweck (monatlich oder einmalig): "
+"Überlebensprogramm"
+msgstr ""
+
+#: templates/cadeau/inputs.php:6 templates/csp/inputs.php:53
+#: templates/frontend/inputs.php:6 templates/single/inputs.php:6
+msgid "bitte nur Zahlen"
+msgstr ""
+
+#: templates/csp/inputs.php:3 templates/frontend/inputs.php:11
+#: templates/single/inputs.php:11
+msgid "Choix du don"
+msgstr ""
+
+#: cf7-pf_oli.php:162
+msgid "CSP"
+msgstr ""
+
+#: cf7-pf_oli.php:152
+msgid "Donation form"
+msgstr ""
+
+#: templates/donation-form.php:128
+msgid ""
+"Du kannst per Post- oder Banküberweisung spenden.<br/>  Nachfolgend findest "
+"du die Informationen für die Zahlung. "
+msgstr ""
+
+#: templates/csp/inputs.php:13 templates/frontend/inputs.php:21
+#: templates/single/inputs.php:21
+msgid "Einmalige Spende"
+msgstr ""
+
+#: cf7-pf_oli.php:236
+msgid "einmalige Spende"
 msgstr ""
 
 #: templates/cadeau/inputs.php:17
 msgid "Familiengeschenk"
 msgstr ""
 
-#: templates/cadeau/inputs.php:18
-msgid "Allgemeines Geschenk"
+#: templates/cadeau/inputs.php:16
+msgid "Geburtstagsgeschenk"
+msgstr ""
+
+#: cf7-pf_oli.php:161
+msgid "General funds"
 msgstr ""
 
 #: templates/cadeau/inputs.php:19
 msgid "Geschenk ans Kinderzentrum"
+msgstr ""
+
+#: cf7-pf_oli.php:163
+msgid "Gift to a child"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "http://compassion.ch/"
+msgstr ""
+
+#: templates/cadeau/inputs.php:29
+msgid "ie : BO012301234"
+msgstr ""
+
+#: templates/csp/inputs.php:62
+msgid "Je désire faire un don mensuel"
+msgstr ""
+
+#: templates/csp/inputs.php:49
+msgid "Je désire faire un don unique"
+msgstr ""
+
+#: templates/donation-form.php:119
+msgid "Jetzt spenden"
+msgstr ""
+
+#: templates/frontend/inputs.php:37
+msgid "Kinder, die ihren Paten verloren haben"
+msgstr ""
+
+#: templates/frontend/inputs.php:38
+msgid "Medizinische Hilfe"
+msgstr ""
+
+#: templates/cadeau/inputs.php:3
+msgid "Mein Betrag in CHF"
+msgstr ""
+
+#: templates/csp/inputs.php:9 templates/frontend/inputs.php:17
+#: templates/single/inputs.php:17
+msgid "Monatlich"
+msgstr ""
+
+#: cf7-pf_oli.php:235
+msgid "monatliche Spende"
+msgstr ""
+
+#: templates/csp/inputs.php:68
+msgid "Monatliche Spende von CHF 15.-"
+msgstr ""
+
+#: templates/csp/inputs.php:69
+msgid "Monatliche Spende von CHF 30.-"
+msgstr ""
+
+#: templates/csp/inputs.php:70
+msgid "Monatliche Spende von CHF 60.-"
+msgstr ""
+
+#: templates/csp/inputs.php:73
+msgid ""
+"Nach deiner ersten Spende wird dir Compassion Schweiz einen "
+"Einzahlungsschein für die weiteren Spenden zusenden."
+msgstr ""
+
+#. Author of the plugin
+msgid "Olivier Requet / J. Kläy"
+msgstr ""
+
+#: templates/donation-form.php:55
+msgid "Online spenden"
 msgstr ""
 
 #: templates/cadeau/inputs.php:26
@@ -144,93 +179,62 @@ msgstr ""
 msgid "Patenkindnummer erforderlich"
 msgstr ""
 
-#: templates/cadeau/inputs.php:29
-msgid "ie : BO012301234"
-msgstr ""
-
-#: templates/csp/inputs.php:3
-msgid "Choix du don"
-msgstr ""
-
-#: templates/csp/inputs.php:9
-msgid "Monatlich"
-msgstr ""
-
-#: templates/csp/inputs.php:13
-msgid "Einmalige Spende"
-msgstr ""
-
-#: templates/csp/inputs.php:49
-msgid "Je désire faire un don unique"
-msgstr ""
-
-#: templates/csp/inputs.php:62
-msgid "Je désire faire un don mensuel"
-msgstr ""
-
-#: templates/csp/inputs.php:68
-msgid "Monatliche Spende von CHF 30.-"
-msgstr ""
-
-#: templates/csp/inputs.php:69
-msgid "Monatliche Spende von CHF 60.-"
-msgstr ""
-
-#: templates/csp/inputs.php:70
-msgid "Monatliche Spende von CHF 90.-"
-msgstr ""
-
-#: templates/csp/inputs.php:73
-msgid ""
-"Nach deiner ersten Spende wird dir Compassion Schweiz einen "
-"Einzahlungsschein für die weiteren Spenden zusenden."
-msgstr ""
-
-#: templates/frontend/inputs.php:3 templates/single/inputs.php:3
-msgid "Betrag deiner Spende in CHF"
-msgstr ""
-
-#: templates/frontend/inputs.php:12 templates/single/inputs.php:12
-msgid "Spendenzweck"
-msgstr ""
-
-#: templates/frontend/inputs.php:17
-msgid "Aktuelle Nothilfe"
-msgstr ""
-
-#: templates/frontend/inputs.php:18
-msgid "Weihnachtsgeschenk"
-msgstr ""
-
-#: templates/frontend/inputs.php:19
-msgid "Sauberes Wasser"
-msgstr ""
-
-#: templates/frontend/inputs.php:20
-msgid "Babys und Müttern helfen"
-msgstr ""
-
-#: templates/frontend/inputs.php:21
-msgid "Kinder, die ihren Paten verloren haben"
-msgstr ""
-
-#: templates/frontend/inputs.php:22
-msgid "Medizinische Hilfe"
-msgstr ""
-
-#: templates/frontend/inputs.php:23
-msgid "Bibelfonds"
-msgstr ""
-
 #. Name of the plugin
 msgid "Postfinance paiement"
 msgstr ""
 
-#. URI of the plugin
-#. Author URI of the plugin
-msgid "http://compassion.ch/"
+#: cf7-pf_oli.php:168
+msgid "Reason for the donation"
 msgstr ""
 
-#. Author of the plugin
-msgid "Olivier Requet / J. Kläy"
+#: templates/frontend/inputs.php:35
+msgid "Sauberes Wasser"
+msgstr ""
+
+#: cf7-pf_oli.php:164 cf7-pf_oli.php:172
+msgid "Specific fund"
+msgstr ""
+
+#: templates/donation-form.php:61
+msgid "Spende per Banküberweisung"
+msgstr ""
+
+#: templates/donation-form.php:69
+msgid ""
+"Spende über eine sichere Online-Zahlung, mit Postfinance, Kreditkarte oder "
+"Twint."
+msgstr ""
+
+#: templates/frontend/inputs.php:28 templates/single/inputs.php:28
+msgid "Spendenzweck"
+msgstr ""
+
+#: cf7-pf_oli.php:170
+msgid ""
+"The second part (separated by a \"|\") is the reason used by Odoo "
+"(corresponds to the internal reference of a product)."
+msgstr ""
+
+#: cf7-pf_oli.php:158
+msgid "The type of donation form to display."
+msgstr ""
+
+#: cf7-pf_oli.php:175
+msgid "Toilettes for all|toilette"
+msgstr ""
+
+#: cf7-pf_oli.php:156
+msgid "Type of form"
+msgstr ""
+
+#: cf7-pf_oli.php:229 cf7-pf_oli.php:244 cf7-pf_oli.php:248
+msgid "Vielen Dank, dass du nicht vergisst, den Spendenzweck zu erwähnen."
+msgstr ""
+
+#: templates/frontend/inputs.php:34
+msgid "Weihnachtsgeschenk"
+msgstr ""
+
+#: cf7-pf_oli.php:234
+msgid "Überlebensprogramm"
 msgstr ""

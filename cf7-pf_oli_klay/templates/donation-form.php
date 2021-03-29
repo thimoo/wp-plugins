@@ -66,7 +66,7 @@
     <div class="tabs-panel is-active" id="panel-online-donation">
         <div class="row">
             <form method="POST" action="?step=redirect"  class="large-12 large-centered medium-12 medium-centered column" >
-                <p><?php _e('Spende über eine sichere Online-Zahlung, mit Postfinance oder Kreditkarte.','donation-form' )?></p>
+                <p><?php _e('Spende über eine sichere Online-Zahlung, mit Postfinance, Kreditkarte oder Twint.','donation-form' )?></p>
 
                 <?php include($donation_inputs_template); ?>
 
