@@ -143,7 +143,7 @@ class ChildOdooImport
          */
         global $wpdb;
         $query = "SELECT post_id FROM $wpdb->postmeta WHERE meta_key = '_child_number' AND meta_value IN (%s)";
-        $result_query = $wpdb->get_results(sprintf($query, implode(array_map("addQuotes", $children), ",")));
+        $result_query = $wpdb->get_results(sprintf($query, implode(",", array_map("addQuotes", $children))));
 
         $post_ids = array();
         foreach($result_query as $row) {
@@ -153,8 +153,8 @@ class ChildOdooImport
         if ($post_ids) {
             $query = "DELETE FROM compassion_posts WHERE ID IN (%s)";
             $query_pm = "DELETE FROM compassion_postmeta WHERE post_id IN (%s)";
-            $wpdb->query(sprintf($query, implode($post_ids, ",")));
-            $wpdb->query(sprintf($query_pm, implode($post_ids, ",")));
+            $wpdb->query(sprintf($query, implode(",", $post_ids)));
+            $wpdb->query(sprintf($query_pm, implode(",", $post_ids)));
 
         }
 
