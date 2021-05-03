@@ -124,7 +124,7 @@ jQuery(document).ready(function($) {
                 <h2 style="text-align: center;"><?php _e('Schön, dass du ', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?></h2>
             <?php }
         } elseif ($my_current_lang == "de") { ?>
-            <h2 style="text-align: center;"><?php _e('Schön, dass du Pate von', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?>
+            <h2 style="text-align: center;"><?php _e('Schön, dass du Patin/Pate von', 'child-sponsor-lang'); ?> <?php echo $child_data['name']; ?>
                 <?php _e('werden möchtest', 'child-sponsor-lang'); ?></h2>
         <?php } elseif ($my_current_lang == "it") {
             ?>

@@ -37,7 +37,7 @@ $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';
                 </div>
                 <div class="small-8 columns">
                     <?php
-	                    $salutation = apply_filters( 'wpml_object_id', $session_data['salutation'], 'post', TRUE);
+	                    $salutation = $session_data['salutation'];
 	                    echo _e($salutation, 'child-sponsor-lang');
 	                ?>
 	        </div>
@@ -177,10 +177,7 @@ $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';
 			<h4 class="text-uppercase"><?php _e('Zahlungsweise', 'child-sponsor-lang'); ?></h4>
 			
             <div class="row">
-                <div class="small-4 columns">
-                    <label class="text-left middle"><?php _e('Ich zahle die Patenschaft durch:', 'child-sponsor-lang'); ?></label>
-                </div>
-                <div class="small-8 columns">
+                               <div class="small-8 columns">
                      <?php
                         switch($session_data['zahlungsweise']) {
                             case 'dauerauftrag': echo _e('Monatlicher Dauerauftrag', 'child-sponsor-lang'); break;

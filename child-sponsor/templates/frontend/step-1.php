@@ -135,7 +135,7 @@ if ($msk) {
                 <div class="small-8 columns">
                     <input type="email" class="input-field" required data-msg="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" name="email" value="<?php echo (isset($session_data['email'])) ? $session_data['email'] : ''; ?>">
                 </div>
-            </div>
+             </div> -->
 
             <div class="row">
                 <div class="small-4 columns">
@@ -255,7 +255,7 @@ if ($msk) {
             <h4 class="text-uppercase" id="bank"><?= __('WIE HAST DU VON COMPASSION ERFAHREN?', 'child-sponsor-lang') ?></h4>
             <div class="row">
                 <div class="small-4 columns">
-                    <label class="text-left middle"><?= __('Ich bin aufmerksam geworden durch', 'child-sponsor-lang') ?></label>
+                    <label class="text-left middle"><?= __('Ich habe von Compassion erfahren durch', 'child-sponsor-lang') ?></label>
                 </div>
                 <div class="small-8 columns">
                     <?php if (!$msk) { ?>

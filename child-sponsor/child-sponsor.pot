@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-27 08:24+0000\n"
+"POT-Creation-Date: 2021-04-29 09:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,142 +14,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: child-sponsor.php:112
-msgid "Compassion Schweiz"
-msgstr ""
-
-#: child-sponsor.php:113
-msgid "Deine Patenschaft"
-msgstr ""
-
-#: templates/email/admin-new-sponsor.php:158
-#: templates/email/user-new-sponsor.php:202
-#: templates/email_de/admin-new-sponsor.php:158
-#: templates/email_de/user-new-sponsor.php:170
-#: templates/email_it/admin-new-sponsor.php:158
-#: templates/email_it/user-new-sponsor.php:191
-msgid "Name"
-msgstr ""
-
-#: templates/email/admin-new-sponsor.php:159
-#: templates/email/admin-new-sponsor.php:174
-#: templates/email/user-new-sponsor.php:203
-#: templates/email/user-new-sponsor.php:219
-#: templates/email_de/admin-new-sponsor.php:159
-#: templates/email_de/admin-new-sponsor.php:195
-#: templates/email_de/user-new-sponsor.php:171
-#: templates/email_de/user-new-sponsor.php:187
-#: templates/email_it/admin-new-sponsor.php:159
-#: templates/email_it/admin-new-sponsor.php:174
-#: templates/email_it/user-new-sponsor.php:192
-#: templates/email_it/user-new-sponsor.php:208 templates/frontend/step-1.php:95
-#: templates/frontend/step-2.php:92
-msgid "Land"
-msgstr ""
-
-#: templates/email/admin-new-sponsor.php:160
-#: templates/email/user-new-sponsor.php:204
-#: templates/email_de/admin-new-sponsor.php:160
-#: templates/email_de/user-new-sponsor.php:172
-#: templates/email_it/admin-new-sponsor.php:160
-#: templates/email_it/user-new-sponsor.php:193
-msgid "Nummer"
-msgstr ""
-
-#: templates/email/admin-new-sponsor.php:168
-#: templates/email/user-new-sponsor.php:211
-#: templates/email_de/admin-new-sponsor.php:189
-#: templates/email_de/user-new-sponsor.php:179
-#: templates/email_it/admin-new-sponsor.php:168
-#: templates/email_it/user-new-sponsor.php:200 templates/frontend/step-1.php:45
-#: templates/frontend/step-2.php:36
-msgid "Anrede"
-msgstr ""
-
-#: templates/email/admin-new-sponsor.php:169
-#: templates/email/user-new-sponsor.php:214
-#: templates/email_de/admin-new-sponsor.php:190
-#: templates/email_de/user-new-sponsor.php:182
-#: templates/email_it/admin-new-sponsor.php:169
-#: templates/email_it/user-new-sponsor.php:203 templates/frontend/step-1.php:65
-#: templates/frontend/step-2.php:57
-msgid "Vorname"
-msgstr ""
-
-#: templates/email/admin-new-sponsor.php:170
-#: templates/email/user-new-sponsor.php:215
-#: templates/email_de/admin-new-sponsor.php:191
-#: templates/email_de/user-new-sponsor.php:183
-#: templates/email_it/admin-new-sponsor.php:170
-#: templates/email_it/user-new-sponsor.php:204 templates/frontend/step-1.php:56
-#: templates/frontend/step-2.php:48
-msgid "Nachname"
-msgstr ""
-
-#: templates/email/admin-new-sponsor.php:171
-#: templates/email_de/admin-new-sponsor.php:192
-#: templates/email_it/admin-new-sponsor.php:171
-msgid "Straße"
-msgstr ""
-
-#: templates/email/admin-new-sponsor.php:172
-#: templates/email/user-new-sponsor.php:217
-#: templates/email_de/admin-new-sponsor.php:193
-#: templates/email_de/user-new-sponsor.php:185
-#: templates/email_it/admin-new-sponsor.php:172
-#: templates/email_it/user-new-sponsor.php:206
-msgid "Stadt"
-msgstr ""
-
-#: templates/email/admin-new-sponsor.php:173
-#: templates/email/admin-new-sponsor.php:188
-#: templates/email/user-new-sponsor.php:218
-#: templates/email_de/admin-new-sponsor.php:194
-#: templates/email_de/admin-new-sponsor.php:209
-#: templates/email_de/user-new-sponsor.php:186
-#: templates/email_it/admin-new-sponsor.php:173
-#: templates/email_it/admin-new-sponsor.php:188
-#: templates/email_it/user-new-sponsor.php:207 templates/frontend/step-2.php:83
-msgid "PLZ"
-msgstr ""
-
-#: templates/email/admin-new-sponsor.php:175
-#: templates/email/user-new-sponsor.php:220
-#: templates/email_de/admin-new-sponsor.php:167
-#: templates/email_de/admin-new-sponsor.php:196
-#: templates/email_de/user-new-sponsor.php:188
-#: templates/email_it/admin-new-sponsor.php:175
-#: templates/email_it/user-new-sponsor.php:209
-msgid "Geburtstag"
-msgstr ""
-
-#: templates/email/admin-new-sponsor.php:176
-#: templates/email/user-new-sponsor.php:221
-#: templates/email_de/admin-new-sponsor.php:197
-#: templates/email_de/user-new-sponsor.php:189
-#: templates/email_it/admin-new-sponsor.php:176
-#: templates/email_it/user-new-sponsor.php:210
-msgid "E-Mail"
-msgstr ""
-
-#: templates/email/admin-new-sponsor.php:177
-#: templates/email/user-new-sponsor.php:222
-#: templates/email_de/admin-new-sponsor.php:198
-#: templates/email_de/user-new-sponsor.php:190
-#: templates/email_it/admin-new-sponsor.php:177
-#: templates/email_it/user-new-sponsor.php:211
-#: templates/frontend/step-1.php:142 templates/frontend/step-2.php:119
-msgid "Telefon"
-msgstr ""
-
-#: templates/email/admin-new-sponsor.php:183
-#: templates/email/admin-new-sponsor.php:185
-#: templates/email_de/admin-new-sponsor.php:204
-#: templates/email_de/admin-new-sponsor.php:206
-#: templates/email_it/admin-new-sponsor.php:183
-#: templates/email_it/admin-new-sponsor.php:185
-#: templates/frontend/step-1.php:258
-msgid "Ich bin aufmerksam geworden durch"
+#: templates/frontend/header.php:135
+msgid " teil."
 msgstr ""
 
 #: templates/email/admin-new-sponsor.php:185
@@ -158,22 +24,507 @@ msgstr ""
 msgid "Aktion \"Den Segen verdoppeln\""
 msgstr ""
 
+#: templates/frontend/step-1.php:440
+msgid "Andere"
+msgstr ""
+
+#: templates/frontend/step-1.php:350 templates/frontend/step-1.php:352
+#: templates/frontend/step-1.php:423 templates/frontend/step-1.php:444
+#: templates/frontend/step-1.php:448 templates/frontend/step-1.php:463
+#: templates/frontend/step-2.php:370
+msgid "Angabe erforderlich"
+msgstr ""
+
+#: templates/email/admin-new-sponsor.php:168
+#: templates/email/user-new-sponsor.php:184
+#: templates/email_de/admin-new-sponsor.php:189
+#: templates/email_de/user-new-sponsor.php:179
+#: templates/email_it/admin-new-sponsor.php:168
+#: templates/email_it/user-new-sponsor.php:184 templates/frontend/step-1.php:60
+#: templates/frontend/step-1.php:227 templates/frontend/step-2.php:36
+#: templates/frontend/step-2.php:198
+msgid "Anrede"
+msgstr ""
+
+#: templates/frontend/step-1.php:63 templates/frontend/step-1.php:64
+#: templates/frontend/step-1.php:65 templates/frontend/step-1.php:230
+#: templates/frontend/step-1.php:231 templates/frontend/step-1.php:232
+msgid "Anrede erforderlich"
+msgstr ""
+
+#: templates/frontend/step-1.php:432
+msgid "Anzeige in Zeitschrift"
+msgstr ""
+
+#: templates/frontend/step-2.php:145 templates/frontend/step-2.php:294
+msgid "Bearbeiten"
+msgstr ""
+
+#: templates/email/user-new-sponsor.php:197
+#: templates/email_de/user-new-sponsor.php:192
+#: templates/email_it/user-new-sponsor.php:197
+#: templates/frontend/step-1.php:173 templates/frontend/step-2.php:137
+msgid "Beruf"
+msgstr ""
+
+#: templates/frontend/step-2.php:379
+msgid "Bestätigen"
+msgstr ""
+
+#: templates/email_de/admin-new-sponsor.php:228
+msgid "BIC"
+msgstr ""
+
+#: templates/frontend/step-1.php:359
+msgid "Bitte wähle einen Betrag zwischen 1 und 42 Franken."
+msgstr ""
+
+#: templates/frontend/step-1.php:424
+msgid "Bitte wählen"
+msgstr ""
+
+#: templates/frontend/step-1.php:377 templates/frontend/step-2.php:297
+#, php-format
+msgid "Briefwechsel mit %s"
+msgstr ""
+
+#. Name of the plugin
+msgid "Compassion Child Sponsor"
+msgstr ""
+
+#: templates/frontend/step-1.php:430
+msgid "Compassion Magazin"
+msgstr ""
+
+#: templates/frontend/step-1.php:148 templates/frontend/step-1.php:315
+msgid "Confirm address"
+msgstr ""
+
+#: templates/frontend/header.php:121
+msgid "Danke, dass du dich für"
+msgstr ""
+
+#: templates/frontend/step-3.php:11
+msgid ""
+"Die Informationen zum Start der Patenschaft wirst du innerhalb der nächsten "
+"Tage per E-Mail erhalten. Sollte dies nicht der Fall sein, "
+msgstr ""
+
+#: templates/frontend/step-1.php:342
+msgid ""
+"Die Patenschaft \"Plus\" beinhaltet die \"Basis\" der Patenschaft von CHF 42."
+"- und eine zusätzliche Spende von CHF 8.- pro Monat. Die CHF 8.- ermöglichen "
+"die Finanzierung dringender Bedürfnisse oder von Bedürfnissen, die durch die "
+"Patenschaftsgelder nicht gedeckt sind (z.B. Naturkatastrophen, chirurgische "
+"Eingriffe, Malariaprävention, usw.). Dieser Solidaritätsfonds ist für alle "
+"von Compassion unterstützten Kinder da."
+msgstr ""
+
+#: templates/email/user-new-sponsor.php:230
+#: templates/email_de/user-new-sponsor.php:227
+#: templates/email_it/user-new-sponsor.php:232
+#: templates/frontend/step-1.php:190 templates/frontend/step-2.php:185
+msgid "Direct Debit - LSV"
+msgstr ""
+
+#: templates/frontend/header.php:137
+msgid "Du wirst das Leben des Kindes für immer verändern."
+msgstr ""
+
+#: templates/email/admin-new-sponsor.php:176
+#: templates/email/user-new-sponsor.php:194
+#: templates/email_de/admin-new-sponsor.php:197
+#: templates/email_de/user-new-sponsor.php:189
+#: templates/email_it/admin-new-sponsor.php:176
+#: templates/email_it/user-new-sponsor.php:194
+msgid "E-Mail"
+msgstr ""
+
+#: templates/frontend/step-1.php:139 templates/frontend/step-1.php:306
+#: templates/frontend/step-2.php:110 templates/frontend/step-2.php:272
+msgid "E-Mail-Adresse"
+msgstr ""
+
+#: templates/frontend/step-1.php:142 templates/frontend/step-1.php:151
+#: templates/frontend/step-1.php:309 templates/frontend/step-1.php:318
+msgid "E-Mail-Adresse erforderlich"
+msgstr ""
+
+#: templates/frontend/header.php:121
+msgid ""
+"einsetzt. Die Patenschaft wird das Leben dieses Kindes nachhaltig verändern."
+msgstr ""
+
+#: templates/email/user-new-sponsor.php:259
+#: templates/email_de/user-new-sponsor.php:256
+#: templates/email_it/user-new-sponsor.php:260
+#: templates/frontend/step-1.php:398 templates/frontend/step-2.php:320
+msgid "Englisch"
+msgstr ""
+
+#: templates/frontend/step-1.php:433
+msgid "Facebook, Youtube, Vimeo…"
+msgstr ""
+
+#: templates/frontend/step-1.php:65 templates/frontend/step-1.php:232
+msgid "Familie"
+msgstr ""
+
+#: templates/email/user-new-sponsor.php:247
+#: templates/email_de/user-new-sponsor.php:244
+#: templates/email_it/user-new-sponsor.php:248
+#: templates/frontend/step-1.php:386 templates/frontend/step-2.php:308
+msgid "Französisch"
+msgstr ""
+
+#: templates/frontend/step-1.php:63 templates/frontend/step-1.php:230
+msgid "Frau"
+msgstr ""
+
+#: templates/frontend/step-1.php:471 templates/frontend/step-2.php:358
+msgid "Freiwillig mithelfen"
+msgstr ""
+
+#: templates/frontend/step-1.php:429
+msgid "Freunde & Verwandte"
+msgstr ""
+
+#: templates/frontend/step-1.php:380
+msgid ""
+"Für den Briefverkehr mit dem Patenkind verstehe ich ausser Deutsch auch:"
+msgstr ""
+
+#: templates/frontend/step-1.php:425
+msgid "Geben Sie das Konzert/Event an"
+msgstr ""
+
+#: templates/frontend/step-1.php:432
+msgid "Geben Sie das Magazin/die Broschüre an"
+msgstr ""
+
+#: templates/frontend/step-1.php:428
+msgid "Geben Sie den Namen der Kirche an"
+msgstr ""
+
+#: templates/frontend/step-1.php:437
+msgid "Geben Sie den Namen des Läufers an"
+msgstr ""
+
+#: templates/frontend/step-1.php:434
+msgid "Geben Sie die Website an"
+msgstr ""
+
+#: templates/frontend/step-1.php:426 templates/frontend/step-1.php:427
+#: templates/frontend/step-1.php:429
+msgid "Geben Sie Vor- und Nachnamen an"
+msgstr ""
+
+#: templates/frontend/step-1.php:120 templates/frontend/step-1.php:287
+#: templates/frontend/step-2.php:101 templates/frontend/step-2.php:263
+msgid "Geburtsdatum"
+msgstr ""
+
+#: templates/frontend/step-1.php:130 templates/frontend/step-1.php:296
+msgid "Geburtsdatum erforderlich"
+msgstr ""
+
+#: templates/email/admin-new-sponsor.php:175
+#: templates/email/user-new-sponsor.php:193
+#: templates/email_de/admin-new-sponsor.php:167
+#: templates/email_de/admin-new-sponsor.php:196
+#: templates/email_de/user-new-sponsor.php:188
+#: templates/email_it/admin-new-sponsor.php:175
+#: templates/email_it/user-new-sponsor.php:193
+msgid "Geburtstag"
+msgstr ""
+
+#: templates/email/admin-new-sponsor.php:191
+#: templates/email_de/admin-new-sponsor.php:212
+#: templates/email_it/admin-new-sponsor.php:191
+msgid "Geschenk"
+msgstr ""
+
+#. Author of the plugin
+msgid "giftGRUEN GmbH"
+msgstr ""
+
+#: templates/frontend/step-1.php:428
+msgid "Gottesdienst/Kirche"
+msgstr ""
+
+#: templates/frontend/step-1.php:64 templates/frontend/step-1.php:231
+msgid "Herr"
+msgstr ""
+
+#: templates/frontend/step-3.php:10
+msgid ""
+"Herzlichen Dank, dass du dich entschieden hast, ein Kind in extremer Armut "
+"durch eine Patenschaft zu unterstützen! Kannst du dir die Riesenfreude "
+"vorstellen, wenn unsere Mitarbeitenden vor Ort dem Kind mitteilen können, "
+"dass es jetzt auf der anderen Seite der Welt eine Patin oder einen Paten hat?"
+msgstr ""
+
+#: templates/frontend/step-2.php:29
+msgid "Hier eine Übersicht deiner angegebenen Daten"
+msgstr ""
+
+#: templates/email_de/admin-new-sponsor.php:229
+msgid "IBAN"
+msgstr ""
+
+#: templates/email/admin-new-sponsor.php:183
+#: templates/email/admin-new-sponsor.php:185
+#: templates/email_de/admin-new-sponsor.php:204
+#: templates/email_de/admin-new-sponsor.php:206
+#: templates/email_it/admin-new-sponsor.php:183
+#: templates/email_it/admin-new-sponsor.php:185
+msgid "Ich bin aufmerksam geworden durch"
+msgstr ""
+
+#: templates/email/user-new-sponsor.php:207
+#: templates/email_de/user-new-sponsor.php:203
+#: templates/email_it/user-new-sponsor.php:208
+#: templates/frontend/step-1.php:351
+msgid ""
+"Ich engagiere mich für mein Patenkind zu beten und ihm regelmässsig zu "
+"schreiben.  Ich habe verstanden, dass eine andere Person die Finanzierung "
+"dieser Patenschaft übernimmt und ich gegenüber dem Kind der/die offizielle "
+"Pate/Patin bin."
+msgstr ""
+
+#: templates/frontend/step-1.php:353
+msgid ""
+"Ich erkläre mich bereit, regelmässig für mein Patenkind zu beten und zu "
+"schreiben, und ich kann das Kind monatlich mit folgenden Betrage "
+"unterstützen:"
+msgstr ""
+
+#: templates/frontend/step-1.php:362
+msgid ""
+"Ich habe verstanden, dass eine andere Person den Rest der Finanzierung für "
+"diese Patenschaft übernimmt, dass ich aber der offizielle Pate/ die Patin "
+"des Kindes bin."
+msgstr ""
+
+#: templates/frontend/step-1.php:418 templates/frontend/step-2.php:340
+msgid "Ich habe von Compassion erfahren durch"
+msgstr ""
+
+#: templates/frontend/step-1.php:474
+msgid ""
+"Ich möchte freiwillig mithelfen (z.B. Übersetzung, Events, Gebet), bitte "
+"kontaktiert mich."
+msgstr ""
+
+#: templates/frontend/step-2.php:172
+msgid "Ich wähle den Betrag CHF 42.-"
+msgstr ""
+
+#: templates/frontend/step-2.php:171
+msgid "Ich wähle den Betrag CHF 50.-"
+msgstr ""
+
+#: templates/frontend/step-1.php:434
+msgid "Internet"
+msgstr ""
+
+#: templates/email_de/admin-new-sponsor.php:170
+#: templates/email_de/admin-new-sponsor.php:180
+msgid "Intervall"
+msgstr ""
+
+#: templates/email/user-new-sponsor.php:251
+#: templates/email_de/user-new-sponsor.php:248
+#: templates/email_it/user-new-sponsor.php:252
+#: templates/frontend/step-1.php:388 templates/frontend/step-2.php:312
+msgid "Italienisch"
+msgstr ""
+
+#: templates/email/user-new-sponsor.php:218
+#: templates/email/user-new-sponsor.php:287
+#: templates/email_de/user-new-sponsor.php:215
+#: templates/email_de/user-new-sponsor.php:284
+#: templates/email_it/user-new-sponsor.php:220
+#: templates/email_it/user-new-sponsor.php:288
+#: templates/frontend/step-1.php:340 templates/frontend/step-2.php:156
+#: templates/frontend/step-2.php:362
+msgid "JA"
+msgstr ""
+
+#: templates/frontend/step-2.php:370
+msgid ""
+"Ja, ich habe die <a target=\"_blank\" href=\"https://compassion.ch/wp-"
+"content/uploads/documents_compassion/GDPR-compassion_DE.pdf\">"
+"Datenschutzbestimmungen gelesen.</a>"
+msgstr ""
+
+#: templates/email/user-new-sponsor.php:209
+#: templates/email_de/user-new-sponsor.php:205
+#: templates/email_it/user-new-sponsor.php:210
+msgid "Je m'engage à [...] et je peux contribuer mensuellement à hauteur de : "
+msgstr ""
+
+#: templates/email/admin-new-sponsor.php:196
+#: templates/email_de/admin-new-sponsor.php:217
+#: templates/email_it/admin-new-sponsor.php:196
+msgid "keine Angabe"
+msgstr ""
+
+#: templates/frontend/step-1.php:165 templates/frontend/step-2.php:128
+msgid "Kirche/Gemeinde"
+msgstr ""
+
+#: templates/email/user-new-sponsor.php:196
+#: templates/email_de/user-new-sponsor.php:191
+#: templates/email_it/user-new-sponsor.php:196
+msgid "Kirchgemeinde"
+msgstr ""
+
+#: templates/frontend/step-1.php:427
+msgid "Kontakt durch Compassion Advokat"
+msgstr ""
+
+#: templates/frontend/step-1.php:426
+msgid "Kontakt durch Pate/Botschafter"
+msgstr ""
+
+#: templates/email_de/admin-new-sponsor.php:231
+msgid "Kontoinhaber"
+msgstr ""
+
+#: templates/frontend/step-1.php:425
+msgid "Konzert/Veranstaltung"
+msgstr ""
+
+#: templates/email/admin-new-sponsor.php:159
+#: templates/email/admin-new-sponsor.php:174
+#: templates/email/user-new-sponsor.php:176
+#: templates/email/user-new-sponsor.php:192
+#: templates/email_de/admin-new-sponsor.php:159
+#: templates/email_de/admin-new-sponsor.php:195
+#: templates/email_de/user-new-sponsor.php:171
+#: templates/email_de/user-new-sponsor.php:187
+#: templates/email_it/admin-new-sponsor.php:159
+#: templates/email_it/admin-new-sponsor.php:174
+#: templates/email_it/user-new-sponsor.php:176
+#: templates/email_it/user-new-sponsor.php:192
+#: templates/frontend/step-1.php:110 templates/frontend/step-1.php:277
+#: templates/frontend/step-2.php:92 templates/frontend/step-2.php:254
+msgid "Land"
+msgstr ""
+
+#: templates/frontend/step-1.php:438
+msgid "Librairies"
+msgstr ""
+
+#: templates/frontend/step-1.php:113 templates/frontend/step-1.php:280
+msgid "Länd erforderlich"
+msgstr ""
+
+#: templates/frontend/step-1.php:56
+msgid "Meine persönlichen Daten"
+msgstr ""
+
+#: templates/frontend/step-3.php:12
+msgid "melde dich bitte hier"
+msgstr ""
+
+#: templates/frontend/step-1.php:48 templates/frontend/step-2.php:21
+#, php-format
+msgid "Mit CHF 42.– pro Monat kannst du %s aus der Armut befreien!"
+msgstr ""
+
+#: templates/email/user-new-sponsor.php:227
+#: templates/email_de/user-new-sponsor.php:224
+#: templates/email_it/user-new-sponsor.php:229
+#: templates/frontend/step-1.php:189 templates/frontend/step-2.php:184
+msgid "Monatlicher Dauerauftrag"
+msgstr ""
+
+#: templates/email/user-new-sponsor.php:276
+#: templates/email_de/user-new-sponsor.php:272
+#: templates/email_it/user-new-sponsor.php:277
+#: templates/frontend/step-1.php:437 templates/frontend/step-2.php:345
+msgid "Muskathlon"
+msgstr ""
+
+#: templates/email/admin-new-sponsor.php:170
+#: templates/email/user-new-sponsor.php:188
+#: templates/email_de/admin-new-sponsor.php:191
+#: templates/email_de/user-new-sponsor.php:183
+#: templates/email_it/admin-new-sponsor.php:170
+#: templates/email_it/user-new-sponsor.php:188 templates/frontend/step-1.php:71
+#: templates/frontend/step-1.php:238 templates/frontend/step-2.php:48
+#: templates/frontend/step-2.php:210
+msgid "Nachname"
+msgstr ""
+
+#: templates/frontend/step-1.php:74 templates/frontend/step-1.php:241
+msgid "Nachname erforderlich"
+msgstr ""
+
+#: templates/email/admin-new-sponsor.php:158
+#: templates/email/user-new-sponsor.php:175
+#: templates/email_de/admin-new-sponsor.php:158
+#: templates/email_de/user-new-sponsor.php:170
+#: templates/email_it/admin-new-sponsor.php:158
+#: templates/email_it/user-new-sponsor.php:175
+msgid "Name"
+msgstr ""
+
+#: templates/email_de/admin-new-sponsor.php:230
+msgid "Name der Bank"
+msgstr ""
+
 #: templates/email/admin-new-sponsor.php:186
 #: templates/email_de/admin-new-sponsor.php:207
 #: templates/email_it/admin-new-sponsor.php:186
 msgid "Name der Person"
 msgstr ""
 
-#: templates/email/admin-new-sponsor.php:187
-#: templates/email_de/admin-new-sponsor.php:208
-#: templates/email_it/admin-new-sponsor.php:187
-msgid "Vorname der Person"
+#: templates/frontend/step-1.php:458
+msgid "Name des Teilnehmers"
+msgstr ""
+
+#: templates/email/user-new-sponsor.php:219
+#: templates/email/user-new-sponsor.php:288
+#: templates/email_de/user-new-sponsor.php:216
+#: templates/email_de/user-new-sponsor.php:285
+#: templates/email_it/user-new-sponsor.php:221
+#: templates/email_it/user-new-sponsor.php:289
+#: templates/frontend/step-2.php:157 templates/frontend/step-2.php:363
+msgid "NEIN"
+msgstr ""
+
+#: templates/frontend/header.php:135
+msgid "nimmt am"
+msgstr ""
+
+#: templates/frontend/step-1.php:440
+msgid "Noch genauer"
+msgstr ""
+
+#: templates/frontend/step-1.php:438
+msgid "nom de la librairie"
+msgstr ""
+
+#: templates/email/admin-new-sponsor.php:160
+#: templates/email/user-new-sponsor.php:177
+#: templates/email_de/admin-new-sponsor.php:160
+#: templates/email_de/user-new-sponsor.php:172
+#: templates/email_it/admin-new-sponsor.php:160
+#: templates/email_it/user-new-sponsor.php:177
+msgid "Nummer"
+msgstr ""
+
+#: templates/frontend/step-3.php:12
+msgid "oder unter: +41 (0)31 552 21 21."
 msgstr ""
 
 #: templates/email/admin-new-sponsor.php:189
 #: templates/email_de/admin-new-sponsor.php:210
 #: templates/email_it/admin-new-sponsor.php:189
-#: templates/frontend/step-2.php:75
+#: templates/frontend/step-2.php:75 templates/frontend/step-2.php:237
 msgid "Ort"
 msgstr ""
 
@@ -183,188 +534,52 @@ msgstr ""
 msgid "Patenreferenznummer"
 msgstr ""
 
-#: templates/email/admin-new-sponsor.php:191
-#: templates/email_de/admin-new-sponsor.php:212
-#: templates/email_it/admin-new-sponsor.php:191
-msgid "Geschenk"
+#: templates/frontend/step-1.php:337 templates/frontend/step-2.php:167
+msgid "Patenschaft plus"
 msgstr ""
 
-#: templates/email/admin-new-sponsor.php:196
-#: templates/email_de/admin-new-sponsor.php:217
-#: templates/email_it/admin-new-sponsor.php:196
-msgid "keine Angabe"
+#: templates/frontend/step-1.php:224
+msgid "PAYER Daten"
 msgstr ""
 
-#: templates/email/user-new-sponsor.php:216
-#: templates/email_de/user-new-sponsor.php:184
-#: templates/email_it/user-new-sponsor.php:205
-msgid "Strasse"
+#: templates/frontend/step-2.php:32 templates/frontend/step-2.php:194
+msgid "Persönliche Daten"
 msgstr ""
 
-#: templates/email/user-new-sponsor.php:223
-#: templates/email_de/user-new-sponsor.php:191
-#: templates/email_it/user-new-sponsor.php:212
-#: templates/frontend/step-1.php:150 templates/frontend/step-2.php:128
-msgid "Kirchgemeinde"
+#: templates/email/admin-new-sponsor.php:173
+#: templates/email/admin-new-sponsor.php:188
+#: templates/email/user-new-sponsor.php:191
+#: templates/email_de/admin-new-sponsor.php:194
+#: templates/email_de/admin-new-sponsor.php:209
+#: templates/email_de/user-new-sponsor.php:186
+#: templates/email_it/admin-new-sponsor.php:173
+#: templates/email_it/admin-new-sponsor.php:188
+#: templates/email_it/user-new-sponsor.php:191 templates/frontend/step-2.php:83
+#: templates/frontend/step-2.php:245
+msgid "PLZ"
 msgstr ""
 
-#: templates/email/user-new-sponsor.php:224
-#: templates/email_de/user-new-sponsor.php:192
-#: templates/email_it/user-new-sponsor.php:213
-#: templates/frontend/step-1.php:158 templates/frontend/step-2.php:137
-msgid "Beruf"
+#: templates/frontend/step-1.php:101 templates/frontend/step-1.php:268
+msgid "PLZ erforderlich"
 msgstr ""
 
-#: templates/email/user-new-sponsor.php:233
-#: templates/email_de/user-new-sponsor.php:203
-#: templates/email_it/user-new-sponsor.php:223
-#: templates/frontend/step-1.php:197
-msgid ""
-"Ich engagiere mich für mein Patenkind zu beten und ihm regelmässsig zu "
-"schreiben.  Ich habe verstanden, dass eine andere Person die Finanzierung "
-"dieser Patenschaft übernimmt und ich gegenüber dem Kind der/die offizielle "
-"Pate/Patin bin."
+#: templates/frontend/step-1.php:98 templates/frontend/step-1.php:265
+msgid "PLZ/Ort"
 msgstr ""
 
-#: templates/email/user-new-sponsor.php:235
-#: templates/email_de/user-new-sponsor.php:205
-#: templates/email_it/user-new-sponsor.php:225
-msgid ""
-"Ich erkläre mich bereit, regelmässig für mein Patenkind zu beten und zu "
-"schreiben, und ich kann das Kind monatlich mit folgenden Betrage "
-"unterstützen: "
-msgstr ""
-
-#: templates/email/user-new-sponsor.php:237
-#: templates/email_de/user-new-sponsor.php:207
-#: templates/email_it/user-new-sponsor.php:227
-#: templates/frontend/step-1.php:208
-msgid ""
-"Ich habe verstanden, dass eine andere Person den Rest der Finanzierung für "
-"diese Patenschaft übernimmt, dass ich aber der offizielle Pate/ die Patin "
-"des Kindes bin."
-msgstr ""
-
-#: templates/email/user-new-sponsor.php:245
-#: templates/email/user-new-sponsor.php:325
-#: templates/email_de/user-new-sponsor.php:216
-#: templates/email_de/user-new-sponsor.php:285
-#: templates/email_it/user-new-sponsor.php:236
-#: templates/email_it/user-new-sponsor.php:312
-#: templates/frontend/step-1.php:186 templates/frontend/step-1.php:314
-#: templates/frontend/step-2.php:156 templates/frontend/step-2.php:170
-#: templates/frontend/step-2.php:262
-msgid "JA"
-msgstr ""
-
-#: templates/email/user-new-sponsor.php:246
-#: templates/email/user-new-sponsor.php:326
-#: templates/email_de/user-new-sponsor.php:217
-#: templates/email_de/user-new-sponsor.php:286
-#: templates/email_it/user-new-sponsor.php:237
-#: templates/email_it/user-new-sponsor.php:313
-#: templates/frontend/step-2.php:157 templates/frontend/step-2.php:171
-#: templates/frontend/step-2.php:263
-msgid "NEIN"
-msgstr ""
-
-#: templates/email/user-new-sponsor.php:254
-#: templates/email_de/user-new-sponsor.php:225
-#: templates/email_it/user-new-sponsor.php:245
-#: templates/frontend/step-1.php:174 templates/frontend/step-2.php:186
-msgid "Monatlicher Dauerauftrag"
-msgstr ""
-
-#: templates/email/user-new-sponsor.php:257
-#: templates/email_de/user-new-sponsor.php:228
-#: templates/email_it/user-new-sponsor.php:248
-#: templates/frontend/step-1.php:175 templates/frontend/step-2.php:187
-msgid "Direct Debit - LSV"
-msgstr ""
-
-#: templates/email/user-new-sponsor.php:274
-#: templates/email_de/user-new-sponsor.php:245
+#: templates/email/user-new-sponsor.php:263
+#: templates/email_de/user-new-sponsor.php:260
 #: templates/email_it/user-new-sponsor.php:264
-#: templates/frontend/step-1.php:230 templates/frontend/step-2.php:208
-msgid "Französisch"
-msgstr ""
-
-#: templates/email/user-new-sponsor.php:278
-#: templates/email_de/user-new-sponsor.php:249
-#: templates/email_it/user-new-sponsor.php:268
-#: templates/frontend/step-1.php:232 templates/frontend/step-2.php:212
-msgid "Italienisch"
-msgstr ""
-
-#: templates/email/user-new-sponsor.php:282
-#: templates/email_de/user-new-sponsor.php:253
-#: templates/email_it/user-new-sponsor.php:272
-#: templates/frontend/step-1.php:240 templates/frontend/step-2.php:216
-msgid "Spanisch"
-msgstr ""
-
-#: templates/email/user-new-sponsor.php:286
-#: templates/email_de/user-new-sponsor.php:257
-#: templates/email_it/user-new-sponsor.php:276
-#: templates/frontend/step-1.php:242 templates/frontend/step-2.php:220
-msgid "Englisch"
-msgstr ""
-
-#: templates/email/user-new-sponsor.php:290
-#: templates/email_de/user-new-sponsor.php:261
-#: templates/email_it/user-new-sponsor.php:280
-#: templates/frontend/step-1.php:244 templates/frontend/step-2.php:224
+#: templates/frontend/step-1.php:400 templates/frontend/step-2.php:324
 msgid "Portugiesisch"
 msgstr ""
 
-#: templates/email/user-new-sponsor.php:314
-#: templates/email_de/user-new-sponsor.php:273
-#: templates/email_it/user-new-sponsor.php:301
-#: templates/frontend/step-1.php:277 templates/frontend/step-2.php:245
-msgid "Muskathlon"
+#: templates/frontend/step-1.php:409
+msgid "Schreiben kannst du deine Briefe auf Deutsch"
 msgstr ""
 
-#: templates/email_de/admin-new-sponsor.php:169
-#: templates/email_de/admin-new-sponsor.php:179
-msgid "Wert"
-msgstr ""
-
-#: templates/email_de/admin-new-sponsor.php:170
-#: templates/email_de/admin-new-sponsor.php:180
-msgid "Intervall"
-msgstr ""
-
-#: templates/email_de/admin-new-sponsor.php:177
-msgid "Weihnachten"
-msgstr ""
-
-#: templates/email_de/admin-new-sponsor.php:228
-msgid "BIC"
-msgstr ""
-
-#: templates/email_de/admin-new-sponsor.php:229
-msgid "IBAN"
-msgstr ""
-
-#: templates/email_de/admin-new-sponsor.php:230
-msgid "Name der Bank"
-msgstr ""
-
-#: templates/email_de/admin-new-sponsor.php:231
-msgid "Kontoinhaber"
-msgstr ""
-
-#: templates/email_it/user-new-sponsor.php:249
-msgid "Téléchargez le formulaire de demande LSV"
-msgstr ""
-
-#: templates/frontend/header.php:121
-msgid "Danke, dass du dich für"
-msgstr ""
-
-#: templates/frontend/header.php:121
-msgid ""
-"einsetzt. Die Patenschaft wird das Leben dieses Kindes nachhaltig verändern."
+#: templates/frontend/header.php:131
+msgid "Schön, dass du"
 msgstr ""
 
 #: templates/frontend/header.php:124
@@ -372,347 +587,153 @@ msgid "Schön, dass du "
 msgstr ""
 
 #: templates/frontend/header.php:127
-msgid "Schön, dass du Pate von"
+msgid "Schön, dass du Patin/Pate von"
 msgstr ""
 
-#: templates/frontend/header.php:128
-msgid "werden möchtest"
+#: templates/email/user-new-sponsor.php:255
+#: templates/email_de/user-new-sponsor.php:252
+#: templates/email_it/user-new-sponsor.php:256
+#: templates/frontend/step-1.php:396 templates/frontend/step-2.php:316
+msgid "Spanisch"
 msgstr ""
 
-#: templates/frontend/header.php:131
-msgid "Schön, dass du"
+#: templates/email/admin-new-sponsor.php:172
+#: templates/email/user-new-sponsor.php:190
+#: templates/email_de/admin-new-sponsor.php:193
+#: templates/email_de/user-new-sponsor.php:185
+#: templates/email_it/admin-new-sponsor.php:172
+#: templates/email_it/user-new-sponsor.php:190
+msgid "Stadt"
 msgstr ""
 
-#: templates/frontend/header.php:135
-msgid "nimmt am"
+#: templates/frontend/step-1.php:104 templates/frontend/step-1.php:271
+msgid "Stadt erforderlich"
 msgstr ""
 
-#: templates/frontend/header.php:135
-msgid " teil."
+#: templates/email/user-new-sponsor.php:189
+#: templates/email_de/user-new-sponsor.php:184
+#: templates/email_it/user-new-sponsor.php:189
+msgid "Strasse"
+msgstr ""
+
+#: templates/frontend/step-1.php:92 templates/frontend/step-1.php:259
+msgid "Strasse erforderlich"
+msgstr ""
+
+#: templates/frontend/step-1.php:89 templates/frontend/step-1.php:256
+#: templates/frontend/step-2.php:66 templates/frontend/step-2.php:228
+msgid "Strasse/Hausnr."
+msgstr ""
+
+#: templates/email/admin-new-sponsor.php:171
+#: templates/email_de/admin-new-sponsor.php:192
+#: templates/email_it/admin-new-sponsor.php:171
+msgid "Straße"
+msgstr ""
+
+#: templates/email/admin-new-sponsor.php:177
+#: templates/email/user-new-sponsor.php:195
+#: templates/email_de/admin-new-sponsor.php:198
+#: templates/email_de/user-new-sponsor.php:190
+#: templates/email_it/admin-new-sponsor.php:177
+#: templates/email_it/user-new-sponsor.php:195
+#: templates/frontend/step-1.php:157 templates/frontend/step-1.php:324
+#: templates/frontend/step-2.php:119 templates/frontend/step-2.php:281
+msgid "Telefon"
+msgstr ""
+
+#: templates/frontend/step-1.php:160 templates/frontend/step-1.php:327
+msgid "Telefon erforderlich"
+msgstr ""
+
+#: templates/email_it/user-new-sponsor.php:233
+msgid "Téléchargez le formulaire de demande LSV"
+msgstr ""
+
+#: templates/frontend/step-1.php:435
+msgid "unacceptable"
 msgstr ""
 
 #: templates/frontend/header.php:135
 msgid "und dankt Ihnen für Ihre Unterstützung!"
 msgstr ""
 
-#: templates/frontend/header.php:137
-msgid "Du wirst das Leben des Kindes für immer verändern."
+#: templates/frontend/step-1.php:142 templates/frontend/step-1.php:151
+#: templates/frontend/step-1.php:309 templates/frontend/step-1.php:318
+msgid "Ungültige E-Mail Adresse"
 msgstr ""
 
-#: templates/frontend/step-1.php:33 templates/frontend/step-2.php:21
-#, php-format
-msgid "Mit 42 CHF pro Monat kannst du %s aus der Armut befreien!"
+#: templates/email/admin-new-sponsor.php:169
+#: templates/email/user-new-sponsor.php:187
+#: templates/email_de/admin-new-sponsor.php:190
+#: templates/email_de/user-new-sponsor.php:182
+#: templates/email_it/admin-new-sponsor.php:169
+#: templates/email_it/user-new-sponsor.php:187 templates/frontend/step-1.php:80
+#: templates/frontend/step-1.php:247 templates/frontend/step-2.php:57
+#: templates/frontend/step-2.php:219
+msgid "Vorname"
 msgstr ""
 
-#: templates/frontend/step-1.php:41
-msgid "Meine persönlichen Daten"
+#: templates/email/admin-new-sponsor.php:187
+#: templates/email_de/admin-new-sponsor.php:208
+#: templates/email_it/admin-new-sponsor.php:187
+msgid "Vorname der Person"
 msgstr ""
 
-#: templates/frontend/step-1.php:48 templates/frontend/step-1.php:49
-#: templates/frontend/step-1.php:50
-msgid "Anrede erforderlich"
-msgstr ""
-
-#: templates/frontend/step-1.php:48
-msgid "Frau"
-msgstr ""
-
-#: templates/frontend/step-1.php:49
-msgid "Herr"
-msgstr ""
-
-#: templates/frontend/step-1.php:50
-msgid "Familie"
-msgstr ""
-
-#: templates/frontend/step-1.php:59
-msgid "Nachname erforderlich"
-msgstr ""
-
-#: templates/frontend/step-1.php:68
+#: templates/frontend/step-1.php:83 templates/frontend/step-1.php:250
 msgid "Vorname erforderlich"
 msgstr ""
 
-#: templates/frontend/step-1.php:74 templates/frontend/step-2.php:66
-msgid "Strasse/Hausnr."
+#: templates/email_de/admin-new-sponsor.php:177
+msgid "Weihnachten"
 msgstr ""
 
-#: templates/frontend/step-1.php:77
-msgid "Strasse erforderlich"
-msgstr ""
-
-#: templates/frontend/step-1.php:83
-msgid "PLZ/Ort"
-msgstr ""
-
-#: templates/frontend/step-1.php:86
-msgid "PLZ erforderlich"
-msgstr ""
-
-#: templates/frontend/step-1.php:89
-msgid "Stadt erforderlich"
-msgstr ""
-
-#: templates/frontend/step-1.php:98
-msgid "Länd erforderlich"
-msgstr ""
-
-#: templates/frontend/step-1.php:103
-msgid "Schweiz"
-msgstr ""
-
-#: templates/frontend/step-1.php:104
-msgid "Deutschland"
-msgstr ""
-
-#: templates/frontend/step-1.php:105
-msgid "Österreich"
-msgstr ""
-
-#: templates/frontend/step-1.php:114 templates/frontend/step-2.php:101
-msgid "Geburtsdatum"
-msgstr ""
-
-#: templates/frontend/step-1.php:124
-msgid "Geburtsdatum erforderlich"
-msgstr ""
-
-#: templates/frontend/step-1.php:127
-#, php-format
-msgid ""
-"Write&Pray-Patenschaften sind für Personen unter 25 Jahren vorgesehen. "
-"Klicke hier, um %s für 42CHF/Monat zu unterstützen."
-msgstr ""
-
-#: templates/frontend/step-1.php:133 templates/frontend/step-2.php:110
-msgid "E-Mail-Adresse"
-msgstr ""
-
-#: templates/frontend/step-1.php:136
-msgid "E-Mail-Adresse erforderlich"
-msgstr ""
-
-#: templates/frontend/step-1.php:145
-msgid "Telefon erforderlich"
-msgstr ""
-
-#: templates/frontend/step-1.php:171 templates/frontend/step-2.php:177
-msgid "Zahlungsweise"
-msgstr ""
-
-#: templates/frontend/step-1.php:174 templates/frontend/step-1.php:175
-msgid "Zahlungsweise erforderlich"
-msgstr ""
-
-#: templates/frontend/step-1.php:178
-msgid ""
-"Wenn du eine andere Zahlungsart wünschst, dann rufe uns bitte an unter 031 "
-"552 21 21."
-msgstr ""
-
-#: templates/frontend/step-1.php:183 templates/frontend/step-2.php:166
-msgid "Patenschaft plus"
-msgstr ""
-
-#: templates/frontend/step-1.php:188
-msgid ""
-"Patenschaft \"Plus\" beinhaltet die Patenschaft \"Basis\" von CHF 42.00 und "
-"eine Spende von CHF 8.00 pro Monat zusätzlich. Sie erlaubt Compassion, "
-"Projekte zu finanzieren um die Umgebung des Patenkindes zu verändern. Die "
-"Spenden, die Compassion durch die Patenschaften \"Plus\" bekommt, gehen in "
-"eine gemeinsame Kasse. Dadurch kann Compassion mehrere Projekte im Jahr "
-"unterstützen. 50.00 CHF/Monat"
-msgstr ""
-
-#: templates/frontend/step-1.php:193 templates/frontend/step-2.php:152
-msgid "Write & Pray"
-msgstr ""
-
-#: templates/frontend/step-1.php:196 templates/frontend/step-1.php:198
-#: templates/frontend/step-1.php:263 templates/frontend/step-1.php:284
-#: templates/frontend/step-1.php:288 templates/frontend/step-1.php:303
-#: templates/frontend/step-2.php:270
-msgid "Angabe erforderlich"
-msgstr ""
-
-#: templates/frontend/step-1.php:199
-msgid ""
-"Ich erkläre mich bereit, regelmässig für mein Patenkind zu beten und zu "
-"schreiben, und ich kann das Kind monatlich mit folgenden Betrage "
-"unterstützen:"
-msgstr ""
-
-#: templates/frontend/step-1.php:205
-msgid "Bitte wähle einen Betrag zwischen 1 und 42 Franken."
-msgstr ""
-
-#: templates/frontend/step-1.php:221 templates/frontend/step-2.php:197
-#, php-format
-msgid "Briefwechsel mit %s"
-msgstr ""
-
-#: templates/frontend/step-1.php:224
-msgid ""
-"Selbstverständlich übersetzen wir deine Briefe gerne, du kannst deine Briefe "
-"aber auch direkt in der Sprache des Kindes oder auf Englisch schreiben. Dies "
-"spart Zeit und nimmt unseren freiwilligen Übersetzern Arbeit ab. Welche der "
-"folgenden Sprachen verstehst du?"
-msgstr ""
-
-#: templates/frontend/step-1.php:255
-msgid "WIE HAST DU VON COMPASSION ERFAHREN?"
-msgstr ""
-
-#: templates/frontend/step-1.php:264
-msgid "Bitte wählen"
-msgstr ""
-
-#: templates/frontend/step-1.php:265
-msgid "Geben Sie das Konzert/Event an"
-msgstr ""
-
-#: templates/frontend/step-1.php:265
-msgid "Konzert/Veranstaltung"
-msgstr ""
-
-#: templates/frontend/step-1.php:266 templates/frontend/step-1.php:267
-#: templates/frontend/step-1.php:269
-msgid "Geben Sie Vor- und Nachnamen an"
-msgstr ""
-
-#: templates/frontend/step-1.php:266
-msgid "Kontakt durch Pate/Botschafter"
-msgstr ""
-
-#: templates/frontend/step-1.php:267
-msgid "Kontakt durch Compassion Advokat"
-msgstr ""
-
-#: templates/frontend/step-1.php:268
-msgid "Geben Sie den Namen der Kirche an"
-msgstr ""
-
-#: templates/frontend/step-1.php:268
-msgid "Gottesdienst/Kirche"
-msgstr ""
-
-#: templates/frontend/step-1.php:269
-msgid "Freunde & Verwandte"
-msgstr ""
-
-#: templates/frontend/step-1.php:270
-msgid "Compassion Magazin"
-msgstr ""
-
-#: templates/frontend/step-1.php:272
-msgid "Geben Sie das Magazin/die Broschüre an"
-msgstr ""
-
-#: templates/frontend/step-1.php:272
-msgid "Anzeige in Zeitschrift"
-msgstr ""
-
-#: templates/frontend/step-1.php:273
-msgid "Facebook, Youtube, Vimeo…"
-msgstr ""
-
-#: templates/frontend/step-1.php:274
-msgid "Geben Sie die Website an"
-msgstr ""
-
-#: templates/frontend/step-1.php:274
-msgid "Internet"
-msgstr ""
-
-#: templates/frontend/step-1.php:275
-msgid "unacceptable"
-msgstr ""
-
-#: templates/frontend/step-1.php:277
-msgid "Geben Sie den Namen des Läufers an"
-msgstr ""
-
-#: templates/frontend/step-1.php:278
-msgid "nom de la librairie"
-msgstr ""
-
-#: templates/frontend/step-1.php:278
-msgid "Librairies"
-msgstr ""
-
-#: templates/frontend/step-1.php:280
-msgid "Noch genauer"
-msgstr ""
-
-#: templates/frontend/step-1.php:280
-msgid "Andere"
-msgstr ""
-
-#: templates/frontend/step-1.php:298
-msgid "Name des Teilnehmers"
-msgstr ""
-
-#: templates/frontend/step-1.php:311 templates/frontend/step-2.php:258
-msgid "Mithelfen"
-msgstr ""
-
-#: templates/frontend/step-1.php:315
-msgid ""
-"Senden Sie mir mehr Informationen, wie ich mich für Kinder in Not einsetzen "
-"kann"
-msgstr ""
-
-#: templates/frontend/step-1.php:321 templates/frontend/step-2.php:278
-msgid "Zurück"
-msgstr ""
-
-#: templates/frontend/step-1.php:322
+#: templates/frontend/step-1.php:481
 msgid "Weiter"
 msgstr ""
 
-#: templates/frontend/step-2.php:29
-msgid "Hier eine Übersicht deiner angegebenen Daten"
+#: templates/frontend/step-1.php:193
+msgid ""
+"Wenn du eine andere Zahlungsart wünschst, melde dich bitte unter: "
+"info@compassion.ch / +41 (0)31 552 21 21"
 msgstr ""
 
-#: templates/frontend/step-2.php:32
-msgid "Persönliche Daten"
+#: templates/frontend/header.php:128
+msgid "werden möchtest"
 msgstr ""
 
-#: templates/frontend/step-2.php:145 templates/frontend/step-2.php:194
-msgid "Bearbeiten"
+#: templates/email_de/admin-new-sponsor.php:169
+#: templates/email_de/admin-new-sponsor.php:179
+msgid "Wert"
 msgstr ""
 
-#: templates/frontend/step-2.php:181
-msgid "Ich zahle die Patenschaft durch:"
-msgstr ""
-
-#: templates/frontend/step-2.php:235
+#: templates/frontend/step-2.php:335
 msgid "Wie haben Sie von Compassion erfahren?"
 msgstr ""
 
-#: templates/frontend/step-2.php:240
-msgid "Ich habe von Compassion erfahren durch"
+#: templates/frontend/step-1.php:415
+msgid "WIE HAST DU VON COMPASSION ERFAHREN?"
 msgstr ""
 
-#: templates/frontend/step-2.php:270
+#: templates/frontend/step-1.php:347 templates/frontend/step-2.php:152
+msgid "Write & Pray"
+msgstr ""
+
+#: templates/frontend/step-1.php:133 templates/frontend/step-1.php:299
+#, php-format
 msgid ""
-"Ja, ich habe die <a target=\"_blank\" href=\"https://compassion.ch/wp-"
-"content/uploads/documents_compassion/GDPR-compassion_DE.pdf\">"
-"Datenschutzbestimmungen gelesen.</a>"
+"Write&Pray-Patenschaften sind für Personen unter 25 Jahren vorgesehen. "
+"Klicke hier, um %s für CHF 42.-/Monat zu unterstützen."
 msgstr ""
 
-#: templates/frontend/step-2.php:279
-msgid "Bestätigen"
+#: templates/frontend/step-1.php:186 templates/frontend/step-2.php:178
+msgid "Zahlungsweise"
 msgstr ""
 
-#: templates/frontend/step-3.php:10
-msgid "Vielen Dank für deine Anfrage!"
+#: templates/frontend/step-1.php:189 templates/frontend/step-1.php:190
+msgid "Zahlungsweise erforderlich"
 msgstr ""
 
-#. Name of the plugin
-msgid "Compassion Child Sponsor"
-msgstr ""
-
-#. Author of the plugin
-msgid "giftGRUEN GmbH"
+#: templates/frontend/step-1.php:480 templates/frontend/step-2.php:378
+msgid "Zurück"
 msgstr ""

@@ -64,7 +64,7 @@ class ChildSponsor {
      * @param $data
      * @return string
      */
-    private function get_email_template($template, $data)
+   /* private function get_email_template($template, $data)
     {
 
         $my_current_lang = apply_filters('wpml_current_language', NULL);
@@ -80,7 +80,7 @@ class ChildSponsor {
         $content = ob_get_contents();
         ob_end_clean();
         return $content;
-    }
+    }*/
 
 
     /**
@@ -173,7 +173,7 @@ class ChildSponsor {
         $email->AddAddress($session_data['email']);
         //$email->AddBCC('ecino@compassion.ch', 'Compassion Suisse');
         $email->addCustomHeader('X-SMTPAPI', '{"filters": {"subscriptiontrack" : {"settings" : {"enable" : 0}}}}');
-        $email->Send();
+        $email->Send();*/
 
         ob_end_clean();
     }
