@@ -16,6 +16,21 @@ if ($msk) {
 }
 ?>
 
+<!--  <script>
+    function confirmEmail() {
+        var email = document.getElementById("email").value
+        var confemail = document.getElementById("confemail").value
+        if(email != confemail) {
+            ("#confemail-error").val((confemail).attr("data-msg"))
+        }
+    }
+
+
+
+</script> -->
+
+
+
 <div class="section background-white step-1 child-sponsor">
     <div class="row">
 
@@ -30,7 +45,7 @@ if ($msk) {
 <!--              Writeandpraystuff  -->
 			<?php if (!$wapr) { ?>
 
-                <p><?php echo sprintf( wp_kses( __('Mit 42 CHF pro Monat kannst du %s aus der Armut befreien!', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></p>
+                <p><?php echo sprintf( wp_kses( __('Mit CHF 42.– pro Monat kannst du %s aus der Armut befreien!', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></p>
            <?php } ?>
 
 <!--       emd Writeandpraystuff  -->
@@ -96,16 +111,7 @@ if ($msk) {
                 </div>
                 <div class="small-8 columns">
 	                <input type="text" required data-msg="<?php _e('Länd erforderlich', 'child-sponsor-lang'); ?>" class="input-field" name="land" value="<?php echo (isset($session_data['land'])) ? $session_data['land'] : ''; ?>">
-<!--
 
-                    <div class="select-wrapper">
-                        <select name="country" class="input-field">
-	                         <option value="Schweiz" <?php echo (isset($session_data['country']) && $session_data['country'] == "Schweiz") ? 'selected' : '' ?>><?php _e('Schweiz', 'child-sponsor-lang'); ?></option>
-                            <option value="Deutschland" <?php echo (isset($session_data['country']) && $session_data['country'] == "Deutschland") ? 'selected' : '' ?>><?php _e('Deutschland', 'child-sponsor-lang'); ?></option>
-                            <option value="Österreich" <?php echo (isset($session_data['country']) && $session_data['country'] == "Österreich") ? 'selected' : '' ?>><?php _e('Österreich', 'child-sponsor-lang'); ?></option>
-                        </select>
-                    </div>
--->
                 </div>
             </div>
 
@@ -124,7 +130,7 @@ if ($msk) {
                            data-default-msg="<?php _e('Geburtsdatum erforderlich', 'child-sponsor-lang'); ?>"
                            data-wrpr="<?= $wapr ? "true" : "false"; ?>"
                            data-wrpr-age-limit="<?= $wapr_age_limit; ?>"
-                           data-wrpr-age-limit-msg="<?php echo sprintf( wp_kses( __("Write&Pray-Patenschaften sind für Personen unter 25 Jahren vorgesehen. Klicke hier, um %s für 42CHF/Monat zu unterstützen.", 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?>"
+                           data-wrpr-age-limit-msg="<?php echo sprintf( wp_kses( __("Write&Pray-Patenschaften sind für Personen unter 25 Jahren vorgesehen. Klicke hier, um %s für CHF 42.-/Monat zu unterstützen.", 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?>"
                 </div></div>
             </div>
 
@@ -133,7 +139,16 @@ if ($msk) {
                     <label class="text-left middle"><?php _e('E-Mail-Adresse', 'child-sponsor-lang'); ?></label>
                 </div>
                 <div class="small-8 columns">
-                    <input type="email" class="input-field" required data-msg="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" name="email" value="<?php echo (isset($session_data['email'])) ? $session_data['email'] : ''; ?>">
+                    <input type="email" id="email" class="input-field"  required data-msg-error="<?php _e('Ungültige E-Mail Adresse', 'child-sponsor-lang'); ?>" data-msg-required="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" name="email" value="<?php echo (isset($session_data['email'])) ? $session_data['email'] : ''; ?>">
+                </div>
+            </div>
+
+           <!--  <div class="row">
+                 <div class="small-4 columns">
+                    <label class="text-left middle"><?php _e('Confirm address', 'child-sponsor-lang'); ?></label>
+                 </div>
+                <div class="small-8 columns">
+                    <input type="email" onblur="confirmEmail()" id="confemail" class="input-field" required data-msg-error="<?php _e('Ungültige E-Mail Adresse', 'child-sponsor-lang'); ?>" data-msg-required="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" name="emailConfirm" >
                 </div>
              </div> -->
 
@@ -147,7 +162,7 @@ if ($msk) {
             </div>
               <div class="row">
                 <div class="small-4 columns">
-                    <label class="text-left middle"><?php _e('Kirchgemeinde', 'child-sponsor-lang'); ?></label>
+                    <label class="text-left middle"><?php _e('Kirche/Gemeinde', 'child-sponsor-lang'); ?></label>
                 </div>
                 <div class="small-8 columns">
                     <input type="text" class="input-field" name="kirchgemeinde" value="<?php echo (isset($session_data['kirchgemeinde'])) ? $session_data['kirchgemeinde'] : ''; ?>">
@@ -175,17 +190,156 @@ if ($msk) {
                            <label><input type="radio" required data-msg="<?php _e('Zahlungsweise erforderlich', 'child-sponsor-lang'); ?>" name="zahlungsweise" value="lsv"> <?php _e('Direct Debit - LSV', 'child-sponsor-lang') ?></label>
 					 </div>
 					<div class="small-12 columns zahlung">
-						<p class="marg-top-10"><?php _e('Wenn du eine andere Zahlungsart wünschst, dann rufe uns bitte an unter 031 552 21 21.', 'child-sponsor-lang' )?></p>
+						<p class="marg-top-10"><?php _e('Wenn du eine andere Zahlungsart wünschst, melde dich bitte unter: info@compassion.ch / +41 (0)31 552 21 21', 'child-sponsor-lang' )?></p>
 					</div>
 				</div>
-            <hr>
+
+    <!-- different payer
+    <div class="row">
+
+        <div class="small-12 columns">
+            <div style="margin-bottom: 16px;">
+                <label style="display:inline-block">
+                    <input type="checkbox" name="show-payer" value="show-payer" <?php echo (isset($session_data['show-payer']) && $session_data['show-payer'] ) ? 'checked' : ''; ?> id="show-payer">
+                    <?= __('Une autre personne finance ce parrainage', 'donation-form') ?>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        jQuery('#show-payer').on('ifChanged', function () {
+            if (jQuery(this).prop('checked')) {
+                jQuery('#payer_delete_button').show();
+                jQuery("#payer_delete_button input").prop('required',true);
+            } else {
+                jQuery('#payer_delete_button').hide();
+                jQuery("#payer_delete_button input").prop('required',false);
+            }
+        });
+    </script>
+
+    <div id="payer_delete_button" style="<?php echo (isset($session_data['show-payer']) && $session_data['show-payer'] ) ? '' : 'display:none;'; ?>">
+
+        <h4 class="text-uppercase"><?php _e('PAYER Daten', 'child-sponsor-lang'); ?></h4>
+        <div class="row">
+            <div class="small-4 columns">
+                <label class="text-left middle"><?php _e('Anrede', 'child-sponsor-lang'); ?></label>
+            </div>
+            <div class="small-8 columns radio-wrapper1">
+                <input id="radio_frau"  data-msg="<?php _e('Anrede erforderlich', 'child-sponsor-lang'); ?>" type="radio" name="salutation_payer" value="Frau" <?php echo (isset($session_data['salutation_payer']) && $session_data['salutation_payer'] == 'Frau') ? 'checked' : ''; ?>><label for="radio_frau"><?php _e('Frau', 'child-sponsor-lang'); ?></label>
+                <input id="radio_herr"  data-msg="<?php _e('Anrede erforderlich', 'child-sponsor-lang'); ?>" type="radio" name="salutation_payer" value="Herr" <?php echo (isset($session_data['salutation_payer']) && $session_data['salutation_payer'] == 'Herr') ? 'checked' : ''; ?>><label for="radio_herr"><?php _e('Herr', 'child-sponsor-lang'); ?></label>
+                <input id="radio_familie" data-msg="<?php _e('Anrede erforderlich', 'child-sponsor-lang'); ?>" type="radio" name="salutation_payer" value="Familie" <?php echo (isset($session_data['salutation_payer']) && $session_data['salutation_payer'] == 'Familie') ? 'checked' : ''; ?>><label for="radio_herr"><?php _e('Familie', 'child-sponsor-lang'); ?></label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-4 columns">
+                <label class="text-left middle"><?php _e('Nachname', 'child-sponsor-lang'); ?></label>
+            </div>
+            <div class="small-8 columns">
+                <input type="text"  data-msg="<?php _e('Nachname erforderlich', 'child-sponsor-lang'); ?>" class="input-field" name="last_name_payer" value="<?php echo (isset($session_data['last_name_payer'])) ? $session_data['last_name_payer'] : ''; ?>">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-4 columns">
+                <label class="text-left middle"><?php _e('Vorname', 'child-sponsor-lang'); ?></label>
+            </div>
+            <div class="small-8 columns">
+                <input type="text"  data-msg="<?php _e('Vorname erforderlich', 'child-sponsor-lang'); ?>" class="input-field" name="first_name_payer" value="<?php echo (isset($session_data['first_name_payer'])) ? $session_data['first_name_payer'] : ''; ?>">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-4 columns">
+                <label class="text-left middle"><?php _e('Strasse/Hausnr.', 'child-sponsor-lang'); ?></label>
+            </div>
+            <div class="small-8 columns">
+                <input type="text"  data-msg="<?php _e('Strasse erforderlich', 'child-sponsor-lang'); ?>" class="input-field" name="street_payer" value="<?php echo (isset($session_data['street_payer'])) ? $session_data['street_payer'] : ''; ?>">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-4 columns">
+                <label class="text-left middle"><?php _e('PLZ/Ort', 'child-sponsor-lang'); ?></label>
+            </div>
+            <div class="small-2 columns">
+                <input type="text" data-msg="<?php _e('PLZ erforderlich', 'child-sponsor-lang'); ?>" class="input-field" name="zipcode_payer" value="<?php echo (isset($session_data['zipcode_payer'])) ? $session_data['zipcode_payer'] : ''; ?>">
+            </div>
+            <div class="small-6 columns no-padding-left">
+                <input type="text" data-msg="<?php _e('Stadt erforderlich', 'child-sponsor-lang'); ?>" class="input-field" name="city_payer" value="<?php echo (isset($session_data['city_payer'])) ? $session_data['city_payer'] : ''; ?>">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-4 columns">
+                <label class="text-left middle"><?php _e('Land', 'child-sponsor-lang'); ?></label>
+            </div>
+            <div class="small-8 columns">
+                <input type="text"  data-msg="<?php _e('Länd erforderlich', 'child-sponsor-lang'); ?>" class="input-field" name="land_payer" value="<?php echo (isset($session_data['land_payer'])) ? $session_data['land_payer'] : ''; ?>">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-4 columns">
+                <label class="text-left middle"><?php _e('Geburtsdatum', 'child-sponsor-lang'); ?></label>
+            </div>
+            <div class="small-8 columns">
+                <input type="text"
+                       id="datepicker1"
+                       name="birthday_payer"
+                       placeholder="31/12/2000"
+                       class="input-field"
+                       value="<?php echo (isset($session_data['birthday_payer'])) ? $session_data['birthday_payer'] : ''; ?>"
+                       data-default-msg="<?php _e('Geburtsdatum erforderlich', 'child-sponsor-lang'); ?>"
+                       data-wrpr="<?= $wapr ? "true" : "false"; ?>"
+                       data-wrpr-age-limit="<?= $wapr_age_limit; ?>"
+                       data-wrpr-age-limit-msg="<?php echo sprintf( wp_kses( __("Write&Pray-Patenschaften sind für Personen unter 25 Jahren vorgesehen. Klicke hier, um %s für CHF 42.-/Monat zu unterstützen.", 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?>"
+            </div>
+        </div></div>
+
+
+    <div class="row">
+        <div class="small-4 columns">
+            <label class="text-left middle"><?php _e('E-Mail-Adresse', 'child-sponsor-lang'); ?></label>
+        </div>
+        <div class="small-8 columns">
+            <input type="email" id="email" class="input-field"  data-msg-error="<?php _e('Ungültige E-Mail Adresse', 'child-sponsor-lang'); ?>" data-msg-required="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" name="email_payer" value="<?php echo (isset($session_data['email_payer'])) ? $session_data['email_payer'] : ''; ?>">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-4 columns">
+            <label class="text-left middle"><?php _e('Confirm address', 'child-sponsor-lang'); ?></label>
+        </div>
+        <div class="small-8 columns">
+            <input type="email" onblur="confirmEmail()" id="confemail" class="input-field"  data-msg-error="<?php _e('Ungültige E-Mail Adresse', 'child-sponsor-lang'); ?>" data-msg-required="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" name="emailConfirm_payer" >
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-4 columns">
+            <label class="text-left middle"><?php _e('Telefon', 'child-sponsor-lang'); ?></label>
+        </div>
+        <div class="small-8 columns">
+            <input type="text" class="input-field"  data-msg="<?php _e('Telefon erforderlich', 'child-sponsor-lang'); ?>" name="phone_payer" value="<?php echo (isset($session_data['phone_payer'])) ? $session_data['phone_payer'] : ''; ?>">
+        </div>
+    </div>
+
+
+</div>
+end different payer -->
+
+<hr>
 
              <h4 class="text-uppercase" id="Patenschaftplus"><?php _e('Patenschaft plus', 'child-sponsor-lang'); ?></h4>
              	<div class="row">
                 <div class="small-12 columns">
                 <input class="" type="checkbox" <?php echo (isset($session_data['patenschaftplus']) && $session_data['patenschaftplus']['checkbox'] == 'on') ? 'checked' : ''; ?> name="patenschaftplus[checkbox]"> <span class="marg-left-10 strong-statment">  <?php _e('JA', 'child-sponsor-lang'); ?></span>
 
-                  <p class="marg-top-10"><?php _e('Patenschaft "Plus" beinhaltet die Patenschaft "Basis" von CHF 42.00 und eine Spende von CHF 8.00 pro Monat zusätzlich. Sie erlaubt Compassion, Projekte zu finanzieren um die Umgebung des Patenkindes zu verändern. Die Spenden, die Compassion durch die Patenschaften "Plus" bekommt, gehen in eine gemeinsame Kasse. Dadurch kann Compassion mehrere Projekte im Jahr unterstützen. 50.00 CHF/Monat', 'child-sponsor-lang')?></p>
+                  <p class="marg-top-10"><?php _e('Die Patenschaft "Plus" beinhaltet die "Basis" der Patenschaft von CHF 42.- und eine zusätzliche Spende von CHF 8.- pro Monat. Die CHF 8.- ermöglichen die Finanzierung dringender Bedürfnisse oder von Bedürfnissen, die durch die Patenschaftsgelder nicht gedeckt sind (z.B. Naturkatastrophen, chirurgische Eingriffe, Malariaprävention, usw.). Dieser Solidaritätsfonds ist für alle von Compassion unterstützten Kinder da.', 'child-sponsor-lang')?></p>
 
                 </div>
                 </div>
@@ -211,6 +365,8 @@ if ($msk) {
 
             </div>
 
+
+
 <?php } ?>
 
           <!--        end Writeandpraystuff  -->
@@ -221,7 +377,7 @@ if ($msk) {
             <h4 class="text-uppercase" id="briefwechsel"><?php echo sprintf( wp_kses( __('Briefwechsel mit %s', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></h4>
             	<div class="row">
 	            	<div class="small-12 columns">
-						<p><?php _e('Selbstverständlich übersetzen wir deine Briefe gerne, du kannst deine Briefe aber auch direkt in der Sprache des Kindes oder auf Englisch schreiben. Dies spart Zeit und nimmt unseren freiwilligen Übersetzern Arbeit ab. Welche der folgenden Sprachen verstehst du?', 'child-sponsor-lang')?></p>
+						<p><?php _e('Für den Briefverkehr mit dem Patenkind verstehe ich ausser Deutsch auch:', 'child-sponsor-lang')?></p>
 	            	</div>
             	</div>
            	<div class="row">
@@ -248,7 +404,11 @@ if ($msk) {
 				</div>
 
 			</div>
-
+    <div class="row">
+        <div class="small-12 columns">
+            <p><?php _e('Schreiben kannst du deine Briefe auf Deutsch', 'child-sponsor-lang')?></p>
+        </div>
+    </div>
 
             <hr>
 
@@ -308,11 +468,10 @@ if ($msk) {
             <?php } ?>
             <hr>
 
-             <h4 class="text-uppercase" id="Patenschaftplus"><?php _e('Mithelfen', 'child-sponsor-lang'); ?></h4>
+             <h4 class="text-uppercase" id="Patenschaftplus"><?php _e('Freiwillig mithelfen', 'child-sponsor-lang'); ?></h4>
              	<div class="row">
                 <div class="small-12 columns">
-	            <input class="" type="checkbox" <?php echo (isset($session_data['mithelfen']) && $session_data['mithelfen']['checkbox'] == 'on') ? 'checked' : ''; ?> name="mithelfen[checkbox]"> <span class="marg-left-10 strong-statment">  <?php _e('JA', 'child-sponsor-lang'); ?></span>
-	             <p class="marg-top-10"><?php _e('Senden Sie mir mehr Informationen, wie ich mich für Kinder in Not einsetzen kann', 'child-sponsor-lang')?></p>
+	            <input class="" type="checkbox" <?php echo (isset($session_data['mithelfen']) && $session_data['mithelfen']['checkbox'] == 'on') ? 'checked' : ''; ?> name="mithelfen[checkbox]"> <span class="marg-left-10">  <?php _e('Ich möchte freiwillig mithelfen (z.B. Übersetzung, Events, Gebet), bitte kontaktiert mich.', 'child-sponsor-lang')?></span>
                 </div>
                 </div>
             <hr>
@@ -335,8 +494,10 @@ if ($msk) {
             dateFormat: "dd/mm/yy",
             constrainInput: false
         });
-        $("#datepicker").datepicker({
+        $("#datepicker,#datepicker1").datepicker({
           dateFormat: "dd/mm/yy",
         });
     });
+
+
 </script>

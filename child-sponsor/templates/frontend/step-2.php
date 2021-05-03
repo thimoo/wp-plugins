@@ -18,7 +18,7 @@ $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';
 <!--              Writeandpraystuff  -->
 			<?php if (!$wapr) { ?> 
 
-                <p><?php echo sprintf( wp_kses( __('Mit 42 CHF pro Monat kannst du %s aus der Armut befreien!', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></p>
+                <p><?php echo sprintf( wp_kses( __('Mit CHF 42.– pro Monat kannst du %s aus der Armut befreien!', 'child-sponsor-lang'), array('br' => []) ), $child_data['name'] ); ?></p>
            <?php } ?>
            
 <!--       emd Writeandpraystuff  -->
@@ -125,7 +125,7 @@ $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';
             
             <div class="row">
                 <div class="small-4 columns">
-                    <label class="text-left middle"><?php _e('Kirchgemeinde', 'child-sponsor-lang'); ?></label>
+                    <label class="text-left middle"><?php _e('Kirche/Gemeinde', 'child-sponsor-lang'); ?></label>
                 </div>
                 <div class="small-8 columns">
                     <?php echo $session_data['kirchgemeinde']; ?>
@@ -158,17 +158,18 @@ $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';
            ?> 
             </div>
             </div>
+                   <hr>
     <?php } else { ?>
 
             
-            <hr>
+
             
             <h4 class="text-uppercase"><?php _e('Patenschaft plus', 'child-sponsor-lang'); ?></h4>
             <div class="row">
 			<div class="small-12 columns">
            <?php if (isset($session_data['patenschaftplus'])) {
-	          echo _e('JA', 'child-sponsor-lang'); 
-	          } else {echo _e('NEIN', 'child-sponsor-lang');}
+	          echo _e('Ich wähle den Betrag CHF 50.-', 'child-sponsor-lang');
+	          } else {echo _e('Ich wähle den Betrag CHF 42.-', 'child-sponsor-lang');}
            ?> 
             </div>
             </div>
@@ -187,7 +188,109 @@ $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';
 
                 </div>
             </div>
+        <?php if($session_data['show-payer']){ ?>
+            <!-- different payer  -->
+
+                   <h4 class="text-uppercase"><?php _e('Persönliche Daten', 'child-sponsor-lang'); ?></h4>
+
+                   <div class="row">
+                       <div class="small-4 columns">
+                           <label class="text-left middle"><?php _e('Anrede', 'child-sponsor-lang'); ?></label>
+                       </div>
+                       <div class="small-8 columns">
+                           <?php
+                           $salutation1 $session_data['payer']['salutation_payer'];
+                           echo _e($salutation1, 'child-sponsor-lang');
+                           ?>
+                       </div>
+                   </div>
+
+                   <div class="row">
+                       <div class="small-4 columns">
+                           <label class="text-left middle"><?php _e('Nachname', 'child-sponsor-lang'); ?></label>
+                       </div>
+                       <div class="small-8 columns">
+                           <?php echo $session_data['last_name_payer']; ?>
+                       </div>
+                   </div>
+
+                   <div class="row">
+                       <div class="small-4 columns">
+                           <label class="text-left middle"><?php _e('Vorname', 'child-sponsor-lang'); ?></label>
+                       </div>
+                       <div class="small-8 columns">
+                           <?php echo $session_data['first_name_payer']; ?>
+                       </div>
+                   </div>
+
+                   <div class="row">
+                       <div class="small-4 columns">
+                           <label class="text-left middle"><?php _e('Strasse/Hausnr.', 'child-sponsor-lang'); ?></label>
+                       </div>
+                       <div class="small-8 columns">
+                           <?php echo $session_data['street_payer']; ?>
+                       </div>
+                   </div>
+
+                   <div class="row">
+                       <div class="small-4 columns">
+                           <label class="text-left middle"><?php _e('Ort', 'child-sponsor-lang'); ?></label>
+                       </div>
+                       <div class="small-8 columns">
+                           <?php echo $session_data['city_payer']; ?>
+                       </div>
+                   </div>
+                   <div class="row">
+                       <div class="small-4 columns">
+                           <label class="text-left middle"><?php _e('PLZ', 'child-sponsor-lang'); ?></label>
+                       </div>
+                       <div class="small-8 columns">
+                           <?php echo $session_data['zipcode_payer']; ?>
+                       </div>
+                   </div>
+
+                   <div class="row">
+                       <div class="small-4 columns">
+                           <label class="text-left middle"><?php _e('Land', 'child-sponsor-lang'); ?></label>
+                       </div>
+                       <div class="small-8 columns">
+                           <?php echo $session_data['land_payer']; ?>
+                       </div>
+                   </div>
+
+                   <div class="row">
+                       <div class="small-4 columns">
+                           <label class="text-left middle"><?php _e('Geburtsdatum', 'child-sponsor-lang'); ?></label>
+                       </div>
+                       <div class="small-8 columns">
+                           <?php echo $session_data['birthday_payer']; ?>
+                       </div>
+                   </div>
+
+                   <div class="row">
+                       <div class="small-4 columns">
+                           <label class="text-left middle"><?php _e('E-Mail-Adresse', 'child-sponsor-lang'); ?></label>
+                       </div>
+                       <div class="small-8 columns">
+                           <?php echo $session_data['email_payer']; ?>
+                       </div>
+                   </div>
+
+                   <div class="row">
+                       <div class="small-4 columns">
+                           <label class="text-left middle"><?php _e('Telefon', 'child-sponsor-lang'); ?></label>
+                       </div>
+                       <div class="small-8 columns">
+                           <?php echo $session_data['phone_payer']; ?>
+                       </div>
+                   </div>
+
+            <?php } ?>
+
+                   <!-- end different payer -->
+
               <?php } ?>
+
             <a href="?step=1#bank" class="edit"><?php _e('Bearbeiten', 'child-sponsor-lang'); ?></a>
 
             <hr>
@@ -252,7 +355,7 @@ $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';
 
             <hr>
             
-            <h4 class="text-uppercase"><?php _e('Mithelfen', 'child-sponsor-lang'); ?></h4>
+            <h4 class="text-uppercase"><?php _e('Freiwillig mithelfen', 'child-sponsor-lang'); ?></h4>
             <div class="row">
 			<div class="small-12 columns">
            <?php if (isset($session_data['mithelfen'])) {
