@@ -156,25 +156,6 @@ class ChildSponsor {
         } catch (Exception $e) {
             $this->send_fail_email($data);
         }
-
-        $email = new PHPMailer\PHPMailer\PHPMailer();
-        $email->isSMTP();                                      // Set mailer to use SMTP
-        $email->Host = 'mail.infomaniak.com';  // Specify main and backup SMTP servers
-        $email->SMTPAuth = true;                               // Enable SMTP authentication
-        $email->Username = 'postmaster@filmgottesdienst.ch';                 // SMTP username
-        $email->Password = TEST_SMTP_KEY;                           // SMTP password
-        $email->Port = 587;
-        $email->CharSet = 'UTF-8';
-        $email->From = 'compassion@compassion.ch';
-        $email->FromName = __('Compassion Schweiz', 'child-sponsor-lang');
-        $email->Subject = __('Deine Patenschaft', 'child-sponsor-lang');
-        $email->Body = $this->get_email_template('user-new-sponsor.php', $session_data);
-        $email->isHTML(true);
-        $email->AddAddress($session_data['email']);
-        //$email->AddBCC('ecino@compassion.ch', 'Compassion Suisse');
-        $email->addCustomHeader('X-SMTPAPI', '{"filters": {"subscriptiontrack" : {"settings" : {"enable" : 0}}}}');
-        $email->Send();*/
-
         ob_end_clean();
     }
 
