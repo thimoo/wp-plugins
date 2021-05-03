@@ -199,8 +199,8 @@ $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';
                        </div>
                        <div class="small-8 columns">
                            <?php
-                           $salutation1 $session_data['payer']['salutation_payer'];
-                           echo _e($salutation1, 'child-sponsor-lang');
+                        //   $salutation $session_data['payer']['salutation_payer'];
+                        //   echo _e($salutation, 'child-sponsor-lang');
                            ?>
                        </div>
                    </div>
