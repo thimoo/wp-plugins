@@ -51,7 +51,7 @@ class ChildSponsor {
 
         //load scripts
 //        wp_enqueue_script('validation-js', plugin_dir_url(__FILE__) . 'bower_components/jquery-validation/dist/jquery.validate.min.js', array('jquery'));
-        wp_enqueue_script('validation-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js', array('jquery'));
+       // wp_enqueue_script('validation-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js', array('jquery'));
 
 //         wp_enqueue_script( 'google-captcha-js', '//www.google.com/recaptcha/api.js', array( 'jquery' ) );
 //        wp_enqueue_script( 'iban-js', plugin_dir_url(__FILE__) . 'bower_components/iban/iban.js', array() );

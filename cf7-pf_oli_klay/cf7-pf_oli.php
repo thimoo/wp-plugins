@@ -124,7 +124,7 @@ class Compassion_Donation_Form {
         wp_enqueue_style('donation-form', plugin_dir_url(__FILE__) . '/assets/stylesheets/screen.css', array(), null);
 
         //load scripts
-        wp_enqueue_script('validation-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js', array('jquery'));
+       // wp_enqueue_script('validation-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js', array('jquery'));
     }
 
     /**
