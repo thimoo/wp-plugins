@@ -27,7 +27,9 @@ class ChildOdooImport
     public function getCountryIdByCode($country_code, $lang='fr')
     {
         global $wpdb;
-
+        if ($country_code == 'ID') {
+		$country_code = 'IO';
+	}
         $results = $wpdb->get_results("SELECT post_id FROM $wpdb->postmeta WHERE meta_value = '$country_code' AND meta_key = '_cmb_country_code'");
         foreach ($results as $row) {
             $post_lang = $wpdb->get_var(
