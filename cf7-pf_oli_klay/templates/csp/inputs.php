@@ -1,8 +1,8 @@
 <div class="row">
-    <div class="small-4 columns">
+    <div class="small-12 medium-4 columns">
         <!-- <label class="text-left middle"><?= __('Choix du don', 'donation-form') ?></label> -->
     </div>
-    <div class="small-8 columns">
+    <div class="small-12 medium-8 columns">
         <div style="margin-bottom: 16px;">
             <label style="display:inline-block; margin-right:8px;">
                 <input type="radio" name="choix_don_unique_mensuel" value="don_mensuel" id="don_mensuel" checked>
@@ -45,10 +45,10 @@
     });
 </script>
 <div class="row don_unique" style="display: none;">
-    <div class="small-4 columns">
+    <div class="small-12 medium-4 columns">
         <!-- <label class="text-left middle"><?php _e('Je désire faire un don unique', 'donation-form'); ?></label> -->
     </div>
-    <div class="small-8 columns">
+    <div class="small-12 medium-8 columns">
         <input type="text"
                placeholder="<?php _e('bitte nur Zahlen', 'donation-form'); ?>"
                data-msg="<?php _e('Betrag erforderlich', 'donation-form'); ?>" class="input-field"
@@ -58,10 +58,10 @@
 </div>
 
 <div class="row don_mensuel">
-    <div class="small-4 columns">
+    <div class="small-12 medium-4 columns">
         <!-- <label class="text-left middle"><?php _e('Je désire faire un don mensuel', 'donation-form'); ?></label> -->
     </div>
-    <div class="small-8 columns">
+    <div class="small-12 medium-8 columns">
         <div class="select-wrapper">
             <select name="fonds" id="fonds" class="input-field">
                 <option value="csp_mensuel_15"

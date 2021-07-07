@@ -1,16 +1,16 @@
 <div class="row">
-    <div class="small-4 columns">
+    <div class="small-12 medium-4 columns">
         <label class="text-left middle"><?php _e('Betrag deiner Spende in CHF', 'donation-form'); ?></label>
     </div>
-    <div class="small-8 columns">
+    <div class="small-12 medium-8 columns">
         <input type="text" id="wert" placeholder="<?php _e('bitte nur Zahlen', 'donation-form'); ?>" required data-msg="<?php _e('Betrag erforderlich', 'donation-form'); ?>" class="input-field" name="wert" value="<?php echo $_SESSION["fund_amount"]?>">
     </div>
 </div>
 <div class="row">
-    <div class="small-4 columns">
+    <div class="small-12 medium-4 columns">
         <!-- <label class="text-left middle"><?= __('Choix du don', 'donation-form') ?></label> -->
     </div>
-    <div class="small-8 columns">
+    <div class="small-12 medium-8 columns">
         <div style="margin-bottom: 16px;">
             <label style="display:inline-block; margin-right:8px;">
                 <input type="radio" name="choix_don_unique_mensuel" value="monthly" id="don_mensuel" >
@@ -24,10 +24,10 @@
     </div>
 </div>
 <div class="row">
-    <div class="small-4 columns">
+    <div class="small-12 medium-4 columns">
         <label class="text-left middle"><?php _e('Spendenzweck', 'donation-form'); ?></label>
     </div>
-    <div class="small-8 columns">
+    <div class="small-12 medium-8 columns">
         <div class="select-wrapper">
             <select name="fonds" id="fonds" class="input-field">
                 <option value="humanitaire" <?php echo ($_SESSION["fund_code"] == "humanitaire") ? 'selected' : '' ?>><?php _e('Aktuelle Nothilfe', 'donation-form'); ?></option>
