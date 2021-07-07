@@ -72,46 +72,47 @@
 
                 <h4 class="text-uppercase"><?php _e('Meine persönlichen Daten', 'child-sponsor-lang'); ?></h4>
                 <div class="row">
-                    <div class="small-4 columns">
+                    <div class="small-12 medium-4 columns">
                         <label class="text-left middle"><?php _e('Vorname, Nachname', 'compassion-letters'); ?></label>
                     </div>
-                    <div class="small-8 columns">
+                    <div class="small-12 medium-8 columns">
                         <input type="text" required data-msg="<?php _e('Name erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="pname" name="pname" value="<?php echo $_SESSION["pname"]?>">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="small-4 columns">
+                    <div class="small-12 medium-4 columns">
                         <label class="text-left middle"><?php _e('Strasse/Hausnr.', 'child-sponsor-lang'); ?></label>
                     </div>
-                    <div class="small-8 columns">
+                    <div class="small-12 medium-8 columns">
                         <input type="text" required data-msg="<?php _e('Strasse erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="street" name="street" value="<?php echo $_SESSION["pstreet"]?>">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="small-4 columns">
+                    <div class="small-12 medium-4 columns">
                         <label class="text-left middle"><?php _e('PLZ/Ort', 'child-sponsor-lang'); ?></label>
                     </div>
-                    <div class="small-2 columns">
+                    <div class="small-6 medium-2 columns">
                         <input type="text" required data-msg="<?php _e('PLZ erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="zipcode" name="zipcode" value="<?php echo $_SESSION["pzip"]?>">
                     </div>
-                    <div class="small-6 columns no-padding-left">
+                    <div class="small-6 medium-6 columns no-padding-left">
                         <input type="text" required data-msg="<?php _e('Stadt erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="city" name="city" value="<?php echo $_SESSION["pcity"]?>">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="small-4 columns">
+                    <div class="small-12 medium-4 columns">
                         <label class="text-left middle"><?php _e('Land', 'child-sponsor-lang'); ?></label>
                     </div>
-                    <div class="small-8 columns">
+                    <div class="mall-12 medium-8 columns">
                         <input type="text" required data-msg="<?php _e('Länd erforderlich', 'child-sponsor-lang'); ?>" class="input-field" id="country" name="country" value="<?php echo $_SESSION["pcountry"]?>">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="small-4 columns">
+                    <div class="small-12 medium-4 columns">
                         <label class="text-left middle"><?php _e('E-Mail-Adresse', 'child-sponsor-lang'); ?></label>
                     </div>
-                    <div class="small-8 columns">
+                    <div class="small-12 medium-8 columns">
                         <input type="email" class="input-field" required data-msg="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" id="email" name="email" value="<?php echo $_SESSION["email"]?>">
+                <!--     <p><?php _e('Deine Spende an Compassion ist in der Schweiz steuerabzugsberechtigt.','donation-form' )?></p> -->
                     </div>
                 </div>
 
