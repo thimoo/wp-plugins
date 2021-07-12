@@ -112,7 +112,7 @@
                     </div>
                     <div class="small-12 medium-8 columns">
                         <input type="email" class="input-field" required data-msg="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" id="email" name="email" value="<?php echo $_SESSION["email"]?>">
-                <!--     <p><?php _e('Deine Spende an Compassion ist in der Schweiz steuerabzugsberechtigt.','donation-form' )?></p> -->
+                <p><?php _e('Deine Spende an Compassion ist in der Schweiz steuerabzugsberechtigt.','donation-form' )?></p>
                     </div>
                 </div>
 
