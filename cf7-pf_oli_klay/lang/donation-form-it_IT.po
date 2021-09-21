@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Contact Form 7 Postfinance oli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-21 08:06+0000\n"
-"PO-Revision-Date: 2021-03-29 14:18+0000\n"
-"Last-Translator: olivier <orequet@compassion.ch>\n"
+"PO-Revision-Date: 2021-07-12 07:37+0000\n"
+"Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.3.1; wp-5.2.4"
+"X-Loco-Version: 2.5.2; wp-5.7.2"
 
 #: templates/frontend/inputs.php:33
 msgid "Aktuelle Nothilfe"
@@ -66,11 +66,15 @@ msgstr ""
 msgid "CSP"
 msgstr ""
 
+#: templates/donation-form.php:115
+msgid "Deine Spende an Compassion ist in der Schweiz steuerabzugsberechtigt."
+msgstr "Le tue donazioni a Compassion sono deducibili dalle tasse in Svizzera."
+
 #: cf7-pf_oli.php:152
 msgid "Donation form"
 msgstr ""
 
-#: templates/donation-form.php:128
+#: templates/donation-form.php:129
 msgid ""
 "Du kannst per Post- oder Banküberweisung spenden.<br/>  Nachfolgend findest "
 "du die Informationen für die Zahlung. "
@@ -124,7 +128,7 @@ msgstr ""
 msgid "Je désire faire un don unique"
 msgstr ""
 
-#: templates/donation-form.php:119
+#: templates/donation-form.php:120
 msgid "Jetzt spenden"
 msgstr "Fare la donazione"
 
@@ -244,6 +248,10 @@ msgid "Vielen Dank, dass du nicht vergisst, den Spendenzweck zu erwähnen."
 msgstr ""
 "Grazie di non dimenticare di includere il motivo della donazione nella "
 "\"ragione pagamento\"."
+
+#: templates/donation-form.php:76
+msgid "Vorname, Nachname"
+msgstr ""
 
 #: templates/frontend/inputs.php:34
 msgid "Weihnachtsgeschenk"

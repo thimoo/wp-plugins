@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Contact Form 7 Postfinance oli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-21 08:06+0000\n"
-"PO-Revision-Date: 2021-03-29 14:18+0000\n"
+"PO-Revision-Date: 2021-07-12 07:33+0000\n"
 "Last-Translator: olivier <orequet@compassion.ch>\n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -66,11 +66,15 @@ msgstr ""
 msgid "CSP"
 msgstr ""
 
+#: templates/donation-form.php:115
+msgid "Deine Spende an Compassion ist in der Schweiz steuerabzugsberechtigt."
+msgstr "Vos dons à Compassion sont déductibles des impôts en Suisse."
+
 #: cf7-pf_oli.php:152
 msgid "Donation form"
 msgstr ""
 
-#: templates/donation-form.php:128
+#: templates/donation-form.php:129
 msgid ""
 "Du kannst per Post- oder Banküberweisung spenden.<br/>  Nachfolgend findest "
 "du die Informationen für die Zahlung. "
@@ -124,7 +128,7 @@ msgstr ""
 msgid "Je désire faire un don unique"
 msgstr ""
 
-#: templates/donation-form.php:119
+#: templates/donation-form.php:120
 msgid "Jetzt spenden"
 msgstr "Envoyer le don"
 
@@ -215,7 +219,7 @@ msgid ""
 "Twint."
 msgstr ""
 "Effectuez votre don par un paiement sécurisé en ligne, au moyen d'une carte "
-"Postfinance, d'une carte de crédit ou Twint."
+"Postfinance, d'une carte de crédit."
 
 #: templates/frontend/inputs.php:28 templates/single/inputs.php:28
 msgid "Spendenzweck"
@@ -244,6 +248,10 @@ msgid "Vielen Dank, dass du nicht vergisst, den Spendenzweck zu erwähnen."
 msgstr ""
 "Merci de ne pas oublier d'inscrire le motif de votre don dans la partie "
 "\"motif de versement\""
+
+#: templates/donation-form.php:76
+msgid "Vorname, Nachname"
+msgstr ""
 
 #: templates/frontend/inputs.php:34
 msgid "Weihnachtsgeschenk"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-29 14:17+0000\n"
+"POT-Creation-Date: 2021-07-12 07:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -64,11 +64,15 @@ msgstr ""
 msgid "CSP"
 msgstr ""
 
+#: templates/donation-form.php:115
+msgid "Deine Spende an Compassion ist in der Schweiz steuerabzugsberechtigt."
+msgstr ""
+
 #: cf7-pf_oli.php:152
 msgid "Donation form"
 msgstr ""
 
-#: templates/donation-form.php:128
+#: templates/donation-form.php:129
 msgid ""
 "Du kannst per Post- oder Banküberweisung spenden.<br/>  Nachfolgend findest "
 "du die Informationen für die Zahlung. "
@@ -120,7 +124,7 @@ msgstr ""
 msgid "Je désire faire un don unique"
 msgstr ""
 
-#: templates/donation-form.php:119
+#: templates/donation-form.php:120
 msgid "Jetzt spenden"
 msgstr ""
 
@@ -229,6 +233,10 @@ msgstr ""
 
 #: cf7-pf_oli.php:229 cf7-pf_oli.php:244 cf7-pf_oli.php:248
 msgid "Vielen Dank, dass du nicht vergisst, den Spendenzweck zu erwähnen."
+msgstr ""
+
+#: templates/donation-form.php:76
+msgid "Vorname, Nachname"
 msgstr ""
 
 #: templates/frontend/inputs.php:34
