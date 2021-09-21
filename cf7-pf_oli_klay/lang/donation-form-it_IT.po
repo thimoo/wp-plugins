@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Contact Form 7 Postfinance oli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-21 08:06+0000\n"
-"PO-Revision-Date: 2021-07-12 07:37+0000\n"
+"PO-Revision-Date: 2021-09-21 14:14+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.2; wp-5.7.2"
+"X-Loco-Version: 2.5.3; wp-5.8"
 
 #: templates/frontend/inputs.php:33
 msgid "Aktuelle Nothilfe"
@@ -251,7 +251,7 @@ msgstr ""
 
 #: templates/donation-form.php:76
 msgid "Vorname, Nachname"
-msgstr ""
+msgstr "Cognome, Nome"
 
 #: templates/frontend/inputs.php:34
 msgid "Weihnachtsgeschenk"
