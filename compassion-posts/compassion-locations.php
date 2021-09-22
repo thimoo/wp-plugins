@@ -56,6 +56,7 @@ class CompassionLocations
             'hierarchical'          => false,
             'public'                => true,
             'show_ui'               => true,
+            'show_in_rest'          => true,
             'show_in_menu'          => true,
             'menu_position'         => 5,
             'show_in_admin_bar'     => true,
@@ -176,5 +177,17 @@ class CompassionLocations
             'id'        => $prefix . 'country_url',
             'type'      => 'text'
         ) );
+
+        $cmb->add_field( array(
+            'name'      => __( 'about', 'compassion-posts' ),
+            'id'        => $prefix . 'country_about',
+            'type'      => 'wysiwyg'
+        ) );
+        $args = array(
+                'type'=>'string',
+                'single'=>true,
+                'show_in_rest'=>true
+        );
+        register_post_meta('location', 'country_about', $args);
     }
 }
