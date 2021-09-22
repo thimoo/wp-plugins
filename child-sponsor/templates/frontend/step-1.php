@@ -16,7 +16,7 @@ if ($msk) {
 }
 ?>
 
-<!--  <script>
+  <script>
     function confirmEmail() {
         var email = document.getElementById("email").value
         var confemail = document.getElementById("confemail").value
@@ -27,7 +27,7 @@ if ($msk) {
 
 
 
-</script> -->
+</script>
 
 
 
@@ -143,14 +143,14 @@ if ($msk) {
                 </div>
             </div>
 
-           <!--  <div class="row">
+             <div class="row">
                  <div class="small-4 columns">
                     <label class="text-left middle"><?php _e('Confirm address', 'child-sponsor-lang'); ?></label>
                  </div>
                 <div class="small-8 columns">
                     <input type="email" onblur="confirmEmail()" id="confemail" class="input-field" required data-msg-error="<?php _e('Ungültige E-Mail Adresse', 'child-sponsor-lang'); ?>" data-msg-required="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" name="emailConfirm" >
                 </div>
-             </div> -->
+             </div>
 
             <div class="row">
                 <div class="small-4 columns">
