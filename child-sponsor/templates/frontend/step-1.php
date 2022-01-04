@@ -16,7 +16,7 @@ if ($msk) {
 }
 ?>
 
-  <script>
+<!--  <script>
     function confirmEmail() {
         var email = document.getElementById("email").value
         var confemail = document.getElementById("confemail").value
@@ -27,7 +27,7 @@ if ($msk) {
 
 
 
-</script>
+</script> -->
 
 
 
@@ -143,14 +143,14 @@ if ($msk) {
                 </div>
             </div>
 
-             <div class="row">
+           <!--  <div class="row">
                  <div class="small-4 columns">
                     <label class="text-left middle"><?php _e('Confirm address', 'child-sponsor-lang'); ?></label>
                  </div>
                 <div class="small-8 columns">
                     <input type="email" onblur="confirmEmail()" id="confemail" class="input-field" required data-msg-error="<?php _e('Ungültige E-Mail Adresse', 'child-sponsor-lang'); ?>" data-msg-required="<?php _e('E-Mail-Adresse erforderlich', 'child-sponsor-lang'); ?>" name="emailConfirm" >
                 </div>
-             </div>
+             </div> -->
 
             <div class="row">
                 <div class="small-4 columns">
@@ -432,10 +432,12 @@ end different payer -->
                             <option value="Anzeige in Zeitschrift" data-placeholder="<?php _e('Geben Sie das Magazin/die Broschüre an', 'child-sponsor-lang'); ?>"<?php echo (isset($session_data['consumer_source']) && $session_data['consumer_source'] == "Anzeige in Zeitschrift") ? 'selected' : '' ?>><?php _e('Anzeige in Zeitschrift', 'child-sponsor-lang'); ?></option>
                             <option value="Facebook, Youtube, Vimeo…" <?php echo (isset($session_data['consumer_source']) && $session_data['consumer_source'] == "Facebook, Youtube, Vimeo…") ? 'selected' : '' ?>><?php _e('Facebook, Youtube, Vimeo…', 'child-sponsor-lang'); ?></option>
                             <option value="Internet" data-placeholder="<?php _e('Geben Sie die Website an', 'child-sponsor-lang'); ?>" <?php echo (isset($session_data['consumer_source']) && $session_data['consumer_source'] == "Internet") ? 'selected' : '' ?>><?php _e('Internet', 'child-sponsor-lang'); ?></option>
-                            <option value="Unacceptable" <?php echo (isset($session_data['consumer_source']) && $session_data['consumer_source'] == "unacceptable") ? 'selected' : '' ?>><?php _e('unacceptable', 'child-sponsor-lang'); ?></option>
+                            <option value="Youversion" <?php echo (isset($session_data['consumer_source']) && $session_data['consumer_source'] == "Youversion") ? 'selected' : '' ?>><?php _e('YouVersion Bible Plan', 'child-sponsor-lang'); ?></option>
 
-                            <option value="Muskathlon" data-placeholder="<?php _e('Geben Sie den Namen des Läufers an', 'child-sponsor-lang'); ?>" <?php echo (isset($session_data['consumer_source']) && $session_data['consumer_source'] == "Muskathlon") ? 'selected' : '' ?>><?php _e('Muskathlon', 'child-sponsor-lang'); ?></option>
-<!--                             <option value="Librairies" data-placeholder="<?php _e('nom de la librairie', 'child-sponsor-lang'); ?>" <?php echo (isset($session_data['consumer_source']) && $session_data['consumer_source'] == "Librairies") ? 'selected' : '' ?>><?php _e('Librairies', 'child-sponsor-lang'); ?></option> -->
+                            <option value="Muskathlon" data-placeholder="<?php _e('Name der Läuferin/des Läufers', 'child-sponsor-lang'); ?>" <?php echo (isset($session_data['consumer_source']) && $session_data['consumer_source'] == "Muskathlon") ? 'selected' : '' ?>><?php _e('Muskathlon', 'child-sponsor-lang'); ?></option>
+                            <option value="TOGETHER" data-placeholder="<?php _e('Name der Läuferin/des Läufers oder des Projekts', 'child-sponsor-lang'); ?>" <?php echo (isset($session_data['consumer_source']) && $session_data['consumer_source'] == "TOGETHER") ? 'selected' : '' ?>><?php _e('TOGETHER', 'child-sponsor-lang'); ?></option>
+
+                            <!--                             <option value="Librairies" data-placeholder="<?php _e('nom de la librairie', 'child-sponsor-lang'); ?>" <?php echo (isset($session_data['consumer_source']) && $session_data['consumer_source'] == "Librairies") ? 'selected' : '' ?>><?php _e('Librairies', 'child-sponsor-lang'); ?></option> -->
 
                             <option value="Andere" data-placeholder="<?php _e('Noch genauer', 'child-sponsor-lang'); ?>" <?php echo (isset($session_data['consumer_source']) && $session_data['consumer_source'] == "Andere") ? 'selected' : '' ?>><?php _e('Andere', 'child-sponsor-lang'); ?></option>
                         </select>
