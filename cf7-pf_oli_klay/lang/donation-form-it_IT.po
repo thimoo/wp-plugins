@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Contact Form 7 Postfinance oli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-21 08:06+0000\n"
-"PO-Revision-Date: 2021-09-22 11:05+0000\n"
+"PO-Revision-Date: 2021-09-22 11:14+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -32,7 +32,7 @@ msgstr "Mamme e neonati"
 
 #: templates/frontend/inputs.php:3 templates/single/inputs.php:3
 msgid "Betrag deiner Spende in CHF"
-msgstr "Importo della vostra donazione"
+msgstr "Importo della donazione"
 
 #: templates/cadeau/inputs.php:6 templates/csp/inputs.php:54
 #: templates/frontend/inputs.php:6 templates/single/inputs.php:6
@@ -218,12 +218,12 @@ msgid ""
 "Spende über eine sichere Online-Zahlung, mit Postfinance, Kreditkarte oder "
 "Twint."
 msgstr ""
-"Donate tramite un pagamento on-line sicuro, con Postfinance, Carta di "
-"Credito o Twint."
+"Dona tramite un pagamento on-line sicuro, con Postfinance, Carta di Credito "
+"o Twint."
 
 #: templates/frontend/inputs.php:28 templates/single/inputs.php:28
 msgid "Spendenzweck"
-msgstr "Motivo della  vostra donazione"
+msgstr "Motivo della donazione"
 
 #: cf7-pf_oli.php:170
 msgid ""
