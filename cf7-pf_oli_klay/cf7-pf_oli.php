@@ -408,7 +408,7 @@ class Compassion_Donation_Form {
         $results = $wpdb->get_results(
             "SELECT * FROM " . $table_name .
             " WHERE odoo_status = '" . self::SUBMITTED_TO_PF . "' " .
-            "AND pf_raw IS NOT NULL AND pf_raw NOT IN ('FAILED', 'DECLINE') " .
+            "AND pf_raw NOT IN ('FAILED', 'DECLINE','FULFILL') " .
             "AND pf_payid IS NOT NULL ORDER BY id desc;");
         foreach ($results as $result) {
             try {
