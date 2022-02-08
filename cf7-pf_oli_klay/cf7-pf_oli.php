@@ -7,6 +7,13 @@
   Version: 0.3
   Author URI: http://compassion.ch/
  */
+
+use PostFinanceCheckout\Sdk\ApiClient;
+use PostFinanceCheckout\Sdk\Model\AddressCreate;
+use PostFinanceCheckout\Sdk\Model\LineItemCreate;
+use PostFinanceCheckout\Sdk\Model\TransactionCreate;
+use PostFinanceCheckout\Sdk\Model\TransactionState;
+
 defined('ABSPATH') || die();
 
 define('CF7PF_PLUGIN_DIR_PATH', plugin_dir_path(__FILE__));
@@ -16,6 +23,8 @@ global $donation_db_version;
 $donation_db_version = '1.26';
 
 const DONATION_TABLE_NAME = 'donation_to_odoo';
+
+require_once('vendor/autoload.php');
 
 function donation_db_install() {
 
@@ -86,6 +95,9 @@ class Compassion_Donation_Form {
     public static $alreadyEnqueued = false;
 
     private $step;
+    private $spaceId = POSTFINANCE_SPACE_ID;
+    private $userId = POSTFINANCE_USER_ID;
+    private $secret = POSTFINANCE_SECRET;
 
     // Possible values for the odoo_status db field.
     const SUBMITTED_TO_PF = 'submit_to_pf';
@@ -293,6 +305,8 @@ class Compassion_Donation_Form {
         if($_SESSION['count_runs']==0) {
             $transaction = guidv4();
             $_SESSION['transaction'] = $transaction;
+        } else {
+            $transaction = $_SESSION['transaction'];
         }
 
         $from_csp = substr($session_data['fonds'], 0, strlen('csp_mensuel')) == 'csp_mensuel';
@@ -302,142 +316,78 @@ class Compassion_Donation_Form {
 
         // Form data to send to postfinance (ogone)
         $base_address = 'https://' . $_SERVER['HTTP_HOST'] . '/' . $my_current_lang;
-        $form = array(
-            'PSPID' => 'compassion_yp',
-//             'ORDERID' => trim($session_data['refenfant'].'_' .$session_data['fonds']),
-            'ORDERID' => trim($session_data['refenfant'] .' '.  $session_data['choix_don_unique_mensuel'].' '.$session_data['fonds']),
-            'AMOUNT' => $final_amount * 100,
-            'CURRENCY' => 'CHF',
-            'LANGUAGE' => $lang,
-            'CN' => $session_data['pname'],
-            'EMAIL' => $session_data['email'],
-            'COMPLUS' => $_SESSION['transaction'],
-            'PAYMENT_REFERENCE' => $_SESSION['choix_don_unique_mensuel'],
-            'PARAMPLUS' => 'campaign_slug='.$_SESSION['campaign_slug'],
-            'ACCEPTURL' =>  $base_address . '/confirmation-don',
-            'DECLINEURL' => $base_address .'/annulation-don',
-            'EXCEPTIONURL' => $base_address .'/annulation-don',
-            'CANCELURL' => $base_address .'/annulation-don',        );
+
+        //redirect thank you page for Christmas only
+        $acceptUrl = $this->cleanfordb($session_data['fonds'])=='noel' ? $base_address . '/confirmation-don-noel' : $form['ACCEPTURL'] = $base_address . '/confirmation-don';
+
+        // Setup API client
+        $client = new ApiClient($this->userId, $this->secret);
+
+        // Create transaction
+        $lineItem = new LineItemCreate();
+        $lineItem->setName($session_data['refenfant'] .' '.  $session_data['choix_don_unique_mensuel'].' '.  $session_data['fonds']);
+        $lineItem->setUniqueId($transaction);
+        $lineItem->setQuantity(1);
+        $lineItem->setAmountIncludingTax($final_amount);
+        $lineItem->setType(\PostFinanceCheckout\Sdk\Model\LineItemType::PRODUCT);
+
+        // Customer Billing Address
+        $billingAddress = new AddressCreate();
+        $billingAddress->setCity($data['city']);
+        $billingAddress->setCountry($data['country']);
+        $billingAddress->setEmailAddress($data['email']);
+        $billingAddress->setGivenName($data['pname']);
+        $billingAddress->setPostCode($data['zipcode']);
+
+        $transactionPayload = new TransactionCreate();
+        $transactionPayload->setCurrency('CHF');
+        $transactionPayload->setLineItems(array($lineItem));
+        $transactionPayload->setAutoConfirmationEnabled(true);
+        $transactionPayload->setBillingAddress($billingAddress);
+        $transactionPayload->setShippingAddress($billingAddress);
+        $transactionPayload->setFailedUrl($base_address .'/annulation-don');
+        $transactionPayload->setSuccessUrl($acceptUrl);
+
+        $pfTransaction = $client->getTransactionService()->create($this->spaceId, $transactionPayload);
 
         if($_SESSION['count_runs']==0) {
             $_SESSION['count_runs']++;
 
 
             $wpdb->insert(
-                    $wpdb->prefix . DONATION_TABLE_NAME,
-                    array(
-                        'time' => date('Y-m-d H:i:s'),
-                        'ip_address' => $_SERVER['REMOTE_ADDR'],
-                        'email' => $this->cleanfordb($data['email']),
-                        'orderid' => $this->cleanfordb($session_data['refenfant'] .' '.  $session_data['choix_don_unique_mensuel'].' '.  $session_data['fonds']),
-                        'utm_source' => $this->cleanfordb($_SESSION['utm_source']),
-                        'utm_medium' => $this->cleanfordb($_SESSION['utm_medium']),
-                        'utm_campaign' => $this->cleanfordb($_SESSION['utm_campaign']),
-                        'name' => $this->cleanfordb($data['pname']),
-                        'street' => $this->cleanfordb($data['street']),
-                        'zipcode' => $this->cleanfordb($data['zipcode']),
-                        'city' => $this->cleanfordb($data['city']),
-                        'country' => $this->cleanfordb($data['country']),
-                        'language' => $lang,
-                        'amount' => $final_amount,
-                        'currency' => 'CHF',
-                        'fund' => $this->cleanfordb($session_data['fonds']),
-                        'child_id' => $this->cleanfordb($session_data['refenfant']),
-                        'partner_ref' => $this->cleanfordb($session_data['partner_ref']),
-                        'transaction_id' => $transaction,
-                        'session_id' => session_id(),
-                        'odoo_status' => self::SUBMITTED_TO_PF,
-                    )
-                );
+                $wpdb->prefix . DONATION_TABLE_NAME,
+                array(
+                    'time' => date('Y-m-d H:i:s'),
+                    'ip_address' => $_SERVER['REMOTE_ADDR'],
+                    'email' => $this->cleanfordb($data['email']),
+                    'orderid' => $this->cleanfordb($session_data['refenfant'] .' '.  $session_data['choix_don_unique_mensuel'].' '.  $session_data['fonds']),
+                    'utm_source' => $this->cleanfordb($_SESSION['utm_source']),
+                    'utm_medium' => $this->cleanfordb($_SESSION['utm_medium']),
+                    'utm_campaign' => $this->cleanfordb($_SESSION['utm_campaign']),
+                    'name' => $this->cleanfordb($data['pname']),
+                    'street' => $this->cleanfordb($data['street']),
+                    'zipcode' => $this->cleanfordb($data['zipcode']),
+                    'city' => $this->cleanfordb($data['city']),
+                    'country' => $this->cleanfordb($data['country']),
+                    'language' => $lang,
+                    'amount' => $final_amount,
+                    'currency' => 'CHF',
+                    'fund' => $this->cleanfordb($session_data['fonds']),
+                    'child_id' => $this->cleanfordb($session_data['refenfant']),
+                    'partner_ref' => $this->cleanfordb($session_data['partner_ref']),
+                    'session_id' => session_id(),
+                    'odoo_status' => self::SUBMITTED_TO_PF,
+                    'transaction_id' => $transaction,
+                    'pf_payid' => $pfTransaction->getId()
+                )
+            );
         }
 
-        //redirect thank you page for Christmas only
-       if($this->cleanfordb($session_data['fonds'])=='noel'){$form['ACCEPTURL'] = $base_address . '/confirmation-don-noel';}
+        // Create Payment Page URL:
+        $redirectionUrl = $client->getTransactionPaymentPageService()->paymentPageUrl($this->spaceId, $pfTransaction->getId());
 
-        $sha_sign = self::compute_pf_sha_sign($form)
+        header('Location: ' . $redirectionUrl);
 
-        ?>
-        <html>
-            <head><title>Redirecting to Postfinance...</title></head>
-            <body>
-                <form action="<?=POSTFINANCE_URL?>/orderstandard_utf8.asp" method="post" name="pf_for_contact_form">
-                    <input type="hidden" name="PSPID" value="<?php echo $form['PSPID']; ?>">
-                    <input type="hidden" name="ORDERID" value="<?php echo $form['ORDERID']; ?>">
-                    <input type="hidden" name="PARAMPLUS" value="<?php echo $form['PARAMPLUS']; ?>">
-                    <input type="hidden" name="AMOUNT" value="<?php echo $form['AMOUNT']; ?>">
-                    <input type="hidden" name="CURRENCY" value="<?php echo $form['CURRENCY']; ?>">
-                    <input type="hidden" name="LANGUAGE" value="<?php echo $form['LANGUAGE']; ?>">
-                    <input type="hidden" name="CN" value="<?php echo $form['CN']; ?>">
-                    <input type="hidden" name="EMAIL" value="<?php echo $form['EMAIL']; ?>">
-                    <input type="hidden" name="COMPLUS" value="<?php echo $form['COMPLUS']; ?>">
-                    <input type="hidden" name="ACCEPTURL" value="<?php echo $form['ACCEPTURL']; ?>">
-                    <input type="hidden" name="DECLINEURL" value="<?php echo $form['DECLINEURL']; ?>">
-                    <input type="hidden" name="EXCEPTIONURL" value="<?php echo $form['EXCEPTIONURL']; ?>">
-                    <input type="hidden" name="CANCELURL" value="<?php echo $form['CANCELURL']; ?>">
-                    <input type="hidden" name="SHASIGN" value="<?php echo $sha_sign; ?>">
-                </form>
-                <script type="text/javascript">
-                    document.pf_for_contact_form.submit();
-                </script>
-            </body>
-        </html>
-        <?php
-    }
-
-    private static function compute_pf_sha_sign($form) {
-        $arrayToHash = array();
-        foreach ($form as $key => $value) {
-            if ($value != '') {
-                $arrayToHash[] = strtoupper($key) . '=' . $value . POSTFINANCE_SHA_IN;
-            }
-        }
-        asort($arrayToHash);
-        $stringToHash = implode('', $arrayToHash);
-        $hashedString = sha1($stringToHash);
-
-        return $hashedString;
-    }
-
-    /**
-     * The sorted names of the parameters that can be sent by PostFinance after a successful payment.
-     * https://e-payment-postfinance.v-psp.com/~/media/kdb/integration%20guides/sha-out_params.ashx
-     */
-    const PF_CORRECT_PARAMETERS = array(
-        'AAVADDRESS',      'AAVCHECK',              'AAVMAIL',             'AAVNAME',
-        'AAVPHONE',        'AAVZIP',                'ACCEPTANCE',          'ALIAS',
-        'AMOUNT',          'BIC',                   'BIN',                 'BRAND',
-        'CARDNO',          'CCCTY',                 'CN',                  'COLLECTOR_BIC',
-        'COLLECTOR_IBAN',  'COMPLUS',               'CREATION_STATUS',     'CREDITDEBIT',
-        'CURRENCY',        'CVCCHECK',              'DCC_COMMPERCENTAGE',  'DCC_CONVAMOUNT',
-        'DCC_CONVCCY',     'DCC_EXCHRATE',          'DCC_EXCHRATESOURCE',  'DCC_EXCHRATETS',
-        'DCC_INDICATOR',   'DCC_MARGINPERCENTAGE',  'DCC_VALIDHOURS',      'DEVICEID',
-        'DIGESTCARDNO',    'ECI',                   'ED',                  'EMAIL',
-        'ENCCARDNO',       'FXAMOUNT',              'FXCURRENCY',          'IP',
-        'IPCTY',           'MANDATEID',             'MOBILEMODE',          'NBREMAILUSAGE',
-        'NBRIPUSAGE',      'NBRIPUSAGE_ALLTX',      'NBRUSAGE',            'NCERROR',
-        'ORDERID',         'PAYID',                 'PAYIDSUB',            'PAYMENT_REFERENCE',
-        'PM',              'SCO_CATEGORY',          'SCORING',             'SEQUENCETYPE',
-        'SIGNDATE',        'STATUS',                'SUBBRAND',            'SUBSCRIPTION_ID',
-        'TICKET',          'TRXDATE',               'VC'
-    );
-
-    public static function is_verified_pf_sha_sign($form) {
-        $upperized = array();
-        foreach ($form as $key => $value) {
-            $upperized[strtoupper($key)] = $value;
-        }
-
-        foreach (self::PF_CORRECT_PARAMETERS as $key) {
-            $value = $upperized[$key] ?? '';
-            if ($value != '') {
-                $arrayToHash[] = $key . '=' . $value . POSTFINANCE_SHA_OUT;
-            }
-        }
-
-        $stringToHash = implode('', $arrayToHash);
-        $hashedString = sha1($stringToHash);
-
-        return strtoupper($hashedString) == strtoupper($form['SHASIGN']);
     }
 
     /**
@@ -447,81 +397,72 @@ class Compassion_Donation_Form {
      */
     public function shortcode_confirmation($atts, $content) {
 
-        $atts = shortcode_atts(array(), $atts);
-
         ob_start();
 
         global $wpdb;
         $table_name = $wpdb->prefix . DONATION_TABLE_NAME;
 
-        // Donation info has been received.
-        if (isset($_GET['COMPLUS']) AND strlen($_GET['COMPLUS']) == 36) {
-
-            $complus = filter_var($_GET['COMPLUS'], FILTER_SANITIZE_STRING);
-
-            // Check if donation infos truly comes from PostFinance
-            if(Compassion_Donation_Form::is_verified_pf_sha_sign($_GET)) {
-                error_log('Update transaction with parameters received from Postfinance');
-                if (isset($_GET['STATUS']) AND in_array($_GET['STATUS'], array(5, 9))) {
+        // Setup API client
+        $client = new ApiClient($this->userId, $this->secret);
+        // Check latest transactions
+        $results = $wpdb->get_results(
+            "SELECT * FROM " . $table_name .
+            " WHERE odoo_status = '" . self::SUBMITTED_TO_PF . "' " .
+            "AND (pf_raw NOT IN ('FAILED', 'DECLINE','FULFILL') or pf_raw is Null) " .
+            "AND pf_payid IS NOT NULL ORDER BY id desc;");
+        foreach ($results as $result) {
+            try {
+                $transaction = $client->getTransactionService()->read($this->spaceId, $result->pf_payid);
+                error_log("Got a transaction from PF with state : " . $transaction->getState());
+                if ($transaction->getState() == TransactionState::FULFILL) {
                     $status = self::RECEIVED_FROM_PF;
+
                 } else {
                     $status = self::SUBMITTED_TO_PF;
                 }
-            } else {
-                // Two possibilities:
-                //   - An attempt at hacking with a falsified message.
-                //   - The POSTFINANCE_SHA_OUT constant does not match the real one.
-                // In case of the second possibility, keep the donation in the db but with a verification_error status.
-
-                error_log('Received falsified donation info. Please check that the POSTFINANCE_SHA_OUT constant is '
-                    . 'correct.');
-
-                $status = self::VERIFICATION_ERROR;
+                $paymentConnector = $transaction->getPaymentConnectorConfiguration();
+                $paymentMode = $paymentConnector ? $paymentConnector->getPaymentMethodConfiguration()->getName() : '';
+                $wpdb->update($table_name, array(
+                    'pf_brand' => $paymentMode,
+                    'pf_pm' => $paymentMode,
+                    'odoo_status' => $status,
+                    'pf_raw' => $transaction->getState()
+                ), array('pf_payid' => $transaction->getId(),
+                        'odoo_complete_time' => NULL)
+                );
+            } catch (\PostFinanceCheckout\Sdk\ApiException $e) {
+                error_log("No PF Transaction found for transaction " . $result->id);
+            } catch (\PostFinanceCheckout\Sdk\Http\ConnectionException $e) {
+                error_log("No PF Transaction found for transaction " . $result->id);
+            } catch (\PostFinanceCheckout\Sdk\VersioningException $e) {
+                error_log("No PF Transaction found for transaction " . $result->id);
             }
-
-            $wpdb->update($table_name, array(
-                'pf_pm' => $_GET['PM'],
-                'pf_payid' => $_GET['PAYID'],
-                'pf_brand' => $_GET['BRAND'],
-                'pf_raw' => json_encode($_GET),
-                'ip_address' => $_GET['IP'],
-                'odoo_status' => $status
-            ), array('transaction_id' => $complus,
-                    'odoo_complete_time' => NULL)
-            );
-
-            unset($_SESSION['transaction']);
         }
 
+        error_log('Looking for donation(s) to export...');
+        $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE odoo_status = '" . self::RECEIVED_FROM_PF . "'");
+        if (sizeof($results) >= 1) {
 
-        if(isset($_GET) OR isset($_POST)) {
+            $odoo = new CompassionOdooConnector();
 
-            error_log('Looking for donation(s) to export...');
+            foreach ($results as $result) {
 
-            $results = $wpdb->get_results("SELECT * FROM " . $table_name . " WHERE odoo_status = '" . self::RECEIVED_FROM_PF . "'");
-            if (sizeof($results) >= 1) {
+                unset($invoice_id);
 
-                $odoo = new CompassionOdooConnector();
-
-                foreach ($results as $result) {
-
-                    unset($invoice_id);
-
-                    try {
-                        $invoice_id = $odoo->send_donation_info($result);
-                        if (!empty($invoice_id)) {
-                            $wpdb->update($table_name, array(
-                                    'odoo_status' => self::INVOICED,
-                                    'odoo_invoice_id' => $invoice_id,
-                                    'odoo_complete_time' => date('Y-m-d H:i:s'),
-                                ), array('transaction_id' => $result->transaction_id)
-                            );
-                        } else {
-                            error_log("Donation '$result->transaction_id' did not receive an invoice_id.");
-                        }
-                    } catch (Exception $e) {
-                        error_log("Error while exporting donation '$result->transaction_id' to odoo.");
+                try {
+                    $invoice_id = $odoo->send_donation_info($result);
+                    if (!empty($invoice_id)) {
+                        $wpdb->update($table_name, array(
+                                'odoo_status' => self::INVOICED,
+                                'odoo_invoice_id' => $invoice_id,
+                                'odoo_complete_time' => date('Y-m-d H:i:s'),
+                            ), array('transaction_id' => $result->transaction_id)
+                        );
+                    } else {
+                        error_log("Donation '$result->transaction_id' did not receive an invoice_id.");
                     }
+                } catch (Exception $e) {
+                    error_log("Error while exporting donation '$result->transaction_id' to odoo.");
                 }
             }
         }
