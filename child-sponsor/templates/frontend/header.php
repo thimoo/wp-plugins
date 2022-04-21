@@ -132,7 +132,7 @@ jQuery(document).ready(function($) {
         <?php } ?>
         <p style="text-align: center;" class="subtitle">
             <?php if ($msk) { ?>
-                <?= $_SESSION['msk_participant_name'] ?>, <?= __('nimmt am', 'child-sponsor-lang') ?> <?= $_SESSION['msk_name'] ?><?= __(' teil.', 'child-sponsor-lang') ?> <?= __('und dankt Ihnen für Ihre Unterstützung!', 'child-sponsor-lang') ?>
+                <?= $_SESSION['msk_participant_name'] ?>, <?= __('nimmt am', 'child-sponsor-lang') ?> <?= $_SESSION['msk_name'] ?><?= __(' teil.', 'child-sponsor-lang') ?> <?= __('und dankt dir für deine Unterstützung!', 'child-sponsor-lang') ?>
             <?php } else {
                 _e('Du wirst das Leben des Kindes für immer verändern.', 'child-sponsor-lang');
             } ?>
