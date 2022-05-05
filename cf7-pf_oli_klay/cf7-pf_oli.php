@@ -310,7 +310,7 @@ class Compassion_Donation_Form {
         }
 
         $from_csp = substr($session_data['fonds'], 0, strlen('csp_mensuel')) == 'csp_mensuel';
-        $final_amount = ($from_csp ? floatval(substr($session_data['fonds'], -2)) : $session_data['wert']);
+        $final_amount = ($session_data['choix_don_unique_mensuel'] == 'don_mensuel' ? floatval(substr($session_data['fonds'], -2)) : $session_data['wert']);
         $session_data['fonds'] = $from_csp ? 'csp' : $session_data['fonds'];
         $session_data['choix_don_unique_mensuel'] = $from_csp ? 'monthly' : $session_data['choix_don_unique_mensuel'];
 
