@@ -8,23 +8,23 @@
  */
 ?>
 <form id="donation_form" method="POST" action="?step=redirect" class="">
-    <div class="row">
-        <div class="small-12 medium-4 columns">
-            <label class="text-left middle"><?php _e("Méthode de versement", "donation-form"); ?></label>
-        </div>
-        <div class="small-12 medium-8 columns">
-            <div style="margin-bottom: 16px;">
-                <label style="display:inline-block; margin-right:8px;">
-                    <input id="payment_method_online" name="payment_method" type="radio" value="online" checked>
-                    <?php _e("En ligne", "donation-form"); ?>
-                </label>
-                <label style="display:inline-block">
-                    <input name="payment_method" type="radio" value="slip">
-                    <?php _e("Par bulletin", "donation-form"); ?>
-                </label>
-            </div>
-        </div>
-    </div>
+<!--    <div class="row">-->
+<!--        <div class="small-12 medium-4 columns">-->
+<!--            <label class="text-left middle">--><?php //_e("Méthode de versement", "donation-form"); ?><!--</label>-->
+<!--        </div>-->
+<!--        <div class="small-12 medium-8 columns">-->
+<!--            <div style="margin-bottom: 16px;">-->
+<!--                <label style="display:inline-block; margin-right:8px;">-->
+<!--                    <input id="payment_method_online" name="payment_method" type="radio" value="online" checked>-->
+<!--                    --><?php //_e("En ligne", "donation-form"); ?>
+<!--                </label>-->
+<!--                <label style="display:inline-block">-->
+<!--                    <input name="payment_method" type="radio" value="slip">-->
+<!--                    --><?php //_e("Par bulletin", "donation-form"); ?>
+<!--                </label>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <?php include($donation_inputs_template); ?>
 
