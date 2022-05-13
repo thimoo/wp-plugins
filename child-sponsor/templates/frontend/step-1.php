@@ -345,6 +345,7 @@ end different payer -->
                 </div>
 <?php } else { ?>
        <h4 class="text-uppercase" id="Patenschaftplus"><?php _e('Write & Pray', 'child-sponsor-lang'); ?></h4>
+        <span class="marg-top-10"><?php _e('Bitte wählen', 'child-sponsor-lang')?>:</span>
             <div class="row">
                 <div class="small-12 columns radio-wrapper">
                     <label><input type="radio" required data-msg="<?php _e('Angabe erforderlich', 'child-sponsor-lang'); ?>" name="writepray" value="WRPR">
