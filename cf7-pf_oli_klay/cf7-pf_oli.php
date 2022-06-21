@@ -172,6 +172,7 @@ class Compassion_Donation_Form {
                         'options' => array(
                             array('value' => 'donation', 'label' => __('General funds', 'donation-form')),
                             array('value' => 'csp', 'label' => __('CSP', 'donation-form')),
+                            array('value' => 'food', 'label' => __('Food', 'donation-form')),
                             array('value' => 'cadeau', 'label' => __('Gift to a child', 'donation-form')),
                             array('value' => 'single', 'label' => __('Specific fund', 'donation-form')),
                         ),
@@ -247,6 +248,14 @@ class Compassion_Donation_Form {
                                         '<tspan x="0" dy="1.4em"> ☐ ' . __('monatliche Spende', 'donation-form') . '</tspan>' .
                                         '<tspan x="0" dy="1.4em"> ☐ ' . __('einmalige Spende', 'donation-form') . '</tspan>';
                 break;
+            case 'food':
+                $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/food/inputs.php';
+                $bank_transfer_comment = __('Bitte gib an, ob du regelmässig oder einmalig für den Nahrungsmittelkrise Fonds spenden möchtest. Spendenzweck (monatlich oder einmalig): Nahrungsmittelkrise', 'donation-form');
+                $bank_transfer_reason = '<tspan x="0" dy="0">' . __('Nahrungsmittelkrise', 'donation-form') . ' :</tspan>' .
+                    '<tspan x="0" dy="1.4em"> ☐ ' . __('monatliche Spende', 'donation-form') . '</tspan>' .
+                    '<tspan x="0" dy="1.4em"> ☐ ' . __('einmalige Spende', 'donation-form') . '</tspan>';
+                break;
+
             case 'single':
                 $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/single/inputs.php';
                 if ($atts['motif']) {
@@ -309,8 +318,12 @@ class Compassion_Donation_Form {
             $transaction = $_SESSION['transaction'];
         }
 
+        $from_food = substr($session_data['fonds'], 0, strlen('drf_food_crisis_mensuel')) == 'drf_food_crisis_mensuel';
+        $final_amount = ($session_data['choix_don_unique_mensuel'] == 'don_mensuel' ? floatval(substr($session_data['fonds'], -3)) : $session_data['wert']);
+        $session_data['fonds'] = $from_food ? 'drf_food_crisis' : $session_data['fonds'];
+        $session_data['choix_don_unique_mensuel'] = $from_food ? 'monthly' : $session_data['choix_don_unique_mensuel'];
+
         $from_csp = substr($session_data['fonds'], 0, strlen('csp_mensuel')) == 'csp_mensuel';
-        $final_amount = ($session_data['choix_don_unique_mensuel'] == 'don_mensuel' ? floatval(substr($session_data['fonds'], -2)) : $session_data['wert']);
         $session_data['fonds'] = $from_csp ? 'csp' : $session_data['fonds'];
         $session_data['choix_don_unique_mensuel'] = $from_csp ? 'monthly' : $session_data['choix_don_unique_mensuel'];
 
@@ -446,12 +459,14 @@ class Compassion_Donation_Form {
             $odoo = new CompassionOdooConnector();
 
             foreach ($results as $result) {
-
+                
                 unset($invoice_id);
+                //error_log("donation result:" . var_dump($result));
 
                 try {
                     $invoice_id = $odoo->send_donation_info($result);
-                    if (!empty($invoice_id)) {
+                    if ($invoice_id!='0') {
+                        error_log("export succeeded with inv_id:" . $invoice_id);
                         $wpdb->update($table_name, array(
                                 'odoo_status' => self::INVOICED,
                                 'odoo_invoice_id' => $invoice_id,

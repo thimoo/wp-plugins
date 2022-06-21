@@ -1,4 +1,4 @@
-<param id="type_flag" value="csp"/>
+<param id="type_flag" value="food"/>
 
 <div class="row">
     <div class="small-12 medium-4 columns">
@@ -24,12 +24,12 @@
     <div class="small-12 medium-8 columns">
         <div class="select-wrapper">
             <select name="fonds" id="fonds" class="input-field">
-                <option data-v="15" value="csp_mensuel_ 15" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 15") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 15.-', 'donation-form'); ?></option>
-                <option data-v="30" value="csp_mensuel_ 30" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 30") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 30.-', 'donation-form'); ?></option>
-                <option data-v="60" value="csp_mensuel_ 60" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 60") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 60.-', 'donation-form'); ?></option>
+                <option data-v="20" value="drf_food_crisis_mensuel_ 20" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 20") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 20.-', 'donation-form'); ?></option>
+                <option data-v="60" value="drf_food_crisis_mensuel_ 60" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 60") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 60.-', 'donation-form'); ?></option>
+                <option data-v="100" value="drf_food_crisis_mensuel_100" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 100") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 100.-', 'donation-form'); ?></option>
             </select>
         </div>
-        <p class="small">
+    <p class="small">
             <?php _e('Nach deiner ersten Spende wird dir Compassion Schweiz einen Einzahlungsschein für die weiteren Spenden zusenden.', 'donation-form'); ?>
         </p>
     </div>
