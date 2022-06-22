@@ -2,7 +2,9 @@
 
 <div class="row">
     <div class="small-12 medium-4 columns">
-        <!-- <label class="text-left middle"><?= __('Choix du don', 'donation-form') ?></label> -->
+        <div class="small-12 medium-4 columns">
+            <h5 class="text-uppercase"><?= __('Ich möchte spenden', 'donation-form') ?></h5>
+        </div>
     </div>
     <div class="small-12 medium-8 columns">
         <div style="margin-bottom: 16px;">
@@ -26,7 +28,9 @@
             <select name="fonds" id="fonds" class="input-field">
                 <option data-v="15" value="csp_mensuel_ 15" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 15") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 15.-', 'donation-form'); ?></option>
                 <option data-v="30" value="csp_mensuel_ 30" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 30") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 30.-', 'donation-form'); ?></option>
-                <option data-v="60" value="csp_mensuel_ 60" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 60") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 60.-', 'donation-form'); ?></option>
+                <option data-v="60" value="csp_mensuel_  <div class="small-12 medium-4 columns">
+                <h5 class="text-uppercase"><?= __('Ich möchte spenden', 'donation-form') ?></h5>
+        </div>60" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 60") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 60.-', 'donation-form'); ?></option>
             </select>
         </div>
         <p class="small">
@@ -39,7 +43,7 @@
         <!-- <label class="text-left middle"><?php _e('Je désire faire un don unique', 'donation-form'); ?></label> -->
     </div>
     <div class="small-12 medium-8 columns">
-        <input id="wert" type="number" step="0.01" required class="input-field" name="wert" value="<?php echo $_SESSION["fund_amount"] ?? '' ?>">
+        <input id="wert" placeholder="<?= __('Betrag angeben', 'donation-form') ?>" type="number" step="0.01" required class="input-field" name="wert" value="<?php echo $_SESSION["fund_amount"] ?? '' ?>">
     </div>
 </div>
 

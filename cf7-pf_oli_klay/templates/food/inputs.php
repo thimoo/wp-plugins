@@ -2,7 +2,7 @@
 
 <div class="row">
     <div class="small-12 medium-4 columns">
-        <!-- <label class="text-left middle"><?= __('Choix du don', 'donation-form') ?></label> -->
+        <h5 class="text-uppercase"><?= __('Ich möchte spenden', 'donation-form') ?></h5>
     </div>
     <div class="small-12 medium-8 columns">
         <div style="margin-bottom: 16px;">
@@ -29,7 +29,7 @@
                 <option data-v="100" value="drf_food_crisis_mensuel_100" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 100") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 100.-', 'donation-form'); ?></option>
             </select>
         </div>
-    <p class="small">
+        <p class="small">
             <?php _e('Nach deiner ersten Spende wird dir Compassion Schweiz einen Einzahlungsschein für die weiteren Spenden zusenden.', 'donation-form'); ?>
         </p>
     </div>
@@ -39,8 +39,9 @@
         <!-- <label class="text-left middle"><?php _e('Je désire faire un don unique', 'donation-form'); ?></label> -->
     </div>
     <div class="small-12 medium-8 columns">
-        <input id="wert" type="number" step="0.01" required class="input-field" name="wert" value="<?php echo $_SESSION["fund_amount"] ?? '' ?>">
+        <input id="wert" placeholder="<?= __('Betrag angeben', 'donation-form') ?>" type="number" step="0.01" required class="input-field" name="wert" value="<?php echo $_SESSION["fund_amount"] ?? '' ?>">
     </div>
+
 </div>
 
 <script>

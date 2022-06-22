@@ -89,7 +89,7 @@
             <input name="email" type="email" required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9+_.-]+\.[a-zA-Z]{2,}$" class="input-field" value="<?php echo $_SESSION["email"] ?? ''?>">
         </div>
     </div>
-    <div class="row text-center form-action">
+    <div class="row text-center form-action marg-top-10">
             <input type="submit" class="button button-blue button-small click_donate" value="<?php _e('Jetzt spenden', 'donation-form'); ?>"/>
     </div>
     <div class="row text-center">
