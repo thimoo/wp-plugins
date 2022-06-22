@@ -29,8 +29,8 @@
     <?php include($donation_inputs_template); ?>
 
     <div class="row">
-        <div class="small-12 medium-12 columns">
-            <h4 class="text-uppercase"><?php _e("Meine persönlichen Daten", "child-sponsor-lang"); ?></h4>
+        <div class="small-12 medium-12 columns marg-top-10 ">
+            <h5 class="text-uppercase"><?php _e("Meine persönlichen Daten", "child-sponsor-lang"); ?></h5>
         </div>
     </div>
     <div class="row">
