@@ -92,7 +92,7 @@
     <div class="row text-center form-action marg-top-10">
             <input type="submit" class="button button-blue button-small click_donate" value="<?php _e('Jetzt spenden', 'donation-form'); ?>"/>
     </div>
-    <div class="row text-center">
+    <div class="row text-center marg-top-10">
         <p>
             <?php _e("Deine Spende an Compassion ist in der Schweiz steuerabzugsberechtigt.", "donation-form")?>
         </p>
