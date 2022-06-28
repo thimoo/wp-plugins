@@ -1,5 +1,5 @@
 <param id="type_flag" value="food"/>
-
+<input type="hidden" id="type_flag" name="type_flag" value="food">
 <div class="row">
     <div class="small-12 medium-4 columns">
         <h5 class="text-uppercase"><?= __('Ich möchte spenden', 'donation-form') ?></h5>

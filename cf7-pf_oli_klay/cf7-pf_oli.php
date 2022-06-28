@@ -318,14 +318,19 @@ class Compassion_Donation_Form {
             $transaction = $_SESSION['transaction'];
         }
 
-        $from_food = substr($session_data['fonds'], 0, strlen('drf_food_crisis_mensuel')) == 'drf_food_crisis_mensuel';
-        $final_amount = ($session_data['choix_don_unique_mensuel'] == 'don_mensuel' ? floatval(substr($session_data['fonds'], -3)) : $session_data['wert']);
-        $session_data['fonds'] = $from_food ? 'drf_food_crisis' : $session_data['fonds'];
-        $session_data['choix_don_unique_mensuel'] = $from_food ? 'monthly' : $session_data['choix_don_unique_mensuel'];
+        $final_amount=$session_data['wert'];
+        if ($session_data['type_flag']=='food') {
+            error_log("starting food donation of : " . $final_amount);
+            $from_food='drf_food_crisis_mensuel';
+            $final_amount = ($session_data['choix_don_unique_mensuel'] == 'don_mensuel' ? floatval(substr($session_data['fonds'], -3)) : $session_data['wert']);
+            $session_data['fonds'] = 'drf_food_crisis';
 
-        $from_csp = substr($session_data['fonds'], 0, strlen('csp_mensuel')) == 'csp_mensuel';
-        $session_data['fonds'] = $from_csp ? 'csp' : $session_data['fonds'];
-        $session_data['choix_don_unique_mensuel'] = $from_csp ? 'monthly' : $session_data['choix_don_unique_mensuel'];
+        } elseif ($session_data['type_flag']=='csp') {
+            $from_csp='csp_mensuel';
+            $final_amount = ($session_data['choix_don_unique_mensuel'] == 'don_mensuel' ? floatval(substr($session_data['fonds'], -2)) : $session_data['wert']);
+            $session_data['fonds'] = 'csp';
+
+        }
 
         // Form data to send to postfinance (ogone)
         $base_address = 'https://' . $_SERVER['HTTP_HOST'] . '/' . $my_current_lang;

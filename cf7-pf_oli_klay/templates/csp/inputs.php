@@ -1,4 +1,5 @@
 <param id="type_flag" value="csp"/>
+<input type="hidden" id="type_flag" name="type_flag" value="csp">
 
 <div class="row">
     <div class="small-12 medium-4 columns">
