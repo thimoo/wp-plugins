@@ -26,7 +26,7 @@
             <select name="fonds" id="fonds" class="input-field">
                 <option data-v="10" value="drf_food_crisis_mensuel_ 10" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 10") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 10.-', 'donation-form'); ?></option>
                 <option data-v="20" value="drf_food_crisis_mensuel_ 20" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 20") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 20.-', 'donation-form'); ?></option>
-                <option data-v="40" value="drf_food_crisis_mensuel_ 40" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 40") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 40.-', 'donation-form'); ?></option>
+                <option data-v="40" selected="selected" value="drf_food_crisis_mensuel_ 40" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 40") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 40.-', 'donation-form'); ?></option>
                 <option data-v="120" value="drf_food_crisis_mensuel_120" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 120") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 120.-', 'donation-form'); ?></option>
                 <option data-v="240" value="drf_food_crisis_mensuel_240" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 240") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 240.-', 'donation-form'); ?></option>
             </select>
