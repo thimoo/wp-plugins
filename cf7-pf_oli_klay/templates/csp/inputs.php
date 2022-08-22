@@ -3,9 +3,7 @@
 
 <div class="row">
     <div class="small-12 medium-4 columns">
-        <div class="small-12 medium-4 columns">
             <h5 class="text-uppercase"><?= __('Ich möchte spenden', 'donation-form') ?></h5>
-        </div>
     </div>
     <div class="small-12 medium-8 columns">
         <div style="margin-bottom: 16px;">
