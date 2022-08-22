@@ -29,9 +29,7 @@
             <select name="fonds" id="fonds" class="input-field">
                 <option data-v="15" value="csp_mensuel_ 15" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 15") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 15.-', 'donation-form'); ?></option>
                 <option data-v="30" value="csp_mensuel_ 30" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 30") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 30.-', 'donation-form'); ?></option>
-                <option data-v="60" value="csp_mensuel_  <div class="small-12 medium-4 columns">
-                <h5 class="text-uppercase"><?= __('Ich möchte spenden', 'donation-form') ?></h5>
-        </div>60" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 60") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 60.-', 'donation-form'); ?></option>
+                <option data-v="60" value="csp_mensuel_ 60"<?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "mensuel 60") ? 'selected' : '' ?>><?php _e('Monatliche Spende von CHF 60.-', 'donation-form'); ?></option>
             </select>
         </div>
         <p class="small">
