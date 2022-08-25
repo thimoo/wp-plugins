@@ -15,11 +15,11 @@
     <div class="small-12 medium-8 columns">
         <div style="margin-bottom: 16px;">
             <label style="display:inline-block; margin-right:8px;">
-                <input type="radio" name="choix_don_unique_mensuel" value="monthly" id="don_mensuel" >
+                <input type="radio" name="choix_don_unique_mensuel" value="monthly" id="don_mensuel" checked >
                 <?= __('Monatlich', 'donation-form') ?>
             </label>
             <label style="display:inline-block">
-                <input type="radio" name="choix_don_unique_mensuel" value="" id="don_unique" checked >
+                <input type="radio" name="choix_don_unique_mensuel" value="" id="don_unique"  >
                 <?= __('Einmalige Spende', 'donation-form') ?>
             </label>
         </div>
