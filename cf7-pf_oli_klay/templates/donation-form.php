@@ -50,7 +50,7 @@
             </label>
         </div>
         <div class="small-12 medium-8 columns">
-            <input name="cname" type="text" required class="input-field" value="<?php echo $_SESSION["cname"] ?? ''?>">
+            <input name="cname" type="text" class="input-field" value="<?php echo $_SESSION["cname"] ?? ''?>">
         </div>
     </div>
     <div class="row">
