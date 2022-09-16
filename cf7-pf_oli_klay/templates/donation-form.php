@@ -46,6 +46,16 @@
     <div class="row">
         <div class="small-12 medium-4 columns">
             <label class="text-left middle">
+                <?php _e("Company", "donation-form"); ?>
+            </label>
+        </div>
+        <div class="small-12 medium-8 columns">
+            <input name="cname" type="text" required class="input-field" value="<?php echo $_SESSION["cname"] ?? ''?>">
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 medium-4 columns">
+            <label class="text-left middle">
                 <?php _e("Strasse/Hausnr.", "child-sponsor-lang"); ?>
             </label>
         </div>
