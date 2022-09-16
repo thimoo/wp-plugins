@@ -46,7 +46,7 @@
     <div class="row">
         <div class="small-12 medium-4 columns">
             <label class="text-left middle">
-                <?php _e("Company", "donation-form"); ?>
+                <?php _e("Unternehmen", "donation-form"); ?>
             </label>
         </div>
         <div class="small-12 medium-8 columns">
