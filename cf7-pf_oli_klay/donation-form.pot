@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-15 07:47+0000\n"
+"POT-Creation-Date: 2022-09-16 11:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -30,11 +30,13 @@ msgstr ""
 msgid "Babys und Müttern helfen"
 msgstr ""
 
-#: templates/csp/inputs.php:47 templates/food/inputs.php:44
+#: templates/csp/inputs.php:43 templates/food/inputs.php:44
+#: templates/food-business/inputs.php:15
 msgid "Betrag angeben"
 msgstr ""
 
-#: templates/frontend/inputs.php:5 templates/single/inputs.php:5
+#: templates/food-business/inputs.php:12 templates/frontend/inputs.php:5
+#: templates/single/inputs.php:5
 msgid "Betrag deiner Spende in CHF"
 msgstr ""
 
@@ -42,21 +44,22 @@ msgstr ""
 msgid "Bibelfonds"
 msgstr ""
 
-#: cf7-pf_oli.php:246
+#: cf7-pf_oli.php:247
 msgid ""
 "Bitte gib an, ob du regelmässig oder einmalig für das Kinder-"
 "Überlebensprogramm spenden möchtest. Spendenzweck (monatlich oder einmalig): "
 "Überlebensprogramm"
 msgstr ""
 
-#: cf7-pf_oli.php:253
+#: cf7-pf_oli.php:254 cf7-pf_oli.php:262
 msgid ""
 "Bitte gib an, ob du regelmässig oder einmalig für den Nahrungsmittelkrise "
 "Fonds spenden möchtest. Spendenzweck (monatlich oder einmalig): "
 "Nahrungsmittelkrise"
 msgstr ""
 
-#: templates/frontend/inputs.php:13 templates/single/inputs.php:13
+#: templates/frontend/inputs.php:13 templates/single/inputs.php:16
+#: templates/single/inputs.php:34
 msgid "Choix du don"
 msgstr ""
 
@@ -64,7 +67,7 @@ msgstr ""
 msgid "CSP"
 msgstr ""
 
-#: templates/donation-form.php:97
+#: templates/donation-form.php:107
 msgid "Deine Spende an Compassion ist in der Schweiz steuerabzugsberechtigt."
 msgstr ""
 
@@ -72,12 +75,13 @@ msgstr ""
 msgid "Donation form"
 msgstr ""
 
-#: templates/csp/inputs.php:18 templates/food/inputs.php:15
-#: templates/frontend/inputs.php:23 templates/single/inputs.php:23
+#: templates/csp/inputs.php:16 templates/food/inputs.php:15
+#: templates/frontend/inputs.php:23 templates/single/inputs.php:26
+#: templates/single/inputs.php:44
 msgid "Einmalige Spende"
 msgstr ""
 
-#: cf7-pf_oli.php:249 cf7-pf_oli.php:256
+#: cf7-pf_oli.php:250 cf7-pf_oli.php:257 cf7-pf_oli.php:265
 msgid "einmalige Spende"
 msgstr ""
 
@@ -93,6 +97,10 @@ msgstr ""
 msgid "Food"
 msgstr ""
 
+#: cf7-pf_oli.php:176
+msgid "Food companies"
+msgstr ""
+
 #: templates/cadeau/inputs.php:18
 msgid "Geburtstagsgeschenk"
 msgstr ""
@@ -105,11 +113,11 @@ msgstr ""
 msgid "Geschenk ans Kinderzentrum"
 msgstr ""
 
-#: cf7-pf_oli.php:176
+#: cf7-pf_oli.php:177
 msgid "Gift to a child"
 msgstr ""
 
-#: templates/donation-form.php:130
+#: templates/donation-form.php:140
 msgid "Générer le bulletin"
 msgstr ""
 
@@ -118,8 +126,8 @@ msgstr ""
 msgid "http://compassion.ch/"
 msgstr ""
 
-#: templates/csp/inputs.php:7 templates/csp/inputs.php:33
-#: templates/food/inputs.php:5
+#: templates/csp/inputs.php:6 templates/food/inputs.php:5
+#: templates/food-business/inputs.php:5
 msgid "Ich möchte spenden"
 msgstr ""
 
@@ -127,19 +135,19 @@ msgstr ""
 msgid "ie : BO012301234"
 msgstr ""
 
-#: templates/donation-form.php:105
+#: templates/donation-form.php:115
 msgid "Imprimer"
 msgstr ""
 
-#: templates/csp/inputs.php:25 templates/food/inputs.php:22
+#: templates/csp/inputs.php:23 templates/food/inputs.php:22
 msgid "Je désire faire un don mensuel"
 msgstr ""
 
-#: templates/csp/inputs.php:44 templates/food/inputs.php:41
+#: templates/csp/inputs.php:40 templates/food/inputs.php:41
 msgid "Je désire faire un don unique"
 msgstr ""
 
-#: templates/donation-form.php:93 templates/donation-form.php:129
+#: templates/donation-form.php:103 templates/donation-form.php:139
 msgid "Jetzt spenden"
 msgstr ""
 
@@ -155,12 +163,13 @@ msgstr ""
 msgid "Mein Betrag in CHF"
 msgstr ""
 
-#: templates/csp/inputs.php:14 templates/food/inputs.php:11
-#: templates/frontend/inputs.php:19 templates/single/inputs.php:19
+#: templates/csp/inputs.php:12 templates/food/inputs.php:11
+#: templates/frontend/inputs.php:19 templates/single/inputs.php:22
+#: templates/single/inputs.php:40
 msgid "Monatlich"
 msgstr ""
 
-#: cf7-pf_oli.php:248 cf7-pf_oli.php:255
+#: cf7-pf_oli.php:249 cf7-pf_oli.php:256 cf7-pf_oli.php:264
 msgid "monatliche Spende"
 msgstr ""
 
@@ -172,7 +181,7 @@ msgstr ""
 msgid "Monatliche Spende von CHF 120.-"
 msgstr ""
 
-#: templates/csp/inputs.php:30
+#: templates/csp/inputs.php:28
 msgid "Monatliche Spende von CHF 15.-"
 msgstr ""
 
@@ -184,7 +193,7 @@ msgstr ""
 msgid "Monatliche Spende von CHF 240.-"
 msgstr ""
 
-#: templates/csp/inputs.php:31
+#: templates/csp/inputs.php:29
 msgid "Monatliche Spende von CHF 30.-"
 msgstr ""
 
@@ -192,7 +201,7 @@ msgstr ""
 msgid "Monatliche Spende von CHF 40.-"
 msgstr ""
 
-#: templates/csp/inputs.php:34
+#: templates/csp/inputs.php:30
 msgid "Monatliche Spende von CHF 60.-"
 msgstr ""
 
@@ -200,13 +209,13 @@ msgstr ""
 msgid "Méthode de versement"
 msgstr ""
 
-#: templates/csp/inputs.php:38 templates/food/inputs.php:35
+#: templates/csp/inputs.php:34 templates/food/inputs.php:35
 msgid ""
 "Nach deiner ersten Spende wird dir Compassion Schweiz einen "
 "Einzahlungsschein für die weiteren Spenden zusenden."
 msgstr ""
 
-#: cf7-pf_oli.php:254
+#: cf7-pf_oli.php:255 cf7-pf_oli.php:263
 msgid "Nahrungsmittelkrise"
 msgstr ""
 
@@ -226,7 +235,7 @@ msgstr ""
 msgid "Postfinance paiement"
 msgstr ""
 
-#: cf7-pf_oli.php:181
+#: cf7-pf_oli.php:182
 msgid "Reason for the donation"
 msgstr ""
 
@@ -234,15 +243,15 @@ msgstr ""
 msgid "Sauberes Wasser"
 msgstr ""
 
-#: cf7-pf_oli.php:177 cf7-pf_oli.php:185
+#: cf7-pf_oli.php:178 cf7-pf_oli.php:186
 msgid "Specific fund"
 msgstr ""
 
-#: templates/frontend/inputs.php:30 templates/single/inputs.php:30
+#: templates/frontend/inputs.php:30 templates/single/inputs.php:54
 msgid "Spendenzweck"
 msgstr ""
 
-#: cf7-pf_oli.php:183
+#: cf7-pf_oli.php:184
 msgid ""
 "The second part (separated by a \"|\") is the reason used by Odoo "
 "(corresponds to the internal reference of a product)."
@@ -252,7 +261,7 @@ msgstr ""
 msgid "The type of donation form to display."
 msgstr ""
 
-#: cf7-pf_oli.php:188
+#: cf7-pf_oli.php:189
 msgid "Toilettes for all|toilette"
 msgstr ""
 
@@ -260,7 +269,11 @@ msgstr ""
 msgid "Type of form"
 msgstr ""
 
-#: cf7-pf_oli.php:242 cf7-pf_oli.php:265 cf7-pf_oli.php:269
+#: templates/donation-form.php:49
+msgid "Unternehmen"
+msgstr ""
+
+#: cf7-pf_oli.php:243 cf7-pf_oli.php:274 cf7-pf_oli.php:278
 msgid "Vielen Dank, dass du nicht vergisst, den Spendenzweck zu erwähnen."
 msgstr ""
 
@@ -268,7 +281,7 @@ msgstr ""
 msgid "Vorname, Nachname"
 msgstr ""
 
-#: templates/donation-form.php:108
+#: templates/donation-form.php:118
 msgid "Vous pouvez également scanner le code QR directement sur votre écran"
 msgstr ""
 
@@ -276,6 +289,6 @@ msgstr ""
 msgid "Weihnachtsgeschenk"
 msgstr ""
 
-#: cf7-pf_oli.php:247
+#: cf7-pf_oli.php:248
 msgid "Überlebensprogramm"
 msgstr ""
