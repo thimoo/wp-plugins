@@ -6,9 +6,8 @@
 <!--    </div>-->
 <!--</div>-->
 <div class="row don_unique"> <!--  style="display: none;">-->
-    <div class="small-12 medium-4 columns">
-    </div>
-    <div class="small-12 medium-8 columns">
+
+    <div class="small-12 medium-12 columns">
         <div class="row">
             <div class="small-12 medium-4 columns">
                 <button class="button button-beige buttondonation" value="40" > 40.-CHF</button>
