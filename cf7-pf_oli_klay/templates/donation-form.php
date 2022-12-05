@@ -7,6 +7,12 @@
  *  - CF7PF_PLUGIN_DIR_URL
  */
 ?>
+
+<script type="text/javascript">
+    // script for different donation buttons
+
+
+</script>
 <form id="donation_form" method="POST" action="?step=redirect" class="">
     <div class="row" style="display:none;">
         <div class="small-12 medium-4 columns">
@@ -148,6 +154,30 @@ let payment_method = document.getElementsByName("payment_method")[1];
 let payment_parent = payment_method.parentElement
 let email = document.getElementsByName("email")[0];
 
+// donation amount buttons on BF donation form
+jQuery(document).ready(function($){
+    $("button").click(function(){
+        var value = $(this).val();
+        var input = $('#wert');
+        input.val(value);
+    });
+});
+// Get all the buttons into a node list
+let buttons = document.querySelectorAll(".buttondonation");
+// Set an event handler on the document so that when
+// any element is clicked, the event will bubble up to it
+document.addEventListener("click", function(evt){
+    // Check to see if it was a button that was clicked
+    if(evt.target.classList.contains("buttondonation")){
+        // Loop over all the buttons & remove the active class
+        buttons.forEach(function(button){
+            button.classList.remove("active");
+        });
+        // Make the clicked button have the active class
+        evt.target.classList.add("active");
+    }
+});
+// end donation amount buttons on BF donation form
 
 jQuery('#payment_method_online').on('ifChanged', function () {
     if (jQuery(this).prop('checked')) {
