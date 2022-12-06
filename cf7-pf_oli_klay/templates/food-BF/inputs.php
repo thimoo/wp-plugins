@@ -21,7 +21,7 @@
         </div>
         <div class="row marg-top-10">
             <div class="small-12 columns ">
-                <input id="wert" type="text" step="0.01" required placeholder="choisir un montant ci-dessus ou indiquer un montant libre" class="input-field buttondonationvalue" name="wert" value="<?php echo $_SESSION["fund_amount"] ?? '' ?>">
+                <input id="wert" type="text" step="0.01" required placeholder="<? echo __('Wähle oben einen Betrag oder gib einen freien Betrag an', 'donation-form') ?>" class="input-field buttondonationvalue" name="wert" value="<?php echo $_SESSION["fund_amount"] ?? '' ?>">
             </div>
         </div>
     </div>
