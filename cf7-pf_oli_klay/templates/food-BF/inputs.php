@@ -16,12 +16,12 @@
                 <button class="button button-beige buttondonation" value="120" > 120.- CHF</button>
             </div>
             <div class="small-12 medium-4 columns">
-                <button class="button button-beige buttondonation" value="440" > 440.- CHF</button>
+                <button id="default_bt_value" class="button button-beige buttondonation" value="440" > 440.- CHF</button>
             </div>
         </div>
         <div class="row marg-top-10">
             <div class="small-12 columns ">
-                <input id="wert" type="hidden" step="0.01" required placeholder="choisir un montant ci-dessus ou indiquer un montant libre" class="input-field" name="wert" value="<?php echo $_SESSION["fund_amount"] ?? '' ?>">
+                <input id="wert" type="text" step="0.01" required placeholder="choisir un montant ci-dessus ou indiquer un montant libre" class="input-field buttondonationvalue" name="wert" value="<?php echo $_SESSION["fund_amount"] ?? '' ?>">
             </div>
         </div>
     </div>

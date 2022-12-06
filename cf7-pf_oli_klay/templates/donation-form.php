@@ -156,7 +156,10 @@ let email = document.getElementsByName("email")[0];
 
 // donation amount buttons on BF donation form
 jQuery(document).ready(function($){
-    $("button").click(function(){
+    // if no button selected, default value
+         $('.buttondonationvalue').val(440);
+    // else
+        $("button").click(function(){
         var value = $(this).val();
         var input = $('#wert');
         input.val(value);

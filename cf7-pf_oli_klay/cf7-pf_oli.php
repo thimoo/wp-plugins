@@ -351,8 +351,7 @@ class Compassion_Donation_Form {
 
         } elseif  ($session_data['type_flag']=='food-bf') {
             error_log("starting food donation of : " . $final_amount);
-            $from_food='drf_food_bf_mensuel';
-            $final_amount = ($session_data['choix_don_unique_mensuel'] == 'don_mensuel' ? floatval(substr($session_data['fonds'], -3)) : $session_data['wert']);
+            $final_amount = $session_data['wert'];
             $session_data['fonds'] = 'drf_food_bf';
 
         } elseif ($session_data['type_flag']=='csp') {
