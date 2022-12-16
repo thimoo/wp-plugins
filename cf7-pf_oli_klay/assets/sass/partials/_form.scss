@@ -364,11 +364,29 @@ label.error {
 }
 
 
+//donation form gift tweak
+
+#donation_gift_form{
+label{
+  color: white;
+  font-size: 1rem;}
+.button{
+  background: #e1e1da !important;
+  border-bottom-color: #d8d8d2;
+  color: #333132 !important;
+}
+}
+
 //zahlung 
 
 .zahlung label{display:inline-block; margin-right: 1em}
 
 @media screen and (max-width: 1080px) {
+
+  #donation_gift_form{
+    label.middle{margin:0;}
+  }
+
   .child-sponsor {
 
     .campaign {
