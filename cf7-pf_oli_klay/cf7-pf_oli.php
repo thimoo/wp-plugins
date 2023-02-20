@@ -300,8 +300,12 @@ class Compassion_Donation_Form {
     }
 
     private function cleanfordb($value) {
+        
+    // Convert special characters to their safe equivalents
+    $value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
 
-        return trim(filter_var($value));
+    // remove whitespaces from both ends and return value
+    return trim($value);
 
     }
 
@@ -439,6 +443,8 @@ class Compassion_Donation_Form {
         $redirectionUrl = $client->getTransactionPaymentPageService()->paymentPageUrl($this->spaceId, $pfTransaction->getId());
 
         header('Location: ' . $redirectionUrl);
+
+        session_destroy();
 
     }
 
