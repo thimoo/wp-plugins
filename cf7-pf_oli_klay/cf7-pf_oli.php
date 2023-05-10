@@ -175,6 +175,7 @@ class Compassion_Donation_Form {
                             array('value' => 'food', 'label' => __('Food', 'donation-form')),
                             array('value' => 'food-business', 'label' => __('Food companies', 'donation-form')),
                             array('value' => 'food-bf', 'label' => __('Food Burkina', 'donation-form')),
+                            array('value' => 'food-2023', 'label' => __('Food crisis 2023', 'donation-form')),
                             array('value' => 'cadeau', 'label' => __('Gift to a child', 'donation-form')),
                             array('value' => 'single', 'label' => __('Specific fund', 'donation-form')),
                         ),
@@ -274,6 +275,14 @@ class Compassion_Donation_Form {
                     '<tspan x="0" dy="1.4em"> ☐ ' . __('einmalige Spende', 'donation-form') . '</tspan>';
                 break;
 
+            case 'food-2023':
+                $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/food-2023/inputs.php';
+                $bank_transfer_comment = __('Bitte gib an, ob du regelmässig oder einmalig für den Nahrungsmittelkrise Fonds spenden möchtest. Spendenzweck (monatlich oder einmalig): Nahrungsmittelkrise', 'donation-form');
+                $bank_transfer_reason = '<tspan x="0" dy="0">' . __('Nahrungsmittelkrise', 'donation-form') . ' :</tspan>' .
+                    '<tspan x="0" dy="1.4em"> ☐ ' . __('monatliche Spende', 'donation-form') . '</tspan>' .
+                    '<tspan x="0" dy="1.4em"> ☐ ' . __('einmalige Spende', 'donation-form') . '</tspan>';
+                break;
+
             case 'single':
                 $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/single/inputs.php';
                 if ($atts['motif']) {
@@ -357,6 +366,11 @@ class Compassion_Donation_Form {
             error_log("starting food donation of : " . $final_amount);
             $final_amount = $session_data['wert'];
             $session_data['fonds'] = 'drf_food_bf';
+
+        } elseif  ($session_data['type_flag']=='food-2023') {
+            error_log("starting food donation of : " . $final_amount);
+            $final_amount = $session_data['wert'];
+            $session_data['fonds'] = 'drf_food_crisis';
 
         } elseif ($session_data['type_flag']=='csp') {
             $from_csp='csp_mensuel';
