@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Contact Form 7 Postfinance oli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-21 08:06+0000\n"
-"PO-Revision-Date: 2022-12-06 08:44+0000\n"
+"PO-Revision-Date: 2023-05-11 09:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -44,7 +44,7 @@ msgstr "Montant de votre don en CHF"
 msgid "Bibelfonds"
 msgstr "Fonds Bible"
 
-#: cf7-pf_oli.php:248
+#: cf7-pf_oli.php:249
 msgid ""
 "Bitte gib an, ob du regelmässig oder einmalig für das Kinder-"
 "Überlebensprogramm spenden möchtest. Spendenzweck (monatlich oder einmalig): "
@@ -53,7 +53,7 @@ msgstr ""
 "Merci d'indiquer dans la partie \"motif de versement\" si vous désirez faire "
 "un don mensuel ou unique en ajoutant la mention \"mamans et tout-petits\". "
 
-#: cf7-pf_oli.php:255 cf7-pf_oli.php:263 cf7-pf_oli.php:271
+#: cf7-pf_oli.php:256 cf7-pf_oli.php:264 cf7-pf_oli.php:272 cf7-pf_oli.php:280
 msgid ""
 "Bitte gib an, ob du regelmässig oder einmalig für den Nahrungsmittelkrise "
 "Fonds spenden möchtest. Spendenzweck (monatlich oder einmalig): "
@@ -85,7 +85,8 @@ msgstr ""
 msgid "Einmalige Spende"
 msgstr "Don unique"
 
-#: cf7-pf_oli.php:251 cf7-pf_oli.php:258 cf7-pf_oli.php:266 cf7-pf_oli.php:274
+#: cf7-pf_oli.php:252 cf7-pf_oli.php:259 cf7-pf_oli.php:267 cf7-pf_oli.php:275
+#: cf7-pf_oli.php:283
 msgid "einmalige Spende"
 msgstr "don unique"
 
@@ -109,6 +110,10 @@ msgstr ""
 msgid "Food companies"
 msgstr ""
 
+#: cf7-pf_oli.php:178
+msgid "Food crisis 2023"
+msgstr ""
+
 #: templates/cadeau/inputs.php:18
 msgid "Geburtstagsgeschenk"
 msgstr "Cadeau d'anniversaire "
@@ -121,7 +126,7 @@ msgstr ""
 msgid "Geschenk ans Kinderzentrum"
 msgstr "Cadeau pour le Centre d’accueil "
 
-#: cf7-pf_oli.php:178
+#: cf7-pf_oli.php:179
 msgid "Gift to a child"
 msgstr ""
 
@@ -177,7 +182,8 @@ msgstr "Montant de mon cadeau en CHF"
 msgid "Monatlich"
 msgstr "Mensuel"
 
-#: cf7-pf_oli.php:250 cf7-pf_oli.php:257 cf7-pf_oli.php:265 cf7-pf_oli.php:273
+#: cf7-pf_oli.php:251 cf7-pf_oli.php:258 cf7-pf_oli.php:266 cf7-pf_oli.php:274
+#: cf7-pf_oli.php:282
 msgid "monatliche Spende"
 msgstr "don mensuel"
 
@@ -227,7 +233,7 @@ msgstr ""
 "carte de crédit ou un virement bancaire (onglets ci-dessus). Compassion "
 "Suisse vous adressera ensuite les informations pour les virements suivants."
 
-#: cf7-pf_oli.php:256 cf7-pf_oli.php:264 cf7-pf_oli.php:272
+#: cf7-pf_oli.php:257 cf7-pf_oli.php:265 cf7-pf_oli.php:273 cf7-pf_oli.php:281
 msgid "Nahrungsmittelkrise"
 msgstr "Crise alimentaire"
 
@@ -247,7 +253,7 @@ msgstr "n° de référence de mon filleul"
 msgid "Postfinance paiement"
 msgstr ""
 
-#: cf7-pf_oli.php:183
+#: cf7-pf_oli.php:184
 msgid "Reason for the donation"
 msgstr ""
 
@@ -255,7 +261,7 @@ msgstr ""
 msgid "Sauberes Wasser"
 msgstr "Fonds de l'eau pour les enfants"
 
-#: cf7-pf_oli.php:179 cf7-pf_oli.php:187
+#: cf7-pf_oli.php:180 cf7-pf_oli.php:188
 msgid "Specific fund"
 msgstr ""
 
@@ -263,7 +269,7 @@ msgstr ""
 msgid "Spendenzweck"
 msgstr "Motif de votre don"
 
-#: cf7-pf_oli.php:185
+#: cf7-pf_oli.php:186
 msgid ""
 "The second part (separated by a \"|\") is the reason used by Odoo "
 "(corresponds to the internal reference of a product)."
@@ -273,7 +279,7 @@ msgstr ""
 msgid "The type of donation form to display."
 msgstr ""
 
-#: cf7-pf_oli.php:190
+#: cf7-pf_oli.php:191
 msgid "Toilettes for all|toilette"
 msgstr ""
 
@@ -285,7 +291,7 @@ msgstr ""
 msgid "Unternehmen"
 msgstr "Entreprise"
 
-#: cf7-pf_oli.php:244 cf7-pf_oli.php:283 cf7-pf_oli.php:287
+#: cf7-pf_oli.php:245 cf7-pf_oli.php:292 cf7-pf_oli.php:296
 msgid "Vielen Dank, dass du nicht vergisst, den Spendenzweck zu erwähnen."
 msgstr ""
 "Merci de ne pas oublier d'inscrire le motif de votre don dans la partie "
@@ -303,10 +309,14 @@ msgstr ""
 msgid "Weihnachtsgeschenk"
 msgstr "Cadeau de Noël"
 
+#: templates/food-2023/inputs.php:24
+msgid "Wähle einen Betrag oder gib einen freien Betrag"
+msgstr "Choisir un montant ci-dessus ou indiquer un montant libre"
+
 #: templates/food-BF/inputs.php:24
 msgid "Wähle oben einen Betrag oder gib einen freien Betrag an"
 msgstr "Choisir un montant ci-dessus ou indiquer un montant libre"
 
-#: cf7-pf_oli.php:249
+#: cf7-pf_oli.php:250
 msgid "Überlebensprogramm"
 msgstr "mamans et tout-petits"
