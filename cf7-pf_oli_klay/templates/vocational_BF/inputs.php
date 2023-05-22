@@ -10,13 +10,13 @@
     <div class="small-12 medium-12 columns">
         <div class="row">
             <div class="small-12 medium-4 columns">
-                <button class="button button-beige buttondonation" value="350" >1 Ausbildungsplatz</button>
+                <button class="button button-beige buttondonation" value="350" ><? echo __('1 Ausbildungsplatz' 'donation-form') ?></button>
             </div>
             <div class="small-12 medium-4 columns">
-                <button class="button button-beige buttondonation" value="3500" >10 Ausbildungsplätze</button>
+                <button class="button button-beige buttondonation" value="1750" ><? echo __('5 Ausbildungsplatze' 'donation-form') ?></button>
             </div>
             <div class="small-12 medium-4 columns">
-                <button id="default_bt_value" class="button button-beige buttondonation" value="17500" >50 Ausbildungsplätze</button>
+                <button id="default_bt_value" class="button button-beige buttondonation" value="3500" ><? echo __('10 Ausbildungsplatze' 'donation-form') ?></button>
             </div>
         </div>
         <div class="row marg-top-10">
