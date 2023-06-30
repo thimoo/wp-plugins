@@ -13,10 +13,10 @@
                 <button class="button button-beige buttondonation" value="122" ><? echo __('1 Familie', 'donation-form') ?></button>
             </div>
             <div class="small-12 medium-4 columns">
-                <button class="button button-beige buttondonation" value="1220" ><? echo __('10 Familien', 'donation-form') ?></button>
+                <button class="button button-beige buttondonation" value="610" ><? echo __('5 Familien', 'donation-form') ?></button>
             </div>
             <div class="small-12 medium-4 columns">
-                <button id="default_bt_value" class="button button-beige buttondonation" value="2440" ><? echo __('20 Familien' , 'donation-form') ?></button>
+                <button id="default_bt_value" class="button button-beige buttondonation" value="1220" ><? echo __('10 Familien' , 'donation-form') ?></button>
             </div>
         </div>
         <div class="row marg-top-10">
