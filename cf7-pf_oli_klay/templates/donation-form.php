@@ -90,7 +90,15 @@
         </div>
         <div class="mall-12 medium-8 columns">
             <select name="country" required class="input-field" >
-                <?php include "countries_options.php" ?>
+                <?php if(ICL_LANGUAGE_CODE=='de'): ?>
+                    <?php include "countries_options_de.php" ?>
+                <?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
+                    <?php include "countries_options_fr.php" ?>
+                <?php elseif(ICL_LANGUAGE_CODE=='it'): ?>
+                    <?php include "countries_options_it.php" ?>
+                <?php endif; ?>
+
+
             </select>
         </div>
     </div>

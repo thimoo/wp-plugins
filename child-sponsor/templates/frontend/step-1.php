@@ -349,7 +349,7 @@ end different payer -->
             <div class="row">
                 <div class="small-12 columns radio-wrapper">
                     <label><input type="radio" required data-msg="<?php _e('Angabe erforderlich', 'child-sponsor-lang'); ?>" name="writepray" value="WRPR">
-                      <?php _e('Ich engagiere mich für mein Patenkind zu beten und ihm regelmässsig zu schreiben.  Ich habe verstanden, dass eine andere Person die Finanzierung dieser Patenschaft übernimmt und ich gegenüber dem Kind der/die offizielle Pate/Patin bin.', 'child-sponsor-lang')?></label>
+                      <?php _e('Ich erkläre mich bereit, für mein Patenkind zu beten und ihm regelmässig zu schreiben.  Ich habe verstanden, dass eine andere Person die Finanzierung dieser Patenschaft übernimmt und ich gegenüber dem Kind der/die offizielle Pate/Patin bin.', 'child-sponsor-lang')?></label>
                     <label><input type="radio" required data-msg="<?php _e('Angabe erforderlich', 'child-sponsor-lang'); ?>" name="writepray" value="WRPR+DON">
                         <?php _e('Ich erkläre mich bereit, regelmässig für mein Patenkind zu beten und zu schreiben, und ich kann das Kind monatlich mit folgenden Betrage unterstützen:', 'child-sponsor-lang')?></label>
                 </div>

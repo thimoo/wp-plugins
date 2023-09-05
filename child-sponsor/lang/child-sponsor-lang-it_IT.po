@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Compassion Child Sponsor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-27 08:24+0000\n"
-"PO-Revision-Date: 2022-04-21 07:28+0000\n"
+"PO-Revision-Date: 2023-09-01 08:52+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -24,13 +24,13 @@ msgstr ""
 msgid "Aktion \"Den Segen verdoppeln\""
 msgstr ""
 
-#: templates/frontend/step-1.php:442
+#: templates/frontend/step-1.php:443
 msgid "Andere"
 msgstr "Altro"
 
-#: templates/frontend/step-1.php:350 templates/frontend/step-1.php:352
-#: templates/frontend/step-1.php:423 templates/frontend/step-1.php:446
-#: templates/frontend/step-1.php:450 templates/frontend/step-1.php:465
+#: templates/frontend/step-1.php:351 templates/frontend/step-1.php:353
+#: templates/frontend/step-1.php:424 templates/frontend/step-1.php:447
+#: templates/frontend/step-1.php:451 templates/frontend/step-1.php:466
 #: templates/frontend/step-2.php:370
 msgid "Angabe erforderlich"
 msgstr "Selezionare una risposta"
@@ -52,7 +52,7 @@ msgstr "Appellativo"
 msgid "Anrede erforderlich"
 msgstr "Compilare il campo Appellativo"
 
-#: templates/frontend/step-1.php:432
+#: templates/frontend/step-1.php:433
 msgid "Anzeige in Zeitschrift"
 msgstr "Articolo di giornale"
 
@@ -75,15 +75,15 @@ msgstr "Confermare"
 msgid "BIC"
 msgstr "Swift / BIC"
 
-#: templates/frontend/step-1.php:359
+#: templates/frontend/step-1.php:360
 msgid "Bitte wähle einen Betrag zwischen 1 und 42 Franken."
 msgstr "Scegli un importo compreso tra 1 e 42 CHF."
 
-#: templates/frontend/step-1.php:424
+#: templates/frontend/step-1.php:348 templates/frontend/step-1.php:425
 msgid "Bitte wählen"
 msgstr "Per favore scegliere"
 
-#: templates/frontend/step-1.php:377 templates/frontend/step-2.php:297
+#: templates/frontend/step-1.php:378 templates/frontend/step-2.php:297
 #, php-format
 msgid "Briefwechsel mit %s"
 msgstr "Scambio di lettere con %s"
@@ -92,7 +92,7 @@ msgstr "Scambio di lettere con %s"
 msgid "Compassion Child Sponsor"
 msgstr ""
 
-#: templates/frontend/step-1.php:430
+#: templates/frontend/step-1.php:431
 msgid "Compassion Magazin"
 msgstr "Rivista di Compassion"
 
@@ -168,11 +168,11 @@ msgstr ""
 #: templates/email/user-new-sponsor.php:284
 #: templates/email_de/user-new-sponsor.php:257
 #: templates/email_it/user-new-sponsor.php:275
-#: templates/frontend/step-1.php:398 templates/frontend/step-2.php:320
+#: templates/frontend/step-1.php:399 templates/frontend/step-2.php:320
 msgid "Englisch"
 msgstr "Inglese"
 
-#: templates/frontend/step-1.php:433
+#: templates/frontend/step-1.php:434
 msgid "Facebook, Youtube, Vimeo…"
 msgstr "Facebook, YouTube, Vimeo..."
 
@@ -183,7 +183,7 @@ msgstr "Famiglia"
 #: templates/email/user-new-sponsor.php:272
 #: templates/email_de/user-new-sponsor.php:245
 #: templates/email_it/user-new-sponsor.php:263
-#: templates/frontend/step-1.php:386 templates/frontend/step-2.php:308
+#: templates/frontend/step-1.php:387 templates/frontend/step-2.php:308
 msgid "Französisch"
 msgstr "Francese"
 
@@ -191,37 +191,37 @@ msgstr "Francese"
 msgid "Frau"
 msgstr "Signora"
 
-#: templates/frontend/step-1.php:473 templates/frontend/step-2.php:358
+#: templates/frontend/step-1.php:474 templates/frontend/step-2.php:358
 msgid "Freiwillig mithelfen"
 msgstr "Volontariato:"
 
-#: templates/frontend/step-1.php:429
+#: templates/frontend/step-1.php:430
 msgid "Freunde & Verwandte"
 msgstr "Amici e parenti"
 
-#: templates/frontend/step-1.php:380
+#: templates/frontend/step-1.php:381
 msgid ""
 "Für den Briefverkehr mit dem Patenkind verstehe ich ausser Deutsch auch:"
 msgstr "Per la corrispondenza con il bambino oltre all’italiano capisco anche:"
 
-#: templates/frontend/step-1.php:425
+#: templates/frontend/step-1.php:426
 msgid "Geben Sie das Konzert/Event an"
 msgstr "Indicare il concerto/evento"
 
-#: templates/frontend/step-1.php:432
+#: templates/frontend/step-1.php:433
 msgid "Geben Sie das Magazin/die Broschüre an"
 msgstr "Indicare il nome del giornale"
 
-#: templates/frontend/step-1.php:428
+#: templates/frontend/step-1.php:429
 msgid "Geben Sie den Namen der Kirche an"
 msgstr "Indicare il nome della chiesa"
 
-#: templates/frontend/step-1.php:434
+#: templates/frontend/step-1.php:435
 msgid "Geben Sie die Website an"
 msgstr "Indicare il sito web"
 
-#: templates/frontend/step-1.php:426 templates/frontend/step-1.php:427
-#: templates/frontend/step-1.php:429
+#: templates/frontend/step-1.php:427 templates/frontend/step-1.php:428
+#: templates/frontend/step-1.php:430
 msgid "Geben Sie Vor- und Nachnamen an"
 msgstr "Indicare i cognomi e nomi"
 
@@ -254,7 +254,7 @@ msgstr "Regalo"
 msgid "giftGRUEN GmbH"
 msgstr ""
 
-#: templates/frontend/step-1.php:428
+#: templates/frontend/step-1.php:429
 msgid "Gottesdienst/Kirche"
 msgstr "Chiesa/Celebrazione"
 
@@ -293,7 +293,6 @@ msgstr "Ho conosciuto Compassion attraverso"
 #: templates/email/user-new-sponsor.php:231
 #: templates/email_de/user-new-sponsor.php:203
 #: templates/email_it/user-new-sponsor.php:223
-#: templates/frontend/step-1.php:351
 msgid ""
 "Ich engagiere mich für mein Patenkind zu beten und ihm regelmässsig zu "
 "schreiben.  Ich habe verstanden, dass eine andere Person die Finanzierung "
@@ -304,12 +303,25 @@ msgstr ""
 "un'altra persona sta finanziando questo sostegno, ma che io sono il "
 "sostenitore ufficiale del bambino."
 
-#: templates/frontend/step-1.php:353
+#: templates/frontend/step-1.php:352
+msgid ""
+"Ich erkläre mich bereit, für mein Patenkind zu beten und ihm regelmässig zu "
+"schreiben.  Ich habe verstanden, dass eine andere Person die Finanzierung "
+"dieser Patenschaft übernimmt und ich gegenüber dem Kind der/die offizielle "
+"Pate/Patin bin."
+msgstr ""
+"Mi impegno a pregare e scrivere regolarmente al bambino. Ho preso atto che "
+"un'altra persona sta finanziando questo sostegno, ma che io sono il "
+"sostenitore ufficiale del bambino."
+
+#: templates/frontend/step-1.php:354
 msgid ""
 "Ich erkläre mich bereit, regelmässig für mein Patenkind zu beten und zu "
 "schreiben, und ich kann das Kind monatlich mit folgenden Betrage "
 "unterstützen:"
 msgstr ""
+"Mi impegno nello scrivere almeno 3 lettere all'anno e a pregare per il "
+"bambino. Posso contribuire mensilmente con un importo di:"
 
 #: templates/email/user-new-sponsor.php:233
 #: templates/email_de/user-new-sponsor.php:205
@@ -325,7 +337,7 @@ msgstr ""
 #: templates/email/user-new-sponsor.php:235
 #: templates/email_de/user-new-sponsor.php:207
 #: templates/email_it/user-new-sponsor.php:227
-#: templates/frontend/step-1.php:362
+#: templates/frontend/step-1.php:363
 msgid ""
 "Ich habe verstanden, dass eine andere Person den Rest der Finanzierung für "
 "diese Patenschaft übernimmt, dass ich aber der offizielle Pate/ die Patin "
@@ -334,11 +346,11 @@ msgstr ""
 "Sono a conoscenza che un'altra persona finanzi la rimanenza per questo "
 "sostegno, e che io sono il sostenitore ufficiale."
 
-#: templates/frontend/step-1.php:418 templates/frontend/step-2.php:340
+#: templates/frontend/step-1.php:419 templates/frontend/step-2.php:340
 msgid "Ich habe von Compassion erfahren durch"
 msgstr "Ho conosciuto Compassion attraverso"
 
-#: templates/frontend/step-1.php:476
+#: templates/frontend/step-1.php:477
 msgid ""
 "Ich möchte freiwillig mithelfen (z.B. Übersetzung, Events, Gebet), bitte "
 "kontaktiert mich."
@@ -354,7 +366,7 @@ msgstr "Scelgo l'importo CHF 42.-"
 msgid "Ich wähle den Betrag CHF 50.-"
 msgstr "Scelgo l'importo CHF 50.-"
 
-#: templates/frontend/step-1.php:434
+#: templates/frontend/step-1.php:435
 msgid "Internet"
 msgstr "Internet"
 
@@ -366,7 +378,7 @@ msgstr ""
 #: templates/email/user-new-sponsor.php:276
 #: templates/email_de/user-new-sponsor.php:249
 #: templates/email_it/user-new-sponsor.php:267
-#: templates/frontend/step-1.php:388 templates/frontend/step-2.php:312
+#: templates/frontend/step-1.php:389 templates/frontend/step-2.php:312
 msgid "Italienisch"
 msgstr "Italiano"
 
@@ -407,11 +419,11 @@ msgstr "Chiesa"
 msgid "Kirchgemeinde"
 msgstr "Chiesa"
 
-#: templates/frontend/step-1.php:427
+#: templates/frontend/step-1.php:428
 msgid "Kontakt durch Compassion Advokat"
 msgstr "Contatto con un volontario di Compassion"
 
-#: templates/frontend/step-1.php:426
+#: templates/frontend/step-1.php:427
 msgid "Kontakt durch Pate/Botschafter"
 msgstr "Contatto con un sostenitore o un ambasciatore"
 
@@ -419,7 +431,7 @@ msgstr "Contatto con un sostenitore o un ambasciatore"
 msgid "Kontoinhaber"
 msgstr "Intestatario del conto"
 
-#: templates/frontend/step-1.php:425
+#: templates/frontend/step-1.php:426
 msgid "Konzert/Veranstaltung"
 msgstr "Concerto/Evento"
 
@@ -440,7 +452,7 @@ msgstr "Concerto/Evento"
 msgid "Land"
 msgstr "Paese"
 
-#: templates/frontend/step-1.php:440
+#: templates/frontend/step-1.php:441
 msgid "Librairies"
 msgstr ""
 
@@ -472,7 +484,7 @@ msgstr "Ordine permanente mensile"
 #: templates/email/user-new-sponsor.php:312
 #: templates/email_de/user-new-sponsor.php:273
 #: templates/email_it/user-new-sponsor.php:299
-#: templates/frontend/step-1.php:437 templates/frontend/step-2.php:345
+#: templates/frontend/step-1.php:438 templates/frontend/step-2.php:345
 msgid "Muskathlon"
 msgstr "Muskathlon"
 
@@ -504,11 +516,11 @@ msgstr ""
 msgid "Name der Bank"
 msgstr "Nome della banca"
 
-#: templates/frontend/step-1.php:437
+#: templates/frontend/step-1.php:438
 msgid "Name der Läuferin/des Läufers"
 msgstr ""
 
-#: templates/frontend/step-1.php:438
+#: templates/frontend/step-1.php:439
 msgid "Name der Läuferin/des Läufers oder des Projekts"
 msgstr ""
 
@@ -518,7 +530,7 @@ msgstr ""
 msgid "Name der Person"
 msgstr "Cognome della persona"
 
-#: templates/frontend/step-1.php:460
+#: templates/frontend/step-1.php:461
 msgid "Name des Teilnehmers"
 msgstr "Nome del partecipante"
 
@@ -536,11 +548,11 @@ msgstr "NO"
 msgid "nimmt am"
 msgstr ""
 
-#: templates/frontend/step-1.php:442
+#: templates/frontend/step-1.php:443
 msgid "Noch genauer"
 msgstr "Precisare"
 
-#: templates/frontend/step-1.php:440
+#: templates/frontend/step-1.php:441
 msgid "nom de la librairie"
 msgstr ""
 
@@ -607,11 +619,11 @@ msgstr "CAP/Luogo"
 #: templates/email/user-new-sponsor.php:288
 #: templates/email_de/user-new-sponsor.php:261
 #: templates/email_it/user-new-sponsor.php:279
-#: templates/frontend/step-1.php:400 templates/frontend/step-2.php:324
+#: templates/frontend/step-1.php:401 templates/frontend/step-2.php:324
 msgid "Portugiesisch"
 msgstr "Portoghese"
 
-#: templates/frontend/step-1.php:409
+#: templates/frontend/step-1.php:410
 msgid "Schreiben kannst du deine Briefe auf Deutsch"
 msgstr "Puoi scrivere le tue lettere in italiano."
 
@@ -630,7 +642,7 @@ msgstr ""
 #: templates/email/user-new-sponsor.php:280
 #: templates/email_de/user-new-sponsor.php:253
 #: templates/email_it/user-new-sponsor.php:271
-#: templates/frontend/step-1.php:396 templates/frontend/step-2.php:316
+#: templates/frontend/step-1.php:397 templates/frontend/step-2.php:316
 msgid "Spanisch"
 msgstr "Spagnolo"
 
@@ -683,7 +695,7 @@ msgstr "Telefono"
 msgid "Telefon erforderlich"
 msgstr "Compilare il campo Telefono"
 
-#: templates/frontend/step-1.php:438
+#: templates/frontend/step-1.php:439
 msgid "TOGETHER"
 msgstr ""
 
@@ -725,7 +737,7 @@ msgstr "Compilare il campo Nome"
 msgid "Weihnachten"
 msgstr ""
 
-#: templates/frontend/step-1.php:483
+#: templates/frontend/step-1.php:484
 msgid "Weiter"
 msgstr "Avanti"
 
@@ -751,7 +763,7 @@ msgstr ""
 msgid "Wie haben Sie von Compassion erfahren?"
 msgstr " Come hai conosciuto Compassion?"
 
-#: templates/frontend/step-1.php:415
+#: templates/frontend/step-1.php:416
 msgid "WIE HAST DU VON COMPASSION ERFAHREN?"
 msgstr " Come hai conosciuto Compassion?"
 
@@ -760,7 +772,7 @@ msgid "Write & Pray"
 msgstr "Write & Pray"
 
 #: templates/frontend/step-1.php:133 templates/frontend/step-1.php:299
-#, php-format
+#, fuzzy, php-format
 #| msgid ""
 #| "Write&Pray-Patenschaften sind für Personen unter 25 Jahren vorgesehen. "
 #| "Klicke hier, um %s für 42CHF/Monat zu unterstützen."
@@ -771,7 +783,7 @@ msgstr ""
 "Il sostegno Write&Pray è solo per i minori di 25 anni. Clicca qui per "
 "sostenere %s per 42CHF/mese."
 
-#: templates/frontend/step-1.php:435
+#: templates/frontend/step-1.php:436
 msgid "YouVersion Bible Plan"
 msgstr ""
 
@@ -783,6 +795,6 @@ msgstr "Metodo di pagamento"
 msgid "Zahlungsweise erforderlich"
 msgstr "Selezionare un metodo"
 
-#: templates/frontend/step-1.php:482 templates/frontend/step-2.php:378
+#: templates/frontend/step-1.php:483 templates/frontend/step-2.php:378
 msgid "Zurück"
 msgstr "Indietro"
