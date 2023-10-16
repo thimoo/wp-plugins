@@ -34,7 +34,7 @@
             <select name="fonds" id="fonds" class="input-field">
                 <option value="humanitaire" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "humanitaire") ? 'selected' : '' ?>><?php _e('Aktuelle Nothilfe', 'donation-form'); ?></option>
                 <option value="noel" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "noel") ? 'selected' : '' ?>><?php _e('Weihnachtsgeschenk', 'donation-form'); ?></option>
-                <option value="wash" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "wash") ? 'selected' : '' ?>><?php _e('Sauberes Wasser', 'donation-form'); ?></option>
+                <option value="wash" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "wash") ? 'selected' : '' ?>><?php _e('Sauberes Wasser und Toiletten', 'donation-form'); ?></option>
                 <option value="csp" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "csp") ? 'selected' : '' ?>><?php _e('Babys und Müttern helfen', 'donation-form'); ?></option>
                 <option value="sansparrain" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "sansparrain") ? 'selected' : '' ?>><?php _e('Kinder, die ihren Paten verloren haben', 'donation-form'); ?></option>
                 <option value="medical" <?php echo (isset($_SESSION["fund_code"]) && $_SESSION["fund_code"] == "medical") ? 'selected' : '' ?>><?php _e('Medizinische Hilfe', 'donation-form'); ?></option>
