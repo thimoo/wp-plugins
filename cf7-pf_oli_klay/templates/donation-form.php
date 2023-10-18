@@ -9,7 +9,7 @@
 ?>
 
 <script type="text/javascript">
-    // script for different donation buttons
+        // script for different donation buttons
 
 
 </script>
@@ -113,7 +113,14 @@
             <input name="email" type="email" required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9+_.-]+\.[a-zA-Z]{2,}$" class="input-field" value="<?php echo $_SESSION["email"] ?? ''?>">
         </div>
     </div>
-    <div class="row text-center form-action marg-top-10">
+
+    <div class="row">
+        <div class="small-12 medium-4 columns"></div>
+        <div class="small-12 medium-8 columns">
+            <input class="condgene" type="checkbox" required /> <span class="marg-left-10"> <?php _e('Ja, ich habe die <a target="_blank" href="https://compassion.ch/de/datenschutz/">Datenschutzbestimmungen gelesen.</a>','donation-form')?> </span>
+        </div>
+    </div>
+    <div class="row text-center form-action marg-top-10"><br/><br/>
             <input type="submit" class="button button-blue button-small click_donate" value="<?php _e('Jetzt spenden', 'donation-form'); ?>"/>
     </div>
     <div class="row text-center marg-top-10">
@@ -136,7 +143,7 @@
 </div>
 
 <script type="text/javascript">
-// Set the reason for the donnation.
+    // Set the reason for the donnation.
 if(window.location.hash) {
     let hashParams = window.location.hash.substr(1).split("&"); // substr(1) to remove the `#`
     for(let i = 0; i < hashParams.length; i++) {
