@@ -179,6 +179,7 @@ class Compassion_Donation_Form {
                             array('value' => 'income_tz', 'label' => __('Income generation TZ', 'donation-form')),
                             array('value' => 'food-2023', 'label' => __('Food crisis 2023', 'donation-form')),
                             array('value' => 'food-2023-companies', 'label' => __('Food crisis 2023 companies', 'donation-form')),
+                            array('value' => 'food-2023-church', 'label' => __('Food crisis 2023 church', 'donation-form')),
                             array('value' => 'cadeau', 'label' => __('Gift to a child', 'donation-form')),
                             array('value' => 'single', 'label' => __('Specific fund', 'donation-form')),
                         ),
@@ -288,6 +289,14 @@ class Compassion_Donation_Form {
 
             case 'food-2023-companies':
                 $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/food-2023-companies/inputs.php';
+                $bank_transfer_comment = __('Bitte gib an, ob du regelmässig oder einmalig für den Nahrungsmittelkrise Fonds spenden möchtest. Spendenzweck (monatlich oder einmalig): Nahrungsmittelkrise', 'donation-form');
+                $bank_transfer_reason = '<tspan x="0" dy="0">' . __('Nahrungsmittelkrise', 'donation-form') . ' :</tspan>' .
+                    '<tspan x="0" dy="1.4em"> ☐ ' . __('monatliche Spende', 'donation-form') . '</tspan>' .
+                    '<tspan x="0" dy="1.4em"> ☐ ' . __('einmalige Spende', 'donation-form') . '</tspan>';
+                break;
+
+            case 'food-2023-church':
+                $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/food-2023-church/inputs.php';
                 $bank_transfer_comment = __('Bitte gib an, ob du regelmässig oder einmalig für den Nahrungsmittelkrise Fonds spenden möchtest. Spendenzweck (monatlich oder einmalig): Nahrungsmittelkrise', 'donation-form');
                 $bank_transfer_reason = '<tspan x="0" dy="0">' . __('Nahrungsmittelkrise', 'donation-form') . ' :</tspan>' .
                     '<tspan x="0" dy="1.4em"> ☐ ' . __('monatliche Spende', 'donation-form') . '</tspan>' .

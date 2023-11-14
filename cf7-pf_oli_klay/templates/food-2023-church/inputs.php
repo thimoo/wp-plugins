@@ -1,5 +1,5 @@
-<param id="type_flag" value="food-2023-companies"/>
-<input type="hidden" id="type_flag" name="type_flag" value="food-2023-companies">
+<param id="type_flag" value="food-2023-church"/>
+<input type="hidden" id="type_flag" name="type_flag" value="food-2023-church">
 <!--<div class="row">-->
 <!--    <div class="small-12 medium-4 columns">-->
 <!--        <h5 class="text-uppercase">--><?//= __('Ich möchte spenden', 'donation-form') ?><!--</h5>-->
@@ -10,13 +10,13 @@
     <div class="small-12 medium-12 columns">
         <div class="row">
             <div class="small-12 medium-4 columns">
+                <button class="button button-beige buttondonation" value="500" >500.- CHF</button>
+            </div>
+            <div class="small-12 medium-4 columns">
                 <button class="button button-beige buttondonation" value="1000" >1000.- CHF</button>
             </div>
             <div class="small-12 medium-4 columns">
-                <button class="button button-beige buttondonation" value="5000" >5000.- CHF</button>
-            </div>
-            <div class="small-12 medium-4 columns">
-                <button id="default_bt_value" class="button button-beige buttondonation" value="10000" >10'000.- CHF</button>
+                <button id="default_bt_value" class="button button-beige buttondonation" value="2500" >2500.- CHF</button>
             </div>
         </div>
         <div class="row marg-top-10">
