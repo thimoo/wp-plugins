@@ -262,30 +262,6 @@
       "oAP" : "\/donation-form-backup-202208150747270.pot~",
       "oF" : 0
     },
-    "\/donation-form-backup-202209161138450.pot~" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/donation-form-backup-202209161138450.pot~",
-      "oF" : 0
-    },
-    "\/donation-form-backup-202212060838020.pot~" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/donation-form-backup-202212060838020.pot~",
-      "oF" : 0
-    },
-    "\/donation-form-backup-202305110952460.pot~" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/donation-form-backup-202305110952460.pot~",
-      "oF" : 0
-    },
     "\/donation-form.pot" : {
       "cB" : 0,
       "ft" : 8192,
@@ -294,20 +270,12 @@
       "oAP" : "\/donation-form.pot",
       "oF" : 0
     },
-    "\/lang\/donation-form-fr_FR-backup-202212060844450.po~" : {
+    "\/lang\/donation-form-fr_FR-backup-202208150749170.po~" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/lang\/donation-form-fr_FR-backup-202212060844450.po~",
-      "oF" : 0
-    },
-    "\/lang\/donation-form-fr_FR-backup-202305110953270.po~" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/lang\/donation-form-fr_FR-backup-202305110953270.po~",
+      "oAP" : "\/lang\/donation-form-fr_FR-backup-202208150749170.po~",
       "oF" : 0
     },
     "\/lang\/donation-form-fr_FR.mo" : {
@@ -326,20 +294,12 @@
       "oAP" : "\/lang\/donation-form-fr_FR.po",
       "oF" : 0
     },
-    "\/lang\/donation-form-it_IT-backup-202109221114540.po~" : {
+    "\/lang\/donation-form-it_IT-backup-202208150751200.po~" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/lang\/donation-form-it_IT-backup-202109221114540.po~",
-      "oF" : 0
-    },
-    "\/lang\/donation-form-it_IT-backup-202212060845200.po~" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/lang\/donation-form-it_IT-backup-202212060845200.po~",
+      "oAP" : "\/lang\/donation-form-it_IT-backup-202208150751200.po~",
       "oF" : 0
     },
     "\/lang\/donation-form-it_IT.mo" : {
@@ -414,22 +374,6 @@
       "oAP" : "\/templates\/donation-redirect.php",
       "oF" : 0
     },
-    "\/templates\/food-2023\/inputs.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/food-2023\/inputs.php",
-      "oF" : 0
-    },
-    "\/templates\/food-BF\/inputs.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/food-BF\/inputs.php",
-      "oF" : 0
-    },
     "\/templates\/food-business\/inputs.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -454,12 +398,12 @@
       "oAP" : "\/templates\/frontend\/inputs.php",
       "oF" : 0
     },
-    "\/templates\/income_tz\/inputs.php" : {
+    "\/templates\/haiti\/inputs.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/templates\/income_tz\/inputs.php",
+      "oAP" : "\/templates\/haiti\/inputs.php",
       "oF" : 0
     },
     "\/templates\/qr_bill.php" : {
@@ -476,14 +420,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/single\/inputs.php",
-      "oF" : 0
-    },
-    "\/templates\/vocational_BF\/inputs.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/vocational_BF\/inputs.php",
       "oF" : 0
     },
     "\/vendor\/autoload.php" : {

@@ -125,7 +125,7 @@
     </div>
     <div class="row text-center marg-top-10">
         <p>
-            <?php _e("Deine Spende an Compassion ist in der Schweiz steuerabzugsberechtigt.", "donation-form")?>
+            <?php _e('Deine Spende an Compassion ist in der Schweiz <a target="_blank" href="https://compassion.ch/de/spenden-und-steuern/">steuerabzugsberechtigt.</a>', 'donation-form')?>
         </p>
     </div>
 </form>

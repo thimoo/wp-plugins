@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Contact Form 7 Postfinance oli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-21 08:06+0000\n"
-"PO-Revision-Date: 2023-11-14 13:41+0000\n"
+"PO-Revision-Date: 2023-11-15 10:46+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -68,7 +68,7 @@ msgstr "Importo della donazione"
 msgid "Bibelfonds"
 msgstr "Bibbie"
 
-#: cf7-pf_oli.php:252
+#: cf7-pf_oli.php:253
 msgid ""
 "Bitte gib an, ob du regelmässig oder einmalig für das Kinder-"
 "Überlebensprogramm spenden möchtest. Spendenzweck (monatlich oder einmalig): "
@@ -77,8 +77,8 @@ msgstr ""
 "Grazie di indicare nel “motivo di versamento” se desiderate fare una "
 "donazione mensile o singola aggiungendo la menzione \"CSP\""
 
-#: cf7-pf_oli.php:259 cf7-pf_oli.php:267 cf7-pf_oli.php:275 cf7-pf_oli.php:283
-#: cf7-pf_oli.php:291 cf7-pf_oli.php:299 cf7-pf_oli.php:308
+#: cf7-pf_oli.php:260 cf7-pf_oli.php:268 cf7-pf_oli.php:276 cf7-pf_oli.php:284
+#: cf7-pf_oli.php:292 cf7-pf_oli.php:300 cf7-pf_oli.php:308 cf7-pf_oli.php:317
 msgid ""
 "Bitte gib an, ob du regelmässig oder einmalig für den Nahrungsmittelkrise "
 "Fonds spenden möchtest. Spendenzweck (monatlich oder einmalig): "
@@ -97,8 +97,14 @@ msgid "CSP"
 msgstr ""
 
 #: templates/donation-form.php:128
-msgid "Deine Spende an Compassion ist in der Schweiz steuerabzugsberechtigt."
-msgstr "Le tue donazioni a Compassion sono deducibili dalle tasse in Svizzera."
+msgid ""
+"Deine Spende an Compassion ist in der Schweiz <a target=\"_blank\" "
+"href=\"https://compassion.ch/de/spenden-und-steuern/\">"
+"steuerabzugsberechtigt.</a>"
+msgstr ""
+"Le tue donazioni a Compassion sono <a target=\"_blank\" href=\"https:"
+"//compassion.ch/de/spenden-und-steuern/\">deducibili dalle tasse</a> in "
+"Svizzera."
 
 #: cf7-pf_oli.php:164
 msgid "Donation form"
@@ -110,8 +116,9 @@ msgstr ""
 msgid "Einmalige Spende"
 msgstr "Donazione singola"
 
-#: cf7-pf_oli.php:255 cf7-pf_oli.php:262 cf7-pf_oli.php:270 cf7-pf_oli.php:278
-#: cf7-pf_oli.php:286 cf7-pf_oli.php:294 cf7-pf_oli.php:302 cf7-pf_oli.php:311
+#: cf7-pf_oli.php:256 cf7-pf_oli.php:263 cf7-pf_oli.php:271 cf7-pf_oli.php:279
+#: cf7-pf_oli.php:287 cf7-pf_oli.php:295 cf7-pf_oli.php:303 cf7-pf_oli.php:311
+#: cf7-pf_oli.php:320
 msgid "einmalige Spende"
 msgstr "Donazione singola"
 
@@ -139,6 +146,10 @@ msgstr ""
 msgid "Food crisis 2023"
 msgstr ""
 
+#: cf7-pf_oli.php:182
+msgid "Food crisis 2023 church"
+msgstr ""
+
 #: cf7-pf_oli.php:181
 msgid "Food crisis 2023 companies"
 msgstr ""
@@ -155,7 +166,7 @@ msgstr ""
 msgid "Geschenk ans Kinderzentrum"
 msgstr "Regalo per il Centro Compassion "
 
-#: cf7-pf_oli.php:182
+#: cf7-pf_oli.php:183
 msgid "Gift to a child"
 msgstr ""
 
@@ -185,7 +196,7 @@ msgstr ""
 msgid "Income generation TZ"
 msgstr ""
 
-#: cf7-pf_oli.php:309
+#: cf7-pf_oli.php:318
 msgid "income generation TZ"
 msgstr ""
 
@@ -228,8 +239,9 @@ msgstr "Il mio importo in CHF"
 msgid "Monatlich"
 msgstr "Mensile"
 
-#: cf7-pf_oli.php:254 cf7-pf_oli.php:261 cf7-pf_oli.php:269 cf7-pf_oli.php:277
-#: cf7-pf_oli.php:285 cf7-pf_oli.php:293 cf7-pf_oli.php:301 cf7-pf_oli.php:310
+#: cf7-pf_oli.php:255 cf7-pf_oli.php:262 cf7-pf_oli.php:270 cf7-pf_oli.php:278
+#: cf7-pf_oli.php:286 cf7-pf_oli.php:294 cf7-pf_oli.php:302 cf7-pf_oli.php:310
+#: cf7-pf_oli.php:319
 msgid "monatliche Spende"
 msgstr "Donazione mensile"
 
@@ -279,8 +291,8 @@ msgstr ""
 "carta di credito o bonifico bancario (schede sopra). Compassion Svizzera "
 "invierà succesivamente le informazioni per eventuali trasferimenti."
 
-#: cf7-pf_oli.php:260 cf7-pf_oli.php:268 cf7-pf_oli.php:276 cf7-pf_oli.php:284
-#: cf7-pf_oli.php:292 cf7-pf_oli.php:300
+#: cf7-pf_oli.php:261 cf7-pf_oli.php:269 cf7-pf_oli.php:277 cf7-pf_oli.php:285
+#: cf7-pf_oli.php:293 cf7-pf_oli.php:301 cf7-pf_oli.php:309
 msgid "Nahrungsmittelkrise"
 msgstr "Crisi alimentare"
 
@@ -300,7 +312,7 @@ msgstr "Numero riferimento bambino"
 msgid "Postfinance paiement"
 msgstr ""
 
-#: cf7-pf_oli.php:187
+#: cf7-pf_oli.php:188
 msgid "Reason for the donation"
 msgstr ""
 
@@ -308,7 +320,7 @@ msgstr ""
 msgid "Sauberes Wasser und Toiletten"
 msgstr ""
 
-#: cf7-pf_oli.php:183 cf7-pf_oli.php:191
+#: cf7-pf_oli.php:184 cf7-pf_oli.php:192
 msgid "Specific fund"
 msgstr ""
 
@@ -316,7 +328,7 @@ msgstr ""
 msgid "Spendenzweck"
 msgstr "Motivo della donazione"
 
-#: cf7-pf_oli.php:189
+#: cf7-pf_oli.php:190
 msgid ""
 "The second part (separated by a \"|\") is the reason used by Odoo "
 "(corresponds to the internal reference of a product)."
@@ -326,7 +338,7 @@ msgstr ""
 msgid "The type of donation form to display."
 msgstr ""
 
-#: cf7-pf_oli.php:194
+#: cf7-pf_oli.php:195
 msgid "Toilettes for all|toilette"
 msgstr ""
 
@@ -338,7 +350,7 @@ msgstr ""
 msgid "Unternehmen"
 msgstr "Azienda"
 
-#: cf7-pf_oli.php:248 cf7-pf_oli.php:320 cf7-pf_oli.php:324
+#: cf7-pf_oli.php:249 cf7-pf_oli.php:329 cf7-pf_oli.php:333
 msgid "Vielen Dank, dass du nicht vergisst, den Spendenzweck zu erwähnen."
 msgstr ""
 "Grazie di non dimenticare di includere il motivo della donazione nella "
@@ -360,9 +372,10 @@ msgstr ""
 msgid "Weihnachtsgeschenk"
 msgstr "Regalo di Natale"
 
-#: templates/food-2023/inputs.php:24
+#: templates/food-2023/inputs.php:24 templates/income_tz/inputs.php:24
+#: templates/vocational_BF/inputs.php:24
 #: templates/food-2023-companies/inputs.php:24
-#: templates/income_tz/inputs.php:24 templates/vocational_BF/inputs.php:24
+#: templates/food-2023-church/inputs.php:24
 msgid "Wähle einen Betrag oder gib einen freien Betrag"
 msgstr ""
 
@@ -370,6 +383,6 @@ msgstr ""
 msgid "Wähle oben einen Betrag oder gib einen freien Betrag an"
 msgstr "Scegliere un importo o inserirne uno libero"
 
-#: cf7-pf_oli.php:253
+#: cf7-pf_oli.php:254
 msgid "Überlebensprogramm"
 msgstr "CSP"
