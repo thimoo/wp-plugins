@@ -16,7 +16,7 @@
                 <button class="button button-beige buttondonation" value="120" >120.- CHF</button>
             </div>
             <div class="small-12 medium-4 columns">
-                <button id="default_bt_value" class="button button-beige buttondonation" value="430" >430.- CHF</button>
+                <button id="default_bt_value" class="button button-beige buttondonation" value="400" >400.- CHF</button>
             </div>
         </div>
         <div class="row marg-top-10">
