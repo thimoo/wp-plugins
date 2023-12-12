@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Contact Form 7 Postfinance oli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-21 08:06+0000\n"
-"PO-Revision-Date: 2023-11-15 10:45+0000\n"
+"PO-Revision-Date: 2023-12-12 14:48+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -274,8 +274,9 @@ msgid "Monatliche Spende von CHF 40.-"
 msgstr "Don mensuel de CHF 40.-"
 
 #: templates/csp/inputs.php:30
-msgid "Monatliche Spende von CHF 60.-"
-msgstr "Don mensuel de CHF 60.-"
+#| msgid "Monatliche Spende von CHF 60.-"
+msgid "Monatliche Spende von CHF 62.-"
+msgstr "Don mensuel de CHF 62.-"
 
 #: templates/donation-form.php:19
 msgid "Méthode de versement"

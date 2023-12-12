@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Contact Form 7 Postfinance oli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-21 08:06+0000\n"
-"PO-Revision-Date: 2023-11-15 10:46+0000\n"
+"PO-Revision-Date: 2023-12-12 14:48+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.3; wp-5.8"
+"X-Loco-Version: 2.6.6; wp-6.4.1"
 
 #: templates/vocational_BF/inputs.php:13
 msgid "1 Ausbildungsplatz"
@@ -275,8 +275,9 @@ msgid "Monatliche Spende von CHF 40.-"
 msgstr "Donazione mensile di CHF 40.-"
 
 #: templates/csp/inputs.php:30
-msgid "Monatliche Spende von CHF 60.-"
-msgstr "Donazione mensile di CHF 60.-"
+#| msgid "Monatliche Spende von CHF 60.-"
+msgid "Monatliche Spende von CHF 62.-"
+msgstr "Donazione mensile di CHF 62.-"
 
 #: templates/donation-form.php:19
 msgid "Méthode de versement"
@@ -377,7 +378,7 @@ msgstr "Regalo di Natale"
 #: templates/food-2023-companies/inputs.php:24
 #: templates/food-2023-church/inputs.php:24
 msgid "Wähle einen Betrag oder gib einen freien Betrag"
-msgstr ""
+msgstr "Scegliere un importo o inserirne uno libero"
 
 #: templates/food-BF/inputs.php:24
 msgid "Wähle oben einen Betrag oder gib einen freien Betrag an"
