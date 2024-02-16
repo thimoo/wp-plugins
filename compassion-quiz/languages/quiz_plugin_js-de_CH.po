@@ -1,0 +1,199 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Quiz Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-16 10:56+0000\n"
+"PO-Revision-Date: 2024-02-16 10:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: German (Switzerland)\n"
+"Language: de_CH\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.3\n"
+"X-Domain: quiz_plugin_js"
+
+#: admin/quiz-questions-admin.php:30
+msgid "a question"
+msgstr ""
+
+#: admin/quiz-quizzes-admin.php:27
+msgid "a quiz"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:76 admin/quiz-quizzes-admin.php:58
+msgid "Actions"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:30 admin/quiz-quizzes-admin.php:27
+msgid "Add"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:65
+msgid "Add Question"
+msgstr ""
+
+#: admin/quiz-quizzes-admin.php:46
+msgid "Add Quiz"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:74
+msgid "Answers"
+msgstr ""
+
+#: quiz-shortcode.php:47
+msgid "Congratulations!"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:75
+msgid "Correct Answer"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:52
+msgid "Correct option:"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:116
+msgid "Delete"
+msgstr ""
+
+#: admin/quiz-quizzes-admin.php:97
+msgid "Delete Quiz"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:30 admin/quiz-questions-admin.php:114
+#: admin/quiz-quizzes-admin.php:27
+msgid "Edit"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:65 admin/quiz-quizzes-admin.php:46
+#: admin/quiz-quizzes-admin.php:95
+msgid "Edit Quiz"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:35
+msgid "Enter the question"
+msgstr ""
+
+#: admin/quiz-quizzes-admin.php:32
+msgid "Enter the quiz title"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:69
+msgid "Existing Questions"
+msgstr ""
+
+#: admin/quiz-quizzes-admin.php:51
+msgid "Existing Quizzes"
+msgstr ""
+
+#. Author of the plugin
+msgid "Jeremie Lang for Compassion Suisse"
+msgstr ""
+
+#: admin/quiz-quizzes-admin.php:56
+msgid "Language"
+msgstr ""
+
+#: admin/quiz-quizzes-admin.php:93
+msgid "Manage Questions"
+msgstr ""
+
+#. Parent menu slug
+#: quiz-plugin.php:108
+msgid "Manage Quiz Questions"
+msgstr ""
+
+#: quiz-plugin.php:92
+msgid "Manage Quizzes"
+msgstr ""
+
+#: quiz-shortcode.php:127
+msgid "Next Question"
+msgstr ""
+
+#: quiz-shortcode.php:137
+msgid "No questions found."
+msgstr ""
+
+#: admin/quiz-quizzes-admin.php:57
+msgid "Number of questions"
+msgstr ""
+
+#: quiz-shortcode.php:47
+msgid "Oops!"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:40 admin/quiz-questions-admin.php:54
+msgid "Option 1"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:45 admin/quiz-questions-admin.php:55
+msgid "Option 2"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:50 admin/quiz-questions-admin.php:56
+msgid "Option 3"
+msgstr ""
+
+#: quiz-shortcode.php:151
+msgid ""
+"Please select an answer for the current question before proceeding to the "
+"next one."
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugin de quiz."
+msgstr ""
+
+#: admin/quiz-questions-admin.php:73
+msgid "Question"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:27
+msgid "Quiz Management"
+msgstr ""
+
+#. Name of the plugin
+msgid "Quiz Plugin"
+msgstr ""
+
+#. Page title
+#: quiz-plugin.php:109
+msgid "Quiz Questions"
+msgstr ""
+
+#. Page title
+#: quiz-plugin.php:93
+msgid "Quizzes"
+msgstr ""
+
+#: admin/quiz-quizzes-admin.php:24
+msgid "Quizzes Management"
+msgstr ""
+
+#: quiz-shortcode.php:55
+msgid "Security error"
+msgstr ""
+
+#: admin/quiz-quizzes-admin.php:59
+msgid "Shortcode"
+msgstr ""
+
+#: quiz-shortcode.php:123
+msgid "Submit Quiz"
+msgstr ""
+
+#: admin/quiz-quizzes-admin.php:55
+msgid "Title"
+msgstr ""
+
+#: quiz-shortcode.php:48
+msgid "You answered all questions correctly!"
+msgstr ""
+
+#: quiz-shortcode.php:48
+msgid "You were almost there!"
+msgstr ""

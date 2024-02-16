@@ -1,0 +1,14 @@
+/* quiz-plugin-styles.css */
+#add-edit-quiz-form input[type="text"], 
+#add-edit-quiz-form select {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; /* Adjust as needed */
+}
+
+#add-edit-question-form input[type="text"],
+#add-edit-question-form select {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; /* Adjust as needed */
+}
