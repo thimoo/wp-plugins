@@ -115,9 +115,15 @@ function quiz_shortcode($atts) {
             echo "<div class='quiz-question' style='display: " . ($index == 0 ? 'block' : 'none') . ";'>";
             echo "<h3 style='color:#005eb8;'>". ($index + 1) . '/' . count($questions) ." - {$question->question}</h3>";
             echo "<ul style='list-style-type: none;'>";
-            echo "<li><input type='radio' name='user_answers[{$question->id}]' value='1'> {$question->option_1}</li>";
-            echo "<li><input type='radio' name='user_answers[{$question->id}]' value='2'> {$question->option_2}</li>";
-            echo "<li><input type='radio' name='user_answers[{$question->id}]' value='3'> {$question->option_3}</li>";
+
+            // Decode the JSON string containing options
+            $options = json_decode($question->options);
+
+            // Generate radio buttons for each option
+            foreach ($options as $option_index => $option) {
+                echo "<li><input type='radio' name='user_answers[{$question->id}]' value='" . ($option_index + 1) . "'> {$option}</li>";
+            }
+
             echo "</ul>";
             if ($index == count($questions) - 1) { // Display the "Submit Quiz" button after the second-last question
                 echo "<button id='submit-button' type='button' class='button button-blue button-small float-right'>". __("Submit Quiz", "quiz_plugin_js") ."</button>";
@@ -208,24 +214,19 @@ function quiz_shortcode($atts) {
                             // Display the result in the result div
                             $('#quiz-result').empty().append(titleElement, subtitleElement).show();
                         }
-                        console.log("Score:", answers.quiz_id);
-                        console.log("Score:", answers.score);
-                        console.log("Total Questions:", answers.total_questions);
-                        console.log(templateId);
                     },
                     error: function(xhr, status, error) {
                         console.error(xhr.answersText);
-                        console.log(templateId);
                     }
                 });
 
                 /**
                  * JavaScript function to handle AJAX request and execute shortcode.
                  * 
-                 * @param {number} quizId - The ID of the quiz.
+                 * @param {number} answers - The ID of the quiz.
                  * @param {number} templateId - The ID of the Elementor template.
                  */
-                function executeShortcode(quizId, templateId) {
+                function executeShortcode(answers, templateId) {
                     $.ajax({
                         type: 'POST',
                         url: ajaxurl, // WordPress AJAX endpoint URL

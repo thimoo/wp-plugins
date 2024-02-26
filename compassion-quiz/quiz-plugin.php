@@ -38,9 +38,7 @@ function quiz_activate() {
             id mediumint(9) NOT NULL AUTO_INCREMENT,
             quiz_id mediumint(9) NOT NULL,
             question text NOT NULL,
-            option_1 text NOT NULL,
-            option_2 text NOT NULL,
-            option_3 text NOT NULL,
+            options text NOT NULL, /* Changed column type to text */
             correct_option tinyint(1) NOT NULL,
             PRIMARY KEY  (id),
             FOREIGN KEY (quiz_id) REFERENCES $quiz_table_name(id)
@@ -66,7 +64,7 @@ register_activation_hook(__FILE__, 'quiz_activate');
  */
 function enqueue_plugin_styles() {
     // Get the URL of the custom CSS file for the plugin
-    $plugin_css_url = plugins_url('assets/css/quiz-plugin-styles.css', __FILE__);
+    $plugin_css_url = plugins_url('/assets/css/quiz-plugin-styles.css', __FILE__);
 
     // Enqueue the custom CSS file for the plugin
     wp_enqueue_style('quiz-plugin-styles', $plugin_css_url);
@@ -79,6 +77,7 @@ function enqueue_plugin_styles() {
 }
 // Add action hook to enqueue plugin styles on WordPress frontend
 add_action('wp_enqueue_scripts', 'enqueue_plugin_styles');
+add_action('admin_enqueue_scripts', 'enqueue_plugin_styles');
 
 
 

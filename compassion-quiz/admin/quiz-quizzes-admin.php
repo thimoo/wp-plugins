@@ -41,8 +41,10 @@ function quiz_quizzes_admin_page_callback() {
                 ?>
             </select>
             <input type="hidden" name="quiz_id" id="quiz_id" value="<?php echo $quiz_id; ?>">
-            <input type="submit" name="add_edit_quiz" id="add_edit_quiz" 
-                    class="button button-primary" style="vertical-align: bottom !important;" 
+            <input type="submit" 
+                    name="add_edit_quiz" 
+                    id="add_edit_quiz" 
+                    class="button button-primary quiz-button" 
                     value="<?php echo ($quiz_id > 0) ? __('Edit Quiz', 'quiz_plugin_js') : __('Add Quiz', 'quiz_plugin_js'); ?>">
         </form>
 
@@ -67,7 +69,8 @@ function quiz_quizzes_admin_page_callback() {
                 // Use foreach() to iterate through the query results and display quizzes
                 foreach ($quizzes as $quiz) {
                     // Escape data before displaying
-                    $escaped_title = esc_html($quiz->title);
+                    $escaped_title = sanitize_text_field($quiz->title);
+                    $escaped_title = stripslashes($escaped_title);
                     $language_code = $quiz->language_code;
                     $language_name = isset($languages[$language_code]) ? $languages[$language_code] : ''; // Get language name
                     $question_count = intval($quiz->question_count);
@@ -132,6 +135,7 @@ function edit_quiz() {
     if (isset($_POST['add_edit_quiz'])) {
         $quiz_id = isset($_POST['quiz_id']) ? intval($_POST['quiz_id']) : 0;
         $quiz_title = sanitize_text_field($_POST['quiz_title']); // Corrected field name
+        $quiz_title = stripslashes($quiz_title);
         $quiz_language = sanitize_text_field($_POST['quiz_language']); // Corrected field name
 
         global $wpdb;
@@ -180,6 +184,7 @@ function delete_quiz() {
         // Delete the quiz from the database
         global $wpdb;
         $wpdb->delete("{$wpdb->prefix}quizzes", array('id' => $quiz_id), array('%d'));
+        $wpdb->delete("{$wpdb->prefix}quiz_questions", array('quiz_id' => $quiz_id), array('%d'));
         
         // Redirect to the manage quizzes page after deletion
         wp_redirect(admin_url('admin.php?page=quiz-admin'));
