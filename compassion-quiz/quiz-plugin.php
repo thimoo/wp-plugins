@@ -56,6 +56,18 @@ function quiz_activate() {
 register_activation_hook(__FILE__, 'quiz_activate');
 
 
+/**
+     * Load translations for the plugin.
+     *
+     * Translations should be placed in the 'languages' directory of the plugin.
+     * The filenames should follow the pattern: {domain}-{locale}.mo
+     * For example: quiz_plugin_js-fr_FR.mo
+     */
+function quiz_plugin_load_textdomain() {
+    load_plugin_textdomain( 'quiz_plugin_js', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+add_action( 'plugins_loaded', 'quiz_plugin_load_textdomain' );
+
 
 /**
  * Function to enqueue the plugin styles.
@@ -78,7 +90,6 @@ function enqueue_plugin_styles() {
 // Add action hook to enqueue plugin styles on WordPress frontend
 add_action('wp_enqueue_scripts', 'enqueue_plugin_styles');
 add_action('admin_enqueue_scripts', 'enqueue_plugin_styles');
-
 
 
 /**
@@ -115,8 +126,8 @@ function add_quiz_admin_page() {
 add_action('admin_menu', 'add_quiz_admin_page');
 
 
-
 // Include the quizzes administration page file
 require_once plugin_dir_path(__FILE__) . 'admin/quiz-quizzes-admin.php';
 require_once plugin_dir_path(__FILE__) . 'admin/quiz-questions-admin.php';
 require_once plugin_dir_path(__FILE__) . 'quiz-shortcode.php';
+
