@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Quiz Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-16 10:56+0000\n"
+"POT-Creation-Date: 2024-02-27 14:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Loco-Version: 2.6.6; wp-6.4.3\n"
 "X-Domain: quiz_plugin_js"
 
-#: admin/quiz-questions-admin.php:30
+#: admin/quiz-questions-admin.php:32
 msgid "a question"
 msgstr ""
 
@@ -24,57 +24,65 @@ msgstr ""
 msgid "a quiz"
 msgstr ""
 
-#: admin/quiz-questions-admin.php:76 admin/quiz-quizzes-admin.php:58
+#: admin/quiz-questions-admin.php:105 admin/quiz-quizzes-admin.php:60
 msgid "Actions"
 msgstr ""
 
-#: admin/quiz-questions-admin.php:30 admin/quiz-quizzes-admin.php:27
+#: admin/quiz-questions-admin.php:32 admin/quiz-quizzes-admin.php:27
 msgid "Add"
 msgstr ""
 
-#: admin/quiz-questions-admin.php:65
+#: admin/quiz-questions-admin.php:47
+msgid "Add Answers"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:68
 msgid "Add Question"
 msgstr ""
 
-#: admin/quiz-quizzes-admin.php:46
+#: admin/quiz-quizzes-admin.php:48
 msgid "Add Quiz"
 msgstr ""
 
-#: admin/quiz-questions-admin.php:74
+#: admin/quiz-questions-admin.php:50 admin/quiz-questions-admin.php:103
 msgid "Answers"
+msgstr ""
+
+#: admin/quiz-questions-admin.php:43 admin/quiz-questions-admin.php:58
+msgid "Answers %d"
 msgstr ""
 
 #: quiz-shortcode.php:47
 msgid "Congratulations!"
 msgstr ""
 
-#: admin/quiz-questions-admin.php:75
+#: admin/quiz-questions-admin.php:104
 msgid "Correct Answer"
 msgstr ""
 
-#: admin/quiz-questions-admin.php:52
-msgid "Correct option:"
+#: admin/quiz-questions-admin.php:39
+msgid "Correct answer:"
 msgstr ""
 
-#: admin/quiz-questions-admin.php:116
+#: admin/quiz-questions-admin.php:152
 msgid "Delete"
 msgstr ""
 
-#: admin/quiz-quizzes-admin.php:97
+#: admin/quiz-quizzes-admin.php:100
 msgid "Delete Quiz"
 msgstr ""
 
-#: admin/quiz-questions-admin.php:30 admin/quiz-questions-admin.php:114
+#: admin/quiz-questions-admin.php:32 admin/quiz-questions-admin.php:150
 #: admin/quiz-quizzes-admin.php:27
 msgid "Edit"
 msgstr ""
 
-#: admin/quiz-questions-admin.php:65 admin/quiz-quizzes-admin.php:46
-#: admin/quiz-quizzes-admin.php:95
+#: admin/quiz-questions-admin.php:68 admin/quiz-quizzes-admin.php:48
+#: admin/quiz-quizzes-admin.php:98
 msgid "Edit Quiz"
 msgstr ""
 
-#: admin/quiz-questions-admin.php:35
+#: admin/quiz-questions-admin.php:37
 msgid "Enter the question"
 msgstr ""
 
@@ -82,11 +90,11 @@ msgstr ""
 msgid "Enter the quiz title"
 msgstr ""
 
-#: admin/quiz-questions-admin.php:69
+#: admin/quiz-questions-admin.php:98
 msgid "Existing Questions"
 msgstr ""
 
-#: admin/quiz-quizzes-admin.php:51
+#: admin/quiz-quizzes-admin.php:53
 msgid "Existing Quizzes"
 msgstr ""
 
@@ -94,32 +102,32 @@ msgstr ""
 msgid "Jeremie Lang for Compassion Suisse"
 msgstr ""
 
-#: admin/quiz-quizzes-admin.php:56
+#: admin/quiz-quizzes-admin.php:58
 msgid "Language"
 msgstr ""
 
-#: admin/quiz-quizzes-admin.php:93
+#: admin/quiz-quizzes-admin.php:96
 msgid "Manage Questions"
 msgstr ""
 
 #. Parent menu slug
-#: quiz-plugin.php:108
+#: quiz-plugin.php:107
 msgid "Manage Quiz Questions"
 msgstr ""
 
-#: quiz-plugin.php:92
+#: quiz-plugin.php:91
 msgid "Manage Quizzes"
 msgstr ""
 
-#: quiz-shortcode.php:127
+#: quiz-shortcode.php:133
 msgid "Next Question"
 msgstr ""
 
-#: quiz-shortcode.php:137
+#: quiz-shortcode.php:143
 msgid "No questions found."
 msgstr ""
 
-#: admin/quiz-quizzes-admin.php:57
+#: admin/quiz-quizzes-admin.php:59
 msgid "Number of questions"
 msgstr ""
 
@@ -127,19 +135,7 @@ msgstr ""
 msgid "Oops!"
 msgstr ""
 
-#: admin/quiz-questions-admin.php:40 admin/quiz-questions-admin.php:54
-msgid "Option 1"
-msgstr ""
-
-#: admin/quiz-questions-admin.php:45 admin/quiz-questions-admin.php:55
-msgid "Option 2"
-msgstr ""
-
-#: admin/quiz-questions-admin.php:50 admin/quiz-questions-admin.php:56
-msgid "Option 3"
-msgstr ""
-
-#: quiz-shortcode.php:151
+#: quiz-shortcode.php:157
 msgid ""
 "Please select an answer for the current question before proceeding to the "
 "next one."
@@ -149,11 +145,11 @@ msgstr ""
 msgid "Plugin de quiz."
 msgstr ""
 
-#: admin/quiz-questions-admin.php:73
+#: admin/quiz-questions-admin.php:102
 msgid "Question"
 msgstr ""
 
-#: admin/quiz-questions-admin.php:27
+#: admin/quiz-questions-admin.php:29
 msgid "Quiz Management"
 msgstr ""
 
@@ -162,12 +158,12 @@ msgid "Quiz Plugin"
 msgstr ""
 
 #. Page title
-#: quiz-plugin.php:109
+#: quiz-plugin.php:108
 msgid "Quiz Questions"
 msgstr ""
 
 #. Page title
-#: quiz-plugin.php:93
+#: quiz-plugin.php:92
 msgid "Quizzes"
 msgstr ""
 
@@ -179,15 +175,15 @@ msgstr ""
 msgid "Security error"
 msgstr ""
 
-#: admin/quiz-quizzes-admin.php:59
+#: admin/quiz-quizzes-admin.php:61
 msgid "Shortcode"
 msgstr ""
 
-#: quiz-shortcode.php:123
+#: quiz-shortcode.php:129
 msgid "Submit Quiz"
 msgstr ""
 
-#: admin/quiz-quizzes-admin.php:55
+#: admin/quiz-quizzes-admin.php:57
 msgid "Title"
 msgstr ""
 
