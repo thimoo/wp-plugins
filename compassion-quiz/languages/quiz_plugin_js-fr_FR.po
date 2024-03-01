@@ -1,0 +1,197 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Quiz Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-16 10:56+0000\n"
+"PO-Revision-Date: 2024-02-28 10:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: Français\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.3\n"
+"X-Domain: quiz_plugin_js"
+
+#: admin/quiz-questions-admin.php:32
+msgid "a question"
+msgstr "Une question"
+
+#: admin/quiz-quizzes-admin.php:27
+msgid "a quiz"
+msgstr "Un quiz"
+
+#: admin/quiz-questions-admin.php:105 admin/quiz-quizzes-admin.php:60
+msgid "Actions"
+msgstr "Actions"
+
+#: admin/quiz-questions-admin.php:32 admin/quiz-quizzes-admin.php:27
+msgid "Add"
+msgstr "Ajouter"
+
+#: admin/quiz-questions-admin.php:47
+msgid "Add Answers"
+msgstr "Ajouter des réponses"
+
+#: admin/quiz-questions-admin.php:68
+msgid "Add Question"
+msgstr "Ajouter une question"
+
+#: admin/quiz-quizzes-admin.php:48
+msgid "Add Quiz"
+msgstr "Ajouter un quizz"
+
+#: admin/quiz-questions-admin.php:50 admin/quiz-questions-admin.php:103
+msgid "Answers"
+msgstr "Réponses"
+
+#: admin/quiz-questions-admin.php:43 admin/quiz-questions-admin.php:58
+msgid "Answers %d"
+msgstr "Réponses %d"
+
+#: quiz-shortcode.php:47
+msgid "Congratulations!"
+msgstr "Bravo!"
+
+#: admin/quiz-questions-admin.php:104
+msgid "Correct Answer"
+msgstr "Réponse correcte"
+
+#: admin/quiz-questions-admin.php:39
+msgid "Correct answer:"
+msgstr "Réponse correcte:"
+
+#: admin/quiz-questions-admin.php:152
+msgid "Delete"
+msgstr "Suprrimer"
+
+#: admin/quiz-quizzes-admin.php:100
+msgid "Delete Quiz"
+msgstr "Supprimer le quizz"
+
+#: admin/quiz-questions-admin.php:32 admin/quiz-questions-admin.php:150
+#: admin/quiz-quizzes-admin.php:27
+msgid "Edit"
+msgstr "Modifier"
+
+#: admin/quiz-questions-admin.php:68 admin/quiz-quizzes-admin.php:48
+#: admin/quiz-quizzes-admin.php:98
+msgid "Edit Quiz"
+msgstr "Modifier le quizz"
+
+#: admin/quiz-questions-admin.php:37
+msgid "Enter the question"
+msgstr "Entrer la question"
+
+#: admin/quiz-quizzes-admin.php:32
+msgid "Enter the quiz title"
+msgstr "Indiquer le titre du quizz"
+
+#: admin/quiz-questions-admin.php:98
+msgid "Existing Questions"
+msgstr "Questions présentes"
+
+#: admin/quiz-quizzes-admin.php:53
+msgid "Existing Quizzes"
+msgstr "Quizzes présents"
+
+#. Author of the plugin
+msgid "Jeremie Lang for Compassion Suisse"
+msgstr "Jeremie Lang pour Compassion Suisse"
+
+#: admin/quiz-quizzes-admin.php:58
+msgid "Language"
+msgstr "Langue"
+
+#: admin/quiz-quizzes-admin.php:96
+msgid "Manage Questions"
+msgstr "Gérer les questions"
+
+#. Parent menu slug
+#: quiz-plugin.php:107
+msgid "Manage Quiz Questions"
+msgstr "Gérer les questions du quizz"
+
+#: quiz-plugin.php:91
+msgid "Manage Quizzes"
+msgstr "Gérer les quizzes"
+
+#: quiz-shortcode.php:133
+msgid "Next Question"
+msgstr "Prochaine question"
+
+#: quiz-shortcode.php:143
+msgid "No questions found."
+msgstr "Il n'y a pas de questions. "
+
+#: admin/quiz-quizzes-admin.php:59
+msgid "Number of questions"
+msgstr "Nombre de questions"
+
+#: quiz-shortcode.php:47
+msgid "Oops!"
+msgstr "Oups!"
+
+#: quiz-shortcode.php:157
+msgid ""
+"Please select an answer for the current question before proceeding to the "
+"next one."
+msgstr ""
+"Veuillez sélectionner une réponse pour la question en cours avant de passer "
+"à la suivante."
+
+#. Description of the plugin
+msgid "Plugin de quiz."
+msgstr "Plugin de quizz."
+
+#: admin/quiz-questions-admin.php:102
+msgid "Question"
+msgstr "Question"
+
+#: admin/quiz-questions-admin.php:29
+msgid "Quiz Management"
+msgstr "Gestion du quizz"
+
+#. Name of the plugin
+msgid "Quiz Plugin"
+msgstr "Plugin de quizz"
+
+#. Page title
+#: quiz-plugin.php:108
+msgid "Quiz Questions"
+msgstr "Questions du quizz"
+
+#. Page title
+#: quiz-plugin.php:92
+msgid "Quizzes"
+msgstr "Quizzes"
+
+#: admin/quiz-quizzes-admin.php:24
+msgid "Quizzes Management"
+msgstr "Gestion des quizzes"
+
+#: quiz-shortcode.php:55
+msgid "Security error"
+msgstr "Erreur de sécurité"
+
+#: admin/quiz-quizzes-admin.php:61
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: quiz-shortcode.php:129
+msgid "Submit Quiz"
+msgstr "Envoyer les réponses"
+
+#: admin/quiz-quizzes-admin.php:57
+msgid "Title"
+msgstr "Titre"
+
+#: quiz-shortcode.php:48
+msgid "You answered all questions correctly!"
+msgstr "Vous avez répondu juste à toutes les questions!"
+
+#: quiz-shortcode.php:48
+msgid "You were almost there!"
+msgstr "Vous y étiez presque!"

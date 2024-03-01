@@ -1,0 +1,36 @@
+/* quiz-plugin-styles.css */
+#add-edit-quiz-form input[type="text"],
+#add-edit-quiz-form select,
+#add-edit-question-form input[type="text"],
+#add-edit-question-form select {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px; /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
+.quiz-button {
+    vertical-align: top !important;
+}
+
+.quiz-button span {
+    font-size: 13px;
+    vertical-align: bottom;
+}
+/* submit buttons on front-end*/
+
+#submit-button, #next-question {
+    margin-top:10px;
+
+}
+#submit-button:hover, #next-question:hover {
+top: 0;
+border-bottom-width: 1px;
+margin-bottom:0;
+filter: brightness(0.8);;}
+
+/* quiz question li list on frontend*/
+.quiz-question ul{
+    margin-left:0 !important;
+
+}
