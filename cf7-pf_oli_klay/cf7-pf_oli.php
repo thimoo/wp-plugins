@@ -181,6 +181,7 @@ class Compassion_Donation_Form {
                             array('value' => 'food-2023-companies', 'label' => __('Food crisis 2023 companies', 'donation-form')),
                             array('value' => 'food-2023-church', 'label' => __('Food crisis 2023 church', 'donation-form')),
                             array('value' => 'TZ-wash24', 'label' => __('Toilets project in Tanzania', 'donation-form')),
+                            array('value' => 'vocational_KE', 'label' => __('vocational Kenya', 'donation-form')),
                             array('value' => 'cadeau', 'label' => __('Gift to a child', 'donation-form')),
                             array('value' => 'single', 'label' => __('Specific fund', 'donation-form')),
                         ),
@@ -312,6 +313,14 @@ class Compassion_Donation_Form {
                     '<tspan x="0" dy="1.4em"> ☐ ' . __('einmalige Spende', 'donation-form') . '</tspan>';
                 break;
 
+            case 'vocational_KE':
+                $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/vocational_KE/inputs.php';
+                $bank_transfer_comment = __('Bitte gib an, ob du regelmässig oder einmalig für den Nahrungsmittelkrise Fonds spenden möchtest. Spendenzweck (monatlich oder einmalig): Nahrungsmittelkrise', 'donation-form');
+                $bank_transfer_reason = '<tspan x="0" dy="0">' . __('Nahrungsmittelkrise', 'donation-form') . ' :</tspan>' .
+                    '<tspan x="0" dy="1.4em"> ☐ ' . __('monatliche Spende', 'donation-form') . '</tspan>' .
+                    '<tspan x="0" dy="1.4em"> ☐ ' . __('einmalige Spende', 'donation-form') . '</tspan>';
+                break;
+
 
             case 'income_tz':
                 $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/income_tz/inputs.php';
@@ -433,6 +442,11 @@ class Compassion_Donation_Form {
             error_log("starting food donation of : " . $final_amount);
             $final_amount = $session_data['wert'];
             $session_data['fonds'] = 'vocational_BF';
+
+        } elseif  ($session_data['type_flag']=='vocational_KE') {
+            error_log("starting donation of : " . $final_amount);
+            $final_amount = $session_data['wert'];
+            $session_data['fonds'] = 'vocational_KE_INT-0000036751';
 
         } elseif  ($session_data['type_flag']=='income_tz') {
             error_log("starting food donation of : " . $final_amount);
