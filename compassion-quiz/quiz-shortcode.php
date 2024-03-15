@@ -113,9 +113,8 @@ function quiz_shortcode($atts) {
         echo "<input type='hidden' value='" . $quiz_id . "' name='quiz_id' />";
         foreach ($questions as $index => $question) {
             echo "<div class='quiz-question' style='display: " . ($index == 0 ? 'block' : 'none') . ";'>";
-            echo "<h3 style='color:#005eb8;'>". ($index + 1) . '/' . count($questions) ." - {$question->question}</h3>";
+            echo "<h3 style='color:#005eb8;'> {$question->question}</h3>";
             echo "<ul style='list-style-type: none;'>";
-
             // Decode the JSON string containing options
             $options = json_decode($question->options);
 
