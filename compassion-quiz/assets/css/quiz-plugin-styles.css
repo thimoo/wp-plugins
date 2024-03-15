@@ -31,6 +31,7 @@ filter: brightness(0.8);;}
 
 /* quiz question li list on frontend*/
 .quiz-question ul{
+    padding: 20px 0 20px 0;
     margin-left:0 !important;
 
 }
