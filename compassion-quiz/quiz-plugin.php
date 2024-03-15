@@ -130,4 +130,3 @@ add_action('admin_menu', 'add_quiz_admin_page');
 require_once plugin_dir_path(__FILE__) . 'admin/quiz-quizzes-admin.php';
 require_once plugin_dir_path(__FILE__) . 'admin/quiz-questions-admin.php';
 require_once plugin_dir_path(__FILE__) . 'quiz-shortcode.php';
-

@@ -1,0 +1,512 @@
+<?php
+/*
+Plugin Name: Quiz Plugin
+Description: Plugin de quiz.
+Version: 1.0
+Author: Jeremie Lang for Compassion Suisse
+Text Domain: quiz_plugin_js
+*/
+
+/**
+ * Function to activate the quiz plugin.
+ * It creates the necessary database table for storing quiz questions upon activation.
+ */
+function quiz_activate() {
+    global $wpdb;
+
+    // Get the charset collation
+    $charset_collate = $wpdb->get_charset_collate();
+    
+    // Define the table name
+    $table_name = $wpdb->prefix . 'quiz_questions';
+
+    // Check if the table already exists
+    if ($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
+        // SQL query to create the table
+        $sql = "CREATE TABLE $table_name (
+            id mediumint(9) NOT NULL AUTO_INCREMENT,
+            question text NOT NULL,
+            option_1 text NOT NULL,
+            option_2 text NOT NULL,
+            option_3 text NOT NULL,
+            correct_option tinyint(1) NOT NULL,
+            PRIMARY KEY  (id)
+        ) $charset_collate;";
+
+        // Include WordPress upgrade functions
+        require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+
+        // Execute the SQL query to create the table
+        dbDelta($sql);
+    }
+}
+
+// Register the activation hook for the quiz plugin
+register_activation_hook(__FILE__, 'quiz_activate');
+
+
+/**
+ * Function to enqueue the plugin styles.
+ * It retrieves the URL of the active theme's style.css file and enqueues it.
+ */
+function enqueue_plugin_styles() {
+    // Get the URL of the active theme's style.css file
+    $theme_css_url = get_stylesheet_directory_uri() . '/style.css';
+
+    // Enqueue the CSS file of the active theme
+    wp_enqueue_style('plugin-theme-styles', $theme_css_url);
+}
+
+// Add action hook to enqueue plugin styles on WordPress frontend
+add_action('wp_enqueue_scripts', 'enqueue_plugin_styles');
+
+/**
+ * Function to add an administration page for managing quiz questions.
+ * It adds a menu page in the admin dashboard.
+ */
+function add_quiz_admin_page() {
+    add_menu_page(
+        __('Gestion du Quiz', 'quiz_plugin_js'), // Page title
+        __('Quiz', 'quiz_plugin_js'), // Menu title
+        'manage_options', // Capability required to access the page
+        'quiz-admin', // Menu slug
+        'quiz_admin_page_callback' // Callback function to display the page content
+    );
+}
+// Add action hook to add quiz administration page to admin menu
+add_action('admin_menu', 'add_quiz_admin_page');
+
+
+/**
+ * Function to retrieve the text of the correct answer based on the question ID.
+ *
+ * @param int $question_id The ID of the question.
+ * @param int $correct_option The ID of the correct option.
+ * @return string The text of the correct answer.
+ */
+function get_correct_option_text($question_id, $correct_option) {
+    global $wpdb;
+    
+    // Select the text of the correct option from the database based on the question ID
+    $query = $wpdb->prepare("SELECT option_%d FROM {$wpdb->prefix}quiz_questions WHERE id = %d", $correct_option, $question_id);
+    $correct_option_text = $wpdb->get_var($query);
+    
+    return $correct_option_text;
+}
+
+
+/**
+ * Callback function to display the content of the administration page for managing quiz questions.
+ * It renders a form to add or edit quiz questions and displays existing questions in a table.
+ */
+function quiz_admin_page_callback() {
+    // Get the base URL of WordPress
+    $base_url = home_url();
+
+    // Get the question ID from the URL
+    $question_id = isset($_GET['question_id']) ? intval($_GET['question_id']) : 0;
+
+    // Build the URL of the PHP script to retrieve question details
+    $url_to_script = admin_url('admin-ajax.php?action=get_question_details&question_id=' . $question_id);
+
+    // If a question ID is passed, retrieve the quiz details to modify
+    $quiz_details = array();
+    if ($question_id > 0) {
+        $quiz_details = get_question_details_by_id($question_id);
+    }
+    ?>
+    <div class="wrap">
+        <h1><?php _e('Quiz Management', 'quiz_plugin_js'); ?></h1>
+        
+        <!-- Form to add or edit a question -->
+        <h2><?php echo ($question_id > 0) ? __('Edit', 'quiz_plugin_js') : __('Add', 'quiz_plugin_js'); ?> <?php _e('a question', 'quiz_plugin_js'); ?></h2>
+        <form id="add-edit-question-form" method="post" action="">
+            <input type="text" name="quiz_question" id="quiz_question" placeholder="<?php _e('Enter the question', 'quiz_plugin_js'); ?>" value="<?php echo isset($quiz_details['question']) ? esc_attr($quiz_details['question']) : ''; ?>" required><br>
+            <input type="text" name="quiz_option_1" id="quiz_option_1" placeholder="<?php _e('Option 1', 'quiz_plugin_js'); ?>" value="<?php echo isset($quiz_details['option_1']) ? esc_attr($quiz_details['option_1']) : ''; ?>" required><br>
+            <input type="text" name="quiz_option_2" id="quiz_option_2" placeholder="<?php _e('Option 2', 'quiz_plugin_js'); ?>" value="<?php echo isset($quiz_details['option_2']) ? esc_attr($quiz_details['option_2']) : ''; ?>" required><br>
+            <input type="text" name="quiz_option_3" id="quiz_option_3" placeholder="<?php _e('Option 3', 'quiz_plugin_js'); ?>" value="<?php echo isset($quiz_details['option_3']) ? esc_attr($quiz_details['option_3']) : ''; ?>" required><br>
+            <label for="correct_option"><?php _e('Correct option:', 'quiz_plugin_js'); ?></label>
+            <select name="correct_option" id="correct_option">
+                <option value="1" <?php echo (isset($quiz_details['correct_option']) && $quiz_details['correct_option'] == 1) ? 'selected' : ''; ?>><?php _e('Option 1', 'quiz_plugin_js'); ?></option>
+                <option value="2" <?php echo (isset($quiz_details['correct_option']) && $quiz_details['correct_option'] == 2) ? 'selected' : ''; ?>><?php _e('Option 2', 'quiz_plugin_js'); ?></option>
+                <option value="3" <?php echo (isset($quiz_details['correct_option']) && $quiz_details['correct_option'] == 3) ? 'selected' : ''; ?>><?php _e('Option 3', 'quiz_plugin_js'); ?></option>
+            </select><br>
+            <input type="hidden" name="question_id" id="question_id" value="<?php echo $question_id; ?>">
+            <input type="submit" name="add_edit_quiz_question" id="add_edit_quiz_question" value="<?php echo ($question_id > 0) ? __('Edit Quiz', 'quiz_plugin_js') : __('Add Question', 'quiz_plugin_js'); ?>">
+        </form>
+        
+        <!-- Display existing questions -->
+        <h2><?php _e('Existing Questions', 'quiz_plugin_js'); ?></h2>
+        <table class="wp-list-table widefat fixed striped">
+            <thead>
+                <tr>
+                    <th scope="col"><?php _e('Question', 'quiz_plugin_js'); ?></th>
+                    <th scope="col"><?php _e('Answers', 'quiz_plugin_js'); ?></th>
+                    <th scope="col"><?php _e('Correct Answer', 'quiz_plugin_js'); ?></th>
+                    <th scope="col"><?php _e('Actions', 'quiz_plugin_js'); ?></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                global $wpdb;
+                $questions = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}quiz_questions");
+
+                // Use foreach() to iterate through the query results and display questions
+                foreach ($questions as $question) {
+                    // Escape data before displaying
+                    $escaped_question = esc_html($question->question);
+                    $question_id = intval($question->id);
+                    $escaped_option_1 = esc_html($question->option_1);
+                    $escaped_option_2 = esc_html($question->option_2);
+                    $escaped_option_3 = esc_html($question->option_3);
+                    $correct_option = intval($question->correct_option);
+
+                    // Display the text of the correct answer
+                    $correct_option_text = get_correct_option_text($question_id, $correct_option);
+
+                    // Format the row using printf()
+                    printf(
+                        '<tr>
+                            <td>%s</td>
+                            <td>1. %s <br/> 2. %s <br/> 3. %s</td>
+                            <td>%s</td>
+                            <td>
+                                <a href="?page=quiz-admin&question_id=%d">%s</a> |
+                                <a href="?page=quiz-admin&delete_question=%d">%s</a>
+                            </td>
+                        </tr>',
+                        $escaped_question,
+                        $escaped_option_1,
+                        $escaped_option_2,
+                        $escaped_option_3,
+                        $correct_option_text,
+                        $question_id,
+                        __("Edit", "quiz_plugin_js"),
+                        $question_id,
+                        __("Delete", "quiz_plugin_js")
+                    );
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+    <?php
+}
+
+
+/**
+ * Function to retrieve details of a question by its ID.
+ * 
+ * @param int $question_id The ID of the question to retrieve details for.
+ * @return array An array containing details of the question, or an empty array if no details are found.
+ */
+function get_question_details_by_id($question_id) {
+    if ($question_id > 0) {
+        global $wpdb;
+
+        $query = $wpdb->prepare("SELECT * FROM {$wpdb->prefix}quiz_questions WHERE id = %d", $question_id);
+        $question = $wpdb->get_row($query);
+
+        if ($question) {
+            $question_details = array(
+                'question' => $question->question,
+                'option_1' => $question->option_1,
+                'option_2' => $question->option_2,
+                'option_3' => $question->option_3,
+                'correct_option' => $question->correct_option
+            );
+
+            return $question_details;
+        }
+    }
+
+    return array(); // Return an empty array if no question details are found
+}
+
+
+
+/**
+ * Function to retrieve question details from the database.
+ * 
+ * This function expects the question ID to be provided via POST data.
+ * It retrieves the details of the question with the provided ID from the database and returns them as JSON.
+ * If the question ID is not provided or the question is not found, appropriate error messages are returned.
+ */
+function get_question_details() {
+    if (isset($_POST['question_id'])) {
+        $question_id = intval($_POST['question_id']);
+        
+        global $wpdb;
+        
+        $query = $wpdb->prepare("SELECT * FROM {$wpdb->prefix}quiz_questions WHERE id = %d", $question_id);
+        $question = $wpdb->get_row($query);
+        
+        if ($question) {
+            $question_details = array(
+                'question' => $question->question,
+                'option_1' => $question->option_1,
+                'option_2' => $question->option_2,
+                'option_3' => $question->option_3,
+                'correct_option' => $question->correct_option
+            );
+            
+            echo json_encode($question_details);
+        } else {
+            echo json_encode(array());
+        }
+        
+        exit;
+    } else {
+        echo json_encode(array('error' => __('Question ID missing in the request.', 'quiz_plugin_js')));
+        exit;
+    }
+}
+
+/**
+ * Function to handle the modification of a quiz question.
+ * 
+ * This function processes the form submission for adding/editing a quiz question.
+ * It retrieves the question details from the POST data, sanitizes them, and updates or inserts the question into the database accordingly.
+ * After processing, it redirects the user back to the quiz administration page.
+ */
+function edit_quiz_question()
+{
+    if (isset($_POST['add_edit_quiz_question'])) {
+        $question_id = isset($_POST['question_id']) ? intval($_POST['question_id']) : 0;
+        $question = sanitize_text_field($_POST['quiz_question']);
+        $option_1 = sanitize_text_field($_POST['quiz_option_1']);
+        $option_2 = sanitize_text_field($_POST['quiz_option_2']);
+        $option_3 = sanitize_text_field($_POST['quiz_option_3']);
+        $correct_option = intval($_POST['correct_option']);
+
+        global $wpdb;
+        if ($question_id > 0) {
+            // Update the existing question
+            $wpdb->update(
+                "{$wpdb->prefix}quiz_questions",
+                array(
+                    'question' => $question,
+                    'option_1' => $option_1,
+                    'option_2' => $option_2,
+                    'option_3' => $option_3,
+                    'correct_option' => $correct_option
+                ),
+                array('id' => $question_id),
+                array('%s', '%s', '%s', '%s', '%d'),
+                array('%d')
+            );
+        } else {
+            // Add a new question
+            $wpdb->insert(
+                "{$wpdb->prefix}quiz_questions",
+                array(
+                    'question' => $question,
+                    'option_1' => $option_1,
+                    'option_2' => $option_2,
+                    'option_3' => $option_3,
+                    'correct_option' => $correct_option
+                ),
+                array('%s', '%s', '%s', '%s', '%d')
+            );
+        }
+
+        // Redirect after modification
+        wp_redirect(admin_url('admin.php?page=quiz-admin'));
+        exit;
+    }
+}
+add_action('admin_init', 'edit_quiz_question');
+
+/**
+ * Function to handle the deletion of a quiz question.
+ * 
+ * This function processes the deletion of a quiz question based on the question ID passed through the query parameter.
+ * It deletes the question from the database and redirects the user back to the quiz administration page.
+ */
+function delete_question() {
+    if (isset($_GET['delete_question'])) {
+        $question_id = intval($_GET['delete_question']);
+        
+        // Delete the question from the database
+        global $wpdb;
+        $result = $wpdb->delete("{$wpdb->prefix}quiz_questions", array('id' => $question_id), array('%d'));
+        
+        if ($result !== false) {
+            // Redirect to the administration page after deletion
+            wp_redirect(admin_url('admin.php?page=quiz-admin'));
+            exit;
+        }
+    }
+}
+add_action('admin_init', 'delete_question');
+
+add_action('wp_ajax_nopriv_process_quiz', 'process_quiz_form');
+
+/**
+ * Function to process the quiz form submission.
+ * 
+ * This function handles the submission of the quiz form. It verifies the security nonce to prevent CSRF attacks,
+ * retrieves the user's answers, compares them with the correct answers stored in the database, calculates the score,
+ * and returns the results in JSON format.
+ */
+function process_quiz_form()
+{
+    global $wpdb;
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['quiz_nonce'])) {
+        // Verify the security nonce to prevent CSRF attacks
+        if (wp_verify_nonce($_POST['quiz_nonce'], 'quiz_form_nonce')) {
+            // Extract the user's answers submitted through the form
+            $user_answers = isset($_POST['user_answers']) ? $_POST['user_answers'] : array();
+
+            // Retrieve the correct answers from the database
+            $questions = $wpdb->get_results("SELECT id, correct_option FROM {$wpdb->prefix}quiz_questions");
+
+            $score = 0;
+            $total_questions = count($questions);
+
+            // Compare the user's answers with the correct answers
+            foreach ($questions as $question) {
+                $question_id = $question->id;
+                $correct_option = $question->correct_option;
+
+                if (isset($user_answers[$question_id]) && $user_answers[$question_id] == $correct_option) {
+                    $score++;
+                }
+            }
+
+            // Prepare the results to be returned
+            $results = array(
+                'score' => $score,
+                'total_questions' => $total_questions,
+                'message_title' => ($score === $total_questions) ? __("Congratulations!", "quiz_plugin_js") : __("Oops!", "quiz_plugin_js"),
+                'message_subtitle' => ($score === $total_questions) ? __("You answered all questions correctly!", "quiz_plugin_js") : __("You were almost there!", "quiz_plugin_js")
+            );
+
+            // Return the results in JSON format
+            wp_send_json($results);
+        } else {
+            // Nonce verification failed, possibly a CSRF attack
+            wp_send_json_error(__("Security error", "quiz_plugin_js"));
+        }
+    }
+}
+
+add_action('init', 'process_quiz_form');
+
+
+add_action("wp_ajax_frontend_action_without_file" , "quiz_shortcode");
+add_action("wp_ajax_nopriv_frontend_action_without_file" , "quiz_shortcode");
+
+/**
+ * Shortcode to display the quiz.
+ * 
+ * This shortcode generates and displays the quiz form. It retrieves questions from the database,
+ * displays them one by one along with options, and provides functionality to submit the quiz
+ * via AJAX. It also handles validation to ensure that an option is selected for each question.
+ */
+function quiz_shortcode() {
+    global $wpdb;
+    
+    ob_start();
+
+    // Retrieve questions from the database
+    $questions = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}quiz_questions");
+
+    if ($questions) {
+        // Display the quiz form
+        echo "<form id='quiz-form'>";
+        echo "<div class='quiz-container'>";
+        foreach ($questions as $index => $question) {
+            echo "<div class='quiz-question' style='display: " . ($index == 0 ? 'block' : 'none') . ";'>";
+            echo "<h3 style='color:#005eb8;'>". ($index + 1) . '/' . count($questions) ." - {$question->question}</h3>";
+            echo "<ul style='list-style-type: none;'>";
+            echo "<li><input type='radio' name='user_answers[{$question->id}]' value='1'> {$question->option_1}</li>";
+            echo "<li><input type='radio' name='user_answers[{$question->id}]' value='2'> {$question->option_2}</li>";
+            echo "<li><input type='radio' name='user_answers[{$question->id}]' value='3'> {$question->option_3}</li>";
+            echo "</ul>";
+            if ($index == count($questions) - 1) { // Display the "Submit Quiz" button after the second-last question
+                echo "<button id='submit-button' type='button' class='button button-blue button-small float-right'>". __("Submit Quiz", "quiz_plugin_js") ."</button>";
+                
+            } else {
+                // Add a button to proceed to the next question (except for the last question)
+                echo "<button id='next-question' type='button' class='button button-blue button-small float-right' onclick='nextQuestion()'>". __("Next Question", "quiz_plugin_js") ."</button>";
+            }
+            echo "</div>";
+        }
+        echo "</div>";
+        echo "</form>";
+        echo "<div id='quiz-result'></div>";
+        echo "<div id='quiz-message'></div>";
+
+    } else {
+        echo "<p>". __("No questions found.", "quiz_plugin_js") ."</p>";
+    }
+
+    ?>
+    <script type="text/javascript">
+        function nextQuestion() {
+            // Retrieve the currently displayed question
+            var currentQuestion = jQuery('.quiz-question:visible');
+
+            // Check if an option is selected for the current question
+            var selectedOption = currentQuestion.find('input[type="radio"]:checked').val();
+            
+            if (selectedOption === undefined) {
+                // No option selected for this question, display an error message
+                alert('<?php echo __("Please select an answer for the current question before proceeding to the next one.", "quiz_plugin_js"); ?>');
+                return; // Stop execution of the function if no option is selected
+            }
+
+            // Hide the current question
+            currentQuestion.hide();
+
+            // Display the next question
+            currentQuestion.next('.quiz-question').show();
+        }
+        
+        jQuery(document).ready(function($) {
+            $('#quiz-form').on('click', '#submit-button', function(e) {
+                e.preventDefault();
+                
+                // Retrieve the AJAX endpoint URL
+                var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+
+                // Create a FormData object to send form data
+                var formData = new FormData($('#quiz-form')[0]);
+
+                // Add the action and security nonce
+                formData.append('action', 'process_quiz_form');
+                formData.append('quiz_nonce', '<?php echo wp_create_nonce('quiz_form_nonce'); ?>');
+
+                // Submit the form via AJAX
+                $.ajax({
+                    type: 'POST',
+                    url: ajaxurl, // WordPress AJAX endpoint URL
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        // Create HTML elements
+                        var titleElement = $('<h3></h3>').text(response.message_title).css('color', '#005eb8');
+                        var subtitleElement = $('<p></p>').text(response.message_subtitle);
+
+                        // Display the result in the result div
+                        $('#quiz-result').empty().append(titleElement, subtitleElement).show();
+                        // Hide the quiz form
+                        $('#quiz-form').hide();
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+    <?php
+
+    return ob_get_clean();
+}
+
+add_shortcode('quiz', 'quiz_shortcode');
+

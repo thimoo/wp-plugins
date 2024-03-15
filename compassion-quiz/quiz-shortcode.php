@@ -196,7 +196,7 @@ function quiz_shortcode($atts) {
                     contentType: false,
                     success: function(answers) {
                         // Hide the quiz form
-                        $('#quiz-form, #title_quiz').hide();
+                        $('#quiz-form, #title_quiz,#sep_quiz').hide();
 
                         // Display Elementor template based on the quiz result
                         if (answers.score === answers.total_questions) {
