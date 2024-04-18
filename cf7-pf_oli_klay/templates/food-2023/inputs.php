@@ -8,6 +8,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById("default_bt_value").click();
+        document.getElementById("wert").value = "40";
     });
 </script>
 <div class="row don_unique"> <!--  style="display: none;">-->
