@@ -10,13 +10,13 @@
     <div class="small-12 medium-12 columns">
         <div class="row">
             <div class="small-12 medium-4 columns">
-                <button class="button button-beige buttondonation" value="40" >20.- CHF</button>
+                <button class="button button-beige buttondonation" value="20" >20.- CHF</button>
             </div>
             <div class="small-12 medium-4 columns">
-                <button class="button button-blue buttondonation" value="120" >40.- CHF</button>
+                <button id="default_bt_value" class="button button-beige buttondonation" value="40" >40.- CHF</button>
             </div>
             <div class="small-12 medium-4 columns">
-                <button id="default_bt_value" class="button button-beige buttondonation" value="400" >120.- CHF</button>
+                <button class="button button-beige buttondonation" value="120" >120.- CHF</button>
             </div>
         </div>
         <div class="row marg-top-10">
