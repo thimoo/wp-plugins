@@ -5,6 +5,11 @@
 <!--        <h5 class="text-uppercase">--><?//= __('Ich möchte spenden', 'donation-form') ?><!--</h5>-->
 <!--    </div>-->
 <!--</div>-->
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById("default_bt_value").click();
+    });
+</script>
 <div class="row don_unique"> <!--  style="display: none;">-->
 
     <div class="small-12 medium-12 columns">
