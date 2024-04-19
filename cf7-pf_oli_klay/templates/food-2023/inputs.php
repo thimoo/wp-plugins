@@ -7,7 +7,7 @@
 <!--</div>-->
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        document.getElementById("default_bt_value").click();
+        document.getElementById("default_bt_value").classList.add("active");
         document.getElementById("wert").value = "40";
     });
 </script>
