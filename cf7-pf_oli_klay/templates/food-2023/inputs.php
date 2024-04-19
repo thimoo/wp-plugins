@@ -5,7 +5,7 @@
 <!--        <h5 class="text-uppercase">--><?//= __('Ich möchte spenden', 'donation-form') ?><!--</h5>-->
 <!--    </div>-->
 <!--</div>-->
-<script>
+<script>// add an active class to the featured button amount on the form
     document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById("default_bt_value").classList.add("active");
         document.getElementById("wert").value = "40";
