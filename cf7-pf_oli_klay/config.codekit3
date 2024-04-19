@@ -7,7 +7,7 @@
       "uuidString" : "4E309C44-4C2F-4A49-AA57-5F564250AD50"
     }
   ],
-  "creatorBuild" : "34564",
+  "creatorBuild" : "34418",
   "files" : {
     "\/assets\/images\/bv_compassion.jpg" : {
       "ft" : 16384,
@@ -262,44 +262,20 @@
       "oAP" : "\/donation-form-backup-202208150747270.pot~",
       "oF" : 0
     },
-    "\/donation-form-backup-202209161138450.pot~" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/donation-form-backup-202209161138450.pot~",
-      "oF" : 0
-    },
-    "\/donation-form-backup-202212060838020.pot~" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/donation-form-backup-202212060838020.pot~",
-      "oF" : 0
-    },
-    "\/donation-form-backup-202305110952460.pot~" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/donation-form-backup-202305110952460.pot~",
-      "oF" : 0
-    },
-    "\/donation-form-backup-202311151044380.pot~" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/donation-form-backup-202311151044380.pot~",
-      "oF" : 0
-    },
     "\/donation-form.pot" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/donation-form.pot",
+      "oF" : 0
+    },
+    "\/lang\/donation-form-fr_FR-backup-202208150749170.po~" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/lang\/donation-form-fr_FR-backup-202208150749170.po~",
       "oF" : 0
     },
     "\/lang\/donation-form-fr_FR.mo" : {
@@ -318,20 +294,12 @@
       "oAP" : "\/lang\/donation-form-fr_FR.po",
       "oF" : 0
     },
-    "\/lang\/donation-form-it_IT-backup-202109221114540.po~" : {
+    "\/lang\/donation-form-it_IT-backup-202208150751200.po~" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/lang\/donation-form-it_IT-backup-202109221114540.po~",
-      "oF" : 0
-    },
-    "\/lang\/donation-form-it_IT-backup-202312040735040.po~" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/lang\/donation-form-it_IT-backup-202312040735040.po~",
+      "oAP" : "\/lang\/donation-form-it_IT-backup-202208150751200.po~",
       "oF" : 0
     },
     "\/lang\/donation-form-it_IT.mo" : {
@@ -374,30 +342,6 @@
       "oAP" : "\/templates\/cadeau\/inputs.php",
       "oF" : 0
     },
-    "\/templates\/countries_options_de.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/countries_options_de.php",
-      "oF" : 0
-    },
-    "\/templates\/countries_options_fr.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/countries_options_fr.php",
-      "oF" : 0
-    },
-    "\/templates\/countries_options_it.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/countries_options_it.php",
-      "oF" : 0
-    },
     "\/templates\/countries_options.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -430,38 +374,6 @@
       "oAP" : "\/templates\/donation-redirect.php",
       "oF" : 0
     },
-    "\/templates\/food-2023-church\/inputs.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/food-2023-church\/inputs.php",
-      "oF" : 0
-    },
-    "\/templates\/food-2023-companies\/inputs.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/food-2023-companies\/inputs.php",
-      "oF" : 0
-    },
-    "\/templates\/food-2023\/inputs.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/food-2023\/inputs.php",
-      "oF" : 0
-    },
-    "\/templates\/food-BF\/inputs.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/food-BF\/inputs.php",
-      "oF" : 0
-    },
     "\/templates\/food-business\/inputs.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -486,12 +398,12 @@
       "oAP" : "\/templates\/frontend\/inputs.php",
       "oF" : 0
     },
-    "\/templates\/income_tz\/inputs.php" : {
+    "\/templates\/haiti\/inputs.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/templates\/income_tz\/inputs.php",
+      "oAP" : "\/templates\/haiti\/inputs.php",
       "oF" : 0
     },
     "\/templates\/qr_bill.php" : {
@@ -508,30 +420,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/single\/inputs.php",
-      "oF" : 0
-    },
-    "\/templates\/vocational_BF\/inputs.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/vocational_BF\/inputs.php",
-      "oF" : 0
-    },
-    "\/templates\/vocational_KE\/inputs.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/vocational_KE\/inputs.php",
-      "oF" : 0
-    },
-    "\/templates\/wash-TZ-24\/inputs.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/wash-TZ-24\/inputs.php",
       "oF" : 0
     },
     "\/vendor\/autoload.php" : {
@@ -22077,10 +21965,6 @@
         "active" : 0,
         "optionString" : "'always', {exceptAfterSingleLine: false}"
       },
-      "logical-assignment-operators" : {
-        "active" : 0,
-        "optionString" : "'always',  {'enforceForIfStatements': false}"
-      },
       "max-classes-per-file" : {
         "active" : 0,
         "optionString" : "{'ignoreExpressions': false, 'max': 1}"
@@ -22241,9 +22125,6 @@
       "no-empty-pattern" : {
         "active" : 1
       },
-      "no-empty-static-block" : {
-        "active" : 0
-      },
       "no-eq-null" : {
         "active" : 0
       },
@@ -22275,8 +22156,7 @@
         "active" : 1
       },
       "no-fallthrough" : {
-        "active" : 1,
-        "optionString" : "{'allowEmptyCase': false}"
+        "active" : 1
       },
       "no-floating-decimal" : {
         "active" : 0
@@ -22384,7 +22264,7 @@
       "no-new-func" : {
         "active" : 0
       },
-      "no-new-native-nonconstructor" : {
+      "no-new-object" : {
         "active" : 0
       },
       "no-new-symbol" : {
@@ -22398,9 +22278,6 @@
       },
       "no-obj-calls" : {
         "active" : 1
-      },
-      "no-object-constructor" : {
-        "active" : 0
       },
       "no-octal" : {
         "active" : 1
@@ -22455,6 +22332,9 @@
       "no-return-assign" : {
         "active" : 0,
         "optionString" : "'except-parens'"
+      },
+      "no-return-await" : {
+        "active" : 0
       },
       "no-script-url" : {
         "active" : 0
@@ -23072,7 +22952,7 @@
       "moduleType" : 2,
       "removeComments" : 0,
       "sourceMapStyle" : 0,
-      "targetECMAVersion" : 2018
+      "targetECMAVersion" : 0
     },
     "languageDefaultsUserDefined" : [
 
@@ -23124,14 +23004,10 @@
       "ENVIRONMENT:::$NODE_ENV"
     ],
     "rollupTreeshakingEnabled" : 1,
-    "rollupTreeshakingModuleSideEffects" : 1,
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
-    "tsAllowArbitraryExtensions" : 0,
-    "tsAllowImportingTSExtensions" : 0,
     "tsAllowSyntheticDefaultImports" : 0,
-    "tsAllowUMDGlobalAccess" : 0,
     "tsAllowUnreachableCode" : 0,
     "tsAllowUnusedLabels" : 0,
     "tsAlwaysStrict" : 0,
@@ -23140,36 +23016,36 @@
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
     "tsExactOptionalPropertyTypes" : 0,
-    "tsExperimentalDecorators" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
+    "tsKeyofStringsOnly" : 0,
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
     "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
+    "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
     "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
+    "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,
     "tsNoUnusedLocals" : 0,
     "tsNoUnusedParameters" : 0,
     "tsPreserveConstEnums" : 0,
     "tsPreserveSymlinks" : 0,
     "tsResolveJsonModule" : 0,
-    "tsSkipDefaultLibCheck" : 0,
     "tsSkipLibCheck" : 0,
-    "tsStrictBindCallApply" : 0,
     "tsStrictFunctionTypes" : 0,
     "tsStrictNullChecks" : 0,
     "tsStrictPropertyInitialization" : 0,
     "tsStripInternal" : 0,
-    "tsUseDefineForClassFields" : 0,
+    "tsSuppressExcessPropertyErrors" : 0,
+    "tsSuppressImplicitAnyIndexErrors" : 0,
     "tsUseUnknownInCatchVariables" : 0,
-    "tsVerbatimModuleSyntax" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {
@@ -23202,7 +23078,7 @@
       },
       "comments" : {
         "active" : 0,
-        "flagValue" : 1
+        "flagValue" : -1
       },
       "comparisons" : {
         "active" : 1,
