@@ -605,7 +605,7 @@ class Compassion_Donation_Form {
 
                 try {
                     $invoice_id = $odoo->send_donation_info($result);
-                    if ($invoice_id!='0') {
+                    if ($invoice_id!=0) {
                         error_log("export succeeded with inv_id:" . $invoice_id);
                         $wpdb->update($table_name, array(
                                 'odoo_status' => self::INVOICED,

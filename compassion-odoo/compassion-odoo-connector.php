@@ -352,7 +352,7 @@ class CompassionOdooConnector {
     public function createInvoiceWithObjects($partner_id, $origin, $amount, $fund, $child_id, $pf_pm, $pf_payid, $pf_brand, $utm_source, $utm_medium, $utm_campaign) {
 
         $payment_mode = trim( ($pf_pm!=$pf_brand ? $pf_pm.' '.$pf_brand : $pf_brand) );
-        return $this->models->execute_kw($this->odoo_db, $this->uid, $this->odoo_password, 'account.invoice', 'create_from_wordpress', array(
+        return $this->models->execute_kw($this->odoo_db, $this->uid, $this->odoo_password, 'account.move', 'create_from_wordpress', array(
             $partner_id, $origin, $amount, $fund, $child_id, $pf_payid, $payment_mode, $utm_source, $utm_medium, $utm_campaign
         ));
     }
@@ -361,7 +361,7 @@ class CompassionOdooConnector {
      * Send the raw information about a donation to Odoo.
      */
     public function send_donation_info($donnation_infos) {
-        return $this->call_method('account.invoice', 'process_wp_confirmed_donation', array($donnation_infos));
+        return $this->call_method('account.move', 'process_wp_confirmed_donation', array($donnation_infos));
     }
 
      /**
