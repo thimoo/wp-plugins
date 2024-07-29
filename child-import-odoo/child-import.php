@@ -2,7 +2,7 @@
 
 /*
  * Plugin Name: Compassion Child Import from Odoo
- * Version:     0.0.2
+ * Version:     14.0.1.0.0
  * Author:      giftGRUEN GmbH / adaptations Compassion Suisse | J.Kläy 11.07.2017
 */
 defined('ABSPATH') || die();
@@ -167,10 +167,6 @@ class ChildOdooImport
                 unlink($file);
         }
 
-//        foreach ($children as $child) {
-//            $wpdb->query("DELETE FROM compassion_posts WHERE post_type = 'attachment' AND guid LIKE '%" . $child . "%';");
-//        }
-
         return true;
     }
 
@@ -238,8 +234,6 @@ function child_import_addChild( $args ) {
 
     $childOdooImport = new ChildOdooImport();
     if($childOdooImport->importChild($childarray)) {
-          fifu_db_insert_attachment();
-          update_option('fifu_fake_created', true, 'no');
         return '1';
     }
     return '0';
@@ -277,7 +271,8 @@ function child_import_deleteAllChildren($args){
         return $wp_xmlrpc_server->error;
 
     $childImport = new ChildOdooImport();
-    return $childImport->deleteAllChildren();
+    $childImport->deleteAllChildren();
+    return true;
 }
 
 
