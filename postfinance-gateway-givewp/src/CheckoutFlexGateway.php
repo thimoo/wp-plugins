@@ -203,6 +203,7 @@ class CheckoutFlexGateway extends PaymentGateway
         $zip = $this->clean_input($meta['postal_code'][0]);
         $city = $this->clean_input($meta['address_level2'][0]);
         $country = $this->clean_input($meta['country'][0]);
+        $company = isset($meta['company']) ? $this->clean_input($meta['company'][0]).' ' : '';
         $utm_source = isset($meta['_utm_source']) ? $this->clean_input($meta['_utm_source'][0]) : '';
         $utm_medium = isset($meta['_utm_medium']) ? $this->clean_input($meta['_utm_medium'][0]) : '';
         $utm_campaign = isset($meta['_utm_campaign']) ? $this->clean_input($meta['_utm_campaign'][0]) : '';
@@ -236,7 +237,7 @@ class CheckoutFlexGateway extends PaymentGateway
                 'account.move',
                 ['process_wp_confirmed_donation',
                     [
-                        'name' => "{$this->clean_input($donation->firstName)} {$this->clean_input($donation->lastName)}",
+                        'name' => "{$company}{$this->clean_input($donation->firstName)} {$this->clean_input($donation->lastName)}",
                         'street' => $street,
                         'zipcode' => $zip,
                         'city' => $city,
