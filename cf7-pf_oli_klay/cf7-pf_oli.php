@@ -182,6 +182,7 @@ class Compassion_Donation_Form {
                             array('value' => 'food-2023-church', 'label' => __('Food crisis 2023 church', 'donation-form')),
                             array('value' => 'TZ-wash24', 'label' => __('Toilets project in Tanzania', 'donation-form')),
                             array('value' => 'vocational_KE', 'label' => __('vocational Kenya', 'donation-form')),
+                            array('value' => 'sansparrain', 'label' => __('sans parrain', 'donation-form')),
                             array('value' => 'cadeau', 'label' => __('Gift to a child', 'donation-form')),
                             array('value' => 'single', 'label' => __('Specific fund', 'donation-form')),
                         ),
@@ -330,6 +331,14 @@ class Compassion_Donation_Form {
                     '<tspan x="0" dy="1.4em"> ☐ ' . __('einmalige Spende', 'donation-form') . '</tspan>';
                 break;
 
+            case 'sansparrain':
+                $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/sans_parrain/inputs.php';
+                $bank_transfer_comment = __('Bitte gib an, ob du regelmässig oder einmalig für den Nahrungsmittelkrise Fonds spenden möchtest. Spendenzweck (monatlich oder einmalig): Nahrungsmittelkrise', 'donation-form');
+                $bank_transfer_reason = '<tspan x="0" dy="0">' . __('income generation TZ', 'donation-form') . ' :</tspan>' .
+                    '<tspan x="0" dy="1.4em"> ☐ ' . __('monatliche Spende', 'donation-form') . '</tspan>' .
+                    '<tspan x="0" dy="1.4em"> ☐ ' . __('einmalige Spende', 'donation-form') . '</tspan>';
+                break;
+
             case 'TZ-wash24':
                 $donation_inputs_template = plugin_dir_path(__FILE__) . 'templates/wash-TZ-24/inputs.php';
                 $bank_transfer_comment = __('Bitte gib an, ob du regelmässig oder einmalig für den Nahrungsmittelkrise Fonds spenden möchtest. Spendenzweck (monatlich oder einmalig): Nahrungsmittelkrise', 'donation-form');
@@ -452,6 +461,11 @@ class Compassion_Donation_Form {
             error_log("starting food donation of : " . $final_amount);
             $final_amount = $session_data['wert'];
             $session_data['fonds'] = 'drf_TZ_ig';
+
+        } elseif  ($session_data['type_flag']=='sansparrain') {
+            error_log("starting food donation of : " . $final_amount);
+            $final_amount = $session_data['wert'];
+            $session_data['fonds'] = 'sansparrain';
 
         } elseif ($session_data['type_flag']=='csp') {
             $from_csp='csp_mensuel';
