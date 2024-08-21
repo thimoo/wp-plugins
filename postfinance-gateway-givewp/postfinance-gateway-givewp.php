@@ -42,3 +42,28 @@ function givewp_sync_donations_with_odoo()
 if (! wp_next_scheduled('givewp_odoo_sync')) {
     wp_schedule_event(time(), 'hourly', 'givewp_odoo_sync');
 }
+
+/**
+    GiveWP stores the submit button's text in a meta key in the database at form creation
+    but this text is not translated correctly. The simplest way is to override the text for all forms
+    The relevant code can be found here:
+    https://github.com/impress-org/givewp/blob/e0251ee5d75decc223f38a741a4e8104b64d2e16/includes/forms/template.php#L2032-L2034
+ */
+add_filter('give_donation_form_submit_button_text', 'givewp_submit_button_override');
+
+function givewp_submit_button_override($display_label_field)
+{
+    $lang = apply_filters('wpml_current_language', null);
+    switch ($lang) {
+        case 'de':
+            return 'Jetzt spenden';
+            break;
+        case 'it':
+            return 'Dona ora';
+            break;
+        default:
+            return 'Donner maintenant';
+            break;
+    }
+
+}
