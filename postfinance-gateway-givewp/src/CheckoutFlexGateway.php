@@ -78,9 +78,9 @@ class CheckoutFlexGateway extends PaymentGateway
         ];
 
         $redirectText = [
-            'fr' => 'Vous allez être redirigé sur la passerelle de paiement de PostFinance pour compléter votre donation en toute sécurité.',
-            'de' => 'Sie werden nun zum Zahlungsgateway von PostFinance weitergeleitet, um Ihre Spende sicher zu vervollständigen.',
-            'it' => 'Sarete reindirizzati al gateway di pagamento PostFinance per completare la vostra donazione in tutta sicurezza.',
+            'fr' => 'Vous allez être redirigé sur notre passerelle de paiement pour compléter votre donation en toute sécurité.',
+            'de' => 'Um die Spende abzuschliessen, erfolgt eine Weiterleitung zum Zahlungsgateway der PostFinance.',
+            'it' => 'Sarai reindirizzato al nostro sistema di pagamento per effettuare la tua donazione in tutta sicurezza.',
             'en' => 'You will be redirected to the PostFinance payment gateway to complete your donation securely.',
         ];
 
