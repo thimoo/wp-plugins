@@ -305,19 +305,56 @@ class CheckoutFlexGateway extends PaymentGateway
         return $res;
     }
 
-    public function sendNonSyncedDonationsToOdoo()
+    public function syncDonations()
     {
         // get all donations from the last 2 weeks without meta odoo_invoice_id
         global $wpdb;
 
-        $donations_not_synced = $wpdb->get_results("SELECT cp.ID FROM {$wpdb->prefix}posts cp LEFT JOIN {$wpdb->prefix}give_donationmeta donmeta ON cp.ID = donmeta.donation_id AND donmeta.meta_key = 'odoo_invoice_id' AND donmeta.meta_value IS NOT NULL WHERE cp.post_type = 'give_payment' AND cp.post_status = 'publish' AND cp.post_modified BETWEEN (NOW() - INTERVAL 14 DAY) AND (NOW() - INTERVAL 15 MINUTE) AND donmeta.donation_id IS NULL");
+        error_log('postfinance-gateway-givewp(syncDonations): odoo sync launched');
 
-        error_log('postfinance-gateway-givewp(sendNonSyncedDonationsToOdoo): '.count($donations_not_synced).' donations to sync.');
+        $odoo_not_synced = $wpdb->get_results("SELECT cp.ID FROM {$wpdb->prefix}posts cp LEFT JOIN {$wpdb->prefix}give_donationmeta donmeta ON cp.ID = donmeta.donation_id AND donmeta.meta_key = 'odoo_invoice_id' AND donmeta.meta_value IS NOT NULL WHERE cp.post_type = 'give_payment' AND cp.post_status = 'publish' AND cp.post_modified BETWEEN (NOW() - INTERVAL 14 DAY) AND (NOW() - INTERVAL 15 MINUTE) AND donmeta.donation_id IS NULL");
+
+        error_log('postfinance-gateway-givewp(syncDonations): '.count($odoo_not_synced).' donations to sync with Odoo.');
         // for each send donation to odoo
-        foreach ($donations_not_synced as $donation) {
+        foreach ($odoo_not_synced as $donation) {
             // error_log('sendNonSyncedDonationsToOdoo(ids): '.$donation->ID);
             $give_donation = Donation::find($donation->ID);
             $this->sendDonationToOdoo($give_donation);
+        }
+
+        error_log('postfinance-gateway-givewp(syncDonations): postfinance sync launched');
+
+        $pf_not_synced = $wpdb->get_results("SELECT cp.ID FROM {$wpdb->prefix}posts cp WHERE cp.post_type = 'give_payment'  AND cp.post_status = 'pending' AND cp.post_modified BETWEEN (NOW() - INTERVAL 14 DAY) AND (NOW() - INTERVAL 15 MINUTE);");
+
+        error_log('postfinance-gateway-givewp(syncDonations): '.count($pf_not_synced).' pending donations to sync with PostFinance.');
+
+        if (count($pf_not_synced) > 0) {
+            $client = new ApiClient($this->userId, $this->secret);
+
+            foreach ($pf_not_synced as $donation) {
+                $meta = get_post_meta($donation->ID);
+                $pf_id = $meta['postfinance_transaction_id'][0];
+                $transaction = $client->getTransactionService()->read($this->spaceId, $pf_id);
+                $pf_state = $transaction->getState();
+                $give_donation = Donation::find($donation->ID);
+
+                switch ($pf_state) {
+                    case 'FAILED':
+                        error_log('postfinance-gateway-givewp(syncDonations): setting give donation '.$donation->ID.' (pf_id: '.$pf_id.') to FAILED');
+                        $give_donation->status = DonationStatus::FAILED();
+                        $give_donation->save();
+                        break;
+                    case 'FULFILL':
+                        error_log('postfinance-gateway-givewp(syncDonations): setting give donation '.$donation->ID.' (pf_id: '.$pf_id.') to COMPLETE');
+                        $give_donation->status = DonationStatus::COMPLETE();
+                        $give_donation->save();
+                        $this->sendDonationToOdoo($give_donation);
+                        break;
+                    default:
+                        error_log('postfinance-gateway-givewp(syncDonations): pf_state '.$pf_state.' not handled (give donation '.$donation->ID.', pf_id: '.$pf_id.')');
+                        break;
+                }
+            }
         }
 
         return true;
