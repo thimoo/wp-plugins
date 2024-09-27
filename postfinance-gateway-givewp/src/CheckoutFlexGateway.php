@@ -248,7 +248,7 @@ class CheckoutFlexGateway extends PaymentGateway
                         'child_id' => '',
                         'orderid' => $form_url,
                         'amount' => floatval($donation->amountInBaseCurrency()->formatToDecimal()),
-                        'time' => $donation->updatedAt->format('Y-m-d H:i:s'),
+                        'time' => $donation->createdAt->format('Y-m-d H:i:s'),
                         'fund' => $fundDescription,
                         'pf_payid' => $postfinanceTransactionId,
                         'pf_brand' => $paymentMethod,
@@ -333,7 +333,12 @@ class CheckoutFlexGateway extends PaymentGateway
 
             foreach ($pf_not_synced as $donation) {
                 $meta = get_post_meta($donation->ID);
-                $pf_id = $meta['postfinance_transaction_id'][0];
+                $pf_id = 0;
+                if (isset($meta['postfinance_transaction_id'])) {
+                    $pf_id = $meta['postfinance_transaction_id'][0];
+                } else {
+                    continue;
+                }
                 $transaction = $client->getTransactionService()->read($this->spaceId, $pf_id);
                 $pf_state = $transaction->getState();
                 $give_donation = Donation::find($donation->ID);
