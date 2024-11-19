@@ -134,7 +134,7 @@ class CheckoutFlexGateway extends PaymentGateway
             ]
         ));
 
-        $transactionPayload->setFailedUrl(give_get_failed_transaction_uri());
+        $transactionPayload->setFailedUrl($this->removeExcessHashes(give_get_failed_transaction_uri()));
 
         if (isset($_COOKIE['pfgg_utm_source'])) {
             update_post_meta($donation->id, '_utm_source', $_COOKIE['pfgg_utm_source']);
@@ -368,5 +368,19 @@ class CheckoutFlexGateway extends PaymentGateway
     private function clean_input($value)
     {
         return trim(htmlspecialchars($value, ENT_QUOTES, 'UTF-8'));
+    }
+
+    // This function removes the second and subsequent hashes in a URL
+    // In certain scenarios, GiveWP generates a URL with 2 hashes,
+    // which is not accepted by Postfinance because not conformant to RFC 3986
+    private function removeExcessHashes($url)
+    {
+        $firstHash = strpos($url, '#');
+        $secondHash = strpos($url, '#', $firstHash + 1);
+        if ($secondHash === false) {
+            return $url;
+        }
+
+        return substr($url, 0, $secondHash);
     }
 }
